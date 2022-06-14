@@ -1,11 +1,11 @@
 openapi: 3.1.0
 info:
   version: 1.0.0
-  title: Example.com
+  title: api.tizo.co
   termsOfService: 'https://example.com/terms/'
   contact:
     email: rcastano@tizo.app
-    url: 'http://example.com/contact'
+    url: 'https://www.linkedin.com/company/tizo/'
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'

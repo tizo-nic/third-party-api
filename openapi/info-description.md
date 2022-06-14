@@ -1,37 +1,17 @@
-This is an **example** API to demonstrate features of the OpenAPI specification.
-
-# Introduction
-
-This API definition is intended to to be a good starting point for
-describing your API in 
-
-[OpenAPI/Swagger
-format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md).
-
-It also demonstrates features of the
-[create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-and 
-
-the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
-the standard OpenAPI syntax, we use a few 
-
-[vendor
-extensions](https://github.com/Redocly/Redoc/blob/master/docs/redoc-vendor-extensions.md).
+# Introducción
 
 
-# OpenAPI Specification
+Esta api contiene todas las funcionalidades de envíos que usted necesita para integrarla en su negocio, en caso de que usted no tenga un sistema existente, le recomendamos que use las apps pronto disponibles en Play Store, Apple Store. Entre las principales funcionalidades se encuentran:
 
-The goal of The OpenAPI Specification is to define a standard,
-language-agnostic interface to REST APIs which
 
-allows both humans and computers to discover and understand the capabilities
-of the service without access to source
+- Creación de envíos usando los distintos aliados de Tizo.
+- Seguimiento en tiempo real, así como el historial de los envíos realizados.
+- Métricas de su negocio, así como algunas variables de su interés.
+- Zonas de cobertura disponibles, su "libreta de contactos", y direcciones predefinidas.
 
-code, documentation, or through network traffic inspection. When properly
-defined via OpenAPI, a consumer can 
+# Comúniquese con nosotros
 
-understand and interact with the remote service with a minimal amount of
-implementation logic. Similar to what
+- Correo: info@tizo.app, axel.garcia@tizo.app
+- Otras plataformas pendientes a preguntar a la jefa.
 
-interfaces have done for lower-level programming, OpenAPI removes the
-guesswork in calling the service.
+ [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/19319757-13ea3bc8-bfe2-4ffd-87ee-f2d3bb439c62?action=collection%2Ffork&collection-url=entityId%3D19319757-13ea3bc8-bfe2-4ffd-87ee-f2d3bb439c62%26entityType%3Dcollection%26workspaceId%3D957b370e-bb6a-4235-b1a9-43894e2c51eb#?env%5BTizo%20Vendors%5D=W3sia2V5IjoiYmFzZV91cmwiLCJ2YWx1ZSI6Imh0dHBzOi8vYXBpLnRpem8uY28iLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9LHsia2V5IjoiYXV0aF90b2tlbiIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifSx7ImtleSI6ImVudmlyb25tZW50IiwidmFsdWUiOiJkZXYiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9LHsia2V5IjoibGFuZ3VhZ2UiLCJ2YWx1ZSI6ImVzIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifV0=)

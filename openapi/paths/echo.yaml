@@ -1,12 +1,11 @@
 post:
   tags:
-    - Echo
-  summary: Echo test
-  description: Receive the exact message you've sent
-  operationId: echo
+    - Login
+  summary: Inicio de sesión
+  description: 
+  operationId: login
   security:
-    - api_key: []
-    - basic_auth: []
+    - basic_auth: [ Authorization ]
   responses:
     '200':
       description: OK

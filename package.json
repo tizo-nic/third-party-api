@@ -6,7 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "openapi preview-docs",
+    "start": "openapi preview-docs --port 3000",
     "build": "openapi bundle -o dist",
     "test": "openapi lint"
   }
