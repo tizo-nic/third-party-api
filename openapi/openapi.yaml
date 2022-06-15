@@ -14,19 +14,12 @@ info:
   description:
     $ref: ./info-description.md
 tags:
-  - name: Echo
-    description: Example echo operations.
-  - name: User
-    description: Operations about users.
-  - name: Tag
-    description: This is a tag description.
+  - name: auth
+    description: Operaciones de autenticación de usuarios.
+  - name: stores
+    description: Gestión de tiendas.
 servers:
-  - url: 'https://{tenant}/api/v1'
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
-  - url: 'https://example.com/api/v1'
+  - url: 'https://api.tizo.co/api/v1'
 paths:
   '/users/{username}':
     $ref: 'paths/users_{username}.yaml'

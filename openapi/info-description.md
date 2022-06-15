@@ -11,7 +11,8 @@ Esta api contiene todas las funcionalidades de envíos que usted necesita para i
 
 # Comúniquese con nosotros
 
-- Correo: info@tizo.app, axel.garcia@tizo.app
-- Otras plataformas pendientes a preguntar a la jefa.
+- Correos: En para el equipo de tizo info@tizo.app  y a axel.garcia@tizo.app en caso de algún inconveniente con la API.
+- Síguenos en las siguientes plataformas para estar al tanto de las últimas mejoras y novedades: [Facebook](https://www.facebook.com/Tizo.appCA/), [Twitter](https://twitter.com/AppTizo), [Instagram](https://www.instagram.com/tizoapp/).
+
 
  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/19319757-13ea3bc8-bfe2-4ffd-87ee-f2d3bb439c62?action=collection%2Ffork&collection-url=entityId%3D19319757-13ea3bc8-bfe2-4ffd-87ee-f2d3bb439c62%26entityType%3Dcollection%26workspaceId%3D957b370e-bb6a-4235-b1a9-43894e2c51eb#?env%5BTizo%20Vendors%5D=W3sia2V5IjoiYmFzZV91cmwiLCJ2YWx1ZSI6Imh0dHBzOi8vYXBpLnRpem8uY28iLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9LHsia2V5IjoiYXV0aF90b2tlbiIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifSx7ImtleSI6ImVudmlyb25tZW50IiwidmFsdWUiOiJkZXYiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9LHsia2V5IjoibGFuZ3VhZ2UiLCJ2YWx1ZSI6ImVzIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifV0=)

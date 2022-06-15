@@ -20,12 +20,7 @@ tags:
   - name: Tag
     description: This is a tag description.
 servers:
-  - url: https://{tenant}/api/v1
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
-  - url: https://example.com/api/v1
+  - url: https://api.tizo.co/api/v1
 paths:
   /users/{username}:
     parameters:
@@ -114,7 +109,7 @@ paths:
       tags:
         - Login
       summary: Inicio de sesión
-      description: null
+      description: 
       operationId: login
       security:
         - basic_auth:
