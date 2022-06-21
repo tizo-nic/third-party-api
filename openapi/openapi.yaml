@@ -14,35 +14,25 @@ info:
   description:
     $ref: ./info-description.md
 tags:
-  - name: auth
-    description: Operaciones de autenticación de usuarios.
-  - name: stores
-    description: Gestión de tiendas.
+  - name: Aclaraciones importantes
+    description: 
+      $ref: ./info-authentication.md
 servers:
   - url: 'https://api.tizo.co/api/v1'
 paths:
-  '/users/{username}':
-    $ref: 'paths/users_{username}.yaml'
-  /echo:
-    $ref: paths/echo.yaml
-  /pathItem:
-    $ref: paths/path-item.yaml
-  /pathItemWithExamples:
-    $ref: paths/path-item-with-examples.yaml
+  /auth/login:
+    $ref: paths/login.yaml
 components:
   securitySchemes:
     main_auth:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: 'http://example.com/api/oauth/dialog'
+          authorizationUrl: 'https://api.tizo.co/api/v1/auth/login'
           scopes:
             'read:users': read users info
             'write:users': modify or remove users
     api_key:
       type: apiKey
       in: header
-      name: api_key
-    basic_auth:
-      type: http
-      scheme: basic
+      name: Authorization

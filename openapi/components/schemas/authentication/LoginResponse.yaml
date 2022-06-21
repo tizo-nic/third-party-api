@@ -1,0 +1,23 @@
+type: object
+properties:
+  data: 
+    type: object
+    properties:
+      user:
+        $ref: ../User.yaml
+      type_user:
+        type: string
+        description: Tipo de usuario (vendor, store_api)
+        example: vendor
+      auth_token:
+        type: string
+        description: Token de autenticación
+        example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+  message:
+    type: string
+    description: Mensaje de respuesta
+    example: Hello
+  status:
+    type: integer
+    description: Estado de la respuesta
+    example: 200

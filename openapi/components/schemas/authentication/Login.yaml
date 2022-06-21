@@ -1,0 +1,18 @@
+type: object
+properties:
+  username: 
+    description: Nombre de usuario
+    type: string
+    required: true
+    example: store_12
+  password:
+    description: Contraseña
+    type: string
+    required: true
+    example: contraseña
+  typeUser:
+    description: Tipo de usuario (vendor, store_api)
+    type: string
+    required: true
+    example: vendor
+  

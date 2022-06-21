@@ -11,249 +11,85 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   x-logo:
     url: https://tizo-dev.s3.us-east-1.amazonaws.com/logos/logo.png
-  description: "# Introducción\r\n\r\n\r\nEsta api contiene todas las funcionalidades de envíos que usted necesita para integrarla en su negocio, en caso de que usted no tenga un sistema existente, le recomendamos que use las apps pronto disponibles en Play Store, Apple Store. Entre las principales funcionalidades se encuentran:\r\n\r\n\r\n- Creación de envíos usando los distintos aliados de Tizo.\r\n- Seguimiento en tiempo real, así como el historial de los envíos realizados.\r\n- Métricas de su negocio, así como algunas variables de su interés.\r\n- Zonas de cobertura disponibles, su \"libreta de contactos\", y direcciones predefinidas.\r\n\r\n# Comúniquese con nosotros\r\n\r\n- Correo: info@tizo.app, axel.garcia@tizo.app\r\n- Otras plataformas pendientes a preguntar a la jefa.\r\n\r\n [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/19319757-13ea3bc8-bfe2-4ffd-87ee-f2d3bb439c62?action=collection%2Ffork&collection-url=entityId%3D19319757-13ea3bc8-bfe2-4ffd-87ee-f2d3bb439c62%26entityType%3Dcollection%26workspaceId%3D957b370e-bb6a-4235-b1a9-43894e2c51eb#?env%5BTizo%20Vendors%5D=W3sia2V5IjoiYmFzZV91cmwiLCJ2YWx1ZSI6Imh0dHBzOi8vYXBpLnRpem8uY28iLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9LHsia2V5IjoiYXV0aF90b2tlbiIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifSx7ImtleSI6ImVudmlyb25tZW50IiwidmFsdWUiOiJkZXYiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9LHsia2V5IjoibGFuZ3VhZ2UiLCJ2YWx1ZSI6ImVzIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifV0=)"
+  description: "# Introducción\r\n\r\n\r\nEsta api contiene todas las funcionalidades de envíos que usted necesita para integrarla en su negocio, en caso de que usted no tenga un sistema existente, le recomendamos que use las apps pronto disponibles en Play Store, Apple Store. Entre las principales funcionalidades se encuentran:\r\n\r\n\r\n- Creación de envíos usando los distintos aliados de Tizo.\r\n- Seguimiento en tiempo real, así como el historial de los envíos realizados.\r\n- Métricas de su negocio, así como algunas variables de su interés.\r\n- Zonas de cobertura disponibles, su \"libreta de contactos\", y direcciones predefinidas.\r\n\r\n# Comúniquese con nosotros\r\n\r\n- Correos: En para el equipo de tizo info@tizo.app  y a axel.garcia@tizo.app en caso de algún inconveniente con la API.\r\n- Síguenos en las siguientes plataformas para estar al tanto de las últimas mejoras y novedades: [Facebook](https://www.facebook.com/Tizo.appCA/), [Twitter](https://twitter.com/AppTizo), [Instagram](https://www.instagram.com/tizoapp/).\r\n\r\n\r\n [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/19319757-13ea3bc8-bfe2-4ffd-87ee-f2d3bb439c62?action=collection%2Ffork&collection-url=entityId%3D19319757-13ea3bc8-bfe2-4ffd-87ee-f2d3bb439c62%26entityType%3Dcollection%26workspaceId%3D957b370e-bb6a-4235-b1a9-43894e2c51eb#?env%5BTizo%20Vendors%5D=W3sia2V5IjoiYmFzZV91cmwiLCJ2YWx1ZSI6Imh0dHBzOi8vYXBpLnRpem8uY28iLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9LHsia2V5IjoiYXV0aF90b2tlbiIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifSx7ImtleSI6ImVudmlyb25tZW50IiwidmFsdWUiOiJkZXYiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9LHsia2V5IjoibGFuZ3VhZ2UiLCJ2YWx1ZSI6ImVzIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifV0=)"
 tags:
-  - name: Echo
-    description: Example echo operations.
-  - name: User
-    description: Operations about users.
-  - name: Tag
-    description: This is a tag description.
+  - name: Aclaraciones importantes
+    description: "## Autenticación.\r\n\r\nUna vez logueado, tus credenciales tienen acceso durante 7 días en nuestra plataforma, por lo que debes refrescar el token una vez ya expirado.\r\n\r\n## Headers\r\n\r\nPara un mejor uso de nuestra API, debes de tomar en cuenta que cada request que se haga, se recibe los siguientes headers.\r\n\r\n| Clave  | Valor |\r\n|-------|-------|\r\n| Authorization | Token | \r\n| Content-Type | application/json |\r\n| environment | ni, dev |\r\n| Accept-Language | es, en |"
 servers:
   - url: https://api.tizo.co/api/v1
 paths:
-  /users/{username}:
-    parameters:
-      - name: pretty_print
-        in: query
-        description: Pretty print response
-        schema:
-          type: boolean
-    get:
-      tags:
-        - User
-      summary: Get user by user name
-      description: |
-        Some description of the operation.
-        You can use `Markdown` here.
-      operationId: getUserByName
-      parameters:
-        - name: username
-          in: path
-          description: The name that needs to be fetched
-          required: true
-          schema:
-            type: string
-        - name: with_email
-          in: query
-          description: Filter users without email
-          schema:
-            type: boolean
-      security:
-        - main_auth:
-            - read:users
-        - api_key: []
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-              example:
-                username: user1
-                email: user@example.com
-        '403':
-          description: Forbidden
-          $ref: '#/components/responses/Problem'
-        '404':
-          description: User not found
-          $ref: '#/components/responses/Problem'
-    put:
-      tags:
-        - User
-      summary: Updated user
-      description: This can only be done by the logged in user.
-      operationId: updateUser
-      parameters:
-        - name: username
-          in: path
-          description: The name that needs to be updated
-          required: true
-          schema:
-            type: string
-      security:
-        - main_auth:
-            - write:users
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/User'
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/User'
-        description: Updated user object
-        required: true
-      responses:
-        '200':
-          description: OK
-        '400':
-          description: Invalid user supplied
-          $ref: '#/components/responses/Problem'
-        '404':
-          description: User not found
-          $ref: '#/components/responses/Problem'
-  /echo:
+  /auth/login:
     post:
       tags:
         - Login
       summary: Inicio de sesión
-      description: 
+      description: null
       operationId: login
       security:
         - basic_auth:
             - Authorization
       responses:
         '200':
-          description: OK
-          headers:
-            X-Rate-Limit:
-              description: calls per hour allowed by the user
-              schema:
-                type: integer
-                format: int32
-            X-Expires-After:
-              $ref: '#/components/headers/ExpiresAfter'
+          description: Success
           content:
             application/json:
               schema:
-                type: string
-              examples:
-                response:
-                  value: Hello world!
-            application/xml:
-              schema:
-                type: string
-            text/csv:
-              schema:
-                type: string
+                $ref: '#/components/schemas/LoginResponse'
         '400':
           description: Unauthorized
       requestBody:
+        headers:
+          environment:
+            description: País donde se encuentra el usuario.
+            schema:
+              type: string
+              example: ni
         content:
           application/json:
             schema:
-              type: string
-              example: Hello world!
-          application/xml:
-            schema:
-              type: string
-              example: Hello world!
+              $ref: '#/components/schemas/Login'
         description: Echo payload
         required: true
       x-codeSamples:
         - lang: C#
-          source: "API.v1.Echo echo = new API.v1.Echo();\r\necho.message = \"Hello World!\");\r\nEchoResponse response = echo.post();\r\nif (response.statusCode == HttpStatusCode.Created)\r\n{\r\n  // Success\r\n}\r\nelse\r\n{\r\n  // Something wrong -- check response for errors\r\n  Console.WriteLine(response.getRawResponse());\r\n}\r\n"
+          source: "var client = new RestClient(\"https://api.tizo.co/api/v1/auth/login/\");\r\nclient.Timeout = -1;\r\nvar request = new RestRequest(Method.POST);\r\nrequest.AddHeader(\"Content-Type\", \"application/json\");\r\nvar body = @\"{\"\"username\"\": \"\"store_0\"\",\"\"password\"\": \"\"12\"\",\"\"typeUser\"\": \"\"store_api\"\"}\";\r\nrequest.AddParameter(\"application/json\", body,  ParameterType.RequestBody);\r\nIRestResponse response = client.Execute(request);\r\nConsole.WriteLine(response.Content);"
         - lang: PHP
-          source: "$form = new \\API\\Entities\\Echo();\r\n$form->setMessage(\"Hello World!\");\r\ntry {\r\n    $pet = $client->echo()->post($form);\r\n} catch (UnprocessableEntityException $e) {\r\n    var_dump($e->getErrors());\r\n}\r\n"
-  /pathItem:
-    post:
-      tags:
-        - Tag
-      summary: Operation summary
-      description: |
-        Operation description **Markdown**.
-      operationId: operationId
-      security:
-        - api_key: []
-        - basic_auth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Schema'
-        description: requestBody description
-        required: true
-      responses:
-        '200':
-          description: OK
-          headers:
-            X-Rate-Limit:
-              description: Calls per hour allowed by the user.
-              schema:
-                type: integer
-                format: int32
-            X-Expires-After:
-              $ref: '#/components/headers/ExpiresAfter'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Schema'
-        '400':
-          $ref: '#/components/responses/Problem'
-  /pathItemWithExamples:
-    post:
-      tags:
-        - Tag
-      summary: Operation summary with examples
-      description: |
-        Operation description **markdown**.
-      operationId: postPathItemWithExamples
-      security:
-        - api_key: []
-        - basic_auth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Schema'
-            examples:
-              mapName:
-                summary: My first example
-                description: My first example's description.
-                value:
-                  stringProperty: tada
-              mapNameDoesNotShowInDocsUnlessSummaryIsNotProvided:
-                value:
-                  stringProperty: checkmark
-        description: requestBody description
-        required: true
-      responses:
-        '200':
-          description: OK
-          headers:
-            X-Rate-Limit:
-              description: calls per hour allowed by the user
-              schema:
-                type: integer
-                format: int32
-            X-Expires-After:
-              $ref: '#/components/headers/ExpiresAfter'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Schema'
-        '400':
-          $ref: '#/components/responses/Problem'
+          source: "<?php\r\n$client = new Client();\r\n$headers = [\r\n  'Authorization' => 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8wIiwiaWF0IjoxNjU1Nzk3NjQ5LCJleHAiOjE2NTY0MDI0NDl9.s-1eTUqzDnmCW98yN4CkFUNjkj_eCzjBe8qUHmO3GUcR35z-4i8o3MGzzEj-JztUcfewI1Sfm18HfPDA3IUR_Q',\r\n  'Content-Type' => 'application/json'\r\n];\r\n$body = '{\r\n  \"username\": \"store_0\",\r\n  \"password\": \"12\",\r\n  \"typeUser\": \"store_api\"\r\n}';\r\n$request = new Request('POST', 'https://api.tizo.co/api/v1/auth/login/', $headers, $body);\r\n$res = $client->sendAsync($request)->wait();\r\necho $res->getBody();\r\n"
+        - lang: Python
+          source: "import requests\r\nimport json\r\n\r\nurl = \"https://api.tizo.co/api/v1/auth/login/\"\r\n\r\npayload = json.dumps({\r\n  \"username\": \"store_0\",\r\n  \"password\": \"12\",\r\n  \"typeUser\": \"store_api\"\r\n})\r\nheaders = {\r\n  'Content-Type': 'application/json'\r\n}\r\n\r\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\r\n\r\nprint(response.text)\r\n"
 components:
   securitySchemes:
     main_auth:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: http://example.com/api/oauth/dialog
+          authorizationUrl: https://api.tizo.co/api/v1/auth/login
           scopes:
             read:users: read users info
             write:users: modify or remove users
     api_key:
       type: apiKey
       in: header
-      name: api_key
-    basic_auth:
-      type: http
-      scheme: basic
+      name: Authorization
   schemas:
+    Login:
+      type: object
+      properties:
+        username:
+          description: Nombre de usuario
+          type: string
+          required: true
+          example: store_12
+        password:
+          description: Contraseña
+          type: string
+          required: true
+          example: contraseña
+        typeUser:
+          description: Tipo de usuario (vendor, store_api)
+          type: string
+          required: true
+          example: vendor
     Email:
       description: User email address
       type: string
@@ -279,209 +115,28 @@ components:
           example: Smith
         email:
           $ref: '#/components/schemas/Email'
-    Problem:
+    LoginResponse:
       type: object
-      additionalProperties: true
-      minProperties: 1
-      description: >-
-        The Problem Details JSON Object
-        [[RFC7807](https://tools.ietf.org/html/rfc7807)].
       properties:
-        type:
+        data:
+          type: object
+          properties:
+            user:
+              $ref: '#/components/schemas/User'
+            type_user:
+              type: string
+              description: Tipo de usuario (vendor, store_api)
+              example: vendor
+            auth_token:
+              type: string
+              description: Token de autenticación
+              example: >-
+                eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+        message:
           type: string
-          description: >-
-            A URI reference [[RFC3986](https://tools.ietf.org/html/rfc3986)]
-            that identifies the problem type. It should provide human-readable
-            documentation for the problem type. When this member is not present,
-            its value is assumed to be "about:blank".
-          format: uri
-        title:
-          type: string
-          description: >-
-            A short, human-readable summary of the problem type. It SHOULD NOT
-            change from occurrence to occurrence of the problem, except for
-            purposes of localization.
+          description: Mensaje de respuesta
+          example: Hello
         status:
           type: integer
-          description: The HTTP status code.
-          minimum: 400
-          maximum: 599
-        detail:
-          type: string
-          description: >-
-            A human-readable explanation specific to this occurrence of the
-            problem.
-        instance:
-          type: string
-          description: >-
-            A URI reference that identifies the specific occurrence of the
-            problem.  It may or may not yield further information if
-            dereferenced.
-    Schema:
-      type: object
-      title: Scalars
-      properties:
-        stringProperty:
-          description: Property name's description (type is string)
-          type: string
-          examples:
-            - example
-            - sample
-        readOnlyStringProperty:
-          description: Notice this only appears in the response.
-          type: string
-          readOnly: true
-          examples:
-            - example
-        writeOnlyStringProperty:
-          description: Notice this only appears in the request.
-          type: string
-          writeOnly: true
-          examples:
-            - example
-        minLengthString:
-          description: Property name's description (type is string)
-          type: string
-          minLength: 4
-          examples:
-            - example
-        maxLengthString:
-          description: Property name's description (type is string)
-          type: string
-          maxLength: 140
-          examples:
-            - example
-        minAndMaxLengthString:
-          description: Property name's description (type is string)
-          type: string
-          minLength: 4
-          maxLength: 140
-          examples:
-            - example
-        nullableOrStringProperty:
-          description: Property name's description (type is string or null)
-          type:
-            - string
-            - null
-          examples:
-            - example
-        stringEnumValues:
-          description: Property name's description (type is string)
-          type: string
-          enum:
-            - sample
-            - example
-            - specimen
-            - case
-            - instance
-            - illustration
-        stringDateTime:
-          description: Property name's description (type is string, format is date-time)
-          type: string
-          format: date-time
-        stringDate:
-          description: Property name's description (type is string, format is date-time)
-          type: string
-          format: date
-        stringEmail:
-          description: Property name's description (type is string, format is email)
-          type: string
-          format: email
-        stringIpAddressV4:
-          description: Property name's description (type is string, format is ipv4 address)
-          type: string
-          format: ipv4
-        stringIpAddressV6:
-          description: Property name's description (type is string, format is ipv6 address)
-          type: string
-          format: ipv6
-        stringPassword:
-          description: Property name's description (type is string, format is password)
-          type: string
-          format: password
-        stringHostname:
-          description: Property name's description (type is string, format is hostname)
-          type: string
-          format: hostname
-        stringUri:
-          description: Property name's description (type is string, format is uri)
-          type: string
-          format: uri
-        stringUuid:
-          description: Property name's description (type is string, format is uuid)
-          type: string
-          format: uuid
-        numberProperty:
-          description: Property name's description (type is number)
-          type: number
-          example: 8
-        numberFloat:
-          description: Property name's description (type is number, format is float)
-          type: number
-          format: float
-        numberDouble:
-          description: Property name's description (type is number, format is double)
-          type: number
-          format: double
-        numberGreaterThanOrEquals:
-          description: Property name's description (type is number)
-          type: number
-          minimum: 5
-        numberGreaterThan:
-          description: Property name's description (type is number)
-          type: number
-          exclusiveMinimum: 5
-        numberLessThan:
-          description: Property name's description (type is number)
-          type: number
-          exclusiveMaximum: 8
-        numberLessThanOrEquals:
-          description: Property name's description (type is number)
-          type: number
-          maximum: 8
-        numberRange:
-          description: Property name's description (type is number)
-          type: number
-          minimum: 5
-          maximum: 8
-        numberRangeExclusiveMaximum:
-          description: Property name's description (type is number)
-          type: number
-          minimum: 5
-          exclusiveMaximum: 8
-        numberRangeExclusiveMinimumAndMaximum:
-          description: Property name's description (type is number)
-          type: number
-          exclusiveMinimum: 5
-          exclusiveMaximum: 8
-        numberMultipleOf:
-          description: Property name's description (type is number)
-          type: number
-          multipleOf: 2
-        integerType:
-          description: Property name's description (type is integer)
-          type: integer
-        integer32bit:
-          description: Property name's description (type is integer, format is int32)
-          type: integer
-          format: int32
-        integer64bit:
-          description: Property name's description (type is integer, format is int64)
-          type: integer
-          format: int64
-        booleanProperty:
-          description: Property name's description (type is boolean)
-          type: boolean
-  responses:
-    Problem:
-      description: Problem
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
-  headers:
-    ExpiresAfter:
-      description: date in UTC when token expires
-      schema:
-        type: string
-        format: date-time
+          description: Estado de la respuesta
+          example: 200
