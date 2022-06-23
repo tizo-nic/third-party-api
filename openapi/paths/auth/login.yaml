@@ -1,0 +1,41 @@
+post:
+  tags:
+    - Autenticación
+  summary: Inicio de sesión
+  description: 
+  operationId: login
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
+    
+    '400': 
+      description: Unauthorized
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/authentication/Login.yaml
+    description: Echo payload
+    required: true
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/authorization/login.cs"
+    - lang: PHP
+      source:
+        $ref: ../../code_samples/PHP/authorization/login.php
+    - lang: Python
+      source:
+        $ref: ../../code_samples/Python/authorization/login.py

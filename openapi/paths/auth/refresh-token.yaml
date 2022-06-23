@@ -1,9 +1,9 @@
 post:
   tags:
-    - Login
-  summary: Inicio de sesión
-  description: 
-  operationId: login
+    - Autenticación
+  summary: Refrescar token
+  description: Actualiza el tiempo de expiración.
+  operationId: refresh-token
   security:
     - basic_auth: [ Authorization ]
   responses:
@@ -12,7 +12,7 @@ post:
       content: 
         application/json:
           schema:
-            $ref: '../components/schemas/authentication/LoginResponse.yaml'
+            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
     
     '400': 
       description: Unauthorized
@@ -26,16 +26,16 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/authentication/Login.yaml
+          $ref: ../../components/schemas/authentication/Login.yaml
     description: Echo payload
     required: true
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../code_samples/csharp/authorization/login.cs"
+        $ref: "../../code_samples/csharp/authorization/login.cs"
     - lang: PHP
       source:
-        $ref: ../code_samples/PHP/authorization/login.php
+        $ref: ../../code_samples/PHP/authorization/login.php
     - lang: Python
       source:
-        $ref: ../code_samples/Python/authorization/login.py
+        $ref: ../../code_samples/Python/authorization/login.py

@@ -21,7 +21,25 @@ servers:
   - url: 'https://api.tizo.co/api/v1'
 paths:
   /auth/login:
-    $ref: paths/login.yaml
+    $ref: paths/auth/login.yaml
+  /auth/permissions:
+    $ref: paths/auth/permissions.yaml
+  /auth/refresh-token:
+    $ref: paths/auth/refresh-token.yaml
+  /auth/recovery-password:
+    $ref: paths/auth/recovery-password.yaml
+  /auth/reset-password:
+    $ref: paths/auth/reset-password.yaml
+  /delivery:
+      $ref: paths/delivery/delivery.yaml
+  /delivery/estimate:
+      $ref: paths/delivery/estimate.yaml
+  /delivery/new:
+      $ref: paths/delivery/new.yaml
+  /delivery/confirm/{code}/:
+      $ref: paths/delivery/confirm.yaml
+  
+  
 components:
   securitySchemes:
     main_auth:
