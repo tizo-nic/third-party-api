@@ -2,7 +2,7 @@ get:
   tags:
     - Autenticación
   summary: Permisos
-  description: Ver los modulos y los permisos de un usuario.
+  description: Ver los modulos y los permisos que tiene un usuario.
   operationId: permissions
   security:
     - basic_auth: [ Authorization ]
@@ -12,10 +12,13 @@ get:
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
-    
+            $ref: '../../components/schemas/authentication/permissionsResponse-positive.yaml'
     '400': 
       description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/authentication/permissionsResponse-negative.yaml'
   requestBody:
     headers:
       environment:
@@ -24,19 +27,18 @@ get:
           type: string
           example: "ni"
     content:
-      application/json:
+      application:
         schema:
-          $ref: ../../components/schemas/authentication/Login.yaml
-    description: Echo payload
-    required: true
+          description: Este método no solicita ningun dato de entrada
+          required: true
   x-codeSamples:
     - lang: "C#"
       source:
         $ref: "../../code_samples/csharp/authorization/login.cs"
     - lang: PHP
       source:
-        $ref: ../../code_samples/PHP/authorization/login.php
+        $ref: "../../code_samples/PHP/authorization/login.php"
     - lang: Python
       source:
-        $ref: ../../code_samples/Python/authorization/login.py
+        $ref: "../../code_samples/Python/authorization/login.py"
 

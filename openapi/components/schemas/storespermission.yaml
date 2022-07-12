@@ -1,0 +1,6 @@
+type: object
+properties:
+    Store:
+      $ref: ./store1.yaml
+    Permissions:
+      $ref: ./Permissions.yaml

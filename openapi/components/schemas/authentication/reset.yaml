@@ -1,13 +1,16 @@
 type: object
 properties:
-  old-password:
-    description: Antigua Contraseña
-    type: string
-    required: true
-    example: antiguacontra
+  
   new-password:
     description: Nueva Contraseña
     type: string
     required: true
     example: nuevacontra
+    minLength: 1
+  old-password:
+    description: Antigua Contraseña
+    type: string
+    required: true
+    example: antiguacontra
+    minLength: 1
   

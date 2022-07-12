@@ -6,10 +6,12 @@ properties:
     description: Contraseña
     type: string
     required: true
+    minLength: 1
     example: contraseña
   typeUser:
     description: Tipo de usuario (vendor, store_api)
     type: string
     required: true
+    minLength: 1
     example: vendor
   

@@ -1,0 +1,6 @@
+type: object
+properties:
+  Email:
+    $ref: ./Email.yaml
+  SMS:
+    $ref: "./Phonenumber.yaml"

@@ -1,0 +1,22 @@
+type: object
+properties:
+  data: 
+    type: object
+    properties:
+      Method:
+        $ref: ../Method.yaml
+      Word to Match:
+        $ref: ../WordMatch.yaml
+      typeUser:
+        description: Tipo de usuario (vendor, store_api)
+        type: string
+        required: true
+        example: vendor
+  message:
+    type: string
+    description: Mensaje positivo de respuesta
+    example: Se ha enviado las instrucciones para recuperar la contraseña.
+  status:
+    type: integer
+    description: Estado positivo de la respuesta
+    example: 200

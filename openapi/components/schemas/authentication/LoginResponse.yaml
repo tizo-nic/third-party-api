@@ -9,6 +9,7 @@ properties:
         type: string
         description: Tipo de usuario (vendor, store_api)
         example: vendor
+        minLength: 1
       auth_token:
         type: string
         description: Token de autenticación
@@ -16,7 +17,7 @@ properties:
   message:
     type: string
     description: Mensaje positivo de respuesta
-    example: Hola
+    example: Hello!
   status:
     type: integer
     description: Estado positivo de la respuesta

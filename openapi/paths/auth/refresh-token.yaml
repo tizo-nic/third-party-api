@@ -2,7 +2,7 @@ post:
   tags:
     - Autenticación
   summary: Refrescar token
-  description: Actualiza el tiempo de expiración.
+  description: Actualiza el tiempo de expiración de un token
   operationId: refresh-token
   security:
     - basic_auth: [ Authorization ]
@@ -12,10 +12,13 @@ post:
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
-    
+            $ref: '../../components/schemas/authentication/refresh-positive.yaml'
     '400': 
       description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/authentication/refresh-negative.yaml'
   requestBody:
     headers:
       environment:

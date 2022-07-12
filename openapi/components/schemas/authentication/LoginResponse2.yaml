@@ -9,6 +9,7 @@ properties:
         type: string
         description: Tipo de usuario (vendor, store_api)
         example: vendor
+        minLength: 1
       auth_token:
         type: string
         description: Token de autenticación
@@ -16,8 +17,8 @@ properties:
   message:
     type: string
     description: Mensaje negativo de respuesta
-    example: Lo siento, no puedes ingresar
+    example: Usuario o contraseña incorrectos
   status:
     type: integer
     description: Estado negativo de la respuesta
-    example: 400
+    example: 401

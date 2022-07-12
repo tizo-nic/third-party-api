@@ -1,0 +1,22 @@
+type: object
+properties:
+  data: 
+    type: object
+    properties:
+      Method:
+        $ref: ../Method.yaml
+      Word to Match:
+        $ref: ../WordMatch.yaml
+      typeUser:
+        description: Tipo de usuario (vendor, store_api)
+        type: string
+        required: true
+        example: vendor
+  message:
+    type: string
+    description: Mensaje negativo de respuesta
+    example: Vendor User no encontrado
+  status:
+    type: integer
+    description: Estado negativo de la respuesta
+    example: 400

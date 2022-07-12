@@ -1,0 +1,64 @@
+type: object
+properties:
+  idVendorUser:
+    description: User Id
+    type: string
+    example: 6
+  idStatusVendorUser:
+    description: User Status
+    type: string
+    example: 0
+  pathImage:
+    description: User Image
+    type: Image
+    example: 0
+  firstName:
+    description: User first name
+    type: string
+    example: John
+  lastName:
+    description: User last name
+    type: string
+    example: Smith
+  PhoneNumber:
+    $ref: ./Phonenumber.yaml
+  Email:
+    $ref: ./Email.yaml
+  identificacion:
+    description: User identification
+    type: string
+    example: 00225062000N
+  gender:
+    description: User gender
+    type: string
+    example: 1
+  loginLast:
+    description: User last login
+    type: date
+    example: 2022-07-12T19:05:37.403+00:00
+  birthdate:
+    description: User birthdate
+    type: date
+    example: 2022-06-07
+  ipCreation:
+    description: User Ip Creation
+    type: date
+    example: 2022-06-07
+  dateCreation:
+    description: User date Creation
+    type: date
+    example: 2022-06-07
+  dateLastUpdate:
+    description: User last Update
+    type: string
+    example: 2022-06-07
+  username:
+    description: User supplied username
+    type: string
+    example: John78
+  connect:
+    description: User active 
+    type: string
+    example: true
+  stores_permission:
+    $ref: ./storespermission.yaml
