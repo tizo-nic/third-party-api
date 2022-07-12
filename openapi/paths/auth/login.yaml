@@ -1,8 +1,8 @@
 post:
   tags:
-    - Autenticación
+      - Autenticación
   summary: Inicio de sesión
-  description: 
+  description: Este método te permite iniciar sesion con un nombre de usuario, una contraseña y un tipo de usuario
   operationId: login
   security:
     - basic_auth: [ Authorization ]
@@ -13,9 +13,12 @@ post:
         application/json:
           schema:
             $ref: '../../components/schemas/authentication/LoginResponse.yaml'
-    
     '400': 
       description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/authentication/LoginResponse2.yaml'
   requestBody:
     headers:
       environment:
@@ -27,7 +30,7 @@ post:
       application/json:
         schema:
           $ref: ../../components/schemas/authentication/Login.yaml
-    description: Echo payload
+    description: Estructura de datos para iniciar sesión
     required: true
   x-codeSamples:
     - lang: "C#"
@@ -38,4 +41,4 @@ post:
         $ref: ../../code_samples/PHP/authorization/login.php
     - lang: Python
       source:
-        $ref: ../../code_samples/Python/authorization/login.py
+        $ref: ../../code_samples/python/authorization/login.py

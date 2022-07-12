@@ -1,10 +1,7 @@
 type: object
 properties:
-  username: 
-    description: Nombre de usuario
-    type: string
-    required: true
-    example: store_12
+  username:
+    $ref: ../User.yaml
   password:
     description: Contraseña
     type: string

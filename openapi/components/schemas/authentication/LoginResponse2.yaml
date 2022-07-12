@@ -15,9 +15,9 @@ properties:
         example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
   message:
     type: string
-    description: Mensaje positivo de respuesta
-    example: Hola
+    description: Mensaje negativo de respuesta
+    example: Lo siento, no puedes ingresar
   status:
     type: integer
-    description: Estado positivo de la respuesta
-    example: 200
+    description: Estado negativo de la respuesta
+    example: 400

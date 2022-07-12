@@ -20,16 +20,18 @@ tags:
 servers:
   - url: 'https://api.tizo.co/api/v1'
 paths:
+  /auth/reset-password:
+    $ref: paths/auth/reset-password.yaml
   /auth/login:
     $ref: paths/auth/login.yaml
   /auth/permissions:
     $ref: paths/auth/permissions.yaml
-  /auth/refresh-token:
-    $ref: paths/auth/refresh-token.yaml
   /auth/recovery-password:
     $ref: paths/auth/recovery-password.yaml
-  /auth/reset-password:
-    $ref: paths/auth/reset-password.yaml
+  /auth/refresh-token:
+    $ref: paths/auth/refresh-token.yaml
+  
+  
   /delivery:
       $ref: paths/delivery/delivery.yaml
   /delivery/estimate:
@@ -38,7 +40,6 @@ paths:
       $ref: paths/delivery/new.yaml
   /delivery/confirm/{code}/:
       $ref: paths/delivery/confirm.yaml
-  
   
 components:
   securitySchemes:
