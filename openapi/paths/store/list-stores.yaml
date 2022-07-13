@@ -1,7 +1,7 @@
 post:
   tags:
     - Tiendas
-  summary: Confirmar un envío
+  summary: Listar las tiendas
   description: 
   operationId: confirm
   security:

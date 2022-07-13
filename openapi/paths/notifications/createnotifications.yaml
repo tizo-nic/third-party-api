@@ -1,6 +1,6 @@
 post:
   tags:
-    - Sucursales
+    - Notificaciones
   summary: Crear una notificaciones
   description: 
   operationId: confirm

@@ -1,7 +1,7 @@
 post:
   tags:
-    - Notificaciones
-  summary: Listar las notificaciones
+    - Tiendas
+  summary: Actualizar las tiendas
   description: 
   operationId: confirm
   security:

@@ -1,6 +1,6 @@
 post:
   tags:
-    - Sucursales
+    - Notificaciones
   summary: Actualizar las notificaciones
   description: 
   operationId: confirm

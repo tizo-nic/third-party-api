@@ -94,10 +94,18 @@ paths:
     $ref: paths/branches/deletebranches.yaml
   /branches/listbranches:
     $ref: paths/branches/listbranches.yaml
-
+  /store/update-stores:
+    $ref: paths/store/update-stores.yaml
+  /store/get-creditbag:
+    $ref: paths/store/get-creditbag.yaml
   /store/list-stores:
     $ref: paths/store/list-stores.yaml
-
+  /store/getone-store:
+    $ref: paths/store/getone-store.yaml
+  /store/create-stores:
+    $ref: paths/store/create-store.yaml
+  /store/delete-stores:
+    $ref: paths/store/delete-stores.yaml
 components:
   securitySchemes:
     main_auth:
