@@ -6,3 +6,39 @@ post:
   operationId: confirm
   security:
     - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/available/getonepayment-positive.yaml'
+    '401': 
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/available/getonepayment-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/authentication/Login.yaml
+    description: Estructura de datos para iniciar sesión
+    required: true
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/authorization/login.cs"
+    - lang: PHP
+      source:
+        $ref: ../../code_samples/PHP/authorization/login.php
+    - lang: Python
+      source:
+        $ref: ../../code_samples/python/authorization/login.py

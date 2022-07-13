@@ -2,7 +2,7 @@ post:
   tags:
     - Autenticación
   summary: Refrescar token
-  description: Actualiza el tiempo de expiración de un token
+  description: Se necesita el token anterior para poder obtener un token nuevo. Adicionalmente, se sobre entiende que tiene la misma duración que el primer token obtenido (una semana).
   operationId: refresh-token
   security:
     - basic_auth: [ Authorization ]

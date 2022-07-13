@@ -2,7 +2,43 @@ post:
   tags:
     - Disponibilidad de Pagos
   summary: Listar los pagos disponibles
-  description: 
-  operationId: confirm
+  description: Métodos de pagos disponibles para la tienda en particular.
+  operationId: list-payments
   security:
     - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
+    '401': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/authentication/LoginResponse2.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/authentication/Login.yaml
+    description: Estructura de datos para iniciar sesión
+    required: true
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/authorization/login.cs"
+    - lang: PHP
+      source:
+        $ref: ../../code_samples/PHP/authorization/login.php
+    - lang: Python
+      source:
+        $ref: ../../code_samples/python/authorization/login.py

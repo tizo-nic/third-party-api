@@ -1,15 +1,5 @@
 type: object
 properties:
-  data: 
-    type: object
-    properties:
-      typeUser:
-        description: Tipo de usuario (vendor, store_api)
-        type: string
-        required: true
-        example: vendor_user
-      User:
-        $ref: ../User2.yaml
   message:
     type: string
     description: Mensaje negativo de respuesta
