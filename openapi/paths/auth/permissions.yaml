@@ -27,18 +27,18 @@ get:
           type: string
           example: "ni"
     content:
-      application:
+      application/json:
         schema:
           description: Este método no solicita ningun dato de entrada
           required: true
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../../code_samples/csharp/authorization/login.cs"
+        $ref: "../../code_samples/csharp/authorization/permissions.cs"
     - lang: PHP
       source:
-        $ref: "../../code_samples/PHP/authorization/login.php"
+        $ref: "../../code_samples/PHP/authorization/permissions.php"
     - lang: Python
       source:
-        $ref: "../../code_samples/Python/authorization/login.py"
+        $ref: "../../code_samples/python/authorization/permissions.py"
 

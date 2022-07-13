@@ -1,0 +1,8 @@
+post:
+  tags:
+    - Sucursales
+  summary: Actualizar la sucursal
+  description: 
+  operationId: confirm
+  security:
+    - basic_auth: [ Authorization ]

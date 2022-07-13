@@ -1,0 +1,6 @@
+post:
+  tags:
+      - Información de los delivery y paquetes
+  summary: Buscar un departamento con su municipalidad
+  description: Este método te permite iniciar sesion con un nombre de usuario, una contraseña y un tipo de usuario
+  operationId: departamentos/login

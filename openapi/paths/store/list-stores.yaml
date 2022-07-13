@@ -1,0 +1,8 @@
+post:
+  tags:
+    - Tiendas
+  summary: Confirmar un envío
+  description: 
+  operationId: confirm
+  security:
+    - basic_auth: [ Authorization ]

@@ -1,0 +1,6 @@
+post:
+  tags:
+      - Información de los delivery y paquetes
+  summary: Listar las categorias de los paquetes
+  description: Este método te permite iniciar sesion con un nombre de usuario, una contraseña y un tipo de usuario
+  operationId: bancos/List

@@ -1,0 +1,8 @@
+post:
+  tags:
+    - Disponibilidad de Pagos
+  summary: Buscar por Id un metodo de pago
+  description: 
+  operationId: confirm
+  security:
+    - basic_auth: [ Authorization ]

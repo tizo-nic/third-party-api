@@ -1,0 +1,8 @@
+post:
+  tags:
+    - Sucursales
+  summary: Crear una notificaciones
+  description: 
+  operationId: confirm
+  security:
+    - basic_auth: [ Authorization ]

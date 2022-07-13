@@ -1,7 +1,7 @@
 post:
   tags:
     - Envíos
-  summary: Obtener todos tus envíos
+  summary: Listar todos tus envíos
   description: 
   operationId: my-deliveries
   security:

@@ -30,17 +30,74 @@ paths:
     $ref: paths/auth/recovery-password.yaml
   /auth/refresh-token:
     $ref: paths/auth/refresh-token.yaml
-  
-  
-  /delivery:
-      $ref: paths/delivery/delivery.yaml
+  /available/getone-payment:
+    $ref: paths/available/getone-payment.yaml
+  /available/list-payment:
+    $ref: paths/available/list-payment.yaml
+  /delivery/new:
+    $ref: paths/delivery/new.yaml
+  /delivery/confirm/{code}/:
+    $ref: paths/delivery/confirm.yaml
   /delivery/estimate:
       $ref: paths/delivery/estimate.yaml
-  /delivery/new:
-      $ref: paths/delivery/new.yaml
-  /delivery/confirm/{code}/:
-      $ref: paths/delivery/confirm.yaml
-  
+  /delivery/listardeliveriesapi:
+      $ref: paths/delivery/listardeliveriesapi.yaml
+  /delivery/buscardeliveryID/{id}:
+      $ref: paths/delivery/buscardeliveryID.yaml
+  /delivery:
+      $ref: paths/delivery/delivery.yaml
+  /data/banks/get-onebank:
+    $ref: paths/data/banks/get-onebank.yaml
+  /data/payment-types/getone-paymenttypes:
+    $ref: paths/data/Payment-types/getone-paymenttypes.yaml
+  /data/banks/list-banks:
+    $ref: paths/data/banks/list-banks.yaml
+  /data/payment-types/payment-types:
+    $ref: paths/data/Payment-types/payment-types.yaml
+  /data/departments/getone-departments:
+    $ref: paths/data/departments/getone-departments.yaml
+  /data/departments/getone-departmentsconmunicipalidad:
+    $ref: paths/data/departments/getone-departmentsmunici.yaml
+  /data/departments/getone-statusdelivery:
+    $ref: paths/data/status-delivery/getone-statusdelivery.yaml
+  /data/departments/getone-stepsdelivery:
+    $ref: paths/data/steps-delivery/getone-stepsdelivery.yaml
+  /data/Package-categories/Package-categories:
+    $ref: paths/data/Package-categories/list-package-categories.yaml
+  /data/departments/list-departments:
+    $ref: paths/data/departments/list-departments.yaml
+  /data/status-delivery/status-delivery:
+    $ref: paths/data/status-delivery/status-delivery.yaml
+  /data/steps-delivery/steps-delivery:
+    $ref: paths/data/steps-delivery/steps-delivery.yaml
+  /finance/get-account-receivable:
+    $ref: paths/finance/Get-account-receivable.yaml
+  /finance/get-account-payable:
+    $ref: paths/finance/Get-account-payable.yaml
+  /finance/account-receivable:
+    $ref: paths/finance/account-receivable.yaml
+  /finance/account-payable:
+    $ref: paths/finance/account-payable.yaml
+  /notifications/updatenotifications:
+    $ref: paths/notifications/updatenotifications.yaml
+  /notifications/createnotifications:
+    $ref: paths/notifications/createnotifications.yaml
+  /notifications/listnotifications:
+    $ref: paths/notifications/listnotifications.yaml
+  /branches/updatebranches:
+    $ref: paths/branches/updatebranches.yaml
+  /branches/getonebranches:
+    $ref: paths/branches/getonebranches.yaml
+  /branches/createbranches:
+    $ref: paths/branches/createbranches.yaml
+  /branches/deletebranches:
+    $ref: paths/branches/deletebranches.yaml
+  /branches/listbranches:
+    $ref: paths/branches/listbranches.yaml
+
+  /store/list-stores:
+    $ref: paths/store/list-stores.yaml
+
 components:
   securitySchemes:
     main_auth:

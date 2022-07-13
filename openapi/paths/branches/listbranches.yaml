@@ -1,0 +1,8 @@
+post:
+  tags:
+    - Sucursales
+  summary: Listar los pagos disponibles
+  description: 
+  operationId: confirm
+  security:
+    - basic_auth: [ Authorization ]

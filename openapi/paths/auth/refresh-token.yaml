@@ -29,9 +29,8 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../components/schemas/authentication/Login.yaml
-    description: Echo payload
-    required: true
+          description: Este método no solicita ningun dato de entrada
+          required: true
   x-codeSamples:
     - lang: "C#"
       source:
