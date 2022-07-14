@@ -1,0 +1,18 @@
+type: object
+properties:
+  idPaymentTypes:
+    type: integer
+    description: Id del tipo de pago
+    example: 2
+  Code:
+    type: string
+    description: Código de tipo de pago
+    example: BOLSON
+  Name:
+    type: string
+    description: Nombre del tipo de pago
+    example: Bolsón de crédito
+  Description: 
+    type: string
+    description: Descripción del tipo de pago
+    example: Habilitado por los couriers

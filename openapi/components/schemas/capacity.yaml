@@ -1,0 +1,10 @@
+type: object
+properties:
+  idCapacity:
+    type: integer
+    description: Id de la capacidad de envío
+    example: 0
+  Name:
+    type: string
+    description: Nombre del tipo de capacidad
+    example: Tizo Small

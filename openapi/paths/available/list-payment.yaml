@@ -1,4 +1,4 @@
-post:
+get:
   tags:
     - Disponibilidad de Pagos
   summary: Listar los pagos disponibles
@@ -12,13 +12,13 @@ post:
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
+            $ref: '../../components/schemas/available/listpayment-positive.yaml'
     '401': 
       description: Unauthorized
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/authentication/LoginResponse2.yaml'
+            $ref: '../../components/schemas/available/listpayment-negative.yaml'
   requestBody:
     headers:
       environment:
@@ -27,18 +27,16 @@ post:
           type: string
           example: "ni"
     content:
-      application/json:
+      application:
         schema:
-          $ref: ../../components/schemas/authentication/Login.yaml
-    description: Estructura de datos para iniciar sesión
-    required: true
+          description: Este método no solicita ningun dato de entrada
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../../code_samples/csharp/authorization/login.cs"
+        $ref: "../../code_samples/csharp/available/list-payment.cs"
     - lang: PHP
       source:
-        $ref: ../../code_samples/PHP/authorization/login.php
+        $ref: "../../code_samples/PHP/available/list-payment.php"
     - lang: Python
       source:
-        $ref: ../../code_samples/python/authorization/login.py
+        $ref: "../../code_samples/python/available/list-payment.py"

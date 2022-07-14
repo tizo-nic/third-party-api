@@ -1,0 +1,11 @@
+
+type: object
+properties:
+  idDelivery:
+    type: integer
+    description: Id del envío
+    example: 166
+  idDeliveryDriver:
+    type: integer
+    description: Id del chofer
+    example: 166

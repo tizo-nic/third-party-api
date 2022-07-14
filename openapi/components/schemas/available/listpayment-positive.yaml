@@ -1,0 +1,45 @@
+type: object
+properties:
+  data: 
+    type: object
+    properties:
+      idStorePaymentAvailable:
+        type: integer
+        description: Id de los pagos disponibles para la tienda.
+        example: 6
+      idStore:
+        type: integer
+        description: Id de la tienda
+        example: 2
+      idPaymentType:
+        type: integer
+        description: Id de los tipos de pagos disponibles.
+        example: 0
+      active:
+        type: boolean
+        description: El estado del pago disponible.
+        example: true
+      minamount:
+        type: integer
+        description: El monto mínimo para el pago disponible.
+        example: 0
+      maxamount:
+        type: boolean
+        description: El máximo de dinero que puede pagar.
+        example: true
+      datecreation:
+        type: date
+        description: Fecha de creación del pago disponible.
+        example: 0
+      datelastupdate:
+        type: date
+        description: Fecha de la última actualización del pago disponible.
+        example: true
+  message:
+    type: string
+    description: Mensaje positivo de respuesta
+    example: payments.list
+  status:
+    type: integer
+    description: Estado positivo de la respuesta
+    example: 200

@@ -1,0 +1,47 @@
+type: object
+properties:
+  idCourier:
+    type: integer
+    description: Id del transportista
+    example: 299
+  firstName:
+    description: User first name
+    type: string
+    example: John
+  lastName:
+    description: User last name
+    type: string
+    example: Smith
+
+  Phone:
+    $ref: ./Phonenumber.yaml
+  Email:
+    $ref: ./Email.yaml
+  identificacion:
+    description: User identification
+    type: string
+    example: 00225062000N
+  gender:
+    description: User gender
+    type: string
+    example: 1
+  loginLast:
+    description: User last login
+    type: date
+    example: 2022-07-12T19:05:37.403+00:00
+  birthdate:
+    description: User birthdate
+    type: date
+    example: 2022-06-07
+  ipCreation:
+    description: User Ip Creation
+    type: date
+    example: 2022-06-07
+  username:
+    description: User supplied username
+    type: string
+    example: John78
+  pathImage:  
+    description: User Image
+    type: Image
+    example: User Image Juan

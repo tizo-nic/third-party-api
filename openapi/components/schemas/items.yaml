@@ -1,0 +1,72 @@
+type: object
+properties:
+  idDeliveryItem:
+    type: integer
+    description: Id del item del envío
+    example: 166
+  idDelivery:
+    type: integer
+    description: Id del envío
+    example: 163
+  idItemCategory:
+    type: integer
+    description: Id del item de la categoría
+    example: 13
+  categoryName:
+    type: integer
+    description: Nombre de la categoría del item
+    example: Animales
+  code:
+    type: string
+    description: Código del item
+    example: 9da503c8-9bfd-41a1-b420-26f94d28f367
+  name:
+    type: string
+    description: Nombre del item
+    example: Paquete numero uno
+  description:
+    type: string
+    description: Descripción del item
+    example: Una escoba con gaseosa.
+  quantity:
+    type: integer
+    description: Cantidad del item
+    example:  1
+  document:
+    type: boolean
+    description: Necesita documento
+    example: false
+  fragile:
+    type: boolean
+    description: Es fragil
+    example: false
+  value:
+    type: float
+    description: Valor del item
+    example: 50.0000
+  height:
+    type: float
+    description: Altura del item
+    example: 1.00
+  Weight:
+    type: float
+    description: Peso del item
+    example:  1.00
+  depth:
+    type: float
+    description: Profundidad del item
+    example: 1.00
+  Width:
+    type: float
+    description: Ancho del item
+    example:  1.00
+  dateCreation:
+    type: datetime
+    description: Fecha de creación del item
+    example: 2022-06-08T17:15:53.000+00:00
+  dateLastUpdate:
+    type: datetime
+    description: Fecha de última actualización del item
+    example: 2022-06-08T17:15:53.000+00:00
+  deliveryItemsFiles:
+    $ref: ./deliveryItemsFiles.yaml

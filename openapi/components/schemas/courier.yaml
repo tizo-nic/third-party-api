@@ -1,0 +1,62 @@
+type: object
+properties:
+  idCourier:
+    type: integer
+    description: Id del transportista
+    example: 299
+  pathImage:
+    description: Courier Image
+    type: Image
+    example: Courier Image Tizo
+  dba:
+    description: nombre Socio Comercial
+    type: string
+    example: Empresa de logistica
+  nombre:
+    description: nombre del empresa transportista
+    type: string
+    example: Tizo
+  description:
+    description: descripcion del empresa transportista
+    type: string
+    example: Cargo de prueba
+  commission:
+    description: comision del empresa transportista
+    type: float
+    example: 0.5
+  phone:
+    description: telefono del empresa transportista
+    type: string
+    example: +50578457845
+  email:
+    description: email del empresa transportista
+    type: string
+    example: tizo@tizo.app
+  traditional:
+    description: Ofrece live tracking en el envio
+    type: boolean
+    example: true
+  vacation:
+    description: Ofrece la disponibilidad de no recibir notificaciones, ademas de no aparecer entre los sugeridos del servicio de envio
+    type: boolean
+    example: true
+  isPrivate:
+    description: La empresa es privada
+    type: boolean
+    example: false
+  Providerapi:
+    description: Le suministramos el api a la empresa transportista
+    type: boolean
+    example: true
+  active:
+    description: La empresa esta activa
+    type: boolean
+    example: true
+  dateCreation:
+    type: datetime
+    description: Fecha de creación del item
+    example: 2022-06-08T17:15:53.000+00:00
+  dateLastUpdate:
+    type: datetime
+    description: Fecha de última actualización del item
+    example: 2022-06-08T17:15:53.000+00:00

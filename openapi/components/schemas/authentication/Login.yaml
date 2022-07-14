@@ -1,7 +1,11 @@
 type: object
 properties:
   username:
-    $ref: ../User.yaml
+    description: Username
+    type: string
+    required: true
+    minLength: 1
+    example: username12
   password:
     description: Contraseña
     type: string

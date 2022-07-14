@@ -1,6 +1,42 @@
-post:
+get:
   tags:
     - Envíos
-  summary: Listar deliveries por Id
-  description: 
-  operationId: my-deliveries
+  summary: Buscar envíos por Id
+  description: Busca el envío por Id y devuelve los datos del mismo.
+  operationId: my-deliveries-id
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/delivery/buscardeliveryID-positive.yaml'
+    '400': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/delivery/buscardeliveryID-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application:
+        schema:
+          description: Este método no solicita ningun dato de entrada
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/delivery/searchdeliveryID.cs"
+    - lang: PHP
+      source:
+        $ref: "../../code_samples/PHP/delivery/searchdeliveryID.php"
+    - lang: Python
+      source:
+        $ref: "../../code_samples/Python/delivery/searchdeliveryID.py"

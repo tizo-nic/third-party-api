@@ -1,24 +1,24 @@
-post:
+put:
   tags:
-    - Disponibilidad de Pagos
-  summary: Buscar por Id un metodo de pago
-  description: 
-  operationId: confirm
+    - Envíos
+  summary: Mandar una notificacion
+  description: Lista de todos los envíos realizados por el usuario por medio de la Api
+  operationId: my-deliveries-api
   security:
     - basic_auth: [ Authorization ]
   responses:
     '200':
       description: Success
-      content:
+      content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/available/getonepayment-positive.yaml'
-    '401': 
+            $ref: '../../components/schemas/delivery/listardeliveryapi-positive.yaml'
+    '400': 
       description: Unauthorized
-      content:
+      content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/available/getonepayment-negative.yaml'
+            $ref: '../../components/schemas/delivery/listardeliveryapi-negative.yaml'
   requestBody:
     headers:
       environment:
@@ -27,11 +27,9 @@ post:
           type: string
           example: "ni"
     content:
-      application/json:
+     application:
         schema:
-          $ref: ../../components/schemas/authentication/Login.yaml
-    description: Estructura de datos para iniciar sesión
-    required: true
+          description: Este método no solicita ningun dato de entrada
   x-codeSamples:
     - lang: "C#"
       source:
@@ -41,4 +39,4 @@ post:
         $ref: ../../code_samples/PHP/authorization/login.php
     - lang: Python
       source:
-        $ref: ../../code_samples/python/authorization/login.py
+        $ref: ../../code_samples/Python/authorization/login.py

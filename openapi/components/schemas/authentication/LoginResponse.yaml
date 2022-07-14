@@ -4,7 +4,7 @@ properties:
     type: object
     properties:
       user:
-        $ref: ../User.yaml
+        $ref: ../User2.yaml
       type_user:
         type: string
         description: Tipo de usuario (vendor, store_api)

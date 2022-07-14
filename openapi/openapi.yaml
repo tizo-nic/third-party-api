@@ -30,10 +30,11 @@ paths:
     $ref: paths/auth/recovery-password.yaml
   /auth/refresh-token:
     $ref: paths/auth/refresh-token.yaml
-  /available/getone-payment:
-    $ref: paths/available/getone-payment.yaml
-  /available/list-payment:
+  /payment-available/list-payment:
     $ref: paths/available/list-payment.yaml
+
+  /delivery/buscardeliveryID/{id}:
+      $ref: paths/delivery/buscardeliveryID.yaml
   /delivery/new:
     $ref: paths/delivery/new.yaml
   /delivery/confirm/{code}/:
@@ -42,10 +43,10 @@ paths:
       $ref: paths/delivery/estimate.yaml
   /delivery/listardeliveriesapi:
       $ref: paths/delivery/listardeliveriesapi.yaml
-  /delivery/buscardeliveryID/{id}:
-      $ref: paths/delivery/buscardeliveryID.yaml
   /delivery:
       $ref: paths/delivery/delivery.yaml
+  /delivery/send-notification:
+      $ref: paths/delivery/sendnotification.yaml
   /data/banks/get-onebank:
     $ref: paths/data/banks/get-onebank.yaml
   /data/payment-types/getone-paymenttypes:

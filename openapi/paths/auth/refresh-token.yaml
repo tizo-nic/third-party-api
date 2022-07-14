@@ -27,10 +27,9 @@ post:
           type: string
           example: "ni"
     content:
-      application/json:
+      application:
         schema:
           description: Este método no solicita ningun dato de entrada
-          required: true
   x-codeSamples:
     - lang: "C#"
       source:

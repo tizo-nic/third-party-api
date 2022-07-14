@@ -1,0 +1,18 @@
+type: object
+properties:
+  idStepDeliveries:
+      type: integer
+      description: Id de los pasos del envío
+      example: 36
+  name:
+    type: string
+    description: Nombre del paso del envío
+    example: Orden creada
+  code:
+    type: string
+    description: Código del paso del envío
+    example: CREATED
+  type:
+    type: string
+    description: Tipo del paso del envío
+    example: 0

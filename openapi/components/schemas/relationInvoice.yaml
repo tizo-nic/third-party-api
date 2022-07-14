@@ -1,0 +1,10 @@
+type: object
+properties:
+  idDelivery:
+    type: integer
+    description: Id del envío
+    example: 166
+  idDeliveryInvoice:
+    type: integer
+    description: Id de la factura
+    example: 166

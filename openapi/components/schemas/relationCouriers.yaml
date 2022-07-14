@@ -1,0 +1,18 @@
+type: object
+properties:
+  idDeliveryCourier:
+    type: integer
+    description: Id del transportista del envío
+    example: 166
+  idDelivery:
+    type: integer
+    description: Id del envío
+    example: 166
+  idCourier:
+    type: integer
+    description: Id del transportista
+    example: 166
+  Courier:
+    $ref: ./courier.yaml
+  CourierDriverUser:
+    $ref: ./courierDriverUser.yaml

@@ -1,0 +1,26 @@
+type: object
+properties:
+  idDelivery:
+    type: integer
+    description: Id del envío
+    example: 166
+  idDeliveryVendors:
+    type: integer
+    description: Id del proveedor
+    example: 166
+  idDeliveryVendorUser:
+    type: integer
+    description: Id del usuario del proveedor
+    example: 6
+  vendorusername:
+    description: vendor supplied username
+    type: string
+    example: v_gabriel_6
+  dateCreation:
+    type: datetime
+    description: Fecha de creación del paso del envío
+    example: 2022-06-23T20:39:39.157+00:00
+  dateLastUpdate:
+    type: string
+    description: Fecha de última actualización del paso del envío
+    example: 2022-06-23T20:39:39.157+00:00

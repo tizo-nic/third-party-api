@@ -1,6 +1,42 @@
-post:
+get:
   tags:
     - Envíos
-  summary: Listar deliveries Api
-  description: 
-  operationId: my-deliveries
+  summary: Listar envíos por Api
+  description: Lista de todos los envíos realizados por el usuario por medio de la Api
+  operationId: my-deliveries-api
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/delivery/listardeliveryapi-positive.yaml'
+    '400': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/delivery/listardeliveryapi-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+     application:
+        schema:
+          description: Este método no solicita ningun dato de entrada
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/authorization/login.cs"
+    - lang: PHP
+      source:
+        $ref: ../../code_samples/PHP/authorization/login.php
+    - lang: Python
+      source:
+        $ref: ../../code_samples/Python/authorization/login.py

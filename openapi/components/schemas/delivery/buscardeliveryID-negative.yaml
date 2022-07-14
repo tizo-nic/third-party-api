@@ -3,7 +3,7 @@ properties:
   message:
     type: string
     description: Mensaje negativo de respuesta
-    example: Vieja contraseña incorrecta
+    example: Id del Envío inválido.
   status:
     type: integer
     description: Estado negativo de la respuesta

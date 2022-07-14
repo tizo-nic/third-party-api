@@ -1,0 +1,14 @@
+type: object
+properties:
+  idstatusdelivery:
+    type: integer
+    description: Id del estado del envío
+    example: 2
+  name:
+    type: string
+    description: Nombre del estado del envío
+    example: Finished
+  code:
+    type: string
+    description: Código del estado del envío
+    example: FINISHED
