@@ -1,0 +1,10 @@
+type: object
+properties:
+  message:
+    type: string
+    description: Mensaje positivo de respuesta
+    example: notificacion enviada
+  status:
+    type: integer
+    description: Estado positivo de la respuesta
+    example: 200

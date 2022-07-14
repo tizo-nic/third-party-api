@@ -2,8 +2,8 @@ put:
   tags:
     - Envíos
   summary: Mandar una notificacion
-  description: Lista de todos los envíos realizados por el usuario por medio de la Api
-  operationId: my-deliveries-api
+  description: Manda una notificacion de un envío
+  operationId: my-deliveries-notification
   security:
     - basic_auth: [ Authorization ]
   responses:
@@ -12,13 +12,13 @@ put:
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/delivery/listardeliveryapi-positive.yaml'
+            $ref: '../../components/schemas/delivery/sendnotification-positive.yaml'
     '400': 
       description: Unauthorized
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/delivery/listardeliveryapi-negative.yaml'
+            $ref: '../../components/schemas/delivery/sendnotification-negative.yaml'
   requestBody:
     headers:
       environment:
@@ -27,9 +27,10 @@ put:
           type: string
           example: "ni"
     content:
-     application:
+     application/json:
         schema:
-          description: Este método no solicita ningun dato de entrada
+          description: Este método solicita por lo menos una forma de notificar que se realizara el envio.
+          $ref: '../../components/schemas/delivery/sendnotification.yaml'
   x-codeSamples:
     - lang: "C#"
       source:

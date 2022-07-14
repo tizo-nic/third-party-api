@@ -2,7 +2,7 @@ post:
   tags:
     - Envíos
   summary: Confirmar un envío
-  description: 
+  description: Se debitará el envío, y ermpieza el flujo de los procesos.
   operationId: confirm
   security:
     - basic_auth: [ Authorization ]
@@ -13,9 +13,12 @@ post:
         application/json:
           schema:
             $ref: '../../components/schemas/authentication/LoginResponse.yaml'
-    
     '400': 
       description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
   requestBody:
     headers:
       environment:
