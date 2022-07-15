@@ -2,7 +2,7 @@ post:
   tags:
     - Envíos
   summary: Crear un envío
-  description: 
+  description: Para crear un envío, se deberán tomar en cuenta los siguientes parámetros. Es importante destacar colocar la categoría correcta, puesto que dependiendo de ella se notifican a los couriers que aceptan esta categoría. No se debitará el envío hasta que se confirme la orden.
   operationId: new
   security:
     - basic_auth: [ Authorization ]
@@ -12,10 +12,13 @@ post:
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
-    
+            $ref: '../../components/schemas/delivery/new-positive.yaml'
     '400': 
       description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/delivery/new-negative.yaml'
   requestBody:
     headers:
       environment:
@@ -26,16 +29,16 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../components/schemas/authentication/Login.yaml
-    description: Echo payload
+          $ref: "../../components/schemas/delivery/new.yaml"
+    description: Estructura de datos para la creación de un envío
     required: true
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../../code_samples/csharp/authorization/login.cs"
+        $ref: "../../code_samples/csharp/delivery/new.cs"
     - lang: PHP
       source:
-        $ref: ../../code_samples/PHP/authorization/login.php
+        $ref: "../../code_samples/PHP/delivery/new.php"
     - lang: Python
       source:
-        $ref: ../../code_samples/Python/authorization/login.py
+        $ref: "../../code_samples/python/delivery/new.py"

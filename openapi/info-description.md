@@ -11,7 +11,7 @@ Esta api contiene todas las funcionalidades de envíos que usted necesita para i
 
 # Comúniquese con nosotros
 
-- Correos: En para el equipo de tizo info@tizo.app  y a axel.garcia@tizo.app en caso de algún inconveniente con la API.
+- Correos: Para contactarse con el equipo de tizo, escriba un correo a los siguientes e-mails info@tizo.app  y a axel.garcia@tizo.app en caso de algún inconveniente con la API.
 - Síguenos en las siguientes plataformas para estar al tanto de las últimas mejoras y novedades: [Facebook](https://www.facebook.com/Tizo.appCA/), [Twitter](https://twitter.com/AppTizo), [Instagram](https://www.instagram.com/tizoapp/).
 
 

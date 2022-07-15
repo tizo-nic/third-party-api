@@ -5,7 +5,7 @@ properties:
   Telefono:
     $ref: "./Phonenumber.yaml"
   Nombre de Usuario:
-    description: User supplied username
+    description: Username dado al usuario
     type: string
     minLength: 4
     example: John78

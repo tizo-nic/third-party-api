@@ -1,0 +1,70 @@
+type: object
+properties:
+  idVendorUser:
+    type: integer
+    description: Id del usuario del proveedor
+    example: 6
+  idStatusVendorUser:
+    type: integer
+    description: Id del estado del usuario del proveedor
+    example: 0
+  pathImage:
+    type: Image
+    description: Imagen del proveedor
+    example: 0
+  firstName:
+    description: Nombres del proveedor
+    type: string
+    example: John
+  lastname:
+    description: Apellidos del proveedor
+    type: string
+    example: Smith
+  identification:
+    description: Identificación del proveedor
+    type: string
+    example: 00225062000N
+  phone:
+    $ref: ./Phonenumber.yaml
+  email:
+    $ref: ./Email.yaml
+  gender:
+    description: Género del proveedor
+    type: string
+    example: 1
+  loginlast:
+    description: Último login del proveedor
+    type: date
+    example: 2022-07-12
+  birthdate:
+    description: Fecha de nacimiento del proveedor
+    type: date
+    example: 2022-06-07
+  ipcreation:
+    description: Ip del proveedor
+    type: string
+    example: 10.10.10.10
+  datecreation:
+    description: Fecha de creación del proveedor
+    type: date
+    example: 2022-06-07
+  datelastupdate:
+    description: Fecha de última actualización del proveedor
+    type: string
+    example: 2022-06-07
+  password:
+    description: Contraseña del proveedor
+    type: Password
+    example: a03ab19b866fc585b5cb1812a2f63ca861e7e7643ee5d43fd7106b623725fd67
+  username:
+    description: Nombre de usuario del proveedor
+    type: string
+    example: John78
+  connect:
+    description: Estado de conexión del proveedor
+    type: boolean
+    example: true
+  fullname:
+    description: Nombre completo del proveedor
+    type: string
+    example: John Smith

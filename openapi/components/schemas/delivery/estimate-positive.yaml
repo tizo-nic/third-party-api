@@ -1,0 +1,27 @@
+type: object
+properties:
+  data:
+    type: object
+    properties:
+      dataofCourier:
+        $ref: ../dataofCourier.yaml
+      costbyCourier:
+        $ref: ../costbyCourier.yaml
+      costbyDriver: 
+        $ref: ../costbyDriver.yaml
+      distance:
+        type: string
+        description: Distancia del envío
+        example: 6,1 km
+      size:
+        type: string
+        description: Tamaño del envío
+        example: Tizo small
+  message:
+    type: string
+    description: Mensaje positivo de respuesta
+    example: Costo estimado de entrega
+  status:
+    type: integer
+    description: Estado positivo de la respuesta
+    example: 200

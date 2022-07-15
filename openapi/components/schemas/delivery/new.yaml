@@ -1,0 +1,32 @@
+type: object
+properties:
+  description:
+    type: string
+    description: Descripción del envío
+    example: Con descripcion
+  isTest:
+    type: boolean
+    description: El envío es de prueba
+    example: true
+  deliveryTime:
+        type: datetime
+        description: Fecha y hora de envío
+        example: 2022-06-08T17:15:53Z
+  waypoints:
+        $ref: ../waypoints2.yaml
+  items:
+    $ref: ../items2.yaml
+  customerEmail:
+    description: Correo Electrónico del cliente
+    type: string
+    example: john.smith@example.com
+  selectedMethod:
+    $ref: ../selectedmethod.yaml
+  idStoreBranch:
+    type: integer
+    description: Id de la sucursal de la tienda
+    example: 3
+  idStore:
+    type: integer
+    description: Id de la tienda
+    example: 3

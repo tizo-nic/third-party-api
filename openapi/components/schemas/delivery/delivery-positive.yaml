@@ -114,7 +114,7 @@ properties:
   message:
     type: string
     description: Mensaje positivo de respuesta
-    example: Envios encontrados
+    example: Envíos encontrados
   status:
     type: integer
     description: Estado positivo de la respuesta

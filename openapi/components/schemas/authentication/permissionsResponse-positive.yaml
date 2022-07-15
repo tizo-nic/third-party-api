@@ -12,9 +12,9 @@ properties:
         $ref: ../User2.yaml
   message:
     type: string
-    description: Mensaje positive de respuesta
+    description: Mensaje positivo de respuesta
     example: Hola, se obtuvieron los permisos
   status:
     type: integer
-    description: Estado positive de la respuesta
+    description: Estado positivo de la respuesta
     example: 200

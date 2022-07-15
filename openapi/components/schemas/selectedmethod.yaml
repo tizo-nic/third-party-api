@@ -1,0 +1,21 @@
+type: object
+properties:
+  Method:
+    type: string
+    description: Método seleccionado por el cliente
+    example: Courier
+  idCourier:
+    type: integer
+    description: Id del transportista
+    example: 0
+  idAreaOrigin:
+    type: integer
+    description: Id del Área de origen
+    example: 9
+  idAreaDestination:
+    type: integer
+    description: Id del Área de destino
+    example: 0
+  idPaymentMethod:
+    type: integer
+    description: Id del tipo de pago

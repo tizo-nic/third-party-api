@@ -1,0 +1,19 @@
+type: object
+properties:
+  data:
+    type: object
+    properties:
+      delivery:
+        $ref: ../delivery.yaml
+      size:
+        type: string
+        description: Tamaño del envío
+        example: Tizo Small
+  message:
+    type: string
+    description: Mensaje positivo de respuesta
+    example: Envío Creado
+  status:
+    type: integer
+    description: Estado positivo de la respuesta
+    example: 200

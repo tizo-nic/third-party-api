@@ -29,7 +29,7 @@ get:
     content:
      application:
         schema:
-          description: Este método no solicita ningun dato de entrada
+          description: Este método no solicita ningún dato de entrada
   x-codeSamples:
     - lang: "C#"
       source:

@@ -5,39 +5,39 @@ properties:
     description: Id del transportista
     example: 299
   pathImage:
-    description: Courier Image
+    description: Imagen del transportista
     type: Image
     example: Courier Image Tizo
   dba:
-    description: nombre Socio Comercial
+    description: Nombre socio comercial
     type: string
     example: Empresa de logistica
   nombre:
-    description: nombre del empresa transportista
+    description: Nombre del empresa transportista
     type: string
     example: Tizo
   description:
-    description: descripcion del empresa transportista
+    description: Descripción de la empresa transportista
     type: string
     example: Cargo de prueba
   commission:
-    description: comision del empresa transportista
+    description: Comisión de la empresa transportista
     type: float
     example: 0.5
   phone:
-    description: telefono del empresa transportista
+    description: Teléfono de la empresa transportista
     type: string
     example: +50578457845
   email:
-    description: email del empresa transportista
+    description: Email de la empresa transportista
     type: string
     example: tizo@tizo.app
   traditional:
-    description: Ofrece live tracking en el envio
+    description: Ofrece live tracking en el envío
     type: boolean
     example: true
   vacation:
-    description: Ofrece la disponibilidad de no recibir notificaciones, ademas de no aparecer entre los sugeridos del servicio de envio
+    description: Ofrece la disponibilidad de no recibir notificaciones, además de no aparecer entre los sugeridos del servicio de envío
     type: boolean
     example: true
   isPrivate:
@@ -49,14 +49,14 @@ properties:
     type: boolean
     example: true
   active:
-    description: La empresa esta activa
+    description: La empresa está activa
     type: boolean
     example: true
   dateCreation:
     type: datetime
-    description: Fecha de creación del item
+    description: Fecha de creación del ítem
     example: 2022-06-08T17:15:53.000+00:00
   dateLastUpdate:
     type: datetime
-    description: Fecha de última actualización del item
+    description: Fecha de última actualización del ítem
     example: 2022-06-08T17:15:53.000+00:00

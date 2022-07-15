@@ -1,23 +1,23 @@
 type: object
 properties:
   idVendorUser:
-    description: User Id
+    description: Id del usuario del proveedor
     type: string
     example: 6
   idStatusVendorUser:
-    description: User Status
+    description: Estado del usuario del proveedor
     type: string
     example: 0
   pathImage:
-    description: User Image
+    description: imagen del usuario
     type: Image
     example: 0
   firstName:
-    description: User first name
+    description: Nombres del usuario
     type: string
     example: John
   lastName:
-    description: User last name
+    description: Apellidos del usuario
     type: string
     example: Smith
   PhoneNumber:
@@ -25,40 +25,40 @@ properties:
   Email:
     $ref: ./Email.yaml
   identificacion:
-    description: User identification
+    description: Identificación del usuario
     type: string
     example: 00225062000N
   gender:
-    description: User gender
+    description: Género del usuario
     type: string
     example: 1
   loginLast:
-    description: User last login
+    description: Último Login del usuario
     type: date
     example: 2022-07-12T19:05:37.403+00:00
   birthdate:
-    description: User birthdate
+    description: Fecha de nacimiento del usuario
     type: date
     example: 2022-06-07
   ipCreation:
-    description: User Ip Creation
-    type: date
-    example: 2022-06-07
+    description: Ip del usuario
+    type: string
+    example: 10.10.10.10
   dateCreation:
-    description: User date Creation
+    description: Fecha de creación del usuario
     type: date
     example: 2022-06-07
   dateLastUpdate:
-    description: User last Update
+    description: Fecha de última actualización del usuario
     type: string
     example: 2022-06-07
   username:
-    description: User supplied username
+    description: username dado al usuario
     type: string
     example: John78
-  connect:
-    description: User active 
-    type: string
+  connect: 
+    description: Estado de conexión del usuario
+    type: boolean
     example: true
   stores_permission:
     $ref: ./storespermission.yaml

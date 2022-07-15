@@ -3,7 +3,7 @@ properties:
   message:
     type: string
     description: Mensaje negativo de respuesta
-    example: No se ha encontrado ningun permiso asociado
+    example: No se ha encontrado ningún permiso asociado
   status:
     type: integer
     description: Estado negativo de la respuesta

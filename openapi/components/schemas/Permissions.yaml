@@ -1,19 +1,19 @@
 type: object
 properties:
   idModule:
-    description: Module Id
+    description: Id del Módulo
     type: integer
     example: 18
   idPermission: 
-    description: IdPermission
+    description: Id de los permisos
     type: integer
     example: 2
   
   nameModule:
-    description: Module Name
+    description: Nombre del módulo
     type: integer
     example: 18
   namePermission:
-    description: Permission Name
+    description: Nombre del permiso
     type: integer
     example: 18

@@ -1,0 +1,14 @@
+type: object
+properties:
+  Courier:
+    type: integer
+    description: Transportistas
+    example: 3
+  CourierWithCategory:
+    type: integer
+    description: Transportistas con categorías
+    example: 3
+  CourierWithPayment:
+    type: integer
+    description: Transportistas con métodos de pago
+    example: 3

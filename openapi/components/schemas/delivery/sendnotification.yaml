@@ -1,12 +1,12 @@
 type: object
 properties:
   WhatsApp:
-    description: Enviar notificacion por WhatsApp
+    description: Enviar notificación por WhatsApp
     type: boolean
     required: true
     example: false
   SMS:
-    description: Enviar notificacion por SMS
+    description: Enviar notificación por SMS
     type: boolean
     required: true
     example: false

@@ -2,7 +2,7 @@ post:
   tags:
       - Autenticación
   summary: Inicio de sesión
-  description: Este método te permite iniciar sesion con un nombre de usuario, una contraseña y un tipo de usuario
+  description: Este método te permite iniciar sesión con un nombre de usuario, una contraseña y un tipo de usuario
   operationId: login
   security:
     - basic_auth: [ Authorization ]

@@ -2,7 +2,7 @@ post:
   tags:
     - Envíos
   summary: Estimar un envío
-  description: 
+  description: Para realizar una estimación del envio, se deberán tomar en cuenta los siguientes parametros. Es importante destacar colocar la categoría correcta, puesto que dependiendo de ella se notifican a los couriers que aceptan esta categoría.
   operationId: estimate
   security:
     - basic_auth: [ Authorization ]
@@ -12,10 +12,13 @@ post:
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
-    
+            $ref: '../../components/schemas/delivery/estimate-positive.yaml'
     '400': 
       description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/delivery/estimate-negative.yaml'
   requestBody:
     headers:
       environment:
@@ -26,16 +29,16 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../components/schemas/authentication/Login.yaml
-    description: Echo payload
+          $ref: "../../components/schemas/delivery/estimate.yaml"
+    description: Estructura de datos para la estimación de un envio
     required: true
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../../code_samples/csharp/authorization/login.cs"
+        $ref: "../../code_samples/csharp/delivery/estimate.cs"
     - lang: PHP
       source:
-        $ref: ../../code_samples/PHP/authorization/login.php
+        $ref: "../../code_samples/PHP/delivery/estimate.php"
     - lang: Python
       source:
-        $ref: ../../code_samples/Python/authorization/login.py
+        $ref: "../../code_samples/python/delivery/estimate.py"

@@ -7,4 +7,4 @@ properties:
   status:
     type: integer
     description: Estado negativo de la respuesta
-    example: 200
+    example: 400

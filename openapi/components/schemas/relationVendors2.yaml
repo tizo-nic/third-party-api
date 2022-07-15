@@ -13,7 +13,7 @@ properties:
     description: Id del usuario del proveedor
     example: 6
   vendorusername:
-    description: vendor supplied username
+    description: Username suministrado al proveedor
     type: string
     example: v_gabriel_6
   dateCreation:

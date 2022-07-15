@@ -2,7 +2,7 @@ put:
   tags:
     - Envíos
   summary: Mandar una notificacion
-  description: Manda una notificacion de un envío
+  description: Manda una notificación de un envío
   operationId: my-deliveries-notification
   security:
     - basic_auth: [ Authorization ]
@@ -29,7 +29,7 @@ put:
     content:
      application/json:
         schema:
-          description: Este método solicita por lo menos una forma de notificar que se realizara el envio.
+          description: Este método solicita por lo menos una forma de notificar que se realizará el envío.
           $ref: '../../components/schemas/delivery/sendnotification.yaml'
   x-codeSamples:
     - lang: "C#"

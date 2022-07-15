@@ -1,0 +1,38 @@
+type: object
+properties:
+  idDeliveryVendor:
+    type: integer
+    description: Id del proveedor
+    example: 167
+  idDelivery:
+    type: integer
+    description: Id del envío
+    example: 370
+  idVendorUser:
+    type: integer
+    description: Id del usuario del proveedor
+    example: 6
+  idStoreBranch:
+    type: integer
+    description: Id de la sucural de la tienda
+    example: 6
+  rating:
+    type: float
+    description: Calificación del proveedor
+    example: 4.7
+  comment:
+    type: string
+    description: Comentario del proveedor
+    example: Buen servicio
+  dateCreation:
+    type: datetime
+    description: Fecha de creación del proveedor
+    example: 2022-06-08T17:15:53.000+00:00
+  dateLastUpdate:
+    type: datetime
+    description: Fecha de última actualización del proveedor
+    example: 2022-06-08T17:15:53.000+00:00
+  VendorUser:
+    $ref: ./vendoruser.yaml
+  StoresBranch:
+    $ref: ./storesbranch.yaml

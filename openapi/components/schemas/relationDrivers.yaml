@@ -7,5 +7,5 @@ properties:
     example: 166
   idDeliveryDriver:
     type: integer
-    description: Id del chofer
+    description: Id del chófer
     example: 166

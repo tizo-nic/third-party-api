@@ -38,7 +38,7 @@ properties:
   message:
     type: string
     description: Mensaje positivo de respuesta
-    example: payments.list
+    example: Lista de tipos de pagos disponibles encontrados
   status:
     type: integer
     description: Estado positivo de la respuesta

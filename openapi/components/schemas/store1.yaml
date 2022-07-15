@@ -1,14 +1,14 @@
 type: object
 properties:
   idStore:
-    description: UStore Id
+    description: Id de la Tienda
     type: integer
     example: 2
   nameStore:
-    description: Store Name
+    description: Nombre de la Tienda
     type: string
     example: Tiendas S.A.
   pathImage:  
-    description: Store Image
+    description: Imagen de la tienda
     type: Image
     example: Tiendas S.A.

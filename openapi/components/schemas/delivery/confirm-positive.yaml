@@ -1,0 +1,137 @@
+type: object
+properties:
+  data: 
+    type: object
+    properties:
+      idDelivery:
+        type: integer
+        description: Id del envío
+        example: 370
+      idPaymentType:
+        type: integer
+        description: Id del tipo de pago
+        example: 2
+      idCapacity:
+        type: integer
+        description: Id de la capacidad de envío
+        example: 0
+      code:
+        type: string
+        description: Código de envío
+        example: E5216190-BD04-4478-84D2-9D7345BA66CE
+      baseRatePickup:
+        type: float
+        description: Tarifa base de recogida
+        example: 0.0000
+      distance:
+        type: float
+        description: Distancia del envío
+        example: 6136
+      discount:
+        type: float
+        description: Descuento del envío
+        example: 0
+      height:
+        type: float
+        description: Altura del envío
+        example: 50
+      weight:
+        type: float
+        description: Peso del envío
+        example: 50
+      depth:
+        type: float
+        description: Profundidad del envío
+        example: 50
+      width:
+        type: float
+        description: Ancho del envío
+        example: 50
+      total:
+        type: float
+        description: Total del envío
+        example: 100.5220
+      description:
+        type: string
+        description: Descripción del envío
+        example: Con descripcion
+      notificationMail:
+        type: string
+        description: Correo de notificación del envío
+        example: agarciadarce@gmail.com
+      deliveryTime:
+        type: datetime
+        description: Fecha y hora de envío
+        example: 2022-06-08T17:15:53.000+00:00
+      estimatedDeliveryTime:
+        type: datetime
+        description: Fecha y hora estimada de envío
+        example: 2022-06-08T17:15:53.000+00:00
+      active:
+        type: boolean
+        description: Estado del envío
+        example: true
+      origin:
+        type: string
+        description: Origen del envío
+        example: vendor
+      receiver:
+        type: string
+        description: Destinatario del envío
+        example: courier
+      idStatusDelivery:
+        type: integer
+        description: Id del estado del envío
+        example: 1
+      dateCreation:
+        type: datetime
+        description: Fecha de creación del envío
+        example: 2022-06-23T20:39:39.157+00:00
+      dateLastUpdate:
+        type: string
+        description: Fecha de última actualización del envío
+        example: 2022-06-23T20:39:39.157+00:00
+      metadata:
+        type: string
+        description: Metadatos de los servicios de terceros
+        example: null
+      relationCouriers:
+        $ref: ../relationCouriers2.yaml
+      paymentwithcard:
+        type: object
+        description: Pagar con tarjeta
+        example: null
+      relationLogistics:
+        type: object
+        description: Logísticas
+        example: null
+      relationDrivers:
+        type: object
+        description: Conductores
+        example: null
+      relationVendors:
+        $ref: ../relationVendors3.yaml
+      relationInvoices:
+        type: object
+        description: Facturas
+        example: null
+      relationManagers:
+        type: object
+        description: Manager
+        example: null
+      relationCustomers:
+        type: object
+        description: Clientes
+        example: null
+      relationStoreApi:
+        type: object
+        description: Tienda de la API
+        example: null
+  message:
+    type: string
+    description: Mensaje positivo de respuesta
+    example: Envío confirmado.
+  status:
+    type: integer
+    description: Estado positivo de la respuesta
+    example: 200

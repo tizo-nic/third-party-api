@@ -1,0 +1,55 @@
+type: object
+properties:
+  idStoreBranch:
+    type: integer
+    description: Id de la sucursal de la tienda
+    example: 3
+  idStore:
+    type: integer
+    description: Id de la tienda
+    example: 3
+  name:
+    type: string
+    description: Nombre de la sucursal
+    example: SINSA Altamira
+  idMunicipality:
+    type: integer
+    description: Id del municipio
+    example: 1
+  addressGeo:
+    type: string
+    description: Dirección de la sucursal de la tienda
+    example: Calle Principal Altamira frente a SINSA, Centro de Especialidades Altamira, Managua, Nicaragua
+  PhoneNumber:
+    description: Número Telefónico
+    type: string
+    example: 8888-8838
+  addressHuman:
+    type: string
+    description: Dirección de la sucursal de la tienda versión Nicaragua
+    example: SINSA Altamira
+  latitude:
+    type: float
+    description: Latitud de la sucursal de la tienda
+    example: 12.121212
+  longitude: 
+    type: float
+    description: Longitud de la sucursal de la tienda
+    example: -12.121212
+  active:
+    type: boolean
+    description: Estado de la sucursal de la tienda
+    example: true
+  vacation:
+    description: Ofrece la disponibilidad de no recibir notificaciones, además de no aparecer entre los sugeridos del servicio de envío
+    type: boolean
+    example: true
+  dateCreation:
+    type: datetime
+    description: Fecha de creación de la sucursal de la tienda
+    example: 2022-06-08T17:15:53.000+00:00
+  dateLastUpdate:
+    type: datetime
+    description: Fecha de última actualización de la sucursal de la tienda
+    example: 2022-06-08T17:15:53.000+00:00
+  

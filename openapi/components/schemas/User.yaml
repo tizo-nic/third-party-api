@@ -1,17 +1,17 @@
 type: object
 properties:
   username:
-    description: User supplied username
+    description: Username dado al usuario
     type: string
     minLength: 4
     example: John78
   firstName:
-    description: User first name
+    description: Nombre del usuario
     type: string
     minLength: 1
     example: John
   lastName:
-    description: User last name
+    description: Apellidos del usuario
     type: string
     minLength: 1
     example: Smith

@@ -2,7 +2,7 @@ post:
   tags:
     - Envíos
   summary: Confirmar un envío
-  description: Se debitará el envío, y ermpieza el flujo de los procesos.
+  description: Se debitará el envío, y empieza el flujo de los procesos.
   operationId: confirm
   security:
     - basic_auth: [ Authorization ]
@@ -12,13 +12,13 @@ post:
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
+            $ref: '../../components/schemas/delivery/confirm-positive.yaml'
     '400': 
       description: Unauthorized
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
+            $ref: '../../components/schemas/delivery/confirm-negative.yaml'
   requestBody:
     headers:
       environment:
@@ -27,18 +27,16 @@ post:
           type: string
           example: "ni"
     content:
-      application/json:
+     application:
         schema:
-          $ref: ../../components/schemas/authentication/Login.yaml
-    description: Echo payload
-    required: true
+          description: Este método no solicita ningún dato de entrada
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../../code_samples/csharp/authorization/login.cs"
+        $ref: "../../code_samples/csharp/delivery/confirm.cs"
     - lang: PHP
       source:
-        $ref: ../../code_samples/PHP/authorization/login.php
+        $ref: "../../code_samples/PHP/delivery/confirm.php"
     - lang: Python
       source:
-        $ref: ../../code_samples/Python/authorization/login.py
+        $ref: "../../code_samples/python/delivery/confirm.py"

@@ -5,43 +5,42 @@ properties:
     description: Id del transportista
     example: 299
   firstName:
-    description: User first name
+    description: Nombre del transportista
     type: string
     example: John
   lastName:
-    description: User last name
+    description: Apellido del transportista
     type: string
     example: Smith
-
   Phone:
     $ref: ./Phonenumber.yaml
   Email:
     $ref: ./Email.yaml
   identificacion:
-    description: User identification
+    description: Identificación del transportista
     type: string
     example: 00225062000N
   gender:
-    description: User gender
+    description: Género del transportista
     type: string
     example: 1
   loginLast:
-    description: User last login
+    description: Último login del transportista
     type: date
     example: 2022-07-12T19:05:37.403+00:00
   birthdate:
-    description: User birthdate
+    description: Fecha de nacimiento del transportista
     type: date
     example: 2022-06-07
   ipCreation:
-    description: User Ip Creation
+    description: Ip de la creación 
     type: date
     example: 2022-06-07
   username:
-    description: User supplied username
+    description: Username dado al transportista del proveedor
     type: string
     example: John78
   pathImage:  
-    description: User Image
+    description: Imagen del transportista
     type: Image
     example: User Image Juan

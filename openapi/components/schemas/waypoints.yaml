@@ -31,7 +31,7 @@ properties:
   PhoneNumber:
     $ref: ./Phonenumber.yaml
   personName:
-    description: User first name
+    description: Nombre del usuario que realiza el pedido
     type: string
     example: John
   personEmail:

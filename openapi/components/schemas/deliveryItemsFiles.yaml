@@ -2,13 +2,13 @@ type: object
 properties:
   idDeliveryItemFile:
         type: integer
-        description: Id del archivo del item del envío
+        description: Id del archivo del ítem del envío
         example: 200
   idDeliveryItem:
         type: integer
-        description: Id del item del envío
+        description: Id del ítem del envío
         example: 166
   FileName:
         type: string
-        description: Nombre del archivo del item del envío
+        description: Nombre del archivo del ítem del envío
         example: "/home/juan/Documentos/archivo.pdf"
