@@ -1,0 +1,40 @@
+type: object
+properties:
+  data: 
+    type: object
+    properties:     
+      StatusDeliveries:
+        type: object
+        properties:
+          idStatusDelivery:
+            type: integer
+            description: Id del estado del envío
+            example: 12
+          name:
+            type: string
+            description: Nombre del estado del envío
+            example: Pre-Order
+          code:
+            type: string
+            description: Nombre del estado del envío
+            example: PRE-ORDER
+          dateCreation:
+            type: datetime
+            description: Fecha de Creación del estado del envío
+            example: 2022-05-06T23:00:52.670+00:00
+          dateLastUpdate:
+            type: datetime
+            description: Fecha de última actualización del estado del envío
+            example: 2022-05-06T23:00:52.670+00:00
+      count:
+        type: integer
+        description: Cantidad de estados de los envíos
+        example: 7
+  message:
+    type: string
+    description: Mensaje positivo de respuesta
+    example: Lista de los estados de los envíos encontrados
+  status:
+    type: integer
+    description: Estado positivo de la respuesta
+    example: 200

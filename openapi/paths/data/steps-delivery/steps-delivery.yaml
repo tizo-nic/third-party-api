@@ -12,13 +12,13 @@ get:
       content: 
         application/json:
           schema:
-            $ref: '../../../components/schemas/data/listpaymenttypes-positive.yaml'
+            $ref: '../../../components/schemas/data/liststepsdelivery-positive.yaml'
     '400': 
       description: Unauthorized
       content: 
         application/json:
           schema:
-            $ref: '../../../components/schemas/data/listpaymenttypes-negative.yaml'
+            $ref: '../../../components/schemas/data/liststepsdelivery-negative.yaml'
   requestBody:
     headers:
       environment:
@@ -33,10 +33,10 @@ get:
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../../../code_samples/csharp/data/listpaymenttypes.cs"
+        $ref: "../../../code_samples/csharp/data/liststepsdelivery.cs"
     - lang: PHP
       source:
-        $ref: "../../../code_samples/PHP/data/listpaymenttypes.php"
+        $ref: "../../../code_samples/PHP/data/liststepsdelivery.php"
     - lang: Python
       source:
-        $ref: "../../../code_samples/python/data/listpaymenttypes.py"
+        $ref: "../../../code_samples/python/data/liststepsdelivery.py"
