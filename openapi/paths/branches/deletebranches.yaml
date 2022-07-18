@@ -1,8 +1,42 @@
-post:
+delete:
   tags:
     - Sucursales
   summary: Eliminar una sucursal
-  description: 
-  operationId: confirm
+  description: Este método sirve para eliminar una de las sucursales existentes
+  operationId: delete-branches
   security:
     - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/branches/delete-positive.yaml'
+    '400': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/branches/delete-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application:
+        schema:
+          description: Este método no solicita ningún dato de entrada
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/branches/delete.cs"
+    - lang: PHP
+      source:
+        $ref: "../../code_samples/PHP/branches/delete.php"
+    - lang: Python
+      source:
+        $ref: "../../code_samples/python/branches/delete.py"

@@ -1,8 +1,44 @@
-post:
+get:
   tags:
     - Sucursales
-  summary: Listar los pagos disponibles
-  description: 
-  operationId: confirm
+  summary: Listar las sucursales de una tienda
+  description: Este método sirve para listar l
+  operationId: list-branches
   security:
     - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/notifications/create-positive.yaml'
+    '400': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/notifications/create-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/notifications/create.yaml"
+    description: Estructura de datos para la creación de una notificación
+    required: true
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/notifications/create.cs"
+    - lang: PHP
+      source:
+        $ref: "../../code_samples/PHP/notifications/create.php"
+    - lang: Python
+      source:
+        $ref: "../../code_samples/python/notifications/create.py"

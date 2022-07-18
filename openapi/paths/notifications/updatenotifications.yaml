@@ -1,8 +1,44 @@
-post:
+put:
   tags:
     - Notificaciones
   summary: Actualizar las notificaciones
-  description: 
-  operationId: confirm
+  description: Este método sirve para actualizar las notificaciones
+  operationId: update-notifications
   security:
     - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/notifications/update-positive.yaml'
+    '400': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/notifications/update-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/notifications/update.yaml"
+    description: Estructura de datos para la actualización de las notificaciones
+    required: true
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/notifications/update.cs"
+    - lang: PHP
+      source:
+        $ref: "../../code_samples/PHP/notifications/update.php"
+    - lang: Python
+      source:
+        $ref: "../../code_samples/python/notifications/update.py"
