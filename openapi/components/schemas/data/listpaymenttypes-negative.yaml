@@ -1,0 +1,10 @@
+type: object
+properties:
+  message:
+    type: string
+    description: Mensaje negativo de respuesta
+    example: Lista de Métodos de Pago no encontrados
+  status:
+    type: integer
+    description: Estado negativo de la respuesta
+    example: 400

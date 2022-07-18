@@ -1,6 +1,42 @@
-post:
+get:
   tags:
-      - Información de los Bancos y métodos de pago
-  summary: Busca un metodo de pago
-  description: Este método te permite iniciar sesion con un nombre de usuario, una contraseña y un tipo de usuario
-  operationId: bancos/List
+      - Información de los bancos y métodos de pago
+  summary: Busca un método de pago
+  description: Este método te permite buscar la información del método de pago por Id y devuelve los datos del mismo.
+  operationId: my-paymenttypes-id
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../../components/schemas/data/getpaymenttype-positive.yaml'
+    '400': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../../components/schemas/data/getpaymenttype-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application:
+        schema:
+          description: Este método no solicita ningún dato de entrada
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../../code_samples/csharp/data/getpaymenttype.cs"
+    - lang: PHP
+      source:
+        $ref: "../../../code_samples/PHP/data/getpaymenttype.php"
+    - lang: Python
+      source:
+        $ref: "../../../code_samples/python/data/getpaymenttype.py"

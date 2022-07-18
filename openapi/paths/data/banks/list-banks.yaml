@@ -1,6 +1,42 @@
-post:
+get:
   tags: 
-    - Información de los Bancos y métodos de pago
-  summary: Listar los Bancos
-  description: Este método te permite iniciar sesion con un nombre de usuario, una contraseña y un tipo de usuario
-  operationId: bancos/List
+    - Información de los bancos y métodos de pago
+  summary: Listar los bancos
+  description: Lista de todos los bancos registrados en el sistema
+  operationId: list-banks
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../../components/schemas/data/listbanks-positive.yaml'
+    '400': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../../components/schemas/data/listbanks-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application:
+        schema:
+          description: Este método no solicita ningún dato de entrada
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../../code_samples/csharp/data/listbanks.cs"
+    - lang: PHP
+      source:
+        $ref: "../../../code_samples/PHP/data/listbanks.php"
+    - lang: Python
+      source:
+        $ref: "../../../code_samples/python/data/listbanks.py"

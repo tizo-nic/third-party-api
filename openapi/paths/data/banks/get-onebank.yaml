@@ -1,6 +1,42 @@
-post:
+get:
   tags: 
-    - Información de los Bancos y métodos de pago
-  summary: Buscar un Banco
-  description: Este método te permite iniciar sesion con un nombre de usuario, una contraseña y un tipo de usuario
-  operationId: bancos/List
+    - Información de los bancos y métodos de pago
+  summary: Buscar un banco
+  description: Este método te permite buscar la información del banco por Id y devuelve los datos del mismo.
+  operationId: my-banks-id
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../../components/schemas/data/getonebank-positive.yaml'
+    '400': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../../components/schemas/data/getonebank-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application:
+        schema:
+          description: Este método no solicita ningún dato de entrada
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../../code_samples/csharp/data/getonebank.cs"
+    - lang: PHP
+      source:
+        $ref: "../../../code_samples/PHP/data/getonebank.php"
+    - lang: Python
+      source:
+        $ref: "../../../code_samples/python/data/getonebank.py"

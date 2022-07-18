@@ -8,7 +8,6 @@ properties:
     description: Id de los permisos
     type: integer
     example: 2
-  
   nameModule:
     description: Nombre del módulo
     type: integer

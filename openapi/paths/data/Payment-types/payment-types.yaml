@@ -1,6 +1,42 @@
-post:
+get:
   tags:
-      - Información de los Bancos y métodos de pago
-  summary: Listar Metodos de pagos
-  description: Este método te permite iniciar sesion con un nombre de usuario, una contraseña y un tipo de usuario
-  operationId: bancos/List
+      - Información de los bancos y métodos de pago
+  summary: Listar métodos de pagos
+  description: Lista de todos los métodos de pago registrados en el sistema
+  operationId: list-payment-types
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../../components/schemas/data/listpaymenttypes-positive.yaml'
+    '400': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../../components/schemas/data/listpaymenttypes-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application:
+        schema:
+          description: Este método no solicita ningún dato de entrada
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../../code_samples/csharp/data/listpaymenttypes.cs"
+    - lang: PHP
+      source:
+        $ref: "../../../code_samples/PHP/data/listpaymenttypes.php"
+    - lang: Python
+      source:
+        $ref: "../../../code_samples/python/data/listpaymenttypes.py"
