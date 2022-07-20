@@ -98,14 +98,14 @@ paths:
     $ref: paths/store/update-stores.yaml
   /vendors/stores/{idStore}/credit-bag/:
     $ref: paths/store/get-creditbag.yaml
-  /vendors/stores/:
-    $ref: paths/store/list-stores.yaml
   /vendors/stores/{idStore}:
     $ref: paths/store/getone-store.yaml
   /vendors/stores:
     $ref: paths/store/create-store.yaml
   /vendors/stores/{idStor}:
-    $ref: paths/store/delete-stores.yaml
+    $ref: paths/store/delete-store.yaml
+  /vendors/stores/:
+    $ref: paths/store/list-stores.yaml
 components:
   securitySchemes:
     main_auth:

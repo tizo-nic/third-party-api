@@ -1,0 +1,18 @@
+type: object
+properties:
+    idStore:
+        description: Id de la Sucursal de la Tienda
+        type: integer
+        example: 2
+    nameStore:
+        description: Nombre de la Sucursal de la Tienda
+        type: string
+        example: Tiendas S.A.
+    pathImage:  
+        description: Imagen de la Sucursal de la tienda
+        type: Image
+        example: Tiendas S.A.
+    Permissions:
+      type: array
+      items:
+        $ref: ./Permissions.yaml

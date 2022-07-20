@@ -1,6 +1,18 @@
 type: object
 properties:
-    Store:
-      $ref: ./store1.yaml
+    idStore:
+      description: Id de la Tienda
+      type: integer
+      example: 2
+    nameStore:
+      description: Nombre de la Tienda
+      type: string
+      example: Tiendas S.A.
+    pathImage:  
+      description: Imagen de la tienda
+      type: Image
+      example: Tiendas S.A.
     Permissions:
-      $ref: ./Permissions.yaml
+      type: array
+      items:
+        $ref: ./Permissions.yaml

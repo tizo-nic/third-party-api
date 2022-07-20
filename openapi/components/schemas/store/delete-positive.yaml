@@ -3,7 +3,7 @@ properties:
   message:
     type: string
     description: Mensaje positivo de respuesta
-    example: Se ha enviado las instrucciones para recuperar la contraseña.
+    example: Tienda eliminada con éxito
   status:
     type: integer
     description: Estado positivo de la respuesta

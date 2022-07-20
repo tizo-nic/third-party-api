@@ -2,7 +2,7 @@ get:
   tags:
     - Sucursales
   summary: Listar las sucursales de una tienda
-  description: Este método sirve para listar l
+  description: Este método sirve para listar todas las sucursales que tiene una tienda
   operationId: list-branches
   security:
     - basic_auth: [ Authorization ]
@@ -12,13 +12,13 @@ get:
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/notifications/create-positive.yaml'
+            $ref: '../../components/schemas/branches/listbranches-positive.yaml'
     '400': 
       description: Unauthorized
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/notifications/create-negative.yaml'
+            $ref: '../../components/schemas/branches/listbranches-negative.yaml'
   requestBody:
     headers:
       environment:
@@ -27,18 +27,16 @@ get:
           type: string
           example: "ni"
     content:
-      application/json:
+      application:
         schema:
-          $ref: "../../components/schemas/notifications/create.yaml"
-    description: Estructura de datos para la creación de una notificación
-    required: true
+          description: Este método no solicita ningún dato de entrada
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../../code_samples/csharp/notifications/create.cs"
+        $ref: "../../code_samples/csharp/branches/list.cs"
     - lang: PHP
       source:
-        $ref: "../../code_samples/PHP/notifications/create.php"
+        $ref: "../../code_samples/PHP/branches/list.php"
     - lang: Python
       source:
-        $ref: "../../code_samples/python/notifications/create.py"
+        $ref: "../../code_samples/python/branches/list.py"

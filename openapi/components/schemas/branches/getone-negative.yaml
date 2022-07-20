@@ -3,7 +3,7 @@ properties:
   message:
     type: string
     description: Mensaje negativo de respuesta
-    example: Usuario no encontrado
+    example: Sucursal no encontrada.
   status:
     type: integer
     description: Estado negativo de la respuesta

@@ -1,9 +1,17 @@
 type: object
 properties:
   Method:
-    $ref: ../Method.yaml
+    description: Método para recuperar la contraseña (Email, SMS)
+    type: string
+    required: true
+    minLength: 1
+    example: vendor
   Word to Match:
-    $ref: ../WordMatch.yaml
+    description: Palabra que debe coincidir con la palabra de recuperación (Email, Teléfono, Nombre de Usuario)
+    type: string
+    required: true
+    minLength: 1
+    example: vendor
   typeUser:
     description: Tipo de usuario (vendor, store_api)
     type: string
