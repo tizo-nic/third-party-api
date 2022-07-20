@@ -1,0 +1,26 @@
+type: object
+properties:
+  idItemCategory:
+    type: integer
+    description: Id de la categoría de los items
+    example: 12
+  idParentCategory:
+    type: integer
+    description: Id de la categoría del paquete
+    example: null
+  name:
+    type: string
+    description: Nombre del paquete
+    example: Otros
+  active:
+    type: boolean
+    description: Estado del paquete
+    example: true
+  dateCreation:
+    type: datetime
+    description: Fecha de Creación de la categoría de los items
+    example: 2022-05-06T23:00:52.670+00:00
+  dateLastUpdate:
+    type: datetime
+    description: Fecha de última actualización de la categoría de los items
+    example: 2022-05-06T23:00:52.670+00:00

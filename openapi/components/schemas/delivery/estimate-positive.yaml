@@ -3,12 +3,12 @@ properties:
   data:
     type: object
     properties:
-      dataofCourier:
-        $ref: ../dataofCourier.yaml
-      costbyCourier:
-        $ref: ../costbyCourier.yaml
       costbyDriver: 
         $ref: ../costbyDriver.yaml
+      costbyCourier:
+        type: array
+        items:
+          $ref: ../costbyCourier.yaml
       distance:
         type: string
         description: Distancia del envío
@@ -17,6 +17,8 @@ properties:
         type: string
         description: Tamaño del envío
         example: Tizo small
+      dataofCourier:
+        $ref: ../dataofCourier.yaml
   message:
     type: string
     description: Mensaje positivo de respuesta

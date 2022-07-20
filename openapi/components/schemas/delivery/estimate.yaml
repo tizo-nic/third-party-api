@@ -21,9 +21,13 @@ properties:
     description: Fecha y hora de envío
     example: 2022-06-08T17:15:53Z
   waypoints:
-        $ref: ../waypoints2.yaml
+    type: array
+    items:
+      $ref: ../waypoints2.yaml
   items:
-    $ref: ../items2.yaml
+    type: array
+    items:
+      $ref: ../items2.yaml
   customerEmail:
     description: Correo Electrónico del cliente
     type: string

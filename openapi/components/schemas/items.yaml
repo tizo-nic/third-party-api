@@ -69,4 +69,6 @@ properties:
     description: Fecha de última actualización del ítem
     example: 2022-06-08T17:15:53.000+00:00
   deliveryItemsFiles:
-    $ref: ./deliveryItemsFiles.yaml
+    type: array
+    items:
+      $ref: ./deliveryItemsFiles.yaml

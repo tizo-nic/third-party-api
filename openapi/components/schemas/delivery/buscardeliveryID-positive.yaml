@@ -94,11 +94,17 @@ properties:
       statusDelivery:
         $ref: ../statusdelivery.yaml
       items:
-        $ref: ../items.yaml
+        type: array
+        items:
+          $ref: ../items.yaml
       steps:
-        $ref: ../steps.yaml
+        type: array
+        items:
+          $ref: ../steps.yaml
       waypoints:
-        $ref: ../waypoints.yaml
+        type: array
+        items:
+          $ref: ../waypoints.yaml
       relationCouriers:
         $ref: ../relationCouriers.yaml
       relationDrivers:

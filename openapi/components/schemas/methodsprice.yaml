@@ -1,0 +1,54 @@
+type: object
+properties:
+  time:
+    type: string
+    description: Tiempo de espera
+    example: 5 days
+  timeInNumber:
+    type: integer
+    description: Tiempo de espera en numero
+    example: 1658343697453
+  distance:
+    type: string
+    description: Distancia
+    example: 5 km
+  price:
+    type: string
+    description: Precio
+    example: $10.00
+  nameAreaOrigin: 
+    type: string
+    description: Nombre del Área de origen
+    example: Managua
+  idAreaOrigin:
+    type: integer
+    description: Id del Área de origen
+    example: 1
+  nameAreaDestination: 
+    type: string
+    description: Nombre del Área de destino
+    example: Calle 132
+  idAreaDestination:
+    type: integer
+    description: Id del Área de destino
+    example: 2
+  pickUpAtOrigin:
+    type: boolean
+    description: ¿Se recogerá en el Área de origen?
+    example: true
+  dropOffAtDestination:
+    type: boolean
+    description: ¿Se entregará en el Área de destino?
+    example: true
+  livetrackingatOrigin:
+    type: boolean
+    description: ¿Se realizará livetracking en el Área de origen?
+    example: true
+  livetrackingatDestination:
+    type: boolean
+    description: ¿Se realizará livetracking en el Área de destino?
+    example: true
+  traditional:
+    type: boolean
+    description: ¿Se realizará de manera tradicional?
+    example: true

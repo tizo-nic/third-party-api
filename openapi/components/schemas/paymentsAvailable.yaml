@@ -1,0 +1,30 @@
+type: object
+properties:
+  idPaymentAvailable:
+    type: integer
+    description: Id del método de pago disponible
+    example: 1
+  idPaymentType:
+    type: integer
+    description: Id del tipo de pago
+    example: 1
+  active:
+    type: boolean
+    description: El estado del pago disponible.
+    example: true
+  minamount:
+    type: integer
+    description: El monto mínimo para el pago disponible.
+    example: 0
+  maxamount:
+    type: boolean
+    description: El máximo de dinero que puede pagar.
+    example: true
+  PaymentType:
+    type: string
+    description: El tipo de pago.
+    example: Efectivo
+  paymentcode:
+    type: string
+    description: El código de pago.
+    example: CASH

@@ -1,0 +1,34 @@
+type: object
+properties:
+  idDepartment:
+    type: integer
+    description: Id del Departamento
+    example: 0
+  name:
+    type: string
+    description: Nombre del Departamento
+    example: Chontales
+  latitude:
+    type: string
+    description: Latitud del Departamento
+    example: 11.974089700
+  longitude:
+    type: string
+    description: Longitud del Departamento
+    example: -86.113809500
+  isActive:
+    type: boolean
+    description: Estado del Departamento
+    example: true
+  active:
+    type: boolean
+    description: Estado del Departamento
+    example: true
+  dateCreation:
+    type: datetime
+    description: Fecha de Creación del Departamento
+    example: 2022-05-06T23:00:52.670+00:00
+  dateLastUpdate:
+    type: datetime
+    description: Fecha de última actualización del Departamento
+    example: 2022-05-06T23:00:52.670+00:00
