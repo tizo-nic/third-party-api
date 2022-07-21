@@ -95,9 +95,13 @@ properties:
         type: string
         description: Metadatos de los servicios de terceros
         example: null
+      imagePreview:
+        type: string
+        description: Imagen de previsualización del envío
+        example: null
       relationCouriers:
         $ref: ../relationCouriers2.yaml
-      paymentwithcard:
+      paymentWithCard:
         type: object
         description: Pagar con tarjeta
         example: null
@@ -111,14 +115,6 @@ properties:
         example: null
       relationVendors:
         $ref: ../relationVendors3.yaml
-      relationInvoices:
-        type: object
-        description: Facturas
-        example: null
-      relationManagers:
-        type: object
-        description: Manager
-        example: null
       relationCustomers:
         type: object
         description: Clientes
@@ -127,6 +123,19 @@ properties:
         type: object
         description: Tienda de la API
         example: null
+      relationManager:
+        type: object
+        description: Manager
+        example: null
+      relationInvoice:
+        type: object
+        description: Facturas
+        example: null
+      url:
+        type: string
+        description: Url del envío
+        example: https://www.google.com
+      
   message:
     type: string
     description: Mensaje positivo de respuesta

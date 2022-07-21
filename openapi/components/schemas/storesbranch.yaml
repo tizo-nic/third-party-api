@@ -20,7 +20,7 @@ properties:
     type: string
     description: Dirección de la sucursal de la tienda
     example: Calle Principal Altamira frente a SINSA, Centro de Especialidades Altamira, Managua, Nicaragua
-  PhoneNumber:
+  phone:
     description: Número Telefónico
     type: string
     example: 8888-8838

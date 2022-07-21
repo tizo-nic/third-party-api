@@ -16,7 +16,7 @@ properties:
     type: string
     description: Nombre del paso del envío
     example: DELIVERY_CREATED
-  descripcion:
+  description:
     type: string
     description: Descripción del paso del envío
     example: Envío creado

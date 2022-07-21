@@ -2,7 +2,7 @@ post:
   tags:
     - Envíos
   summary: Crear un envío
-  description: Para crear un envío, se deberán tomar en cuenta los siguientes parámetros. Es importante destacar colocar la categoría correcta, puesto que dependiendo de ella se notifican a los couriers que aceptan esta categoría. No se debitará el envío hasta que se confirme la orden.
+  description: Este método te permite crear un envío. Es importante destacar colocar la categoría correcta, puesto que dependiendo de ella se notifican a los couriers que aceptan esta categoría. No se debitará el envío hasta que se confirme la orden.
   operationId: new
   security:
     - basic_auth: [ Authorization ]

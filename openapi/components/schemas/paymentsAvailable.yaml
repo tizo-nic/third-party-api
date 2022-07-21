@@ -12,19 +12,19 @@ properties:
     type: boolean
     description: El estado del pago disponible.
     example: true
-  minamount:
+  minAmount:
     type: integer
     description: El monto mínimo para el pago disponible.
     example: 0
-  maxamount:
+  maxAmount:
     type: boolean
     description: El máximo de dinero que puede pagar.
     example: true
-  PaymentType:
+  paymentType:
     type: string
     description: El tipo de pago.
     example: Efectivo
-  paymentcode:
+  paymentCode:
     type: string
     description: El código de pago.
     example: CASH

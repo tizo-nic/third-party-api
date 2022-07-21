@@ -28,7 +28,7 @@ properties:
     type: string
     description: Identificación de la persona
     example: 001-061199-1009L
-  PhoneNumber:
+  phone:
     $ref: ./Phonenumber.yaml
   personEmail:
     $ref: ./Email.yaml
@@ -40,7 +40,7 @@ properties:
     type: string
     description: Dirección del punto de ruta
     example: De la rotonda de Rubén Darío 1c al sur, 2c abajo, Managua 14003, Nicaragua
-  instruction:
+  instructions:
     type: string
     description: Instrucción del punto de ruta
     example: Arbol de mango

@@ -28,7 +28,7 @@ properties:
     type: string
     description: Direccion del punto de ruta
     example: De la rotonda de Rubén Darío 1c al sur, 2c abajo, Managua 14003, Nicaragua
-  PhoneNumber:
+  phone:
     $ref: ./Phonenumber.yaml
   personName:
     description: Nombre del usuario que realiza el pedido
@@ -36,7 +36,7 @@ properties:
     example: John
   personEmail:
     $ref: ./Email.yaml
-  instruction:
+  instructions:
     type: string
     description: Instrucción del punto de ruta
     example: Arbol de mango

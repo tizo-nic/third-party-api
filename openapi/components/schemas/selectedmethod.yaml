@@ -1,6 +1,6 @@
 type: object
 properties:
-  Method:
+  method:
     type: string
     description: Método seleccionado por el cliente
     example: Courier

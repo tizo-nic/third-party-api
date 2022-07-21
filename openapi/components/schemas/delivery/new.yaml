@@ -26,11 +26,12 @@ properties:
     example: john.smith@example.com
   selectedMethod:
     $ref: ../selectedmethod.yaml
-  idStoreBranch:
-    type: integer
-    description: Id de la sucursal de la tienda
-    example: 3
   idStore:
     type: integer
     description: Id de la tienda
     example: 3
+  idBranchStore:
+    type: integer
+    description: Id de la sucursal de la tienda
+    example: 3
+  

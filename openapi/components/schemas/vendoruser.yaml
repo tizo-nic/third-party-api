@@ -32,7 +32,7 @@ properties:
     description: Género del proveedor
     type: string
     example: 1
-  loginlast:
+  loginLast:
     description: Último login del proveedor
     type: date
     example: 2022-07-12
@@ -40,15 +40,15 @@ properties:
     description: Fecha de nacimiento del proveedor
     type: date
     example: 2022-06-07
-  ipcreation:
+  ipCreation:
     description: Ip del proveedor
     type: string
     example: 10.10.10.10
-  datecreation:
+  dateCreation:
     description: Fecha de creación del proveedor
     type: date
     example: 2022-06-07
-  datelastupdate:
+  dateLastUpdate:
     description: Fecha de última actualización del proveedor
     type: string
     example: 2022-06-07
@@ -64,7 +64,7 @@ properties:
     description: Estado de conexión del proveedor
     type: boolean
     example: true
-  fullname:
+  fullName:
     description: Nombre completo del proveedor
     type: string
     example: John Smith

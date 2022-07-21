@@ -2,7 +2,7 @@ put:
   tags:
     - Envíos
   summary: Mandar una notificacion
-  description: Manda una notificación de un envío
+  description: Este método manda una notificación a un usuario según el método que haya seleccionado.
   operationId: my-deliveries-notification
   security:
     - basic_auth: [ Authorization ]

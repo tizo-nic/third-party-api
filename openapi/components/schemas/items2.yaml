@@ -1,6 +1,6 @@
 type: object
 properties:
-  idCategory:
+  category:
     type: integer
     description: Id del ítem de la categoría
     example: 13
@@ -12,11 +12,11 @@ properties:
     type: string
     description: Descripción del item
     example: Una escoba con gaseosa.
-  height:
+  weight:
     type: float
     description: Altura del ítem
     example: 1.00
-  Weight:
+  height:
     type: float
     description: Peso del ítem
     example:  1.00
@@ -24,7 +24,7 @@ properties:
     type: float
     description: Profundidad del ítem
     example: 1.00
-  Width:
+  width:
     type: float
     description: Ancho del ítem
     example:  1.00
@@ -32,13 +32,13 @@ properties:
     type: float
     description: Valor del ítem
     example: 50.0000
-  document:
-    type: boolean
-    description: Necesita documento
-    example: false
   fragile:
     type: boolean
     description: Es frágil
+    example: false
+  document:
+    type: boolean
+    description: Necesita documento
     example: false
   images:
     type: Image

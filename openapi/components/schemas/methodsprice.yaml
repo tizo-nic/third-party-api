@@ -40,11 +40,11 @@ properties:
     type: boolean
     description: ¿Se entregará en el Área de destino?
     example: true
-  livetrackingatOrigin:
+  liveTrackingAtOrigin:
     type: boolean
     description: ¿Se realizará livetracking en el Área de origen?
     example: true
-  livetrackingatDestination:
+  liveTrackingAtDestination:
     type: boolean
     description: ¿Se realizará livetracking en el Área de destino?
     example: true

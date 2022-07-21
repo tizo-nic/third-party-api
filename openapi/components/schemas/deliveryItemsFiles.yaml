@@ -8,7 +8,7 @@ properties:
         type: integer
         description: Id del ítem del envío
         example: 166
-  FileName:
+  fileName:
         type: string
         description: Nombre del archivo del ítem del envío
         example: "/home/juan/Documentos/archivo.pdf"

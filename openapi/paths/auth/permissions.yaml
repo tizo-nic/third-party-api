@@ -2,7 +2,7 @@ get:
   tags:
     - Autenticación
   summary: Permisos
-  description: Ver los módulos y los permisos que tiene un usuario.
+  description: Este método te permite ver los módulos y los permisos que tiene un usuario.
   operationId: permissions
   security:
     - basic_auth: [ Authorization ]

@@ -2,7 +2,7 @@ post:
   tags:
     - Envíos
   summary: Confirmar un envío
-  description: Se debitará el envío, y empieza el flujo de los procesos.
+  description: Este método te permite confirmar el envío y así empezar el flujo de los procesos.
   operationId: confirm
   security:
     - basic_auth: [ Authorization ]

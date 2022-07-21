@@ -4,7 +4,7 @@ properties:
         description: Id de la Sucursal de la Tienda
         type: integer
         example: 2
-    nameStore:
+    name:
         description: Nombre de la Sucursal de la Tienda
         type: string
         example: Tiendas S.A.
@@ -12,7 +12,7 @@ properties:
         description: Imagen de la Sucursal de la tienda
         type: Image
         example: Tiendas S.A.
-    Permissions:
+    permissions:
       type: array
       items:
         $ref: ./Permissions.yaml

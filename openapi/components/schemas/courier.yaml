@@ -4,15 +4,11 @@ properties:
     type: integer
     description: Id del transportista
     example: 299
-  pathImage:
-    description: Imagen del transportista
-    type: Image
-    example: Courier Image Tizo
   dba:
     description: Nombre socio comercial
     type: string
     example: Empresa de logistica
-  nombre:
+  name:
     description: Nombre del empresa transportista
     type: string
     example: Tizo
@@ -44,7 +40,7 @@ properties:
     description: La empresa es privada
     type: boolean
     example: false
-  Providerapi:
+  providerApi:
     description: Le suministramos el api a la empresa transportista
     type: boolean
     example: true

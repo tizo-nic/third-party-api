@@ -1,18 +1,18 @@
 type: object
 properties:
+  idDeliveryVendor:
+    type: integer
+    description: Id del proveedor
+    example: 166
   idDelivery:
     type: integer
     description: Id del envío
     example: 166
-  idDeliveryVendors:
-    type: integer
-    description: Id del proveedor
-    example: 166
-  idDeliveryVendorUser:
+  idVendorUser:
     type: integer
     description: Id del usuario del proveedor
     example: 6
-  vendorusername:
+  vendorUsername:
     description: Username suministrado al proveedor
     type: string
     example: v_gabriel_6

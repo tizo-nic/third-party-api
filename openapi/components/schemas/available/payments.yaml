@@ -16,19 +16,19 @@ properties:
     type: boolean
     description: El estado del pago disponible.
     example: true
-  minamount:
+  minAmount:
     type: integer
     description: El monto mínimo para el pago disponible.
     example: 0
-  maxamount:
+  maxAmount:
     type: boolean
     description: El máximo de dinero que puede pagar.
     example: true
-  datecreation:
+  dateCreation:
     type: date
     description: Fecha de creación del pago disponible.
     example: 0
-  datelastupdate:
+  dateLastUpdate:
     type: date
     description: Fecha de la última actualización del pago disponible.
     example: true

@@ -20,11 +20,11 @@ properties:
     description: Apellidos del usuario
     type: string
     example: Smith
-  PhoneNumber:
+  phone:
     $ref: ./Phonenumber.yaml
-  Email:
+  email:
     $ref: ./Email.yaml
-  identificacion:
+  identification:
     description: Identificación del usuario
     type: string
     example: 00225062000N
@@ -60,7 +60,7 @@ properties:
     description: Estado de conexión del usuario
     type: boolean
     example: true
-  stores_permission:
+  storesPermissions:
     type: array
     items:
       $ref: "./storespermission.yaml"

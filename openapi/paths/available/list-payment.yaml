@@ -2,7 +2,7 @@ get:
   tags:
     - Disponibilidad de pagos
   summary: Listar los pagos disponibles
-  description: Métodos de pagos disponibles para una tienda en particular.
+  description: Este método te permite visualizar todos los métodos de pagos disponibles para una tienda en particular.
   operationId: list-payments
   security:
     - basic_auth: [ Authorization ]

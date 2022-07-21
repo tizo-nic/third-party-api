@@ -2,7 +2,7 @@ get:
   tags:
     - Envíos
   summary: Listar envíos por Api
-  description: Lista de todos los envíos realizados por el usuario por medio de la Api
+  description: Este método te permite visualizar todos los envíos realizados por el usuario por medio de la Api
   operationId: my-deliveries-api
   security:
     - basic_auth: [ Authorization ]

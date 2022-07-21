@@ -2,7 +2,7 @@ post:
   tags:
     - Envíos
   summary: Estimar un envío
-  description: Para realizar una estimación del envio, se deberán tomar en cuenta los siguientes parametros. Es importante destacar colocar la categoría correcta, puesto que dependiendo de ella se notifican a los couriers que aceptan esta categoría.
+  description: Este método te permite estimar los gastos del envío. Es importante destacar colocar la categoría correcta, puesto que dependiendo de ella se notifican a los couriers que aceptan esta categoría.
   operationId: estimate
   security:
     - basic_auth: [ Authorization ]

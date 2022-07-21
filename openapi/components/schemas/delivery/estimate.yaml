@@ -8,13 +8,13 @@ properties:
     type: boolean
     description: El envío es de prueba
     example: true
-  idStoreBranch:
-    type: integer
-    description: Id de la sucursal de la tienda
-    example: 3
   idStore:
     type: integer
     description: Id de la tienda
+    example: 3
+  idBranchStore:
+    type: integer
+    description: Id de la sucursal de la tienda
     example: 3
   deliveryTime:
     type: datetime

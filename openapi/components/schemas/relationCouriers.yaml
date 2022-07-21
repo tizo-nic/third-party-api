@@ -12,7 +12,7 @@ properties:
     type: integer
     description: Id del transportista
     example: 166
-  Courier:
+  courier:
     $ref: ./courier.yaml
-  CourierDriverUser:
+  courierDriverUser:
     $ref: ./courierDriverUser.yaml

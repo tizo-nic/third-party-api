@@ -1,6 +1,6 @@
 type: object
 properties:
-  idstatusdelivery:
+  idStatusDelivery:
     type: integer
     description: Id del estado del envío
     example: 2

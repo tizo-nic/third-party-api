@@ -108,11 +108,15 @@ properties:
       relationCouriers:
         $ref: ../relationCouriers.yaml
       relationDrivers:
-        $ref: ../relationDrivers.yaml
+        type: object
+        description: Choferes asociados al envío
+        example: null
       relationVendors:
         $ref: ../relationVendors.yaml
       relationInvoices:
-        $ref: ../relationInvoice.yaml
+        type: object
+        description: Choferes asociados al envío
+        example: null
       relationLogistics:
         $ref: ../relationLogistics.yaml
       relationManagers:

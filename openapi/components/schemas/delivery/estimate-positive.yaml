@@ -3,21 +3,21 @@ properties:
   data:
     type: object
     properties:
-      costbyDriver: 
+      costByDriver: 
         $ref: ../costbyDriver.yaml
-      costbyCourier:
+      costByCourier:
         type: array
         items:
           $ref: ../costbyCourier.yaml
-      distance:
-        type: string
-        description: Distancia del envío
-        example: 6,1 km
       size:
         type: string
         description: Tamaño del envío
         example: Tizo small
-      dataofCourier:
+      distance:
+        type: string
+        description: Distancia del envío
+        example: 6,1 km
+      dataOfCourier:
         $ref: ../dataofCourier.yaml
   message:
     type: string

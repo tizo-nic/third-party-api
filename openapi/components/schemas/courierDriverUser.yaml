@@ -12,11 +12,15 @@ properties:
     description: Apellido del transportista
     type: string
     example: Smith
-  Phone:
+  pathImage:
+    description: Imagen del transportista
+    type: Image
+    example: Courier Image Tizo
+  phone:
     $ref: ./Phonenumber.yaml
-  Email:
+  email:
     $ref: ./Email.yaml
-  identificacion:
+  identification:
     description: Identificación del transportista
     type: string
     example: 00225062000N
@@ -40,7 +44,3 @@ properties:
     description: Username dado al transportista del proveedor
     type: string
     example: John78
-  pathImage:  
-    description: Imagen del transportista
-    type: Image
-    example: User Image Juan

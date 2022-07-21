@@ -3,12 +3,12 @@ properties:
   data: 
     type: object
     properties:
-      typeUser:
+      type_user:
         description: Tipo de usuario (vendor, store_api)
         type: string
         required: true
         example: vendor_user
-      User:
+      user:
         $ref: ../User2.yaml
   message:
     type: string
