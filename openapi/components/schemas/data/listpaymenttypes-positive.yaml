@@ -3,14 +3,15 @@ properties:
   data: 
     type: object
     properties:
-      paymentTypes:
-        type: array
-        items:
-          $ref:  "./paymenttypes.yaml"
       count:
         type: integer
         description: Número de métodos de pago
         example: 3
+      paymentTypes:
+        type: array
+        items:
+          $ref:  "./paymenttypes.yaml"
+      
   message:
     type: string
     description: Mensaje positivo de respuesta

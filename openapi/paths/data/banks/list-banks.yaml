@@ -2,7 +2,7 @@ get:
   tags: 
     - Información de los bancos y métodos de pago
   summary: Listar los bancos
-  description: Lista de todos los bancos registrados en el sistema
+  description: Este método te permite visualizar todos los bancos registrados en el sistema.
   operationId: list-banks
   security:
     - basic_auth: [ Authorization ]

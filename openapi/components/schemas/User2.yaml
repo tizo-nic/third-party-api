@@ -10,7 +10,7 @@ properties:
     example: 0
   pathImage:
     description: imagen del usuario
-    type: Image
+    type: string
     example: 0
   firstName:
     description: Nombres del usuario

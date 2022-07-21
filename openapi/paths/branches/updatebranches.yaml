@@ -2,7 +2,7 @@ put:
   tags:
     - Sucursales
   summary: Actualizar la sucursal
-  description: Este método sirve para actualizar los datos de una sucursal
+  description: Este método sirve para actualizar los datos de una sucursal 
   operationId: update-branches
   security:
     - basic_auth: [ Authorization ]

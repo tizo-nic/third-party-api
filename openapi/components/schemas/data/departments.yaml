@@ -20,10 +20,7 @@ properties:
     type: boolean
     description: Estado del Departamento
     example: true
-  active:
-    type: boolean
-    description: Estado del Departamento
-    example: true
+  
   dateCreation:
     type: datetime
     description: Fecha de Creación del Departamento
@@ -32,3 +29,7 @@ properties:
     type: datetime
     description: Fecha de última actualización del Departamento
     example: 2022-05-06T23:00:52.670+00:00
+  active:
+    type: boolean
+    description: Estado del Departamento
+    example: true

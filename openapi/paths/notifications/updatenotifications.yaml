@@ -2,7 +2,7 @@ put:
   tags:
     - Notificaciones
   summary: Actualizar las notificaciones
-  description: Este método sirve para actualizar las notificaciones
+  description: Este método sirve para actualizar las notificaciones de una tienda 
   operationId: update-notifications
   security:
     - basic_auth: [ Authorization ]

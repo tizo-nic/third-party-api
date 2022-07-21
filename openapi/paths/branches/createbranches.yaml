@@ -2,7 +2,7 @@ post:
   tags:
     - Sucursales
   summary: Crear una sucursal
-  description: Este método sirve para crear las nuevas sucursales
+  description: Este método sirve para crear nuevas sucursales de una tienda
   operationId: create-branches
   security:
     - basic_auth: [ Authorization ]

@@ -2,7 +2,7 @@ get:
   tags:
     - Tiendas
   summary: Buscar una tienda
-  description: Este método sirve para buscar una tienda
+  description: Este método sirve para buscar una tienda por medio de su ID y devuelve su información.
   operationId: getone-store
   security:
     - basic_auth: [ Authorization ]

@@ -2,7 +2,7 @@ get:
   tags:
       - Información de los envíos y paquetes
   summary: Listar las categorías de los paquetes
-  description: Lista de todos las categorías de los paquetes registrados en el sistema
+  description: Este método te permite visualizar todas las categorías de los paquetes existentes.
   operationId: list-package-categories
   security:
     - basic_auth: [ Authorization ]

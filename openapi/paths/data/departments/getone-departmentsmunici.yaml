@@ -2,7 +2,7 @@ get:
   tags:
       - Información de los envíos y paquetes
   summary: Buscar un departamento con sus municipalidades
-  description: Este método te permite buscar la información del departamento con sus municipalidades por Id y devuelve los datos del mismo.
+  description: Este método te permite buscar un departamento por medio de su Id y devuelve los datos del mismo con sus respectivos municipios.
   operationId: my-department-municipalities-id
   security:
     - basic_auth: [ Authorization ]

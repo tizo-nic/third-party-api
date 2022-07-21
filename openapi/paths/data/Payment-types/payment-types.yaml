@@ -2,7 +2,7 @@ get:
   tags:
       - Información de los bancos y métodos de pago
   summary: Listar métodos de pagos
-  description: Lista de todos los métodos de pago registrados en el sistema
+  description: Este método te permite visualizar todos los métodos de pago registrados en el sistema.
   operationId: list-payment-types
   security:
     - basic_auth: [ Authorization ]

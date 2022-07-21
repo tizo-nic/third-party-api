@@ -2,7 +2,7 @@ get:
   tags:
     - Sucursales
   summary: Buscar una sucursal
-  description: Este método sirve para buscar una sucursal de las que tiene una tienda
+  description: Este método sirve para buscar una sucursal por medio del ID y mostrar sus datos.
   operationId: get-one-branches
   security:
     - basic_auth: [ Authorization ]

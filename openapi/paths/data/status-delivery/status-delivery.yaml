@@ -2,7 +2,7 @@ get:
   tags:
       - Información de los envíos y paquetes
   summary: Listar los estados de los envíos
-  description: Lista de todos los estados de los envíos registrados en el sistema
+  description: Este método te permite visualizar todos los estados de envíos registrados en el sistema.
   operationId: list-status-delivery
   security:
     - basic_auth: [ Authorization ]

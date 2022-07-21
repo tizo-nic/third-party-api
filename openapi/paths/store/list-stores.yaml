@@ -2,7 +2,7 @@ get:
   tags:
     - Tiendas
   summary: Listar las tiendas
-  description: Este método sirve para listar todas las tiendas
+  description: Este método sirve para visualizar todas las tiendas
   operationId: list-stores
   security:
     - basic_auth: [ Authorization ]

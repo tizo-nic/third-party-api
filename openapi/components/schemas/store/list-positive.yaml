@@ -3,7 +3,7 @@ properties:
   data: 
     type: object
     properties:
-      store:
+      stores:
         type: array
         items:
           $ref:  "./list-store-item.yaml"

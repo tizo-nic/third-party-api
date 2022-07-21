@@ -2,7 +2,7 @@ get:
   tags:
       - Información de los envíos y paquetes
   summary: Buscar un paso del envío
-  description: Este método te permite buscar la información del paso de envíos por Id y devuelve los datos del mismo.
+  description: Este método te permite buscar un paso del envío por medio de su Id y devuelve los datos del mismo.
   operationId: my-stepsdelivery-id
   security:
     - basic_auth: [ Authorization ]

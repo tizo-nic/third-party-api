@@ -2,7 +2,7 @@ get:
   tags:
       - Información de los envíos y paquetes
   summary: Buscar un estado de envío
-  description: Este método te permite buscar la información del estado de envíos por Id y devuelve los datos del mismo.
+  description: Este método te permite buscar un estado del envío por medio de su Id y devuelve los datos del mismo.
   operationId: my-statusdelivery-id
   security:
     - basic_auth: [ Authorization ]

@@ -15,7 +15,7 @@ properties:
         type: integer
         description: Notificaciones por email
         example: 1
-      sendSMS:
+      sendSms:
         type: integer
         description: Notificaciones por SMS
         example: 1

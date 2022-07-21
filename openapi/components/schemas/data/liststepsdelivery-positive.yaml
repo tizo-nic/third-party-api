@@ -3,14 +3,15 @@ properties:
   data: 
     type: object
     properties:
-      StepDeliveries:
-        type: array
-        items:
-          $ref:  "./stepdelivery.yaml"
       count:
         type: integer
         description: Cantidad de los pasos del envío
         example: 13
+      stepDeliveries:
+        type: array
+        items:
+          $ref:  "./stepdelivery.yaml"
+      
   message:
     type: string
     description: Mensaje positivo de respuesta

@@ -3,7 +3,7 @@ properties:
   data: 
     type: object
     properties:
-      idStatusDelivery:
+      idStepsDeliveries:
         type: integer
         description: Id del paso del envío
         example: 36

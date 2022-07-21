@@ -3,14 +3,15 @@ properties:
   data: 
     type: object
     properties:
-      count:
-        type: integer
-        description: Cantidad de categorías de paquetes
-        example: 24
+      
       itemCategory:
         type: array
         items:
           $ref:  "./itemcategory.yaml"
+      count:
+        type: integer
+        description: Cantidad de categorías de paquetes
+        example: 24
   message:
     type: string
     description: Mensaje positivo de respuesta

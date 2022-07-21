@@ -9,7 +9,7 @@ properties:
     description: Id del estado del usuario del proveedor
     example: 0
   pathImage:
-    type: Image
+    type: string
     description: Imagen del proveedor
     example: 0
   firstName:

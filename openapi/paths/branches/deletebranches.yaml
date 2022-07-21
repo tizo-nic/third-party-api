@@ -2,7 +2,7 @@ delete:
   tags:
     - Sucursales
   summary: Eliminar una sucursal
-  description: Este método sirve para eliminar una de las sucursales existentes
+  description: Este método sirve para eliminar una de las sucursales existentes que tenga una tienda
   operationId: delete-branches
   security:
     - basic_auth: [ Authorization ]

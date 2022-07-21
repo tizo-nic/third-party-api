@@ -2,7 +2,7 @@ get:
   tags:
       - Información de los envíos y paquetes
   summary: Listar los departamentos
-  description: Lista de todos los departamentos registrados en el sistema
+  description: Este método te permite visualizar todos los departamentos registrados en el sistema.
   operationId: list-departments
   security:
     - basic_auth: [ Authorization ]

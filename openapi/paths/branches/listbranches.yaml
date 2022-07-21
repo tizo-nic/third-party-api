@@ -2,7 +2,7 @@ get:
   tags:
     - Sucursales
   summary: Listar las sucursales de una tienda
-  description: Este método sirve para listar todas las sucursales que tiene una tienda
+  description: Este método sirve para visualizar todas las sucursales que tiene una tienda
   operationId: list-branches
   security:
     - basic_auth: [ Authorization ]

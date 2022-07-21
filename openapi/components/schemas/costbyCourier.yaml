@@ -10,7 +10,7 @@ properties:
     example: true
   pathImage:
     description: Imagen del transportista
-    type: Image
+    type: string
     example: Courier Image Tizo
   methodsPrice:
     type: array

@@ -2,7 +2,7 @@ post:
   tags:
     - Notificaciones
   summary: Crear una notificaciones
-  description: Este método sirve para crear las notificaciones
+  description: Este método sirve para crear las notificaciones de una tienda
   operationId: create-notifications
   security:
     - basic_auth: [ Authorization ]

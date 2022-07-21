@@ -121,22 +121,22 @@ properties:
         type: string
         description: Email de la API de la tienda
         example: string
-        active:
-          type: boolean
-          description: Estado de la API de la tienda
-          example: true
-        loginLastUpdate:
-          type: datetime
-          description: Fecha del último inicio de sesión de la API de la tienda
-          example: 2022-05-06T23:00:52.670+00:00
-        dateCreation:
-          type: datetime
-          description: Fecha de creación de la API de la tienda
-          example: 2022-05-06T23:00:52.670+00:00
-        dateLastUpdate: 
-          type: datetime
-          description: Fecha de última actualización de la API de la tienda
-          example: 2022-05-06T23:00:52.670+00:00
+      active:
+        type: boolean
+        description: Estado de la API de la tienda
+        example: true
+      loginLastUpdate:
+        type: datetime
+        description: Fecha del último inicio de sesión de la API de la tienda
+        example: 2022-05-06T23:00:52.670+00:00
+      dateCreation:
+        type: datetime
+        description: Fecha de creación de la API de la tienda
+        example: 2022-05-06T23:00:52.670+00:00
+      dateLastUpdate: 
+        type: datetime
+        description: Fecha de última actualización de la API de la tienda
+        example: 2022-05-06T23:00:52.670+00:00
   notifications:
     example: null
     type: object

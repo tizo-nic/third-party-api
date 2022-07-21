@@ -2,7 +2,7 @@ get:
   tags:
     - Notificaciones
   summary: Listar las notificaciones
-  description: Este método sirve para listar las notificaciones
+  description: Este método sirve para visualizar las notificaciones que puede tener la tienda
   operationId: list-notifications
   security:
     - basic_auth: [ Authorization ]

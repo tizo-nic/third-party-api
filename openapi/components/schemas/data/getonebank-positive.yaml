@@ -14,12 +14,12 @@ properties:
             type: string
             description: Nombre del Banco
             example: BAC
-          fullname:
+          fullName:
             type: string
             description: Nombre completo del Banco
             example: Credomatic
-          iconpath:
-            type: image
+          iconPath:
+            type: string
             description: Imagen del logo del Banco
             example: logo BAC
           dateCreation:

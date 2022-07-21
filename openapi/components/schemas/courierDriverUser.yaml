@@ -14,7 +14,7 @@ properties:
     example: Smith
   pathImage:
     description: Imagen del transportista
-    type: Image
+    type: String
     example: Courier Image Tizo
   phone:
     $ref: ./Phonenumber.yaml

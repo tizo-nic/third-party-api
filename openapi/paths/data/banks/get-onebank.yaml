@@ -2,7 +2,7 @@ get:
   tags: 
     - Información de los bancos y métodos de pago
   summary: Buscar un banco
-  description: Este método te permite buscar la información del banco por Id y devuelve los datos del mismo.
+  description: Este método te permite buscar un banco por medio de su Id y devuelve los datos del mismo.
   operationId: my-banks-id
   security:
     - basic_auth: [ Authorization ]

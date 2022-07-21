@@ -2,7 +2,7 @@ get:
   tags:
       - Información de los envíos y paquetes
   summary: Buscar un departamento
-  description: Este método te permite buscar la información del departamento por Id y devuelve los datos del mismo.
+  description: Este método te permite buscar un departamento por medio de su Id y devuelve los datos del mismo.
   operationId: my-department-id
   security:
     - basic_auth: [ Authorization ]

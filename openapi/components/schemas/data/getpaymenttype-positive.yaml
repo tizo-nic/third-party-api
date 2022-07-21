@@ -3,7 +3,7 @@ properties:
   data: 
     type: object
     properties:
-      paymenttypes:
+      paymentTypes:
         type: object
         properties:
           idPaymentType:
@@ -34,10 +34,6 @@ properties:
             type: datetime
             description: Fecha de última actualización del Método de Pago
             example: 2022-06-07T19:26:22.807+00:00
-      count:
-        type: integer
-        description: Número de bancos conectados a la cuenta
-        example: 1
   message:
     type: string
     description: Mensaje positivo de respuesta

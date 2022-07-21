@@ -3,7 +3,7 @@ properties:
   data: 
     type: object
     properties:     
-      StatusDeliveries:
+      statusDeliveries:
         type: array
         items:
           $ref:  "./statusdelivery.yaml"

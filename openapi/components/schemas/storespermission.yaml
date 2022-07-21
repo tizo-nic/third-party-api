@@ -10,7 +10,7 @@ properties:
       example: Tiendas S.A.
     pathImage:  
       description: Imagen de la tienda
-      type: Image
+      type: string
       example: Tiendas S.A.
     permissions:
       type: array
