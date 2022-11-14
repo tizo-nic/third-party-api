@@ -4,21 +4,6 @@ post:
   summary: Inicio de sesión
   description: Este método te permite iniciar sesión con un nombre de usuario, una contraseña y un tipo de usuario
   operationId: login
-  security:
-    - basic_auth: [ Authorization ]
-  responses:
-    '200':
-      description: Success
-      content: 
-        application/json:
-          schema:
-            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
-    '401': 
-      description: Unauthorized
-      content: 
-        application/json:
-          schema:
-            $ref: '../../components/schemas/authentication/LoginResponse2.yaml'
   requestBody:
     headers:
       environment:
@@ -32,6 +17,20 @@ post:
           $ref: ../../components/schemas/authentication/Login.yaml
     description: Estructura de datos para iniciar sesión
     required: true
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/authentication/LoginResponse.yaml'
+    '401': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../components/schemas/authentication/LoginResponse2.yaml'
+  
   x-codeSamples:
     - lang: "C#"
       source:

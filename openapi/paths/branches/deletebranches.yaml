@@ -4,8 +4,19 @@ delete:
   summary: Eliminar una sucursal
   description: Este método sirve para eliminar una de las sucursales existentes que tenga una tienda
   operationId: delete-branches
-  security:
-    - basic_auth: [ Authorization ]
+  parameters:
+    - name: idStore
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID de la tienda
+    - name: idBranch
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID de la sucursal de la tienda
   responses:
     '200':
       description: Success

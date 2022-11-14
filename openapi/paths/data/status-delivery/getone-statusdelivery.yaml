@@ -4,8 +4,13 @@ get:
   summary: Buscar un estado de envío
   description: Este método te permite buscar un estado del envío por medio de su Id y devuelve los datos del mismo.
   operationId: my-statusdelivery-id
-  security:
-    - basic_auth: [ Authorization ]
+  parameters:
+    - name: idStatusDelivery
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID del estado del envío
   responses:
     '200':
       description: Success

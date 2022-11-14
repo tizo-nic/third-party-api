@@ -4,8 +4,13 @@ get:
   summary: Listar las sucursales de una tienda
   description: Este método sirve para visualizar todas las sucursales que tiene una tienda
   operationId: list-branches
-  security:
-    - basic_auth: [ Authorization ]
+  parameters:
+    - name: idStore
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID de la tienda
   responses:
     '200':
       description: Success

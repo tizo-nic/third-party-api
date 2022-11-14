@@ -4,8 +4,6 @@ get:
   summary: Listar los pasos de los envíos
   description: Este método te permite visualizar todos los pasos de envíos registrados en el sistema.
   operationId: list-steps-delivery
-  security:
-    - basic_auth: [ Authorization ]
   responses:
     '200':
       description: Success

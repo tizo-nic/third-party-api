@@ -4,8 +4,6 @@ get:
   summary: Listar todos tus envíos
   description: Este método te permite visualizar todos los envíos realizados por el usuario. 
   operationId: my-deliveries
-  security:
-    - basic_auth: [ Authorization ]
   responses:
     '200':
       description: Success
@@ -13,14 +11,12 @@ get:
         application/json:
           schema:
             $ref: '../../components/schemas/delivery/delivery-positive.yaml'
-    
     '400': 
       description: Unauthorized
       content: 
         application/json:
           schema:
             $ref: '../../components/schemas/delivery/delivery-negative.yaml'
-    
   requestBody:
     headers:
       environment:

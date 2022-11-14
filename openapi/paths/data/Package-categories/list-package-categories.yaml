@@ -4,8 +4,6 @@ get:
   summary: Listar las categorías de los paquetes
   description: Este método te permite visualizar todas las categorías de los paquetes existentes.
   operationId: list-package-categories
-  security:
-    - basic_auth: [ Authorization ]
   responses:
     '200':
       description: Success

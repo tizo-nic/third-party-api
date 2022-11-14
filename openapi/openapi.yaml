@@ -21,63 +21,39 @@ servers:
   - url: 'https://api.tizo.co/api/v1'
 paths:
   /auth/reset-password:
-    $ref: paths/auth/reset-password.yaml
+    $ref: paths/auth/reset-password.yaml  
   /auth/login:
     $ref: paths/auth/login.yaml
-  /auth/permissions:
-    $ref: paths/auth/permissions.yaml
   /auth/recovery-password:
     $ref: paths/auth/recovery-password.yaml
   /auth/refresh-token:
     $ref: paths/auth/refresh-token.yaml
-  /vendors/stores/{idStore}/payment-available/list-payment:
-    $ref: paths/available/list-payment.yaml
+  /delivery/get/?codeDelivery={code}:
+    $ref: paths/delivery/buscardeliverycode.yaml
   /delivery/get/?idDelivery={id}:
-      $ref: paths/delivery/buscardeliveryID.yaml
+    $ref: paths/delivery/buscardeliveryID.yaml
+
+
   /delivery/new:
     $ref: paths/delivery/new.yaml
+
+
   /delivery/confirm/{code}:
     $ref: paths/delivery/confirm.yaml
   /delivery/estimate:
-      $ref: paths/delivery/estimate.yaml
-  /delivery/api/?idStore={idStore}:
-      $ref: paths/delivery/listardeliveriesapi.yaml
+    $ref: paths/delivery/estimate.yaml
   /delivery:
-      $ref: paths/delivery/delivery.yaml
-  /delivery/send-notification/{code}:
-      $ref: paths/delivery/sendnotification.yaml
-  /system-data/banks/get-onebank/{id}:
-    $ref: paths/data/banks/get-onebank.yaml
-  /system-data/payment-types/{id}:
-    $ref: paths/data/Payment-types/getone-paymenttypes.yaml
-  /system-data/banks/:
-    $ref: paths/data/banks/list-banks.yaml
-  /system-data/payment-types/:
-    $ref: paths/data/Payment-types/payment-types.yaml
-  /system-data/departments/{id}:
-    $ref: paths/data/departments/getone-departments.yaml
-  /system-data/departments/{id}/municipalities/:
-    $ref: paths/data/departments/getone-departmentsmunici.yaml
-  /system-data/status-deliveries/{id}/:
+    $ref: paths/delivery/delivery.yaml
+  /system-data/status-deliveries/{idStatusDelivery}/:
     $ref: paths/data/status-delivery/getone-statusdelivery.yaml
-  /system-data/steps-deliveries/{id}/:
+  /system-data/steps-deliveries/{idStepDeliveries}/:
     $ref: paths/data/steps-delivery/getone-stepsdelivery.yaml
   /system-data/item-categories/:
     $ref: paths/data/Package-categories/list-package-categories.yaml
-  /system-data/departments:
-    $ref: paths/data/departments/list-departments.yaml
   /system-data/status-deliveries/:
     $ref: paths/data/status-delivery/status-delivery.yaml
   /system-data/steps-deliveries/:
     $ref: paths/data/steps-delivery/steps-delivery.yaml
-  /vendors/stores/{idStore}/account-receivable/{idAccount}:
-    $ref: paths/finance/Get-account-receivable.yaml
-  /vendors/stores/{idStore}/account-payable/{idAccount}:
-    $ref: paths/finance/Get-account-payable.yaml
-  /vendors/stores/{idStore}/account-receivable/:
-    $ref: paths/finance/account-receivable.yaml
-  /vendors/stores/{idStore}/account-payable/:
-    $ref: paths/finance/account-payable.yaml
   /vendors/stores/{idStore}/notifications/:
     $ref: paths/notifications/updatenotifications.yaml
   /vendors/stores/{idStor}/notifications/:
@@ -88,24 +64,37 @@ paths:
     $ref: paths/branches/updatebranches.yaml
   /vendors/stores/{idStor}/branches/{idBranch}/:
     $ref: paths/branches/getonebranches.yaml
+
+
   /vendors/stores/{idStore}/branches/:
     $ref: paths/branches/createbranches.yaml
+
+
   /vendors/stores/{idStore}/branches/{idBranch}:
     $ref: paths/branches/deletebranches.yaml
   /vendors/stores/{idStor}/branches:
     $ref: paths/branches/listbranches.yaml
+
+
+
   /vendors/stores/{idStore}/:
     $ref: paths/store/update-stores.yaml
+
   /vendors/stores/{idStore}/credit-bag/:
     $ref: paths/store/get-creditbag.yaml
+
   /vendors/stores/{idStore}:
     $ref: paths/store/getone-store.yaml
+
   /vendors/stores:
     $ref: paths/store/create-store.yaml
+
   /vendors/stores/{idStor}:
     $ref: paths/store/delete-store.yaml
+
   /vendors/stores/:
     $ref: paths/store/list-stores.yaml
+
 components:
   securitySchemes:
     main_auth:

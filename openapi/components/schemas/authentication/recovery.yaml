@@ -1,19 +1,29 @@
 type: object
 properties:
   method:
-    description: Método para recuperar la contraseña (Email, SMS)
+    description: Método para recuperar la contraseña
     type: string
     required: true
-    minLength: 1
+    enum:
+      - email
+      - sms
     example: email
   wordToMatch:
-    description: Palabra que debe coincidir con la palabra de recuperación (Email, Teléfono, Nombre de Usuario)
+    description: Palabra que debe coincidir con la palabra de recuperación
     type: string
     required: true
-    minLength: 1
+    enum:
+      - your_email
+      - your_username
+      - your_phonenumber
     example: m_yoni3
   typeUser:
-    description: Tipo de usuario (vendor, store_api)
+    description: Tipo de usuario
     type: string
     required: true
     example: vendor
+allOf:
+  - required:
+    - method
+    - wordToMatch
+    - typeUser 

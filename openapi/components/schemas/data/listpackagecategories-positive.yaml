@@ -3,7 +3,6 @@ properties:
   data: 
     type: object
     properties:
-      
       itemCategory:
         type: array
         items:

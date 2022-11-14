@@ -4,8 +4,17 @@ get:
   summary: Permisos
   description: Este método te permite ver los módulos y los permisos que tiene un usuario.
   operationId: permissions
-  security:
-    - basic_auth: [ Authorization ]
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application:
+        schema:
+          description: Este método no solicita ningún dato de entrada
   responses:
     '200':
       description: Success
@@ -19,17 +28,7 @@ get:
         application/json:
           schema:
             $ref: '../../components/schemas/authentication/permissionsResponse-negative.yaml'
-  requestBody:
-    headers:
-      environment:
-        description: País donde se encuentra el usuario.
-        schema:
-          type: string
-          example: "ni"
-    content:
-      application:
-        schema:
-          description: Este método no solicita ningún dato de entrada
+  
   x-codeSamples:
     - lang: "C#"
       source:

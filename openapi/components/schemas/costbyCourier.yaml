@@ -1,5 +1,28 @@
 type: object
 properties:
+  coverage: 
+    type: float
+    description: Es el porcentaje de devolución, en caso de que se pierda el paquete
+    example: 1.0
+  policies: 
+    type: object
+    properties:
+      idPolicies:
+        type: integer
+        description: Id de las políticas del logístico
+        example: 299
+      linkDocument:
+        type: string
+        description: Link de
+        example: /link/Document
+      linkVideo:
+        type: string
+        description: Nombre del transportista
+        example: /link/Video
+      idCourier:
+        type: integer
+        description: Id del logístico
+        example: 299
   courierName:
     type: string
     description: Nombre del transportista
@@ -18,7 +41,7 @@ properties:
       $ref: ./methodsprice.yaml
   idCourier:
     type: integer
-    description: Id del transportista
+    description: Id del logístico
     example: 299
   paymentsAvailable:
     type: array

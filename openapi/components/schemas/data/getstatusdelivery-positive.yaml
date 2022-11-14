@@ -3,27 +3,29 @@ properties:
   data: 
     type: object
     properties:
-      idStatusDelivery:
-        type: integer
-        description: Id del estado del envío
-        example: 1
-      name: 
-        type: string
-        description: Nombre del estado del envío
-        example: In process
-      code:
-        type: string
-        description: Código del estado del envío
-        example: IN-PROCESS
-      
-      dateCreation:
-        type: datetime
-        description: Fecha de creación del estado del envío
-        example: 2022-06-02T15:47:02.797+00:00
-      dateLastUpdate:
-        type: datetime
-        description: Fecha de última actualización del estado del envío
-        example: 2022-06-07T19:26:22.807+00:00
+      statusDeliveries:
+        type: object
+        properties:
+          idStatusDelivery:
+            type: integer
+            description: Id del estado del envío
+            example: 1
+          name: 
+            type: string
+            description: Nombre del estado del envío
+            example: In process
+          code:
+            type: string
+            description: Código del estado del envío
+            example: IN-PROCESS
+          dateCreation:
+            type: datetime
+            description: Fecha de creación del estado del envío
+            example: 2022-06-02T15:47:02.797+00:00
+          dateLastUpdate:
+            type: datetime
+            description: Fecha de última actualización del estado del envío
+            example: 2022-06-07T19:26:22.807+00:00
   message:
     type: string
     description: Mensaje positivo de respuesta

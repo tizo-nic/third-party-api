@@ -4,8 +4,17 @@ post:
   summary: Refrescar token
   description: Este método necesita el token anterior para poder obtener un token nuevo. Adicionalmente, se sobre entiende que tiene la misma duración que el primer token obtenido (una semana).
   operationId: refresh-token
-  security:
-    - basic_auth: [ Authorization ]
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application:
+        schema:
+          description: Este método no solicita ningún dato de entrada
   responses:
     '200':
       description: Success
@@ -19,17 +28,6 @@ post:
         application/json:
           schema:
             $ref: '../../components/schemas/authentication/refresh-negative.yaml'
-  requestBody:
-    headers:
-      environment:
-        description: País donde se encuentra el usuario.
-        schema:
-          type: string
-          example: "ni"
-    content:
-      application:
-        schema:
-          description: Este método no solicita ningún dato de entrada
   x-codeSamples:
     - lang: "C#"
       source:

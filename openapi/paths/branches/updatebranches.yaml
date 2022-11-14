@@ -4,8 +4,19 @@ put:
   summary: Actualizar la sucursal
   description: Este método sirve para actualizar los datos de una sucursal 
   operationId: update-branches
-  security:
-    - basic_auth: [ Authorization ]
+  parameters:
+    - name: idStore
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID de la tienda
+    - name: idBranch
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID de la sucursal de la tienda
   responses:
     '200':
       description: Success

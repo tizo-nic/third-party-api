@@ -64,7 +64,7 @@ payload = json.dumps({
   "customerEmail": "agarciadarce@gmail.com"
 })
 headers = {
-  'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidmVuZG9yIiwidXNlcm5hbWUiOiJ2X2dhYnJpZWxfNiIsImlhdCI6MTY1NzgwOTQ2MSwiZXhwIjoxNjU4NDE0MjYxfQ.N_rPvlIFgpj_mK8mcWzDbKEgud6bJeSNc5cOKqzyYTvWeCqStlzUCQjeyoNt98GwqpEU-4jdI35jMk83bahzpg',
+  'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8xMSIsImlhdCI6MTY2ODQzODYyNywiZXhwIjoxNjY5MDQzNDI3fQ.DK3uGNDCZi9_pyJzhhMoujy1OCW0RHjL8sY1CnimwPSWJZ1Sbzhz4oyIK379Ei7jb0rbxHP7GuSGKpFJavyxMw',
   'Content-Type': 'application/json'
 }
 

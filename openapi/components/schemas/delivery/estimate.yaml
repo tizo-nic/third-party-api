@@ -23,11 +23,109 @@ properties:
   waypoints:
     type: array
     items:
-      $ref: ../waypoints2.yaml
+      type: object
+      properties:
+        type:
+          type: string
+          description: Tipo de punto de ruta
+          example: PICK-UP
+        city:
+          type: string
+          description: Ciudad del punto de ruta
+          example: Managua
+        country:
+          type: string
+          description: País del punto de ruta
+          example: Nicaragua
+        state:  
+          type: string
+          description: Departamento del punto de ruta
+          example: Managua
+        addressStreet:
+          type: string
+          description: Calle del punto de ruta
+          example: Miguel Gutierrez
+        personName:
+          description: Nombre del usuario que realiza el pedido
+          type: string
+          example: John
+        personIdentification:
+          type: string
+          description: Identificación de la persona
+          example: 001-061199-1009L
+        phone:
+          $ref: ../Phonenumber.yaml
+        personEmail:
+          $ref: ../Email.yaml
+        addressHuman:
+          type: string
+          description: Nombre del punto de ruta
+          example: Tamarindo
+        addressGeo:
+          type: string
+          description: Dirección del punto de ruta
+          example: De la rotonda de Rubén Darío 1c al sur, 2c abajo, Managua 14003, Nicaragua
+        instructions:
+          type: string
+          description: Instrucción del punto de ruta
+          example: Arbol de mango
+        latitude:
+          type: float
+          description: Latitud del punto de ruta
+          example: 12.121212
+        longitude: 
+          type: float
+          description: Longitud del punto de ruta
+          example: -12.121212
   items:
     type: array
     items:
-      $ref: ../items2.yaml
+      type: object
+      properties:
+        category:
+          type: integer
+          description: Id del ítem de la categoría
+          example: 13
+        name:
+          type: string
+          description: Nombre del ítem
+          example: Paquete número uno
+        description:
+          type: string
+          description: Descripción del item
+          example: Una escoba con gaseosa.
+        weight:
+          type: float
+          description: Altura del ítem
+          example: 1.00
+        height:
+          type: float
+          description: Peso del ítem
+          example:  1.00
+        depth:
+          type: float
+          description: Profundidad del ítem
+          example: 1.00
+        width:
+          type: float
+          description: Ancho del ítem
+          example:  1.00
+        value:
+          type: float
+          description: Valor del ítem
+          example: 50.0000
+        fragile:
+          type: boolean
+          description: Es frágil
+          example: false
+        document:
+          type: boolean
+          description: Necesita documento
+          example: false
+        images:
+          type: Image
+          description: Imagen del ítem
+          example: '.src'
   customerEmail:
     description: Correo Electrónico del cliente
     type: string

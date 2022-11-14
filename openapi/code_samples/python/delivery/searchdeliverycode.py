@@ -1,6 +1,6 @@
 import requests
 
-url = "https://api.tizo.co/api/v1/delivery/get/?idDelivery=304"
+url = "https://api.tizo.co/api/v1/delivery/get/?codeDelivery=5443185F-3FD5-42B1-AF56-4A3128E996A7"
 
 payload={}
 headers = {
@@ -10,4 +10,3 @@ headers = {
 response = requests.request("GET", url, headers=headers, data=payload)
 
 print(response.text)
-

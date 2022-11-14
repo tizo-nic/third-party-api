@@ -6,10 +6,14 @@ properties:
       idDelivery:
         type: integer
         description: Id del envío
-        example: 370
+        example: 304
       idPaymentType:
         type: integer
         description: Id del tipo de pago
+        example: 2
+      idDeliveryType: 
+        type: integer
+        description: Id del tipo de envío
         example: 2
       idCapacity:
         type: integer
@@ -47,10 +51,18 @@ properties:
         type: float
         description: Ancho del envío
         example: 50
+      collectMoney:
+        type: float
+        description: Cobro del producto, para pagos en efectivo. 
+        example: null
       total:
         type: float
         description: Total del envío
         example: 100.5220
+      change: 
+        type: float
+        description: Cambio del efectivo
+        example: null
       description:
         type: string
         description: Descripción del envío
@@ -67,6 +79,10 @@ properties:
         type: datetime
         description: Fecha y hora estimada de envío
         example: 2022-06-08T17:15:53.000+00:00
+      scheduledDeliveryTime:
+        type: integer
+        description: Fecha y hora de estimados, pero si el courier cambia el tiempo de entrega, se cambia este dato
+        example: 0
       active:
         type: boolean
         description: Estado del envío
@@ -74,7 +90,7 @@ properties:
       origin:
         type: string
         description: Origen del envío
-        example: vendor
+        example: store_api
       receiver:
         type: string
         description: Destinatario del envío
@@ -100,7 +116,44 @@ properties:
         description: Imagen de previsualización del envío
         example: null
       relationCouriers:
-        $ref: ../relationCouriers2.yaml
+        type: object
+        properties:
+          idDeliveryCourier:
+            type: integer
+            description: Id del logístico del envío
+            example: 166
+          idDelivery:
+            type: integer
+            description: Id del envío
+            example: 166
+          idCourier:
+            type: integer
+            description: Id del logístico
+            example: 166
+          idCourierRoute:
+            type: integer
+            description: Id de la ruta del logístico
+            example: 166
+          idCourierDriver:
+            type: integer
+            description: Id del conductor del logístico
+            example: 166
+          rating:
+            type: integer
+            description: Calificación dada por el logistico
+            example: null
+          comment:
+            type: string
+            description: Comentario dado por el logistico
+            example: null
+          dateCreation:
+            type: datetime
+            description: Fecha de creación del ítem
+            example: 2022-06-08T17:15:53.000+00:00
+          dateLastUpdate:
+            type: datetime
+            description: Fecha de última actualización del ítem
+            example: 2022-06-08T17:15:53.000+00:00
       paymentWithCard:
         type: object
         description: Pagar con tarjeta
@@ -114,15 +167,104 @@ properties:
         description: Conductores
         example: null
       relationVendors:
-        $ref: ../relationVendors3.yaml
+        type: object
+        description: Tiendas
+        example: null
       relationCustomers:
         type: object
         description: Clientes
         example: null
       relationStoreApi:
         type: object
-        description: Tienda de la API
-        example: null
+        description: Api de la tienda asociada al envío
+        properties:
+          idDeliveryVendor:
+            type: integer
+            description: Id del envío de la tienda
+            example: 166
+          idDelivery:
+            type: integer
+            description: Id del envío
+            example: 166
+          idStoreApi:
+            type: integer
+            description: Id de la Api de la tienda
+            example: 166
+          idStoreBranch:
+            type: integer
+            description: Id de la sucursal de la tienda
+            example: 166
+          rating: 
+            type: integer
+            description: Puntuación de la tienda por la empresa logistica
+            example: 2
+          comment:
+            type: string
+            description: Comentario de la tienda por la empresa logistica
+            example: Hola
+          dateCreation:
+            type: datetime
+            description: Fecha de creación del ítem
+            example: 2022-06-08T17:15:53.000+00:00
+          dateLastUpdate:
+            type: datetime
+            description: Fecha de última actualización del ítem
+            example: 2022-06-08T17:15:53.000+00:00
+          storesBranch:
+            type: object
+            properties:
+              idStoreBranch:
+                type: integer
+                description: Id de la Sucursal de la tienda
+                example: 19
+              idStore:
+                type: integer
+                description: Id de la tienda
+                example: 19
+              name: 
+                type: string
+                description: Nombre de la sucursal
+                example: Tizo Bodegon
+              idMunicipality:
+                type: integer
+                description: Id de la municipalidad de la tienda
+                example: 19
+              addressGeo:
+                type: string
+                description: Direccion de Google Maps de la sucursal
+                example: De la rotonda de Rubén Darío 1c al sur, 2c abajo, Managua 14003, Nicaragua
+              phone:
+                description: Teléfono de la tienda
+                type: string
+                example: 8888-8838
+              addressHuman:
+                type: string
+                description: Direccion Nicaraguense de la sucursal
+                example: De la rotonda de Rubén Darío 1c al sur, 2c abajo, Managua 14003, Nicaragua
+              latitude:
+                type: float
+                description: Latitud de la tienda
+                example: 12.121212
+              longitude:
+                type: float
+                description: Longitud de la tienda
+                example: 12.121212
+              active:
+                description: Estado de la sucursal
+                type: boolean
+                example: true
+              vacation:
+                description: Ofrece la disponibilidad de no recibir notificaciones
+                type: boolean
+                example: true
+              dateCreation:
+                type: datetime
+                description: Fecha de creación del ítem
+                example: 2022-06-08T17:15:53.000+00:00
+              dateLastUpdate:
+                type: datetime
+                description: Fecha de última actualización del ítem
+                example: 2022-06-08T17:15:53.000+00:00
       relationManager:
         type: object
         description: Manager
@@ -131,11 +273,38 @@ properties:
         type: object
         description: Facturas
         example: null
-      url:
+      estimatedDeliveryTimeString:
         type: string
-        description: Url del envío
-        example: https://www.google.com
-      
+        description: Fecha del Tiempo estimado del envío en un string
+        example: 25 de 
+      urlVendor:
+        type: string
+        description: Url para que la tienda pueda monitorear su envío
+        example: https://vendor.tizo.com.ni/tracking/96320C6C-A627-4F11-A1CF-8ECC2BBE79ED
+      urlLogistic:
+        type: string
+        description: Url para que el logistico pueda monitorear el envío
+        example: https://manager.tizo.com.ni/home/shipment/552
+      codeShort:
+        type: string
+        description: Es el codigo del envío acortado
+        example: 8ECC2BBE79ED
+      liveTracking: 
+        type: boolean
+        description: Permite saber si el envío puede ser monitoreado en tiempo real
+        example: true
+      creatorPathImage:
+        type: string
+        description: Url a la imagen de la tienda
+        example: https://s3.amazonaws.com/tizo-dev/documents-vendor-11/1660361968102-tizo.jpg
+      pinDelivery:
+        type: integer
+        description: Pin unico que se crea para validar que la persona que reciba el pedido sea la correcta
+        example: 04704
+      couponDiscount:
+        type: object
+        description: En caso de que se le haya aplicado un cupón sea validado.
+        example: null
   message:
     type: string
     description: Mensaje positivo de respuesta

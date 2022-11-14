@@ -4,8 +4,13 @@ post:
   summary: Crear una notificaciones
   description: Este método sirve para crear las notificaciones de una tienda
   operationId: create-notifications
-  security:
-    - basic_auth: [ Authorization ]
+  parameters:
+    - name: idStore
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID de la tienda
   responses:
     '200':
       description: Success

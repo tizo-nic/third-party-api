@@ -3,7 +3,7 @@ properties:
   data:
     type: object
     properties:
-      creditBag:
+      storeCreditBag:
         type: object
         description: Bolsa de crédito de la Tienda
         properties:
@@ -35,6 +35,14 @@ properties:
             type: date
             description: Fecha de último pago de la bolsa de crédito
             example: 2022-05-06
+          cutoffDate:
+            type: datetime
+            description: Fecha de corte de la bolsa de crédito
+            example: 2022-05-06T23:00:52.670+00:00
+          cutoffPayDate:
+            type: datetime
+            description: Fecha de corte para pagar bolsa de crédito
+            example: 2022-05-06T23:00:52.670+00:00
           daysToPay:
             type: integer
             description: Días que faltan para pagar la bolsa de crédito

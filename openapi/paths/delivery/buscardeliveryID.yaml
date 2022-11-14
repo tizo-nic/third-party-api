@@ -1,11 +1,16 @@
 get:
   tags:
     - Envíos
-  summary: Buscar envíos por Id
+  summary: Buscar envío por Id
   description: Este método te permite buscar un envío por medio de su Id y devuelve los datos del mismo.
   operationId: my-deliveries-id
-  security:
-    - basic_auth: [ Authorization ]
+  parameters:
+    - name: idDelivery
+      in: query
+      schema:
+        type: string
+        example: 304
+      description: Id del envío
   responses:
     '200':
       description: Success

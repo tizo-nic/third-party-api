@@ -4,8 +4,6 @@ post:
   summary: Estimar un envío
   description: Este método te permite estimar los gastos del envío. Es importante destacar colocar la categoría correcta, puesto que dependiendo de ella se notifican a los couriers que aceptan esta categoría.
   operationId: estimate
-  security:
-    - basic_auth: [ Authorization ]
   responses:
     '200':
       description: Success

@@ -4,8 +4,6 @@ post:
   summary: Crear una tienda
   description: Este método sirve para crear una nueva tienda
   operationId: create-store
-  security:
-    - basic_auth: [ Authorization ]
   responses:
     '200':
       description: Success

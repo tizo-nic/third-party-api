@@ -1,11 +1,16 @@
 get:
   tags:
     - Notificaciones
-  summary: Listar las notificaciones
+  summary: Obtener las preferencias de las notificaciones
   description: Este método sirve para visualizar las notificaciones que puede tener la tienda
   operationId: list-notifications
-  security:
-    - basic_auth: [ Authorization ]
+  parameters:
+    - name: idStore
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID de la tienda
   responses:
     '200':
       description: Success

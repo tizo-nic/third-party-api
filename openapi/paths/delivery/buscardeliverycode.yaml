@@ -1,9 +1,9 @@
-post:
+get:
   tags:
     - Envíos
-  summary: Confirmar un envío
-  description: Este método te permite confirmar el envío y así empezar el flujo de los procesos.
-  operationId: confirm
+  summary: Buscar envío por código de envío
+  description: Este método te permite buscar un envío por medio de su código de envío y devuelve los datos del mismo.
+  operationId: my-deliveries-code
   parameters:
     - name: codeDelivery
       in: query
@@ -17,13 +17,13 @@ post:
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/delivery/confirm-positive.yaml'
+            $ref: '../../components/schemas/delivery/buscardeliverycode-positive.yaml'
     '400': 
       description: Unauthorized
       content: 
         application/json:
           schema:
-            $ref: '../../components/schemas/delivery/confirm-negative.yaml'
+            $ref: '../../components/schemas/delivery/buscardeliverycode-negative.yaml'
   requestBody:
     headers:
       environment:
@@ -32,16 +32,16 @@ post:
           type: string
           example: "ni"
     content:
-     application:
+      application:
         schema:
           description: Este método no solicita ningún dato de entrada
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../../code_samples/csharp/delivery/confirm.cs"
+        $ref: "../../code_samples/csharp/delivery/searchdeliverycode.cs"
     - lang: PHP
       source:
-        $ref: "../../code_samples/PHP/delivery/confirm.php"
+        $ref: "../../code_samples/PHP/delivery/searchdeliverycode.php"
     - lang: Python
       source:
-        $ref: "../../code_samples/python/delivery/confirm.py"
+        $ref: "../../code_samples/Python/delivery/searchdeliverycode.py"
