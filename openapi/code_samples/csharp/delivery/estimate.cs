@@ -1,19 +1,19 @@
-var client = new RestClient("https://api.tizo.co/api/v1/delivery/estimate/");
+var client = new RestClient("http://ac50c79e407e44dc89f257057d60ddbf-1643442314.us-east-1.elb.amazonaws.com/api/v1/delivery/estimate/");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
-request.AddHeader("Authorization", "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8xMSIsImlhdCI6MTY2ODQzODYyNywiZXhwIjoxNjY5MDQzNDI3fQ.DK3uGNDCZi9_pyJzhhMoujy1OCW0RHjL8sY1CnimwPSWJZ1Sbzhz4oyIK379Ei7jb0rbxHP7GuSGKpFJavyxMw");
+request.AddHeader("Authorization", "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8xMSIsImlhdCI6MTY2ODUyNTU3NSwiZXhwIjoxNjczODA5NTc1fQ.8WAs-muUnBUrEIv4cevePavSOo_vVLS-jySkDF7tjVOgVo8mTg-NoMzb7OW7JbBBoIL_8L0CJfkkTLFVq5myYg");
 request.AddHeader("Content-Type", "application/json");
 var body = @"{
+" + "\n" +
+@"    ""idStore"": 11,
+" + "\n" +
+@"    ""idBranchStore"": 20,
 " + "\n" +
 @"    ""description"": ""Sin descripcion"",
 " + "\n" +
 @"    ""isTest"": true,
 " + "\n" +
-@"    ""idStore"": 2,
-" + "\n" +
-@"    ""idBranchStore"": 2,
-" + "\n" +
-@"    ""deliveryTime"": ""2022-06-05T23:15:53Z"",
+@"    ""deliveryTime"": ""2022-11-15T15:25:55.999Z"",
 " + "\n" +
 @"    ""waypoints"": [
 " + "\n" +
@@ -27,29 +27,35 @@ var body = @"{
 " + "\n" +
 @"            ""state"": ""Managua"",
 " + "\n" +
-@"            ""addressStreet"": ""Miguel Gutierrez"",
+@"            ""addressStreet"": ""tizo central"",
 " + "\n" +
-@"            ""personName"": ""Axel Garcia"",
+@"            ""personName"": ""Adriana"",
 " + "\n" +
-@"            ""personIdentification"": ""001-061199-1009L"",
+@"            ""personEmail"": ""agb@tizo.app"",
 " + "\n" +
-@"            ""phone"": ""+50581380937"",
+@"            ""personIdentification"": ""001-030696-0016J"",
 " + "\n" +
-@"            ""personEmail"": ""axelgarciadarce@gmail.com"",
+@"            ""phone"": ""+50557418465"",
 " + "\n" +
-@"            ""addressHuman"": ""Tamarindo"",
+@"            ""addressHuman"": ""Bodegon mercado oriental"",
 " + "\n" +
-@"            ""addressGeo"": ""Jocote"",
+@"            ""addressGeo"": ""4P8V+8C8, Managua 14031, Nicaragua"",
 " + "\n" +
-@"            ""instructions"": ""Arbol de mango"",
+@"            ""instructions"": ""No golpear"",
 " + "\n" +
-@"            ""latitude"": 12.0985803,
+@"            ""latitude"": 12.116088834,
 " + "\n" +
-@"            ""longitude"": -86.2275385
+@"            ""longitude"": -86.25661897,
+" + "\n" +
+@"            ""branchName"": ""tizo central"",
+" + "\n" +
+@"            ""storeName"": ""Tizo bodegon""
 " + "\n" +
 @"        },
 " + "\n" +
 @"        {
+" + "\n" +
+@"            ""type"": ""DROP_OFF"",
 " + "\n" +
 @"            ""city"": ""Managua"",
 " + "\n" +
@@ -57,27 +63,25 @@ var body = @"{
 " + "\n" +
 @"            ""state"": ""Managua"",
 " + "\n" +
-@"            ""addressStreet"": ""9 de Junio"",
+@"            ""addressStreet"": """",
 " + "\n" +
-@"            ""personName"": ""Raul"",
+@"            ""personName"": ""Hanzel Urrutia"",
 " + "\n" +
-@"            ""personEmail"": ""axel.garcia@tizo.app"",
+@"            ""personEmail"": ""hanzelurrutia8118@gmail.com"",
 " + "\n" +
-@"            ""personIdentification"": ""001-061199-1009L"",
+@"            ""personIdentification"": ""888-170702-1002A"",
 " + "\n" +
-@"            ""phone"": ""+50558400760"",
+@"            ""phone"": ""+50578849074"",
 " + "\n" +
-@"            ""addressHuman"": ""Tamarindo"",
+@"            ""addressHuman"": ""Del molino, una cuadra arriba dos y medía al algo"",
 " + "\n" +
-@"            ""addressGeo"": ""Jocote con maiz"",
+@"            ""addressGeo"": ""514 P.º las colinas, Managua 14197, Nicaragua"",
 " + "\n" +
-@"            ""instructions"": ""Abajo del mercado"",
+@"            ""instructions"": ""Decir buenas"",
 " + "\n" +
-@"            ""type"": ""DROP_OFF"",
+@"            ""latitude"": 12.102190263,
 " + "\n" +
-@"            ""longitude"": -86.235741,
-" + "\n" +
-@"            ""latitude"": 12.136511
+@"            ""longitude"": -86.23643979
 " + "\n" +
 @"        }
 " + "\n" +
@@ -87,39 +91,45 @@ var body = @"{
 " + "\n" +
 @"        {
 " + "\n" +
-@"            ""category"": 12,
-" + "\n" +
-@"            ""name"": ""Paquete numero uno"",
-" + "\n" +
-@"            ""description"": ""Una escoba con gaseosa."",
-" + "\n" +
-@"            ""weight"": 1,
-" + "\n" +
-@"            ""height"": 1,
-" + "\n" +
-@"            ""depth"": 1,
-" + "\n" +
-@"            ""width"": 1,
-" + "\n" +
-@"            ""value"": 50,
+@"            ""name"": ""Paquete"",
 " + "\n" +
 @"            ""fragile"": false,
 " + "\n" +
 @"            ""document"": false,
 " + "\n" +
+@"            ""description"": ""m"",
+" + "\n" +
+@"            ""isUsingCapacities"": false,
+" + "\n" +
+@"            ""value"": 5,
+" + "\n" +
+@"            ""weight"": 50,
+" + "\n" +
+@"            ""height"": 30,
+" + "\n" +
+@"            ""width"": 40,
+" + "\n" +
+@"            ""depth"": 30,
+" + "\n" +
 @"            ""images"": [
 " + "\n" +
-@"                "".src"",
+@"                null
 " + "\n" +
-@"                "".src""
+@"            ],
 " + "\n" +
-@"            ]
+@"            ""idItemCategory"": 0,
+" + "\n" +
+@"            ""capacitySelected"": ""Tizo Small0"",
+" + "\n" +
+@"            ""otherCapacity"": ""m"",
+" + "\n" +
+@"            ""category"": 0
 " + "\n" +
 @"        }
 " + "\n" +
 @"    ],
 " + "\n" +
-@"    ""customerEmail"": ""agarciadarce@gmail.com""
+@"    ""customerEmail"": ""agb@tizo.app""
 " + "\n" +
 @"}";
 request.AddParameter("application/json", body,  ParameterType.RequestBody);

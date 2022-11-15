@@ -32,12 +32,8 @@ paths:
     $ref: paths/delivery/buscardeliverycode.yaml
   /delivery/get/?idDelivery={id}:
     $ref: paths/delivery/buscardeliveryID.yaml
-
-
   /delivery/new:
     $ref: paths/delivery/new.yaml
-
-
   /delivery/confirm/{code}:
     $ref: paths/delivery/confirm.yaml
   /delivery/estimate:
@@ -64,37 +60,12 @@ paths:
     $ref: paths/branches/updatebranches.yaml
   /vendors/stores/{idStor}/branches/{idBranch}/:
     $ref: paths/branches/getonebranches.yaml
-
-
-  /vendors/stores/{idStore}/branches/:
-    $ref: paths/branches/createbranches.yaml
-
-
   /vendors/stores/{idStore}/branches/{idBranch}:
     $ref: paths/branches/deletebranches.yaml
   /vendors/stores/{idStor}/branches:
     $ref: paths/branches/listbranches.yaml
-
-
-
-  /vendors/stores/{idStore}/:
-    $ref: paths/store/update-stores.yaml
-
   /vendors/stores/{idStore}/credit-bag/:
     $ref: paths/store/get-creditbag.yaml
-
-  /vendors/stores/{idStore}:
-    $ref: paths/store/getone-store.yaml
-
-  /vendors/stores:
-    $ref: paths/store/create-store.yaml
-
-  /vendors/stores/{idStor}:
-    $ref: paths/store/delete-store.yaml
-
-  /vendors/stores/:
-    $ref: paths/store/list-stores.yaml
-
 components:
   securitySchemes:
     main_auth:

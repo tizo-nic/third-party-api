@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "https://api.tizo.co/api/v1/delivery/new/"
+url = "http://ac50c79e407e44dc89f257057d60ddbf-1643442314.us-east-1.elb.amazonaws.com/api/v1/delivery/new/"
 
 payload = json.dumps({
   "description": "Con descripcion",
@@ -13,65 +13,68 @@ payload = json.dumps({
       "city": "Managua",
       "country": "Nicaragua",
       "state": "Managua",
-      "addressStreet": "Miguel Gutierrez",
-      "personName": "Axel Garcia",
-      "personIdentification": "001-061199-1009L",
-      "phone": "+50581380937",
-      "personEmail": "axelgarciadarce@gmail.com",
-      "addressHuman": "Tamarindo",
-      "addressGeo": "Jocote",
-      "instructions": "Arbol de mango",
-      "latitude": 12.0985803,
-      "longitude": -86.2275385
+      "addressStreet": "tizo central",
+      "personName": "Adriana",
+      "personEmail": "agb@tizo.app",
+      "personIdentification": "001-030696-0016J",
+      "phone": "+50557418465",
+      "addressHuman": "Bodegon mercado oriental",
+      "addressGeo": "4P8V+8C8, Managua 14031, Nicaragua",
+      "instructions": "No golpear",
+      "latitude": 12.116088834,
+      "longitude": -86.25661897,
+      "branchName": "tizo central",
+      "storeName": "Tizo bodegon"
     },
     {
+      "type": "DROP_OFF",
       "city": "Managua",
       "country": "Nicaragua",
       "state": "Managua",
-      "addressStreet": "9 de Junio",
-      "personName": "Raul",
-      "personEmail": "axel.garcia@tizo.app",
-      "personIdentification": "001-061199-1009L",
-      "phone": "+50558400760",
-      "addressHuman": "Tamarindo",
-      "addressGeo": "Jocote con maiz",
-      "instructions": "Abajo del mercado",
-      "type": "DROP_OFF",
-      "longitude": -86.235741,
-      "latitude": 12.136511
+      "addressStreet": "",
+      "personName": "Hanzel Urrutia",
+      "personEmail": "hanzelurrutia8118@gmail.com",
+      "personIdentification": "888-170702-1002A",
+      "phone": "+50578849074",
+      "addressHuman": "Del molino, una cuadra arriba dos y medía al algo",
+      "addressGeo": "514 P.º las colinas, Managua 14197, Nicaragua",
+      "instructions": "Decir buenas",
+      "latitude": 12.102190263,
+      "longitude": -86.23643979
     }
   ],
   "items": [
     {
-      "category": 13,
-      "name": "Paquete numero uno",
-      "description": "Una escoba con gaseosa.",
-      "weight": 50,
-      "height": 50,
-      "depth": 50,
-      "width": 50,
-      "value": 50,
+      "name": "Paquete",
       "fragile": False,
       "document": False,
+      "description": "m",
+      "isUsingCapacities": False,
+      "value": 5,
+      "weight": 50,
+      "height": 30,
+      "width": 40,
+      "depth": 30,
       "images": [
-        ".src",
-        ".src"
-      ]
+        None
+      ],
+      "idItemCategory": 0,
+      "capacitySelected": "Tizo Small",
+      "otherCapacity": "m",
+      "category": 0
     }
   ],
   "customerEmail": "agarciadarce@gmail.com",
   "selectedMethod": {
     "method": "COURIER",
-    "idCourier": 0,
-    "idAreaOrigin": 9,
-    "idAreaDestination": 10,
+    "idCourier": 1,
     "idPaymentMethod": 2
   },
-  "idStore": 2,
-  "idBranchStore": 3
+  "idStore": 11,
+  "idBranchStore": 20
 })
 headers = {
-  'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidmVuZG9yIiwidXNlcm5hbWUiOiJ2X2dhYnJpZWxfNiIsImlhdCI6MTY1NzgwOTQ2MSwiZXhwIjoxNjU4NDE0MjYxfQ.N_rPvlIFgpj_mK8mcWzDbKEgud6bJeSNc5cOKqzyYTvWeCqStlzUCQjeyoNt98GwqpEU-4jdI35jMk83bahzpg',
+  'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8xMSIsImlhdCI6MTY2ODUyNTU3NSwiZXhwIjoxNjczODA5NTc1fQ.8WAs-muUnBUrEIv4cevePavSOo_vVLS-jySkDF7tjVOgVo8mTg-NoMzb7OW7JbBBoIL_8L0CJfkkTLFVq5myYg',
   'Content-Type': 'application/json'
 }
 

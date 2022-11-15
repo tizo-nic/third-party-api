@@ -1,10 +1,147 @@
-var client = new RestClient("https://api.tizo.co/api/v1/delivery/new/");
+var client = new RestClient("http://ac50c79e407e44dc89f257057d60ddbf-1643442314.us-east-1.elb.amazonaws.com/api/v1/delivery/new/");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
-request.AddHeader("Authorization", "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidmVuZG9yIiwidXNlcm5hbWUiOiJ2X2dhYnJpZWxfNiIsImlhdCI6MTY1NzgwOTQ2MSwiZXhwIjoxNjU4NDE0MjYxfQ.N_rPvlIFgpj_mK8mcWzDbKEgud6bJeSNc5cOKqzyYTvWeCqStlzUCQjeyoNt98GwqpEU-4jdI35jMk83bahzpg");
+request.AddHeader("Authorization", "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8xMSIsImlhdCI6MTY2ODUyNTU3NSwiZXhwIjoxNjczODA5NTc1fQ.8WAs-muUnBUrEIv4cevePavSOo_vVLS-jySkDF7tjVOgVo8mTg-NoMzb7OW7JbBBoIL_8L0CJfkkTLFVq5myYg");
 request.AddHeader("Content-Type", "application/json");
-var body = @"{" + "\n" +@"    ""description"": ""Con descripcion""," + "\n" +@"    ""isTest"": true," + "\n" +@"    ""deliveryTime"": ""2022-06-08T17:15:53Z""," + "\n" +@"    ""waypoints"": [" + "\n" +
-@"        {" + "\n" +@"            ""type"": ""PICK_UP""," + "\n" +@"            ""city"": ""Managua""," + "\n" +@"            ""country"": ""Nicaragua""," + "\n" +@"            ""state"": ""Managua""," + "\n" +@"            ""addressStreet"": ""Miguel Gutierrez""," + "\n" +@"            ""personName"": ""Axel Garcia""," + "\n" +@"            ""personIdentification"": ""001-061199-1009L""," + "\n" +@"            ""phone"": ""+50581380937""," + "\n" +@"            ""personEmail"": ""axelgarciadarce@gmail.com""," + "\n" +@"            ""addressHuman"": ""Tamarindo""," + "\n" +@"            ""addressGeo"": ""Jocote""," + "\n" +@"            ""instructions"": ""Arbol de mango""," + "\n" +@"            ""latitude"": 12.0985803," + "\n" +@"            ""longitude"": -86.2275385" + "\n" +@"        }," + "\n" +@"        {" + "\n" +@"            ""city"": ""Managua""," + "\n" +@"            ""country"": ""Nicaragua""," + "\n" +@"            ""state"": ""Managua""," + "\n" +@"            ""addressStreet"": ""9 de Junio""," +"\n" +@"            ""personName"": ""Raul""," + "\n" +@"            ""personEmail"": ""axel.garcia@tizo.app""," + "\n" +@"            ""personIdentification"": ""001-061199-1009L""," + "\n" +@"            ""phone"": ""+50558400760""," + "\n" +@"            ""addressHuman"": ""Tamarindo""," + "\n" +@"            ""addressGeo"": ""Jocote con maiz""," + "\n" +@"            ""instructions"": ""Abajo del mercado""," + "\n" +@"            ""type"": ""DROP_OFF""," + "\n" +@"            ""longitude"": -86.235741," + "\n" +@"            ""latitude"": 12.136511" + "\n" +@"        }" + "\n" +@"    ]," + "\n" +@"    ""items"": [" + "\n" +@"        {" + "\n" +@"            ""category"": 13," + "\n" +@"            ""name"": ""Paquete numero uno""," + "\n" +@"            ""description"": ""Una escoba con gaseosa.""," + "\n" +@"            ""weight"": 50," + "\n" +@"            ""height"": 50," + "\n" +@"            ""depth"": 50," + "\n" +@"            ""width"": 50," + "\n" +@"            ""value"": 50," + "\n" +@"            ""fragile"": false," + "\n" +@"            ""document"": false," + "\n" +@"            ""images"": [" + "\n" +@"                "".src""," + "\n" +@"                "".src""" + "\n" +@"            ]" + "\n" +@"        }" + "\n" +@"    ]," + "\n" +@"    ""customerEmail"": ""agarciadarce@gmail.com""," + "\n" +@"    ""selectedMethod"": {" + "\n" +@"        ""method"": ""COURIER""," + "\n" +@"        ""idCourier"": 0," + "\n" +@"        ""idAreaOrigin"": 9," + "\n" +@"        ""idAreaDestination"": 10," + "\n" +@"        ""idPaymentMethod"":2 " + "\n" +@"    }," + "\n" +@"    ""idStore"": 2," + "\n" +@"    ""idBranchStore"":3" + "\n" +@"}";
+var body = @"{
+" + "\n" +
+@"    ""description"": ""Con descripcion"",
+" + "\n" +
+@"    ""isTest"": true,
+" + "\n" +
+@"    ""deliveryTime"": ""2022-06-08T17:15:53Z"",
+" + "\n" +
+@"    ""waypoints"": [
+" + "\n" +
+@"        {
+" + "\n" +
+@"            ""type"": ""PICK_UP"",
+" + "\n" +
+@"            ""city"": ""Managua"",
+" + "\n" +
+@"            ""country"": ""Nicaragua"",
+" + "\n" +
+@"            ""state"": ""Managua"",
+" + "\n" +
+@"            ""addressStreet"": ""tizo central"",
+" + "\n" +
+@"            ""personName"": ""Adriana"",
+" + "\n" +
+@"            ""personEmail"": ""agb@tizo.app"",
+" + "\n" +
+@"            ""personIdentification"": ""001-030696-0016J"",
+" + "\n" +
+@"            ""phone"": ""+50557418465"",
+" + "\n" +
+@"            ""addressHuman"": ""Bodegon mercado oriental"",
+" + "\n" +
+@"            ""addressGeo"": ""4P8V+8C8, Managua 14031, Nicaragua"",
+" + "\n" +
+@"            ""instructions"": ""No golpear"",
+" + "\n" +
+@"            ""latitude"": 12.116088834,
+" + "\n" +
+@"            ""longitude"": -86.25661897,
+" + "\n" +
+@"            ""branchName"": ""tizo central"",
+" + "\n" +
+@"            ""storeName"": ""Tizo bodegon""
+" + "\n" +
+@"        },
+" + "\n" +
+@"        {
+" + "\n" +
+@"            ""type"": ""DROP_OFF"",
+" + "\n" +
+@"            ""city"": ""Managua"",
+" + "\n" +
+@"            ""country"": ""Nicaragua"",
+" + "\n" +
+@"            ""state"": ""Managua"",
+" + "\n" +
+@"            ""addressStreet"": """",
+" + "\n" +
+@"            ""personName"": ""Hanzel Urrutia"",
+" + "\n" +
+@"            ""personEmail"": ""hanzelurrutia8118@gmail.com"",
+" + "\n" +
+@"            ""personIdentification"": ""888-170702-1002A"",
+" + "\n" +
+@"            ""phone"": ""+50578849074"",
+" + "\n" +
+@"            ""addressHuman"": ""Del molino, una cuadra arriba dos y medía al algo"",
+" + "\n" +
+@"            ""addressGeo"": ""514 P.º las colinas, Managua 14197, Nicaragua"",
+" + "\n" +
+@"            ""instructions"": ""Decir buenas"",
+" + "\n" +
+@"            ""latitude"": 12.102190263,
+" + "\n" +
+@"            ""longitude"": -86.23643979
+" + "\n" +
+@"        }
+" + "\n" +
+@"    ],
+" + "\n" +
+@"    ""items"": [
+" + "\n" +
+@"        {
+" + "\n" +
+@"            ""name"": ""Paquete"",
+" + "\n" +
+@"            ""fragile"": false,
+" + "\n" +
+@"            ""document"": false,
+" + "\n" +
+@"            ""description"": ""m"",
+" + "\n" +
+@"            ""isUsingCapacities"": false,
+" + "\n" +
+@"            ""value"": 5,
+" + "\n" +
+@"            ""weight"": 50,
+" + "\n" +
+@"            ""height"": 30,
+" + "\n" +
+@"            ""width"": 40,
+" + "\n" +
+@"            ""depth"": 30,
+" + "\n" +
+@"            ""images"": [
+" + "\n" +
+@"                null
+" + "\n" +
+@"            ],
+" + "\n" +
+@"            ""idItemCategory"": 0,
+" + "\n" +
+@"            ""capacitySelected"": ""Tizo Small"",
+" + "\n" +
+@"            ""otherCapacity"": ""m"",
+" + "\n" +
+@"            ""category"": 0
+" + "\n" +
+@"        }
+" + "\n" +
+@"    ],
+" + "\n" +
+@"    ""customerEmail"": ""agarciadarce@gmail.com"",
+" + "\n" +
+@"    ""selectedMethod"": {
+" + "\n" +
+@"        ""method"": ""COURIER"",
+" + "\n" +
+@"        ""idCourier"": 1,
+" + "\n" +
+@"        ""idPaymentMethod"": 2
+" + "\n" +
+@"    },
+" + "\n" +
+@"    ""idStore"": 11,
+" + "\n" +
+@"    ""idBranchStore"": 20
+" + "\n" +
+@"}";
 request.AddParameter("application/json", body,  ParameterType.RequestBody);
 IRestResponse response = client.Execute(request);
 Console.WriteLine(response.Content);

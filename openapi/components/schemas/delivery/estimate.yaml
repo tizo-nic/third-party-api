@@ -77,6 +77,14 @@ properties:
           type: float
           description: Longitud del punto de ruta
           example: -12.121212
+        branchName:
+          type: string
+          description: Nombre de la sucursal de la Tienda
+          example: tizo central
+        storeName:
+          type: string
+          description: Nombre de la tienda
+          example: Tizo bodegon
   items:
     type: array
     items:
@@ -84,8 +92,20 @@ properties:
       properties:
         category:
           type: integer
+          description: Id de la categoría
+          example: 13
+        idItemCategory:
+          type: integer
           description: Id del ítem de la categoría
           example: 13
+        capacitySelected:
+          type: string
+          description: Nombre de la capacidad seleccionada
+          example: Tizo Small
+        otherCapacity:
+          type: string 
+          description: Cuando la categoria es otros, se almacena este dato para saber en que categoría puede el cliente meter el producto que desea enviar
+          example: m
         name:
           type: string
           description: Nombre del ítem

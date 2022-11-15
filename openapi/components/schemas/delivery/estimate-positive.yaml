@@ -137,10 +137,30 @@ properties:
               items:
                 type: object
                 properties:
+                  nameAreaOrigin:
+                    type: string
+                    description: Nombre del Área de origen
+                    example: Managua
+                  idAreaOrigin:
+                    type: integer
+                    description: Id del Área de origen
+                    example: 1
+                  nameAreaDestination: 
+                    type: string
+                    description: Nombre del Área de destino
+                    example: Calle 132
+                  idAreaDestination:
+                    type: integer
+                    description: Id del Área de destino
+                    example: 2
                   dropOffAtDestination:
                     type: boolean
                     description: ¿Se entregará en el Área de destino?
                     example: true
+                  idRoute:
+                    type: integer
+                    example: 26
+                    description: Id de la Ruta
                   liveTrackingAtOrigin:
                     type: boolean
                     description: ¿Se realizará livetracking en el Área de origen?
