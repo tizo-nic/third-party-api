@@ -11,6 +11,6 @@ $body = '{
   "sendPush": 1,
   "sendTelegram": 1
 }';
-$request = new Request('POST', 'https://api.tizo.co/api/v1/vendors/stores/0/notifications/', $headers, $body);
+$request = new Request('POST', 'https://staging-api.tizo.co/api/v1/vendors/stores/0/notifications/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();

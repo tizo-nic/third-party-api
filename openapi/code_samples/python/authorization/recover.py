@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "https://api.tizo.co/api/v1/auth/recovery-password/"
+url = "https://staging-api.tizo.co/api/v1/auth/recovery-password/"
 
 payload = json.dumps({
   "method": "email",

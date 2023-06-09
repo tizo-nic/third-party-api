@@ -8,6 +8,6 @@ $body = '{
   "password": "12",
   "oldPassword": "1"
 }';
-$request = new Request('POST', 'https://api.tizo.co/api/v1/auth/reset-password/', $headers, $body);
+$request = new Request('POST', 'https://staging-api.tizo.co/api/v1/auth/reset-password/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();

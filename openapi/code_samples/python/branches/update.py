@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "https://api.tizo.co/api/v1/vendors/stores/0/branches/1/"
+url = "https://staging-api.tizo.co/api/v1/vendors/stores/0/branches/1/"
 
 payload = json.dumps({
   "name": "strong",

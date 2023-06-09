@@ -1,6 +1,6 @@
 import requests
 
-url = "https://api.tizo.co/api/v1/auth/permissions/"
+url = "https://staging-api.tizo.co/api/v1/auth/permissions/"
 
 payload = ""
 headers = {

@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   version: 1.0.0
-  title: api.tizo.co
+  title: staging-api.tizo.co
   termsOfService: https://example.com/terms/
   contact:
     email: rcastano@tizo.app
@@ -16,7 +16,7 @@ tags:
   - name: Aclaraciones importantes
     description: "## Autenticación.\r\n\r\nUna vez logueado, tus credenciales tienen acceso durante 7 días en nuestra plataforma, por lo que debes refrescar el token una vez ya expirado.\r\n\r\n## Headers\r\n\r\nPara un mejor uso de nuestra API, debes de tomar en cuenta que cada request que se haga, se recibe los siguientes headers.\r\n\r\n| Clave  | Valor |\r\n|-------|-------|\r\n| Authorization | Token | \r\n| Content-Type | application/json |\r\n| environment | ni, dev |\r\n| Accept-Language | es, en |"
 servers:
-  - url: https://api.tizo.co/api/v1
+  - url: https://staging-api.tizo.co/api/v1
 paths:
   /auth/login:
     post:
@@ -52,18 +52,18 @@ paths:
         required: true
       x-codeSamples:
         - lang: C#
-          source: "var client = new RestClient(\"https://api.tizo.co/api/v1/auth/login/\");\r\nclient.Timeout = -1;\r\nvar request = new RestRequest(Method.POST);\r\nrequest.AddHeader(\"Content-Type\", \"application/json\");\r\nvar body = @\"{\"\"username\"\": \"\"store_0\"\",\"\"password\"\": \"\"12\"\",\"\"typeUser\"\": \"\"store_api\"\"}\";\r\nrequest.AddParameter(\"application/json\", body,  ParameterType.RequestBody);\r\nIRestResponse response = client.Execute(request);\r\nConsole.WriteLine(response.Content);"
+          source: "var client = new RestClient(\"https://staging-api.tizo.co/api/v1/auth/login/\");\r\nclient.Timeout = -1;\r\nvar request = new RestRequest(Method.POST);\r\nrequest.AddHeader(\"Content-Type\", \"application/json\");\r\nvar body = @\"{\"\"username\"\": \"\"store_0\"\",\"\"password\"\": \"\"12\"\",\"\"typeUser\"\": \"\"store_api\"\"}\";\r\nrequest.AddParameter(\"application/json\", body,  ParameterType.RequestBody);\r\nIRestResponse response = client.Execute(request);\r\nConsole.WriteLine(response.Content);"
         - lang: PHP
-          source: "<?php\r\n$client = new Client();\r\n$headers = [\r\n  'Authorization' => 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8wIiwiaWF0IjoxNjU1Nzk3NjQ5LCJleHAiOjE2NTY0MDI0NDl9.s-1eTUqzDnmCW98yN4CkFUNjkj_eCzjBe8qUHmO3GUcR35z-4i8o3MGzzEj-JztUcfewI1Sfm18HfPDA3IUR_Q',\r\n  'Content-Type' => 'application/json'\r\n];\r\n$body = '{\r\n  \"username\": \"store_0\",\r\n  \"password\": \"12\",\r\n  \"typeUser\": \"store_api\"\r\n}';\r\n$request = new Request('POST', 'https://api.tizo.co/api/v1/auth/login/', $headers, $body);\r\n$res = $client->sendAsync($request)->wait();\r\necho $res->getBody();\r\n"
+          source: "<?php\r\n$client = new Client();\r\n$headers = [\r\n  'Authorization' => 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8wIiwiaWF0IjoxNjU1Nzk3NjQ5LCJleHAiOjE2NTY0MDI0NDl9.s-1eTUqzDnmCW98yN4CkFUNjkj_eCzjBe8qUHmO3GUcR35z-4i8o3MGzzEj-JztUcfewI1Sfm18HfPDA3IUR_Q',\r\n  'Content-Type' => 'application/json'\r\n];\r\n$body = '{\r\n  \"username\": \"store_0\",\r\n  \"password\": \"12\",\r\n  \"typeUser\": \"store_api\"\r\n}';\r\n$request = new Request('POST', 'https://staging-api.tizo.co/api/v1/auth/login/', $headers, $body);\r\n$res = $client->sendAsync($request)->wait();\r\necho $res->getBody();\r\n"
         - lang: Python
-          source: "import requests\r\nimport json\r\n\r\nurl = \"https://api.tizo.co/api/v1/auth/login/\"\r\n\r\npayload = json.dumps({\r\n  \"username\": \"store_0\",\r\n  \"password\": \"12\",\r\n  \"typeUser\": \"store_api\"\r\n})\r\nheaders = {\r\n  'Content-Type': 'application/json'\r\n}\r\n\r\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\r\n\r\nprint(response.text)\r\n"
+          source: "import requests\r\nimport json\r\n\r\nurl = \"https://staging-api.tizo.co/api/v1/auth/login/\"\r\n\r\npayload = json.dumps({\r\n  \"username\": \"store_0\",\r\n  \"password\": \"12\",\r\n  \"typeUser\": \"store_api\"\r\n})\r\nheaders = {\r\n  'Content-Type': 'application/json'\r\n}\r\n\r\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\r\n\r\nprint(response.text)\r\n"
 components:
   securitySchemes:
     main_auth:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: https://api.tizo.co/api/v1/auth/login
+          authorizationUrl: https://staging-api.tizo.co/api/v1/auth/login
           scopes:
             read:users: read users info
             write:users: modify or remove users

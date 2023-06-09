@@ -16,8 +16,9 @@ properties:
     type: string
     required: true
     enum:
+      - store
       - store_api
-    example: store_api
+    example: store
 allOf:
   - required:
     - username

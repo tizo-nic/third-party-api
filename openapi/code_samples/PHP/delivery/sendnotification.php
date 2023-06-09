@@ -9,6 +9,6 @@ $body = '{
   "sms": false,
   "email": true
 }';
-$request = new Request('PUT', 'https://api.tizo.co/api/v1/delivery/send-notification/98871c18-a766-4b06-b528-f39d0b2666ba/', $headers, $body);
+$request = new Request('PUT', 'https://staging-api.tizo.co/api/v1/delivery/send-notification/98871c18-a766-4b06-b528-f39d0b2666ba/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();

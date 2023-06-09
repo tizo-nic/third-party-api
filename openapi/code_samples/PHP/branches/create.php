@@ -14,6 +14,6 @@ $body = '{
   "active": true,
   "vacation": true
 }';
-$request = new Request('POST', 'https://api.tizo.co/api/v1/vendors/stores/:idStore/branches/', $headers, $body);
+$request = new Request('POST', 'https://staging-api.tizo.co/api/v1/vendors/stores/:idStore/branches/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();

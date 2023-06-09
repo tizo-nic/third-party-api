@@ -1,4 +1,4 @@
-var client = new RestClient("https://api.tizo.co/api/v1/auth/recovery-password/");
+var client = new RestClient("https://staging-api.tizo.co/api/v1/auth/recovery-password/");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
 request.AddHeader("Authorization", "");

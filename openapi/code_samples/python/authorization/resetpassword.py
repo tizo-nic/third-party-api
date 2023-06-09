@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "https://api.tizo.co/api/v1/auth/reset-password/"
+url = "https://staging-api.tizo.co/api/v1/auth/reset-password/"
 
 payload = json.dumps({
   "password": "12",

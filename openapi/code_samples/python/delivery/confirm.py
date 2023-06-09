@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "https://api.tizo.co/api/v1/delivery/confirm/6ce15dac-83d2-4631-a32d-12b753da8fbc"
+url = "https://staging-api.tizo.co/api/v1/delivery/confirm/6ce15dac-83d2-4631-a32d-12b753da8fbc"
 
 payload = json.dumps({})
 headers = {

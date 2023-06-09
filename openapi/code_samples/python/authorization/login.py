@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "https://api.tizo.co/api/v1/auth/login/"
+url = "https://staging-api.tizo.co/api/v1/auth/login/"
 
 payload = json.dumps({
   "username": "store_11",

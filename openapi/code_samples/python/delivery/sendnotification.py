@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "https://api.tizo.co/api/v1/delivery/send-notification/98871c18-a766-4b06-b528-f39d0b2666ba/"
+url = "https://staging-api.tizo.co/api/v1/delivery/send-notification/98871c18-a766-4b06-b528-f39d0b2666ba/"
 
 payload = json.dumps({
   "whatsapp": False,

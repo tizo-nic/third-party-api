@@ -6,11 +6,6 @@ post:
   operationId: login
   requestBody:
     headers:
-      environment:
-        description: País donde se encuentra el usuario.
-        schema:
-          type: string
-          example: "ni"
     content:
       application/json:
         schema:

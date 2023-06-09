@@ -13,6 +13,6 @@ $body = '{
   "longitude": 14.2222,
   "active": true
 }';
-$request = new Request('PUT', 'https://api.tizo.co/api/v1/vendors/stores/0/branches/1/', $headers, $body);
+$request = new Request('PUT', 'https://staging-api.tizo.co/api/v1/vendors/stores/0/branches/1/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();

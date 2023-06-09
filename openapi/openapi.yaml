@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   version: 1.0.0
-  title: api.tizo.co
+  title: staging-api.tizo.co
   termsOfService: 'https://example.com/terms/'
   contact:
     email: rcastano@tizo.app
@@ -12,13 +12,13 @@ info:
   x-logo:
     url: 'https://tizo-dev.s3.us-east-1.amazonaws.com/logos/logo.png'
   description:
-    $ref: ./info-description.md
+    $ref: './info-description.md'
 tags:
   - name: Aclaraciones importantes
     description: 
-      $ref: ./info-authentication.md
+      $ref: './info-authentication.md'
 servers:
-  - url: 'https://api.tizo.co/api/v1'
+  - url: 'https://staging-api.tizo.co/api/v1'
 paths:
   /auth/reset-password:
     $ref: paths/auth/reset-password.yaml  
@@ -72,7 +72,7 @@ components:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: 'https://api.tizo.co/api/v1/auth/login'
+          authorizationUrl: 'https://staging-api.tizo.co/api/v1/auth/login'
           scopes:
             'read:users': read users info
             'write:users': modify or remove users

@@ -1,4 +1,4 @@
-var client = new RestClient("https://api.tizo.co/api/v1/auth/login/");
+var client = new RestClient("https://staging-api.tizo.co/api/v1/auth/login/");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
 request.AddHeader("Authorization", "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8xMSIsImlhdCI6MTY2ODE3OTE2MywiZXhwIjoxNjY4NzgzOTYzfQ.NFIxkVowStlEtnDa2RXTKLGQWv844q5EPI3oBSkjGRlVz-jTd4IXSfl8byOpzZurm6ScyslhgJ_kjuJZTgFQFQ");

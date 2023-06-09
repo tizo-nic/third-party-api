@@ -1,6 +1,6 @@
 import requests
 
-url = "https://api.tizo.co/api/v1/system-data/status-deliveries/1/"
+url = "https://staging-api.tizo.co/api/v1/system-data/status-deliveries/1/"
 
 payload={}
 headers = {

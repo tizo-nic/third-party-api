@@ -15,6 +15,6 @@ $body = '{
   "description": "AA",
   "vacation": false
 }';
-$request = new Request('POST', 'https://api.tizo.co/api/v1/vendors/stores/', $headers, $body);
+$request = new Request('POST', 'https://staging-api.tizo.co/api/v1/vendors/stores/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();

@@ -9,6 +9,6 @@ $body = '{
   "wordToMatch": "m_yoni3",
   "typeUser": "manager"
 }';
-$request = new Request('POST', 'https://api.tizo.co/api/v1/auth/recovery-password/', $headers, $body);
+$request = new Request('POST', 'https://staging-api.tizo.co/api/v1/auth/recovery-password/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();

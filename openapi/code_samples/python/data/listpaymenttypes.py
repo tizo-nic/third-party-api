@@ -1,6 +1,6 @@
 import requests
 
-url = "https://api.tizo.co/api/v1/system-data/payment-types/"
+url = "https://staging-api.tizo.co/api/v1/system-data/payment-types/"
 
 payload={}
 headers = {
