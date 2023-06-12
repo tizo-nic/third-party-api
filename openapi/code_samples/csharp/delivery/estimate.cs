@@ -1,19 +1,57 @@
-var client = new RestClient("http://ac50c79e407e44dc89f257057d60ddbf-1643442314.us-east-1.elb.amazonaws.com/api/v1/delivery/estimate/");
+var client = new RestClient("http://staging-api.tizo.co/api/v1/delivery/estimate/");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
-request.AddHeader("Authorization", "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8xMSIsImlhdCI6MTY2ODUyNTU3NSwiZXhwIjoxNjczODA5NTc1fQ.8WAs-muUnBUrEIv4cevePavSOo_vVLS-jySkDF7tjVOgVo8mTg-NoMzb7OW7JbBBoIL_8L0CJfkkTLFVq5myYg");
+request.AddHeader("Authorization", "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidmVuZG9yIiwidXNlcm5hbWUiOiJ2X2FkcmlhbmFfOSIsImlhdCI6MTY4NjU4MzM4MCwiZXhwIjoxNjkxODY3MzgwfQ.8AaS0pzsWQhar3y-c04gXiZUQ18K5voz2n_8G0SFItXgnp21kb9Eg-0a27dCEVAL60f0fU6gLhoJeKouEBufFg");
 request.AddHeader("Content-Type", "application/json");
 var body = @"{
 " + "\n" +
-@"    ""idStore"": 11,
+@"    ""idStore"": 0,
 " + "\n" +
-@"    ""idBranchStore"": 20,
+@"    ""idBranchStore"": 1,
 " + "\n" +
-@"    ""description"": ""Sin descripcion"",
+@"    ""customerEmail"": ""agb@tizo.app"",
 " + "\n" +
-@"    ""isTest"": true,
+@"    ""deliveryTypeCode"": ""T1"",
 " + "\n" +
-@"    ""deliveryTime"": ""2022-11-15T15:25:55.999Z"",
+@"    ""description"": ""Envío simple"",
+" + "\n" +
+@"    ""isTest"": false,
+" + "\n" +
+@"    ""items"": [
+" + "\n" +
+@"        {
+" + "\n" +
+@"            ""fragile"": false,
+" + "\n" +
+@"            ""document"": false,
+" + "\n" +
+@"            ""idItemCategory"": 29,
+" + "\n" +
+@"            ""categoryOther"": """",
+" + "\n" +
+@"            ""value"": 123,
+" + "\n" +
+@"            ""description"": ""dd"",
+" + "\n" +
+@"            ""width"": 45,
+" + "\n" +
+@"            ""height"": 16,
+" + "\n" +
+@"            ""depth"": 35,
+" + "\n" +
+@"            ""weight"": 5,
+" + "\n" +
+@"            ""name"": ""Paquete"",
+" + "\n" +
+@"            ""category"": 29,
+" + "\n" +
+@"            ""images"": [],
+" + "\n" +
+@"            ""nameCategory"": ""Calzado""
+" + "\n" +
+@"        }
+" + "\n" +
+@"    ],
 " + "\n" +
 @"    ""waypoints"": [
 " + "\n" +
@@ -27,29 +65,29 @@ var body = @"{
 " + "\n" +
 @"            ""state"": ""Managua"",
 " + "\n" +
-@"            ""addressStreet"": ""tizo central"",
+@"            ""addressStreet"": ""Sede Central"",
 " + "\n" +
-@"            ""personName"": ""Adriana"",
+@"            ""personName"": ""Luis Gonzalez Lopez"",
 " + "\n" +
 @"            ""personEmail"": ""agb@tizo.app"",
 " + "\n" +
-@"            ""personIdentification"": ""001-030696-0016J"",
+@"            ""personIdentification"": ""001-4430696-0016J"",
 " + "\n" +
-@"            ""phone"": ""+50557418465"",
+@"            ""phone"": ""+50563397024"",
 " + "\n" +
-@"            ""addressHuman"": ""Bodegon mercado oriental"",
+@"            ""addressHuman"": ""Parque Central"",
 " + "\n" +
-@"            ""addressGeo"": ""4P8V+8C8, Managua 14031, Nicaragua"",
+@"            ""addressGeo"": ""4QRG+622, Managua, Nicaragua"",
 " + "\n" +
-@"            ""instructions"": ""No golpear"",
+@"            ""instructions"": ""Entrar y retirar en tienda"",
 " + "\n" +
-@"            ""latitude"": 12.116088834,
+@"            ""latitude"": 12.140644111,
 " + "\n" +
-@"            ""longitude"": -86.25661897,
+@"            ""longitude"": -86.225119053,
 " + "\n" +
-@"            ""branchName"": ""tizo central"",
+@"            ""branchName"": ""Sede Central"",
 " + "\n" +
-@"            ""storeName"": ""Tizo bodegon""
+@"            ""storeName"": ""tizo""
 " + "\n" +
 @"        },
 " + "\n" +
@@ -57,79 +95,53 @@ var body = @"{
 " + "\n" +
 @"            ""type"": ""DROP_OFF"",
 " + "\n" +
-@"            ""city"": ""Managua"",
+@"            ""city"": ""Tipitapa"",
 " + "\n" +
 @"            ""country"": ""Nicaragua"",
 " + "\n" +
 @"            ""state"": ""Managua"",
 " + "\n" +
-@"            ""addressStreet"": """",
+@"            ""addressStreet"": ""Vía sin nombre"",
 " + "\n" +
-@"            ""personName"": ""Hanzel Urrutia"",
+@"            ""personName"": ""Axel Garcia"",
 " + "\n" +
-@"            ""personEmail"": ""hanzelurrutia8118@gmail.com"",
+@"            ""personEmail"": ""axel.garcia@tizo.app"",
 " + "\n" +
-@"            ""personIdentification"": ""888-170702-1002A"",
+@"            ""personIdentification"": ""0010611991009L"",
 " + "\n" +
-@"            ""phone"": ""+50578849074"",
+@"            ""phone"": ""+50581380937"",
 " + "\n" +
-@"            ""addressHuman"": ""Del molino, una cuadra arriba dos y medía al algo"",
+@"            ""addressHuman"": ""Contiguo al Hospital Vivian Pellas"",
 " + "\n" +
-@"            ""addressGeo"": ""514 P.º las colinas, Managua 14197, Nicaragua"",
+@"            ""addressGeo"": ""5W42+2J Tipitapa, Nicaragua"",
 " + "\n" +
-@"            ""instructions"": ""Decir buenas"",
+@"            ""instructions"": ""Entregar al cliente"",
 " + "\n" +
-@"            ""latitude"": 12.102190263,
+@"            ""latitude"": 12.155067762636003,
 " + "\n" +
-@"            ""longitude"": -86.23643979
+@"            ""longitude"": -86.09838499989073,
 " + "\n" +
-@"        }
+@"            ""isSaveCustomer"": false,
 " + "\n" +
-@"    ],
+@"            ""fullName"": ""Axel Garcia"",
 " + "\n" +
-@"    ""items"": [
+@"            ""url"": {
 " + "\n" +
-@"        {
+@"                ""url"": ""assets/img/logistic/maps/B-icon.png"",
 " + "\n" +
-@"            ""name"": ""Paquete"",
+@"                ""scaledSize"": {
 " + "\n" +
-@"            ""fragile"": false,
+@"                    ""width"": 60,
 " + "\n" +
-@"            ""document"": false,
+@"                    ""height"": 60
 " + "\n" +
-@"            ""description"": ""m"",
+@"                }
 " + "\n" +
-@"            ""isUsingCapacities"": false,
-" + "\n" +
-@"            ""value"": 5,
-" + "\n" +
-@"            ""weight"": 50,
-" + "\n" +
-@"            ""height"": 30,
-" + "\n" +
-@"            ""width"": 40,
-" + "\n" +
-@"            ""depth"": 30,
-" + "\n" +
-@"            ""images"": [
-" + "\n" +
-@"                null
-" + "\n" +
-@"            ],
-" + "\n" +
-@"            ""idItemCategory"": 0,
-" + "\n" +
-@"            ""capacitySelected"": ""Tizo Small0"",
-" + "\n" +
-@"            ""otherCapacity"": ""m"",
-" + "\n" +
-@"            ""category"": 0
+@"            }
 " + "\n" +
 @"        }
 " + "\n" +
-@"    ],
-" + "\n" +
-@"    ""customerEmail"": ""agb@tizo.app""
+@"    ]
 " + "\n" +
 @"}";
 request.AddParameter("application/json", body,  ParameterType.RequestBody);

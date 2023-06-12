@@ -27,6 +27,14 @@ properties:
                   type: float
                   description: Precio
                   example: 110.00
+                cost:   
+                  type: float
+                  description: Costo
+                  example: 110.00
+                realPrice:
+                  type: float
+                  description: Precio real
+                  example: 110.00
                 nameAreaOrigin: 
                   type: string
                   description: Nombre del Área de origen
@@ -43,6 +51,18 @@ properties:
                   type: integer
                   description: Id del Área de destino
                   example: 2
+                idRoute:
+                  type: integer
+                  example: 26
+                  description: Id de la Ruta
+                branchOrigin:
+                  type: array
+                  description: Sucursales de origen
+                  example: []
+                branchDestination:
+                  type: array
+                  description: Sucursales de destino
+                  example: []
                 pickUpAtOrigin:
                   type: boolean
                   description: ¿Se recogerá en el Área de origen?
@@ -63,15 +83,27 @@ properties:
                   type: boolean
                   description: ¿Se realizará de manera tradicional?
                   example: true
+                discount:
+                  type: float
+                  description: Descuento
+                  example: 0.00
+                metadata:
+                  type: string
+                  description: Metadatos
+                  example:
           paymentsAvailable:
             type: array
             items:
               type: object
               properties:
-                idPaymentAvailable:
+                idCourierPaymentAvailable:
                   type: integer
-                  description: Id del método de pago disponible
+                  description: Id del método de pago disponible del logístico
                   example: 1
+                idCourier:
+                  type: integer
+                  description: Id del logístico
+                  example: 299
                 idPaymentType:
                   type: integer
                   description: Id del tipo de pago
@@ -80,14 +112,10 @@ properties:
                   type: boolean
                   description: El estado del pago disponible.
                   example: true
-                minAmount:
-                  type: integer
-                  description: El monto mínimo para el pago disponible.
-                  example: 0
-                maxAmount:
+                isSelected:
                   type: boolean
-                  description: El máximo de dinero que puede pagar.
-                  example: true
+                  description: Este método de pago ha sido seleccionado, pero como se estima debe estar en false
+                  example: false
                 paymentType:
                   type: string
                   description: El tipo de pago.
@@ -96,6 +124,14 @@ properties:
                   type: string
                   description: El código de pago.
                   example: CASH
+                maxAmount:
+                  type: boolean
+                  description: El máximo de dinero que puede pagar.
+                  example: true
+                minAmount:
+                  type: integer
+                  description: El monto mínimo para el pago disponible.
+                  example: 0
       costByCourier:
         type: array
         items:
@@ -137,6 +173,30 @@ properties:
               items:
                 type: object
                 properties:
+                  time:
+                    type: string
+                    description: Tiempo de espera
+                    example: 5 days
+                  timeInNumber:
+                    type: integer
+                    description: Tiempo de espera en numero
+                    example: 1658343697453
+                  distance:
+                    type: integer
+                    description: Distancia
+                    example: 5411
+                  price:
+                    type: float
+                    description: Precio
+                    example: 110.00
+                  cost:   
+                    type: float
+                    description: Costo
+                    example: 110.00
+                  realPrice:
+                    type: float
+                    description: Precio real
+                    example: 110.00
                   nameAreaOrigin:
                     type: string
                     description: Nombre del Área de origen
@@ -153,14 +213,26 @@ properties:
                     type: integer
                     description: Id del Área de destino
                     example: 2
-                  dropOffAtDestination:
-                    type: boolean
-                    description: ¿Se entregará en el Área de destino?
-                    example: true
                   idRoute:
                     type: integer
                     example: 26
                     description: Id de la Ruta
+                  branchOrigin:
+                    type: array
+                    description: Sucursales de origen
+                    example: []
+                  branchDestination:
+                    type: array
+                    description: Sucursales de destino
+                    example: []
+                  pickUpAtOrigin:
+                    type: boolean
+                    description: ¿Se recogerá en el Área de origen?
+                    example: true
+                  dropOffAtDestination:
+                    type: boolean
+                    description: ¿Se entregará en el Área de destino?
+                    example: true
                   liveTrackingAtOrigin:
                     type: boolean
                     description: ¿Se realizará livetracking en el Área de origen?
@@ -173,26 +245,14 @@ properties:
                     type: boolean
                     description: ¿Se realizará de manera tradicional?
                     example: true
-                  distance:
-                    type: integer
-                    description: Distancia
-                    example: 5411
-                  price:
+                  discount:
                     type: float
-                    description: Precio
-                    example: 110.00
-                  timeInNumber:
-                    type: integer
-                    description: Tiempo de espera en numero
-                    example: 1658343697453
-                  time:
+                    description: Descuento
+                    example: 0.00
+                  metadata:
                     type: string
-                    description: Tiempo de espera
-                    example: 5 days
-                  pickUpAtOrigin:
-                    type: boolean
-                    description: ¿Se recogerá en el Área de origen?
-                    example: true
+                    description: Metadatos
+                    example: 
             idCourier:
               type: integer
               description: Id del logístico
@@ -262,46 +322,39 @@ properties:
                   example: null
                   description: Los anteriores comentarios que le realizaron al logístico 
                 rating: 
-                  type: integer
+                  type: float
                   descripcion: Valoración promedio del logístico
                 count: 
                   type: integer
                   description: Cantidad de valoraciones recibidas para el logístico
-            vacation:
-              description: Ofrece la disponibilidad de no recibir notificaciones
+            collectionHours: 
+              type: string
+              description: Hora de recolección 
+              example: 08:00 - 17:02
+            fastest:
+              description: Ofrece el envío más rápido
               type: boolean
               example: true
             isCollectionPayment: 
               description: Si se va a realizar en efectivo, este dato cambia a verdadero
               type: boolean
               example: true
-            collectionHours: 
-              type: string
-              description: Hora de recolección 
-              example: 08:00 - 17:02
-      size:
-        type: string
-        description: Tamaño del envío
-        example: Tizo small
+            recommended:
+              description: Ofrece el envío recomendado
+              type: boolean
+              example: true
+            vacation:
+              description: Ofrece la disponibilidad de no recibir notificaciones
+              type: boolean
+              example: true
+            cheapest:
+              description: Ofrece el envío más barato
+              type: boolean
+              example: true        
       distance:
         type: string
         description: Distancia del envío
         example: 6,1 km
-      dataOfCourier:
-        type: object
-        properties:
-          couriers:
-            type: integer
-            description: Transportistas
-            example: 3
-          courierWithCategory:
-            type: integer
-            description: Transportistas con categorías
-            example: 3
-          courierWithPayment:
-            type: integer
-            description: Transportistas con métodos de pago
-            example: 3
   message:
     type: string
     description: Mensaje positivo de respuesta

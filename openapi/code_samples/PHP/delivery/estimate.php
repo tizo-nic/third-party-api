@@ -1,74 +1,80 @@
 <?php
 $client = new Client();
 $headers = [
-  'Authorization' => 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8xMSIsImlhdCI6MTY2ODUyNTU3NSwiZXhwIjoxNjczODA5NTc1fQ.8WAs-muUnBUrEIv4cevePavSOo_vVLS-jySkDF7tjVOgVo8mTg-NoMzb7OW7JbBBoIL_8L0CJfkkTLFVq5myYg',
+  'Authorization' => 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidmVuZG9yIiwidXNlcm5hbWUiOiJ2X2FkcmlhbmFfOSIsImlhdCI6MTY4NjU4MzM4MCwiZXhwIjoxNjkxODY3MzgwfQ.8AaS0pzsWQhar3y-c04gXiZUQ18K5voz2n_8G0SFItXgnp21kb9Eg-0a27dCEVAL60f0fU6gLhoJeKouEBufFg',
   'Content-Type' => 'application/json'
 ];
 $body = '{
-  "idStore": 11,
-  "idBranchStore": 20,
-  "description": "Sin descripcion",
-  "isTest": true,
-  "deliveryTime": "2022-11-15T15:25:55.999Z",
+  "idStore": 0,
+  "idBranchStore": 1,
+  "customerEmail": "agb@tizo.app",
+  "deliveryTypeCode": "T1",
+  "description": "Envío simple",
+  "isTest": false,
+  "items": [
+    {
+      "fragile": false,
+      "document": false,
+      "idItemCategory": 29,
+      "categoryOther": "",
+      "value": 123,
+      "description": "dd",
+      "width": 45,
+      "height": 16,
+      "depth": 35,
+      "weight": 5,
+      "name": "Paquete",
+      "category": 29,
+      "images": [],
+      "nameCategory": "Calzado"
+    }
+  ],
   "waypoints": [
     {
       "type": "PICK_UP",
       "city": "Managua",
       "country": "Nicaragua",
       "state": "Managua",
-      "addressStreet": "tizo central",
-      "personName": "Adriana",
+      "addressStreet": "Sede Central",
+      "personName": "Luis Gonzalez Lopez",
       "personEmail": "agb@tizo.app",
-      "personIdentification": "001-030696-0016J",
-      "phone": "+50557418465",
-      "addressHuman": "Bodegon mercado oriental",
-      "addressGeo": "4P8V+8C8, Managua 14031, Nicaragua",
-      "instructions": "No golpear",
-      "latitude": 12.116088834,
-      "longitude": -86.25661897,
-      "branchName": "tizo central",
-      "storeName": "Tizo bodegon"
+      "personIdentification": "001-4430696-0016J",
+      "phone": "+50563397024",
+      "addressHuman": "Parque Central",
+      "addressGeo": "4QRG+622, Managua, Nicaragua",
+      "instructions": "Entrar y retirar en tienda",
+      "latitude": 12.140644111,
+      "longitude": -86.225119053,
+      "branchName": "Sede Central",
+      "storeName": "tizo"
     },
     {
       "type": "DROP_OFF",
-      "city": "Managua",
+      "city": "Tipitapa",
       "country": "Nicaragua",
       "state": "Managua",
-      "addressStreet": "",
-      "personName": "Hanzel Urrutia",
-      "personEmail": "hanzelurrutia8118@gmail.com",
-      "personIdentification": "888-170702-1002A",
-      "phone": "+50578849074",
-      "addressHuman": "Del molino, una cuadra arriba dos y medía al algo",
-      "addressGeo": "514 P.º las colinas, Managua 14197, Nicaragua",
-      "instructions": "Decir buenas",
-      "latitude": 12.102190263,
-      "longitude": -86.23643979
+      "addressStreet": "Vía sin nombre",
+      "personName": "Axel Garcia",
+      "personEmail": "axel.garcia@tizo.app",
+      "personIdentification": "0010611991009L",
+      "phone": "+50581380937",
+      "addressHuman": "Contiguo al Hospital Vivian Pellas",
+      "addressGeo": "5W42+2J Tipitapa, Nicaragua",
+      "instructions": "Entregar al cliente",
+      "latitude": 12.155067762636003,
+      "longitude": -86.09838499989073,
+      "isSaveCustomer": false,
+      "fullName": "Axel Garcia",
+      "url": {
+        "url": "assets/img/logistic/maps/B-icon.png",
+        "scaledSize": {
+          "width": 60,
+          "height": 60
+        }
+      }
     }
-  ],
-  "items": [
-    {
-      "name": "Paquete",
-      "fragile": false,
-      "document": false,
-      "description": "m",
-      "isUsingCapacities": false,
-      "value": 5,
-      "weight": 50,
-      "height": 30,
-      "width": 40,
-      "depth": 30,
-      "images": [
-        null
-      ],
-      "idItemCategory": 0,
-      "capacitySelected": "Tizo Small0",
-      "otherCapacity": "m",
-      "category": 0
-    }
-  ],
-  "customerEmail": "agb@tizo.app"
+  ]
 }';
-$request = new Request('POST', 'http://ac50c79e407e44dc89f257057d60ddbf-1643442314.us-east-1.elb.amazonaws.com/api/v1/delivery/estimate/', $headers, $body);
+$request = new Request('POST', 'http://staging-api.tizo.co/api/v1/delivery/estimate/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();

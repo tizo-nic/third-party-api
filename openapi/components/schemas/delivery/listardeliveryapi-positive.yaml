@@ -10,7 +10,223 @@ properties:
       deliveries:
         type: array
         items:
-          $ref:  "./deliveries-api.yaml"
+          idDelivery:
+            type: integer
+            description: ID del envío
+            example: 1
+          codeDelivery:
+            type: string
+            description: Código del envío
+            example: 123456
+          typeDeliveryImage:
+            type: string
+            description: Imagen del tipo de envío
+            example: https://tizo-dev.s3.us-east-1.amazonaws.com/logos/logo.png
+          typeDeliveryCode:
+            type: string
+            description: Código del tipo de envío
+            example: 1
+          originInformation:
+            type: object
+            properties:
+              idDeliveryWaypoint:
+                type: integer
+                description: ID del punto de entrega
+                example: 1
+              idDelivery:
+                type: integer
+                description: ID del envío
+                example: 1
+              type: 
+                type: string
+                description: Tipo de punto de entrega
+                example: PICK_UP
+              city:
+                type: string
+                description: Ciudad del punto de entrega
+                example: Bogotá
+              addressStreet:
+                type: string
+                description: Dirección del punto de entrega
+                example: Calle 1
+              addressHuman:
+                type: string
+                description: Dirección del punto de entrega
+                example: Calle 1
+              addressGeo:
+                type: string
+                description: Dirección del punto de entrega
+                example: Calle 1
+              phone:
+                type: string
+                description: Teléfono del punto de entrega
+                example: 123456789
+              personName:
+                type: string
+                description: Nombre de la persona del punto de entrega
+                example: Juan
+              personEmail:
+                type: string
+                description: Correo de la persona del punto de entrega
+                example: Juan@juan.com
+              instructions:
+                type: string
+                description: Instrucciones del punto de entrega
+                example: Instrucciones
+              latitude:
+                type: string
+                description: Latitud del punto de entrega
+                example: 4.123456
+              longitude:
+                type: string
+                description: Longitud del punto de entrega
+                example: -74.123456
+              personIdentification:
+                type: string
+                description: Identificación de la persona del punto de entrega
+                example: 123456789
+              arrivalOrder:
+                type: integer
+                description: Orden de llegada del punto de entrega
+                example: 1
+              country:
+                type: string
+                description: País del punto de entrega
+                example: Colombia
+              state:
+                type: string
+                description: Estado del punto de entrega
+                example: Bogotá
+              dateCreation:
+                type: datetime
+                description: Fecha de creación del punto de entrega
+                example: 2021-01-01T00:00:00.000Z
+              dateLastUpdate:
+                type: datetime
+                description: Fecha de última actualización del punto de entrega
+                example: 2021-01-01T00:00:00.000Z
+          destinationInformation:
+            type: object
+            properties:
+              idDeliveryWaypoint:
+                type: integer
+                description: ID del punto de entrega
+                example: 1
+              idDelivery:
+                type: integer
+                description: ID del envío
+                example: 1
+              type: 
+                type: string
+                description: Tipo de punto de entrega
+                example: DROP_OFF
+              city:
+                type: string
+                description: Ciudad del punto de entrega
+                example: Bogotá
+              addressStreet:
+                type: string
+                description: Dirección del punto de entrega
+                example: Calle 1
+              addressHuman:
+                type: string
+                description: Dirección del punto de entrega
+                example: Calle 1
+              addressGeo:
+                type: string
+                description: Dirección del punto de entrega
+                example: Calle 1
+              phone:
+                type: string
+                description: Teléfono del punto de entrega
+                example: 123456789
+              personName:
+                type: string
+                description: Nombre de la persona del punto de entrega
+                example: Juan
+              personEmail:
+                type: string
+                description: Correo de la persona del punto de entrega
+                example: juan@juan.com
+              instructions:
+                type: string
+                description: Instrucciones del punto de entrega
+                example: Instrucciones
+              latitude:
+                type: string
+                description: Latitud del punto de entrega
+                example: 4.123456
+              longitude:
+                type: string
+                description: Longitud del punto de entrega
+                example: -74.123456
+              personIdentification:
+                type: string
+                description: Identificación de la persona del punto de entrega
+                example: 123456789
+              arrivalOrder:
+                type: integer
+                description: Orden de llegada del punto de entrega
+                example: 2
+              country:
+                type: string
+                description: País del punto de entrega
+                example: Colombia
+              state:
+                type: string
+                description: Estado del punto de entrega
+                example: Bogotá
+              dateCreation:
+                type: datetime
+                description: Fecha de creación del punto de entrega
+                example: 2021-01-01T00:00:00.000Z
+              dateLastUpdate:
+                type: datetime
+                description: Fecha de última actualización del punto de entrega
+                example: 2021-01-01T00:00:00.000Z
+          username:
+            type: string
+            description: Nombre de usuario
+            example: v_adriana_9
+          lastStepName:
+            type: string
+            description: Nombre del último paso
+            example: Orden entregada
+          courierName:
+            type: string
+            description: Nombre de la empresa logística
+            example: Pedidos Ya
+          idStatus:
+            type: integer
+            description: ID del estado
+            example: 1
+          statusName:
+            type: string
+            description: Nombre del estado
+            example: En camino
+          storeName:
+            type: string
+            description: Nombre de la tienda
+            example: Tienda de prueba
+          creatorName:
+            type: string
+            description: Nombre del creador
+            example: Adriana
+          dateCreation:
+            type: datetime
+            description: Fecha de creación
+            example: 2021-01-01T00:00:00.000Z
+          invoice:
+            type: object
+            properties:
+              code: 
+                type: string
+                description: Código de la factura
+                example: 123456
+              description: 
+                type: string
+                description: Descripción de la factura
+                example: Factura de prueba
   message:
     type: string
     description: Mensaje positivo de respuesta

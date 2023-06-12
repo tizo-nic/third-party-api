@@ -18,14 +18,54 @@ properties:
             type: integer
             description: Id del tipo de envío
             example: 2
-          idCapacity:
-            type: integer
-            description: Id de la capacidad de envío
-            example: 0
+          deliveryType:
+            type: string
+            description: Tipo de envío
+            example: Envío Simple
+          deliveryTypeImage:
+            type: string
+            description: Imagen del tipo de envío
+            example: https://cdn.mercadoni.com/images/delivery_types/1.png
           code:
             type: string
             description: Código del envío
             example: 5443185F-3FD5-42B1-AF56-4A3128E996A7
+          codeShort:
+            type: string
+            description: Código corto del envío
+            example: 5443185F
+          url: 
+            type: string
+            description: Url del envío
+            example: https://www.mercadoni.com/delivery/5443185F-3FD5-42B1-AF56-4A3128E996A7
+          deliveryTime:
+            type: datetime
+            description: Fecha y hora de envío de inicio
+            example: 2022-06-08T17:15:53.000+00:00
+          deliveryTimeInMillis:
+            type: integer
+            description: Fecha y hora de envío de inicio en milisegundos
+            example: 0
+          estimatedDeliveryTime:
+            type: datetime
+            description: Fecha y hora de estimados
+            example: 2022-06-08T17:15:53.000+00:00
+          estimatedDeliveryTimeInMillis:
+            type: integer
+            description: Fecha y hora de estimados en milisegundos
+            example: 0
+          scheduledDeliveryTime:
+            type: datetime
+            description: Fecha y hora de estimados, pero si el courier cambia el tiempo de entrega, se cambia este dato
+            example: 2022-06-08T17:15:53.000+00:00
+          scheduledDeliveryTimeInMillis:
+            type: integer
+            description: Fecha y hora de estimados, pero si el courier cambia el tiempo de entrega, se cambia este dato en milisegundos
+            example: 0
+          idCapacity:
+            type: integer
+            description: Id de la capacidad de envío
+            example: 0
           baseRatePickup:
             type: float
             description: Tarifa base de recogida
@@ -54,18 +94,14 @@ properties:
             type: float
             description: Ancho del envío
             example: 1
-          collectMoney:
-            type: float
-            description: Cobro del producto, para pagos en efectivo. 
-            example: 40.0
           total:
             type: float
             description: Total del envío
             example: 29.80
-          change:
+          cost:
             type: float
-            description: Cambio del envío
-            example: 11.20
+            description: Costo del envío
+            example: 29.80
           description:
             type: string
             description: Descripción del envío
@@ -73,23 +109,15 @@ properties:
           notificationMail:
             type: string
             description: Correo de notificación del envío
-            example: agarciadarce@gmail.com
-          deliveryTime:
-            type: datetime
-            description: Fecha y hora de envío de inicio
-            example: 2022-06-08T17:15:53.000+00:00
-          estimatedDeliveryTime:
-            type: integer
-            description: Fecha y hora de estimados
-            example: 0 
-          scheduledDeliveryTime:
-            type: integer
-            description: Fecha y hora de estimados, pero si el courier cambia el tiempo de entrega, se cambia este dato
-            example: 0
+            example:  john@gmail.com
           active:
             type: boolean
             description: Estado del envío
             example: true
+          collectMoney:
+            type: float
+            description: Cobro del producto, para pagos en efectivo. 
+            example: 40.0
           origin:
             type: string
             description: Origen del envío
@@ -110,14 +138,279 @@ properties:
             type: datetime
             description: Fecha de última actualización del envío
             example: 2022-06-23T20:39:39.157+00:00
-          metadata:
-            type: string
-            description: Metadatos de los servicios de terceros
-            example: null
-          imagePreview:
-            type: string
-            description: Imagen de previsualización del envío
-            example: null
+          change:
+            type: float
+            description: Cambio del envío
+            example: 11.20
+          pinDelivery:
+            type: integer
+            description: Pin unico que se crea para validar que la persona que reciba el pedido sea la correcta
+            example: 04704
+          paymentTypes:
+            type: object
+            description: Tipos de pago del envío
+            properties:
+              idPaymentType:
+                type: integer
+                description: Id del tipo de pago
+                example: 2
+              code:
+                type: string
+                description: Código del tipo de pago
+                example: cash
+              name:
+                type: string
+                description: Nombre del tipo de pago
+                example: Efectivo
+              description:
+                type: string
+                description: Descripción del tipo de pago
+                example: Efectivo
+          capacity:
+            type: object
+            description: Capacidad del envío
+            properties:
+              idCapacity:
+                type: integer
+                description: Id de la capacidad
+                example: 0
+              code:
+                type: string
+                description: Código de la capacidad
+                example: 0
+              name:
+                type: string
+                description: Nombre de la capacidad
+                example: 0
+          statusDelivery:
+            type: object
+            description: Estado del envío
+            properties:
+              idStatusDelivery:
+                type: integer
+                description: Id del estado del envío
+                example: 2
+              code:
+                type: string
+                description: Código del estado del envío
+                example: 2
+              name:
+                type: string
+                description: Nombre del estado del envío
+                example: 2
+          items: 
+            type: array
+            description: Items del envío
+            items:
+              type: object
+              description: Item del envío
+              properties:
+                idDeliveryItem:
+                  type: integer
+                  description: Id del item del envío
+                  example: 0
+                idItemCategory:
+                  type: integer
+                  description: Id de la categoría del item del envío
+                  example: 0
+                code:
+                  type: string
+                  description: Código del item del envío
+                  example: 0
+                categoryOther:
+                  type: string
+                  description: Otra categoría del item del envío
+                  example: 0
+                name:
+                  type: string
+                  description: Nombre del item del envío
+                  example: 0
+                description:
+                  type: string
+                  description: Descripción del item del envío
+                  example: 0
+                quantity:
+                  type: integer
+                  description: Cantidad del item del envío
+                  example: 0
+                document:
+                  type: boolean
+                  description: Documento del item del envío
+                  example: false
+                fragile:
+                  type: boolean
+                  description: Frágil del item del envío
+                  example: false
+                weight:
+                  type: float
+                  description: Peso del item del envío
+                  example: 0
+                height:
+                  type: float
+                  description: Altura del item del envío
+                  example: 0
+                width:
+                  type: float
+                  description: Ancho del item del envío
+                  example: 0
+                depth:
+                  type: float
+                  description: Profundidad del item del envío
+                  example: 0
+                dateCreation:
+                  type: datetime
+                  description: Fecha de creación del item del envío
+                  example: 2022-06-23T20:39:39.157+00:00
+                dateLastUpdate:
+                  type: datetime
+                  description: Fecha de última actualización del item del envío
+                  example: 2022-06-23T20:39:39.157+00:00
+                deliveryItemsFiles:
+                  type: array
+                  description: Archivos del item del envío
+                  example: []
+          relationInvoices:
+            type: array
+            description: Facturas del envío
+            example: []
+          steps: 
+            type: array
+            description: Pasos del envío
+            items: 
+              type: object
+              description: Paso del envío
+              properties:
+                idStepDelivery:
+                  type: integer
+                  description: Id del paso del envío
+                  example: 0
+                idStepDeliveries:
+                  type: integer
+                  description: Id del paso del envío
+                  example: 0
+                name:
+                  type: string
+                  description: Nombre del paso del envío
+                  example: 0
+                description:
+                  type: string
+                  description: Descripción del paso del envío
+                  example: 0
+                stepsDeliveries:
+                  type: array
+                  description: Pasos del envío
+                  example: []
+                dateCreation:
+                  type: datetime
+                  description: Fecha de creación del paso del envío
+                  example: 2022-06-23T20:39:39.157+00:00
+                dateLastUpdate:
+                  type: datetime
+                  description: Fecha de última actualización del paso del envío
+                  example: 2022-06-23T20:39:39.157+00:00
+                dateCreationInMillis:
+                  type: integer
+                  description: Fecha de creación del paso del envío en milisegundos
+                  example: 0
+          waypoints:
+            type: array
+            description: Waypoints del envío
+            items: 
+              type: object
+              description: Waypoint del envío
+              properties:
+                idDeliveryWaypoint:
+                  type: integer
+                  description: Id del waypoint del envío
+                  example: 0
+                type:
+                  type: string
+                  description: Tipo del waypoint del envío
+                  example: PICK_UP
+                city:
+                  type: string
+                  description: Ciudad del waypoint del envío
+                  example: Managua
+                addressStreet:
+                  type: string
+                  description: Dirección de la calle del waypoint del envío
+                  example: Parque Central
+                addressHuman:
+                  type: string
+                  description: Dirección humana del waypoint del envío
+                  example: Parque Central
+                addressGeo:
+                  type: string
+                  description: Dirección geográfica del waypoint del envío
+                  example: QRG+622, Managua, Nicaragua
+                phone:
+                  type: string
+                  description: Teléfono del waypoint del envío
+                  example: +50588888888
+                personName:
+                  type: string
+                  description: Nombre de la persona del waypoint del envío
+                  example: Jo
+                personEmail:
+                  type: string
+                  description: Email de la persona del waypoint del envío
+                  example: jo@example.com
+                instructions:
+                  type: string
+                  description: Instrucciones del waypoint del envío
+                  example: hola
+                latitude:
+                  type: float
+                  description: Latitud del waypoint del envío
+                  example: 2.2
+                longitude:
+                  type: float
+                  description: Longitud del waypoint del envío
+                  example: 2.2
+                personIdentification:
+                  type: string
+                  description: Identificación de la persona del waypoint del envío
+                  example: aaaaaaaaaaaa
+                arrivalOrder:
+                  type: integer
+                  description: Orden de llegada del waypoint del envío
+                  example: 0
+                country:
+                  type: string
+                  description: País del waypoint del envío
+                  example: Nicaragua
+                state: 
+                  type: string
+                  description: Estado del waypoint del envío
+                  example: Managua
+                courierAreaWaypoint:
+                  type: object
+                  description: Área del waypoint del envío
+                  properties:
+                    idCourierAreaWaypoint:
+                      type: integer
+                      description: Id del área del waypoint del envío
+                      example: 0
+                    idCourierArea:
+                      type: integer
+                      description: Id del área del courier
+                      example: 0
+                    dateCreation:
+                      type: datetime
+                      description: Fecha de creación del área del waypoint del envío
+                      example: 2022-06-23T20:39:39.157+00:00
+                    dateLastUpdate:
+                      type: datetime
+                      description: Fecha de última actualización del área del waypoint del envío
+                      example: 2022-06-23T20:39:39.157+00:00
+                dateCreation:
+                  type: datetime
+                  description: Fecha de creación del waypoint del envío
+                  example: 2022-06-23T20:39:39.157+00:00
+                dateLastUpdate:
+                  type: datetime
+                  description: Fecha de última actualización del waypoint del envío
+                  example: 2022-06-23T20:39:39.157+00:00
           relationCouriers:
             type: object
             properties:
@@ -125,58 +418,138 @@ properties:
                 type: integer
                 description: Id del logístico del envío
                 example: 166
-              idDelivery:
-                type: integer
-                description: Id del envío
-                example: 166
               idCourier:
                 type: integer
                 description: Id del logístico
                 example: 166
-              idCourierRoute:
-                type: integer
-                description: Id de la ruta del logístico
-                example: 166
-              idCourierDriver:
-                type: integer
-                description: Id del conductor del logístico
-                example: 166
-              rating:
-                type: integer
-                description: Calificación dada por el logistico
-                example: null
-              comment:
-                type: string
-                description: Comentario dado por el logistico
-                example: null
-              dateCreation:
-                type: datetime
-                description: Fecha de creación del ítem
-                example: 2022-06-08T17:15:53.000+00:00
-              dateLastUpdate:
-                type: datetime
-                description: Fecha de última actualización del ítem
-                example: 2022-06-08T17:15:53.000+00:00
-          paymentWithCard:
+              courierDriverUser:
+                type: object  
+                description: Usuario del logístico driver 
+                example: {}
+              courier: 
+                type: object
+                description: Logístico
+                properties:
+                  idCourier:
+                    type: integer
+                    description: Id del logístico
+                    example: 166
+                  pathImage:
+                    type: string
+                    description: Ruta de la imagen del logístico
+                    example: null
+                  dba:
+                    type: string
+                    description: Nombre comercial del logístico
+                    example: Cargo
+                  name:
+                    type: string
+                    description: Nombre del logístico
+                    example: Cargo
+                  description:
+                    type: string
+                    description: Descripción del logístico
+                    example: Cargo
+                  commission:
+                    type: float
+                    description: Comisión del logístico
+                    example: 0.3
+                  phone:
+                    type: string
+                    description: Teléfono del logístico
+                    example: +50588888888
+                  email:
+                    type: string
+                    description: Email del logístico
+                    example: jog@gmail.com
+                  traditional:
+                    type: boolean
+                    description: ¿Se realizará de manera tradicional?
+                    example: true
+                  vacation:
+                    type: boolean
+                    description: ¿Está de vacaciones?
+                    example: true
+                  isPrivate:
+                    type: boolean
+                    description: ¿Es privado?
+                    example: true
+                  providerApi:
+                    type: boolean
+                    description: ¿Es proveedor de api?
+                    example: true
+                  active:
+                    type: boolean
+                    description: ¿Está activo?
+                    example: true
+                  dateCreation:
+                    type: datetime
+                    description: Fecha de creación del logístico
+                    example: 2022-06-23T20:39:39.157+00:00
+                  dateLastUpdate:
+                    type: datetime
+                    description: Fecha de última actualización del logístico
+                    example: 2022-06-23T20:39:39.157+00:00
+          relationCustomer:
             type: object
-            description: Pagar con tarjeta
-            example: null
-          relationLogistics:
-            type: object
-            description: Logísticas
-            example: null
+            description: Cliente
+            example: {}
           relationDrivers:
             type: object
             description: Conductores
-            example: null
+            properties:
+              idDeliveryDriver:
+                type: integer
+                description: Id del conductor del envío
+                example: 166
+              idDelivery:
+                type: integer
+                description: Id del envío
+                example: 166
+              idDriver:
+                type: integer
+                description: Id del conductor
+                example: 166
+              rating:
+                example: null
+              dateCreation:
+                type: datetime
+                description: Fecha de creación del conductor del envío
+                example: 2022-06-23T20:39:39.157+00:00
+              dateLastUpdate:
+                type: datetime
+                description: Fecha de última actualización del conductor del envío
+                example: 2022-06-23T20:39:39.157+00:00
+              driver:
+                type: null
           relationVendors:
             type: object
             description: Tiendas
-            example: null
-          relationCustomers:
+            properties:
+              idDeliveryVendor:
+                type: integer
+                description: Id de la tienda del envío
+                example: 166
+              idVendorUser:
+                type: integer
+                description: Id de la tienda
+                example: 16
+              vendorUsername:
+                type: string
+                description: Nombre de la tienda
+                example: 1
+            dateCreation:
+              type: datetime
+              description: Fecha de creación de la tienda del envío
+              example: 2022-06-23T20:39:39.157+00:00
+            dateLastUpdate:
+              type: datetime
+              description: Fecha de última actualización de la tienda del envío
+              example: 2022-06-23T20:39:39.157+00:00
+          relationInvoice:
             type: object
-            description: Clientes
-            example: null
+            description: Factura
+            example: {}
           relationStoreApi:
             type: object
             description: Api de la tienda asociada al envío
@@ -213,105 +586,20 @@ properties:
                 type: datetime
                 description: Fecha de última actualización del ítem
                 example: 2022-06-08T17:15:53.000+00:00
+              storeApi: 
+                example: null
+                description: Api de la tienda
               storesBranch:
-                type: object
-                properties:
-                  idStoreBranch:
-                    type: integer
-                    description: Id de la Sucursal de la tienda
-                    example: 19
-                  idStore:
-                    type: integer
-                    description: Id de la tienda
-                    example: 19
-                  name: 
-                    type: string
-                    description: Nombre de la sucursal
-                    example: Tizo Bodegon
-                  idMunicipality:
-                    type: integer
-                    description: Id de la municipalidad de la tienda
-                    example: 19
-                  addressGeo:
-                    type: string
-                    description: Direccion de Google Maps de la sucursal
-                    example: De la rotonda de Rubén Darío 1c al sur, 2c abajo, Managua 14003, Nicaragua
-                  phone:
-                    description: Teléfono de la tienda
-                    type: string
-                    example: 8888-8838
-                  addressHuman:
-                    type: string
-                    description: Direccion Nicaraguense de la sucursal
-                    example: De la rotonda de Rubén Darío 1c al sur, 2c abajo, Managua 14003, Nicaragua
-                  latitude:
-                    type: float
-                    description: Latitud de la tienda
-                    example: 12.121212
-                  longitude:
-                    type: float
-                    description: Longitud de la tienda
-                    example: 12.121212
-                  active:
-                    description: Estado de la sucursal
-                    type: boolean
-                    example: true
-                  vacation:
-                    description: Ofrece la disponibilidad de no recibir notificaciones
-                    type: boolean
-                    example: true
-                  dateCreation:
-                    type: datetime
-                    description: Fecha de creación del ítem
-                    example: 2022-06-08T17:15:53.000+00:00
-                  dateLastUpdate:
-                    type: datetime
-                    description: Fecha de última actualización del ítem
-                    example: 2022-06-08T17:15:53.000+00:00
+                example: null
+                description: Sucursal de la tienda
+          relationLogistics:
+            type: object
+            description: Logísticas
+            example: {}
           relationManager:
             type: object
             description: Manager
-            example: null
-          relationInvoice:
-            type: object
-            description: Facturas
-            example: null
-          couponDiscount:
-            type: object
-            description: En caso de que se le haya aplicado un cupón sea validado.
-            example: null
-          urlLogistic:
-            type: string
-            description: Url para que el logistico pueda monitorear el envío
-            example: https://manager.tizo.com.ni/home/shipment/552
-          estimatedDeliveryTimeString:
-            type: string
-            description: Fecha del Tiempo estimado del envío en un string
-            example: 25 de 
-          urlVendor:
-            type: string
-            description: Url para que la tienda pueda monitorear su envío
-            example: https://vendor.tizo.com.ni/tracking/96320C6C-A627-4F11-A1CF-8ECC2BBE79ED
-          codeShort:
-            type: string
-            description: Es el codigo del envío acortado
-            example: 8ECC2BBE79ED
-          liveTracking: 
-            type: boolean
-            description: Permite saber si el envío puede ser monitoreado en tiempo real
-            example: true
-          creatorPathImage:
-            type: string
-            description: Url a la imagen de la tienda
-            example: https://s3.amazonaws.com/tizo-dev/documents-vendor-11/1660361968102-tizo.jpg
-          pinDelivery:
-            type: integer
-            description: Pin unico que se crea para validar que la persona que reciba el pedido sea la correcta
-            example: 04704
-      size:
-        type: string
-        description: Tamaño del envío
-        example: Tizo Small
+            example: {}
   message:
     type: string
     description: Mensaje positivo de respuesta

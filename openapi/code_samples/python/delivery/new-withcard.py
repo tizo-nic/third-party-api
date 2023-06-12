@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "http://staging-api.tizo.co/api/v1/delivery/estimate/"
+url = "http://staging-api.tizo.co/api/v1/delivery/new/"
 
 payload = json.dumps({
   "idStore": 0,
@@ -12,12 +12,12 @@ payload = json.dumps({
   "isTest": False,
   "items": [
     {
-      "fragile": False,
+      "fragile": True,
       "document": False,
       "idItemCategory": 29,
       "categoryOther": "",
-      "value": 123,
-      "description": "dd",
+      "value": 81,
+      "description": "cal",
       "width": 45,
       "height": 16,
       "depth": 35,
@@ -28,6 +28,22 @@ payload = json.dumps({
       "nameCategory": "Calzado"
     }
   ],
+  "selectedMethod": {
+    "method": "COURIER",
+    "idCourier": 26,
+    "idAreaOrigin": 2380,
+    "idAreaDestination": 2385,
+    "idBranchOrigin": -1,
+    "idBranchDestination": -1,
+    "idPaymentMethod": 4,
+    "card": {
+            "name": "H",
+            "number": "4012000000020071",
+            "debit": false,
+            "expirationDate": "1224",
+            "cvv": "123"
+    }
+  },
   "waypoints": [
     {
       "type": "PICK_UP",

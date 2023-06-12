@@ -613,7 +613,135 @@ properties:
       relationVendors:
         type: object
         description: Tienda asociados al envío
-        example: null
+        properties:
+          idDeliveryVendor:
+            type: integer
+            description: Id del envío de la tienda
+            example: 166
+          idDelivery:
+            type: integer
+            description: Id del envío
+            example: 166
+          idVendor:
+            type: integer
+            description: Id de la tienda
+            example: 166
+          vendorUsername:
+            type: string
+            description: Nombre de usuario de la tienda
+            example: v_adriana_9
+          storesBranch:
+            type: object
+            description: Sucursal de la tienda
+            properties:
+              idStoreBranch:
+                type: integer
+                description: Id de la sucursal de la tienda
+                example: 1
+              idStore:
+                type: integer
+                description: Id de la tienda
+                example: 1
+              name:
+                type: string
+                description: Nombre de la sucursal de la tienda
+                example: Sede Central
+              idMunicipality:
+                type: integer
+                description: Id del municipio de la sucursal de la tienda
+                example: 1
+              addressGeo:
+                type: string
+                description: Dirección geográfica de la sucursal de la tienda
+                example: 4QRG+622, Managua, Nicaragua
+              phone:
+                type: string
+                description: Teléfono de la sucursal de la tienda
+                example: +50575874875
+              addressHuman:
+                type: string
+                description: Dirección humana de la sucursal de la tienda
+                example: Parque Central
+              latitude:
+                type: float
+                description: Latitud de la sucursal de la tienda
+                example: 12.140644111
+              longitude:
+                type: float
+                description: Longitud de la sucursal de la tienda
+                example: -86.225119053
+              active:
+                type: boolean
+                description: La sucursal de la tienda está activa
+                example: true
+              vacation:
+                type: boolean
+                description: La sucursal de la tienda está de vacaciones
+                example: false
+              dateCreation:
+                type: datetime
+                description: Fecha de creación del ítem
+                example: 2022-06-08T17:15:53.000+00:00
+              dateLastUpdate:
+                type: datetime
+                description: Fecha de última actualización del ítem
+                example: 2022-06-08T17:15:53.000+00:00
+              store:
+                type: object
+                description: Tienda
+                properties:
+                  idStore:
+                    type: integer
+                    description: Id de la tienda
+                    example: 1
+                  name:
+                    type: string
+                    description: Nombre de la tienda
+                    example: Tizo 
+                  dba:
+                    type: string
+                    description: Nombre comercial de la tienda
+                    example: Tizo
+                  pathImage:
+                    type: string
+                    description: Ruta de la imagen de la tienda
+                    example: https://s3.amazonaws.com/tizo-dev/documents-vendor-0/1685735024709-Cascada-Blanca.jpg
+                  description:
+                    type: string
+                    description: Descripción de la tienda
+                    example: AA
+                  phone:
+                    type: string
+                    description: Teléfono de la tienda
+                    example: +50586600957
+                  email:
+                    type: string
+                    description: Correo electrónico de la tienda
+                    example: john@john.com
+                  ruc:
+                    type: string
+                    description: RUC de la tienda
+                    example: 1212122
+                  vacation:
+                    type: boolean
+                    description: La tienda está de vacaciones
+                    example: false
+                  isPrivate:
+                    type: boolean
+                    description: La tienda es privada
+                    example: true
+                  active:
+                    type: boolean
+                    description: La tienda está activa
+                    example: true
+                  dateCreation:
+                    type: datetime
+                    description: Fecha de creación del ítem
+                    example: 2022-06-08T17:15:53.000+00:00  
+                  dateLastUpdate:
+                    type: datetime
+                    description: Fecha de última actualización del ítem
+                    example: 2022-06-08T17:15:53.000+00:00
       relationStoreApi:
         type: object
         description: Api de la tienda asociada al envío
@@ -848,12 +976,11 @@ properties:
                     type: datetime
                     description: Fecha de última actualización del ítem
                     example: 2022-06-08T17:15:53.000+00:00
-    
       relationLogistics:
         type: object
         description: Logisticos asociados al envío
         example: null
-      relationManagers:
+      relationManager:
         type: object
         description: Managers asociados al envío
         example: null
@@ -865,4 +992,5 @@ properties:
     type: integer
     description: Estado positivo de la respuesta
     example: 200
-               
+
+                

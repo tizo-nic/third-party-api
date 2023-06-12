@@ -34,11 +34,13 @@ paths:
     $ref: paths/delivery/buscardeliveryID.yaml
   /delivery/new:
     $ref: paths/delivery/new.yaml
+  /delivery/new/:
+    $ref: paths/delivery/new-with-card.yaml
   /delivery/confirm/{code}:
     $ref: paths/delivery/confirm.yaml
   /delivery/estimate:
     $ref: paths/delivery/estimate.yaml
-  /delivery:
+  /delivery/lite/:
     $ref: paths/delivery/delivery.yaml
   /system-data/status-deliveries/{idStatusDelivery}/:
     $ref: paths/data/status-delivery/getone-statusdelivery.yaml
@@ -50,12 +52,12 @@ paths:
     $ref: paths/data/status-delivery/status-delivery.yaml
   /system-data/steps-deliveries/:
     $ref: paths/data/steps-delivery/steps-delivery.yaml
-  /vendors/stores/{idStore}/notifications/:
-    $ref: paths/notifications/updatenotifications.yaml
-  /vendors/stores/{idStor}/notifications/:
-    $ref: paths/notifications/createnotifications.yaml
-  /vendors/stores/{idStoree}/notifications/:
-    $ref: paths/notifications/listnotifications.yaml
+  # /vendors/stores/{idStore}/notifications/:
+  #   $ref: paths/notifications/updatenotifications.yaml
+  # /vendors/stores/{idStor}/notifications/:
+  #   $ref: paths/notifications/createnotifications.yaml
+  # /vendors/stores/{idStoree}/notifications/:
+  #   $ref: paths/notifications/listnotifications.yaml
   /vendors/stores/{idStore}/branches/{idBranch}/:
     $ref: paths/branches/updatebranches.yaml
   /vendors/stores/{idStor}/branches/{idBranch}/:

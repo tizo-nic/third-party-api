@@ -116,6 +116,30 @@ properties:
         type: integer
         description: Id del tipo de pago
         example: 2
+      card:
+        type: object
+        description: Tarjeta de crédito o débito del cliente
+        properties:
+          name:
+            type: string
+            description: Nombre del titular de la tarjeta
+            example: John Smith
+          number:
+            type: string
+            description: Número de la tarjeta
+            example: 4242424242424242
+          debit:
+            type: boolean
+            description: Es tarjeta de débito
+            example: false
+          expirationDate:
+            type: string
+            description: Fecha de expiración de la tarjeta
+            example: 1224
+          cvv:
+            type: string
+            description: Código de seguridad de la tarjeta
+            example: 123
   waypoints:
     type: array
     items:

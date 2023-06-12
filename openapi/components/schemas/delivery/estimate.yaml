@@ -1,21 +1,21 @@
 type: object
 properties:
-  description:
-    type: string
-    description: Descripción del envío
-    example: Con descripcion
-  isTest:
-    type: boolean
-    description: El envío es de prueba
-    example: true
   idStore:
     type: integer
     description: Id de la tienda
     example: 3
-  idBranchStore:
+  idBranchStore:  
     type: integer
     description: Id de la sucursal de la tienda
     example: 3
+  description:
+    type: string
+    description: Descripción del envío
+    example: Una escoba con gaseosa.
+  isTest:
+    type: boolean
+    description: El envío es de prueba
+    example: true
   deliveryTime:
     type: datetime
     description: Fecha y hora de envío
@@ -49,14 +49,18 @@ properties:
           description: Nombre del usuario que realiza el pedido
           type: string
           example: John
+        personEmail:
+          description: Correo electrónico del usuario que realiza el pedido
+          type: string
+          example: john@gmail.com
         personIdentification:
           type: string
           description: Identificación de la persona
           example: 001-061199-1009L
         phone:
-          $ref: ../Phonenumber.yaml
-        personEmail:
-          $ref: ../Email.yaml
+          type: string
+          description: Teléfono del punto de ruta
+          example: 88888888
         addressHuman:
           type: string
           description: Nombre del punto de ruta
@@ -90,30 +94,30 @@ properties:
     items:
       type: object
       properties:
-        category:
-          type: integer
-          description: Id de la categoría
-          example: 13
-        idItemCategory:
-          type: integer
-          description: Id del ítem de la categoría
-          example: 13
-        capacitySelected:
-          type: string
-          description: Nombre de la capacidad seleccionada
-          example: Tizo Small
-        otherCapacity:
-          type: string 
-          description: Cuando la categoria es otros, se almacena este dato para saber en que categoría puede el cliente meter el producto que desea enviar
-          example: m
         name:
           type: string
           description: Nombre del ítem
           example: Paquete número uno
+        fragile:
+          type: boolean
+          description: Es frágil
+          example: false
+        document:
+          type: boolean
+          description: Necesita documento
+          example: false
         description:
           type: string
           description: Descripción del item
-          example: Una escoba con gaseosa.
+          example: Una escoba con gaseosa.    
+        isUsingCapacities:
+          type: boolean
+          description: El usuario conoce las capacidades
+          example: true
+        value:
+          type: float
+          description: Valor del ítem
+          example: 50.0000
         weight:
           type: float
           description: Altura del ítem
@@ -130,22 +134,28 @@ properties:
           type: float
           description: Ancho del ítem
           example:  1.00
-        value:
-          type: float
-          description: Valor del ítem
-          example: 50.0000
-        fragile:
-          type: boolean
-          description: Es frágil
-          example: false
-        document:
-          type: boolean
-          description: Necesita documento
-          example: false
         images:
-          type: Image
-          description: Imagen del ítem
-          example: '.src'
+          type: array
+          items:
+            type: string
+            description: Imágenes del ítem
+            example: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
+        idItemCategory:
+          type: integer
+          description: Id del ítem de la categoría
+          example: 13
+        capacitySelected:
+          type: string
+          description: Nombre de la capacidad seleccionada
+          example: Tizo Small
+        otherCapacity:
+          type: string 
+          description: Cuando la categoria es otros, se almacena este dato para saber en que categoría puede el cliente meter el producto que desea enviar
+          example: m
+        category:
+          type: integer
+          description: Id de la categoría
+          example: 13
   customerEmail:
     description: Correo Electrónico del cliente
     type: string

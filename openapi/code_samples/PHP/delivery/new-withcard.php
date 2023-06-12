@@ -1,23 +1,24 @@
-import requests
-import json
-
-url = "http://staging-api.tizo.co/api/v1/delivery/estimate/"
-
-payload = json.dumps({
+<?php
+$client = new Client();
+$headers = [
+  'Authorization' => 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidmVuZG9yIiwidXNlcm5hbWUiOiJ2X2FkcmlhbmFfOSIsImlhdCI6MTY4NjU4MzM4MCwiZXhwIjoxNjkxODY3MzgwfQ.8AaS0pzsWQhar3y-c04gXiZUQ18K5voz2n_8G0SFItXgnp21kb9Eg-0a27dCEVAL60f0fU6gLhoJeKouEBufFg',
+  'Content-Type' => 'application/json'
+];
+$body = '{
   "idStore": 0,
   "idBranchStore": 1,
   "customerEmail": "agb@tizo.app",
   "deliveryTypeCode": "T1",
   "description": "Envío simple",
-  "isTest": False,
+  "isTest": false,
   "items": [
     {
-      "fragile": False,
-      "document": False,
+      "fragile": true,
+      "document": false,
       "idItemCategory": 29,
       "categoryOther": "",
-      "value": 123,
-      "description": "dd",
+      "value": 81,
+      "description": "cal",
       "width": 45,
       "height": 16,
       "depth": 35,
@@ -28,6 +29,22 @@ payload = json.dumps({
       "nameCategory": "Calzado"
     }
   ],
+  "selectedMethod": {
+    "method": "COURIER",
+    "idCourier": 26,
+    "idAreaOrigin": 2380,
+    "idAreaDestination": 2385,
+    "idBranchOrigin": -1,
+    "idBranchDestination": -1,
+    "idPaymentMethod": 4,
+    "card": {
+        "name": "H",
+        "number": "4012000000020071",
+        "debit": false,
+        "expirationDate": "1224",
+        "cvv": "123"
+    }
+  },
   "waypoints": [
     {
       "type": "PICK_UP",
@@ -62,7 +79,7 @@ payload = json.dumps({
       "instructions": "Entregar al cliente",
       "latitude": 12.155067762636003,
       "longitude": -86.09838499989073,
-      "isSaveCustomer": False,
+      "isSaveCustomer": false,
       "fullName": "Axel Garcia",
       "url": {
         "url": "assets/img/logistic/maps/B-icon.png",
@@ -73,12 +90,7 @@ payload = json.dumps({
       }
     }
   ]
-})
-headers = {
-  'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidmVuZG9yIiwidXNlcm5hbWUiOiJ2X2FkcmlhbmFfOSIsImlhdCI6MTY4NjU4MzM4MCwiZXhwIjoxNjkxODY3MzgwfQ.8AaS0pzsWQhar3y-c04gXiZUQ18K5voz2n_8G0SFItXgnp21kb9Eg-0a27dCEVAL60f0fU6gLhoJeKouEBufFg',
-  'Content-Type': 'application/json'
-}
-
-response = requests.request("POST", url, headers=headers, data=payload)
-
-print(response.text)
+}';
+$request = new Request('POST', 'http://staging-api.tizo.co/api/v1/delivery/new/', $headers, $body);
+$res = $client->sendAsync($request)->wait();
+echo $res->getBody();
