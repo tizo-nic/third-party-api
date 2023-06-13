@@ -1,0 +1,68 @@
+type: object
+properties:
+  data: 
+    type: object
+    properties:
+      capacities: 
+        type: object
+        properties:
+          idCapacity:
+            type: integer
+            description: Id de la capacidad de envío
+            example: 36
+          name:
+            type: string
+            description: Nombre de la capacidad de envío
+            example: El Mini
+          code:
+            type: string
+            description: Código de la capacidad de envío
+            example: TS
+          icon:
+            type: string
+            description: Icono de la capacidad de envío
+            example: https://tizo-dev.s3.us-east-1.amazonaws.com/logos/5kg.png
+          description:
+            type: string
+            description: Descripción de la capacidad de envío
+            example: "Ej: Celulares, cargadores, vasos, etc."
+          maxWeight:
+            type: float
+            description: Peso máximo de la capacidad de envío
+            example: 5.00
+          maxDepth:
+            type: float
+            description: Profundidad máxima de la capacidad de envío
+            example: 35.00
+          maxWidth: 
+            type: float
+            description: Ancho máximo de la capacidad de envío
+            example: 45.00
+          maxHeight:
+            type: float
+            description: Altura máxima de la capacidad de envío
+            example: 16.00
+          dateCreation:
+            type: string
+            description: Fecha de creación de la capacidad de envío
+            example: 2022-03-30T15:17:56.793+00:00
+          dateLastUpdate:
+            type: string
+            description: Fecha de última actualización de la capacidad de envío
+            example: 2022-05-09T00:10:50.733+00:00
+          active:
+            type: boolean
+            description: Estado de la capacidad de envío
+            example: true
+          select:
+            type: boolean
+            description: Estado de selección de la capacidad de envío
+            example: false
+  message:
+    type: string
+    description: Mensaje positivo de respuesta
+    example: Item Category capacity retrieved successfully
+  status:
+    type: integer
+    description: Estado positivo de la respuesta
+    example: 200

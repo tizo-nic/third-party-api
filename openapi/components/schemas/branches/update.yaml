@@ -28,3 +28,11 @@ properties:
     type: boolean
     description: Estado de la sucursal de la tienda
     example: true
+  personInCharge:
+    type: string
+    description: Persona encargada de la sucursal
+    example: Juan Perez
+  phone:
+    type: string
+    description: Teléfono de la sucursal
+    example: 8884-2939

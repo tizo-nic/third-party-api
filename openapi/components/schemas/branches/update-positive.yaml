@@ -50,6 +50,10 @@ properties:
             description: Ofrece la disponibilidad de no recibir notificaciones, además de no aparecer entre los sugeridos del servicio de envío
             type: boolean
             example: true
+          personInCharge:
+            type: string
+            description: Persona encargada de la sucursal
+            example: Juan Perez
           dateCreation:
             type: datetime
             description: Fecha de creación de la sucursal de la tienda

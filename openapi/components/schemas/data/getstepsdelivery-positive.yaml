@@ -22,6 +22,10 @@ properties:
             type: integer
             description: Tipo del paso del envío
             example: 0
+          active:
+            type: boolean
+            description: Estado del paso del envío
+            example: true
           dateCreation:
             type: datetime
             description: Fecha de creación del paso del envío

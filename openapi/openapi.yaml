@@ -46,6 +46,10 @@ paths:
     $ref: paths/data/status-delivery/getone-statusdelivery.yaml
   /system-data/steps-deliveries/{idStepDeliveries}/:
     $ref: paths/data/steps-delivery/getone-stepsdelivery.yaml
+  /system-data/capacities/:
+    $ref: paths/data/capacities/list-capacities.yaml
+  /system-data/item-categories/{idItemCategory}/capacities/:
+    $ref: paths/data/capacities/list-capacities-by-categories.yaml
   /system-data/item-categories/:
     $ref: paths/data/Package-categories/list-package-categories.yaml
   /system-data/status-deliveries/:

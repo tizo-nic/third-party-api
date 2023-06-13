@@ -6,7 +6,33 @@ properties:
       itemCategory:
         type: array
         items:
-          $ref:  "./itemcategory.yaml"
+          type: object
+          description: Categoría de paquete
+          properties:
+            idItemCategory:
+              type: integer
+              description: Id de la categoría de paquete
+              example: 1
+            idParentCategory:
+              type: integer
+              description: Id de la categoría padre
+              example: 0
+            name:
+              type: string
+              description: Nombre de la categoría de paquete
+              example: Categoría 1
+            active:
+              type: boolean
+              description: Estado de la categoría de paquete
+              example: true
+            dateCreation:
+              type: datetime
+              description: Fecha de creación de la categoría de paquete
+              example: 2022-06-02T15:47:02.797+00:00
+            dateLastUpdate:
+              type: datetime
+              description: Fecha de última actualización de la categoría de paquete
+              example: 2022-06-07T19:26:22.807+00:00
       count:
         type: integer
         description: Cantidad de categorías de paquetes

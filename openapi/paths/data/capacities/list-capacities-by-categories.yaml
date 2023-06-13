@@ -1,0 +1,42 @@
+get:
+  tags:
+      - Información de los envíos y paquetes
+  summary: Listar capacidades de envío dependiendo de las categoría seleccionada
+  description: Este método te permite visualizar todos las capacidades de envío que pertenecen a una categoría seleccionada.
+  operationId: list-capacities-by-categories
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content: 
+        application/json:
+          schema:
+            $ref: '../../../components/schemas/data/list-capacities-by-categories-positive.yaml'
+    '400': 
+      description: Unauthorized
+      content: 
+        application/json:
+          schema:
+            $ref: '../../../components/schemas/data/list-capacities-by-categories-negative.yaml'
+  requestBody:
+    headers:
+      environment:
+        description: País donde se encuentra el usuario.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application:
+        schema:
+          description: Este método no solicita ningún dato de entrada
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../../code_samples/csharp/data/list-capacities-by-categories.cs"
+    - lang: PHP
+      source:
+        $ref: "../../../code_samples/PHP/data/list-capacities-by-categories.php"
+    - lang: Python
+      source:
+        $ref: "../../../code_samples/python/data/list-capacities-by-categories.py"

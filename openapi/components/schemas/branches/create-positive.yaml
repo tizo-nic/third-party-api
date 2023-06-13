@@ -23,6 +23,10 @@ properties:
         type: string
         description: Teléfono de la sucursal
         example: 8884-2939
+      personInCharge:
+        type: string
+        description: Persona encargada de la sucursal
+        example: Juan Perez
       addressGeo:
         type: string
         description: Direccion de la sucursal
