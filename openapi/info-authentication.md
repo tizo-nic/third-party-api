@@ -5,9 +5,10 @@ Para un mejor uso de nuestra API, debes de tomar en cuenta que cada request que 
 
 | Clave  | Valor |
 |-------|-------|
-| Authorization | Token | 
-| Content-Type | application/json |
-| Accept-Language | es, en |
+| **Authorization** | Token | 
+| **Content-Type** | application/json |
+| **Accept-Language** | es, en |
+| **User-Agent** | Navegador donde procede la solicitud |
 
 ## Autenticación.
 

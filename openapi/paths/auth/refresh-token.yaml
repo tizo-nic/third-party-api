@@ -31,10 +31,10 @@ post:
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../../code_samples/csharp/authorization/login.cs"
+        $ref: "../../code_samples/csharp/authorization/refresh.cs"
     - lang: PHP
       source:
-        $ref: ../../code_samples/PHP/authorization/login.php
+        $ref: ../../code_samples/PHP/authorization/refresh.php
     - lang: Python
       source:
-        $ref: ../../code_samples/Python/authorization/login.py
+        $ref: ../../code_samples/Python/authorization/refresh.py
