@@ -5,18 +5,18 @@ post:
   description: Este método te permite crear un envío. Es importante destacar colocar la categoría correcta, puesto que dependiendo de ella se notifican a los couriers que aceptan esta categoría. No se debitará el envío hasta que se confirme la orden.
   operationId: new
   responses:
-    '200':
+    "200":
       description: Success
-      content: 
+      content:
         application/json:
           schema:
-            $ref: '../../components/schemas/delivery/new-positive.yaml'
-    '400': 
+            $ref: "../../components/schemas/delivery/new-positive.yaml"
+    "400":
       description: Unauthorized
-      content: 
+      content:
         application/json:
           schema:
-            $ref: '../../components/schemas/delivery/new-negative.yaml'
+            $ref: "../../components/schemas/delivery/new-negative.yaml"
   requestBody:
     headers:
       environment:
@@ -26,7 +26,7 @@ post:
           example: "ni"
     content:
       application/json:
-        description: 
+        description:
         schema:
           $ref: "../../components/schemas/delivery/new.yaml"
     description: Estructura de datos para la creación de un envío, en caso de que el usuario no pague con tarjeta de crédito.

@@ -40,22 +40,22 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/reset'
+              $ref: "#/components/schemas/reset"
         description: Estructura de datos para cambiar contraseña
         required: true
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Resetpassword-positive'
-        '400':
+                $ref: "#/components/schemas/Resetpassword-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Resetpassword-negative'
+                $ref: "#/components/schemas/Resetpassword-negative"
       x-codeSamples:
         - lang: C#
           source: "var client = new RestClient(\"https://staging-api.tizo.co/api/v1/auth/reset-password/\");\r\nclient.Timeout = -1;\r\nvar request = new RestRequest(Method.POST);\r\nrequest.AddHeader(\"Authorization\", \"eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8yIiwiaWF0IjoxNjY4MTc3Mjc2LCJleHAiOjE2Njg3ODIwNzZ9.OKgtyp6DYHkANu-s-BZaHj1jAs0d6Pq37_3hiPm1C2EQ6XxHwpzN36FZsG5o0L29lno7Qryt3gFn4GfzVdETyA\");\r\nrequest.AddHeader(\"Content-Type\", \"application/json\");\r\nvar body = @\"{\r\n\" + \"\\n\" +\r\n@\"    \"\"password\"\": \"\"12\"\",\r\n\" + \"\\n\" +\r\n@\"    \"\"oldPassword\"\": \"\"12\"\"\r\n\" + \"\\n\" +\r\n@\"}\";\r\nrequest.AddParameter(\"application/json\", body,  ParameterType.RequestBody);\r\nIRestResponse response = client.Execute(request);\r\nConsole.WriteLine(response.Content);"
@@ -77,22 +77,22 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Login'
+              $ref: "#/components/schemas/Login"
         description: Estructura de datos para iniciar sesión
         required: true
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LoginResponse'
-        '401':
+                $ref: "#/components/schemas/LoginResponse"
+        "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LoginResponse2'
+                $ref: "#/components/schemas/LoginResponse2"
       x-codeSamples:
         - lang: C#
           source: "var client = new RestClient(\"https://staging-api.tizo.co/api/v1/auth/login/\");\r\nclient.Timeout = -1;\r\nvar request = new RestRequest(Method.POST);\r\nrequest.AddHeader(\"Authorization\", \"eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8xMSIsImlhdCI6MTY2ODE3OTE2MywiZXhwIjoxNjY4NzgzOTYzfQ.NFIxkVowStlEtnDa2RXTKLGQWv844q5EPI3oBSkjGRlVz-jTd4IXSfl8byOpzZurm6ScyslhgJ_kjuJZTgFQFQ\");\r\nrequest.AddHeader(\"Content-Type\", \"application/json\");\r\nvar body = @\"{\r\n\" + \"\\n\" +\r\n@\"    \"\"username\"\": \"\"store_11\"\",\r\n\" + \"\\n\" +\r\n@\"    \"\"password\"\": \"\"12\"\",\r\n\" + \"\\n\" +\r\n@\"    \"\"typeUser\"\": \"\"store_api\"\"\r\n\" + \"\\n\" +\r\n@\"}\";\r\nrequest.AddParameter(\"application/json\", body,  ParameterType.RequestBody);\r\nIRestResponse response = client.Execute(request);\r\nConsole.WriteLine(response.Content);"
@@ -123,22 +123,22 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/recovery'
+              $ref: "#/components/schemas/recovery"
         description: Estructura de datos para recuperar la cuenta.
         required: true
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/recoveryResponse-positive'
-        '400':
+                $ref: "#/components/schemas/recoveryResponse-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/recoveryResponse-negative'
+                $ref: "#/components/schemas/recoveryResponse-negative"
       x-codeSamples:
         - lang: C#
           source: "var client = new RestClient(\"https://staging-api.tizo.co/api/v1/auth/recovery-password/\");\r\nclient.Timeout = -1;\r\nvar request = new RestRequest(Method.POST);\r\nrequest.AddHeader(\"Authorization\", \"\");\r\nrequest.AddHeader(\"Content-Type\", \"application/json\");\r\nvar body = @\"{\r\n\" + \"\\n\" +\r\n@\"  \"\"method\"\": \"\"email\"\",\r\n\" + \"\\n\" +\r\n@\"  \"\"wordToMatch\"\": \"\"m_yoni3\"\",\r\n\" + \"\\n\" +\r\n@\"  \"\"typeUser\"\": \"\"manager\"\"\r\n\" + \"\\n\" +\r\n@\"}\";\r\nrequest.AddParameter(\"application/json\", body,  ParameterType.RequestBody);\r\nIRestResponse response = client.Execute(request);\r\nConsole.WriteLine(response.Content);"
@@ -168,18 +168,18 @@ paths:
             schema:
               description: Este método no solicita ningún dato de entrada
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/refresh-positive'
-        '400':
+                $ref: "#/components/schemas/refresh-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/refresh-negative'
+                $ref: "#/components/schemas/refresh-negative"
       x-codeSamples:
         - lang: C#
           source: "var client = new RestClient(\"https://staging-api.tizo.co/api/v1/auth/refresh-token/\");\r\nclient.Timeout = -1;\r\nvar request = new RestRequest(Method.POST);\r\nrequest.AddHeader(\"Authorization\", \"eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3RvcmVfYXBpIiwidXNlcm5hbWUiOiJzdG9yZV8xMSIsImlhdCI6MTY2ODE4MDY3MywiZXhwIjoxNjY4Nzg1NDczfQ.Epg1NeTr_R2de8jUQW-B2eJxyEFpC00CaJMmxsHHFbP9tkHBWhU7eTLIe47GHWchyy_-z-WthaloG92yFeblHg\");\r\nIRestResponse response = client.Execute(request);\r\nConsole.WriteLine(response.Content);"
@@ -204,18 +204,18 @@ paths:
             example: 5443185F-3FD5-42B1-AF56-4A3128E996A7
           description: Código del envío
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/buscardeliverycode-positive'
-        '400':
+                $ref: "#/components/schemas/buscardeliverycode-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/buscardeliverycode-negative'
+                $ref: "#/components/schemas/buscardeliverycode-negative"
       requestBody:
         headers:
           environment:
@@ -251,18 +251,18 @@ paths:
             example: 304
           description: Id del envío
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/buscardeliveryID-positive'
-        '400':
+                $ref: "#/components/schemas/buscardeliveryID-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/buscardeliveryID-negative'
+                $ref: "#/components/schemas/buscardeliveryID-negative"
       requestBody:
         headers:
           environment:
@@ -293,18 +293,18 @@ paths:
         se confirme la orden.
       operationId: new
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/new-positive'
-        '400':
+                $ref: "#/components/schemas/new-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/new-negative'
+                $ref: "#/components/schemas/new-negative"
       requestBody:
         headers:
           environment:
@@ -316,7 +316,7 @@ paths:
           application/json:
             description: null
             schema:
-              $ref: '#/components/schemas/new'
+              $ref: "#/components/schemas/new"
         description: >-
           Estructura de datos para la creación de un envío, en caso de que el
           usuario no pague con tarjeta de crédito.
@@ -340,18 +340,18 @@ paths:
         se confirme la orden.
       operationId: new
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/new-withcard-positive'
-        '400':
+                $ref: "#/components/schemas/new-withcard-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/new-withcard-negative'
+                $ref: "#/components/schemas/new-withcard-negative"
       requestBody:
         headers:
           environment:
@@ -363,7 +363,7 @@ paths:
           application/json:
             description: null
             schema:
-              $ref: '#/components/schemas/new-withcard'
+              $ref: "#/components/schemas/new-withcard"
         description: >-
           Estructura de datos para la creación de un envío, en caso de que el
           usuario pague con tarjeta de crédito.
@@ -392,18 +392,18 @@ paths:
             example: 5443185F-3FD5-42B1-AF56-4A3128E996A7
           description: Código del envío
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/confirm-positive'
-        '400':
+                $ref: "#/components/schemas/confirm-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/confirm-negative'
+                $ref: "#/components/schemas/confirm-negative"
       requestBody:
         headers:
           environment:
@@ -433,18 +433,18 @@ paths:
         se notifican a los couriers que aceptan esta categoría.
       operationId: estimate
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/estimate-positive'
-        '400':
+                $ref: "#/components/schemas/estimate-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/estimate-negative'
+                $ref: "#/components/schemas/estimate-negative"
       requestBody:
         headers:
           environment:
@@ -455,7 +455,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/estimate'
+              $ref: "#/components/schemas/estimate"
         description: Estructura de datos para la estimación de un envio
         required: true
       x-codeSamples:
@@ -475,18 +475,18 @@ paths:
         usuario.
       operationId: my-deliveries
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/delivery-positive'
-        '400':
+                $ref: "#/components/schemas/delivery-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/delivery-negative'
+                $ref: "#/components/schemas/delivery-negative"
       requestBody:
         headers:
           environment:
@@ -522,18 +522,18 @@ paths:
             type: string
           description: ID del estado del envío
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getstatusdelivery-positive'
-        '400':
+                $ref: "#/components/schemas/getstatusdelivery-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getstatusdelivery-negative'
+                $ref: "#/components/schemas/getstatusdelivery-negative"
       requestBody:
         headers:
           environment:
@@ -569,18 +569,18 @@ paths:
             type: string
           description: ID del paso del envío
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getstepsdelivery-positive'
-        '400':
+                $ref: "#/components/schemas/getstepsdelivery-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getstepsdelivery-negative'
+                $ref: "#/components/schemas/getstepsdelivery-negative"
       requestBody:
         headers:
           environment:
@@ -612,18 +612,18 @@ paths:
         - basic_auth:
             - Authorization
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/list-capacities-positive'
-        '400':
+                $ref: "#/components/schemas/list-capacities-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/list-capacities-negative'
+                $ref: "#/components/schemas/list-capacities-negative"
       requestBody:
         headers:
           environment:
@@ -655,18 +655,18 @@ paths:
         - basic_auth:
             - Authorization
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/list-capacities-by-categories-positive'
-        '400':
+                $ref: "#/components/schemas/list-capacities-by-categories-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/list-capacities-by-categories-negative'
+                $ref: "#/components/schemas/list-capacities-by-categories-negative"
       requestBody:
         headers:
           environment:
@@ -695,18 +695,18 @@ paths:
         existentes.
       operationId: list-package-categories
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/listpackagecategories-positive'
-        '400':
+                $ref: "#/components/schemas/listpackagecategories-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/listpackagecategories-negative'
+                $ref: "#/components/schemas/listpackagecategories-negative"
       requestBody:
         headers:
           environment:
@@ -735,18 +735,18 @@ paths:
         registrados en el sistema.
       operationId: list-status-delivery
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/liststatusdelivery-positive'
-        '400':
+                $ref: "#/components/schemas/liststatusdelivery-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/liststatusdelivery-negative'
+                $ref: "#/components/schemas/liststatusdelivery-negative"
       requestBody:
         headers:
           environment:
@@ -775,18 +775,18 @@ paths:
         en el sistema.
       operationId: list-steps-delivery
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/liststepsdelivery-positive'
-        '400':
+                $ref: "#/components/schemas/liststepsdelivery-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/liststepsdelivery-negative'
+                $ref: "#/components/schemas/liststepsdelivery-negative"
       requestBody:
         headers:
           environment:
@@ -826,18 +826,18 @@ paths:
             type: string
           description: ID de la sucursal de la tienda
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/update-positive'
-        '400':
+                $ref: "#/components/schemas/update-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/update-negative'
+                $ref: "#/components/schemas/update-negative"
       requestBody:
         headers:
           environment:
@@ -848,7 +848,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/update'
+              $ref: "#/components/schemas/update"
         description: Estructura de datos para la actualización de una sucursal
         required: true
       x-codeSamples:
@@ -881,18 +881,18 @@ paths:
             type: string
           description: ID de la sucursal de la tienda
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getone-positive'
-        '400':
+                $ref: "#/components/schemas/getone-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getone-negative'
+                $ref: "#/components/schemas/getone-negative"
       requestBody:
         headers:
           environment:
@@ -934,18 +934,18 @@ paths:
             type: string
           description: ID de la sucursal de la tienda
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/delete-positive'
-        '400':
+                $ref: "#/components/schemas/delete-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/delete-negative'
+                $ref: "#/components/schemas/delete-negative"
       requestBody:
         headers:
           environment:
@@ -981,18 +981,18 @@ paths:
             type: string
           description: ID de la tienda
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/listbranches-positive'
-        '400':
+                $ref: "#/components/schemas/listbranches-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/listbranches-negative'
+                $ref: "#/components/schemas/listbranches-negative"
       requestBody:
         headers:
           environment:
@@ -1026,18 +1026,18 @@ paths:
             type: string
           description: ID de la tienda
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getcredit-positive'
-        '400':
+                $ref: "#/components/schemas/getcredit-positive"
+        "400":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getcredit-negative'
+                $ref: "#/components/schemas/getcredit-negative"
       requestBody:
         headers:
           environment:
@@ -1139,7 +1139,7 @@ components:
                   type: string
                   example: 50563397024
                 email:
-                  $ref: '#/components/schemas/Email'
+                  $ref: "#/components/schemas/Email"
                 identification:
                   description: Identificación del usuario
                   type: string
@@ -1151,19 +1151,19 @@ components:
                 birthDate:
                   description: Fecha de nacimiento del usuario
                   type: date
-                  example: '2022-08-04'
+                  example: "2022-08-04"
                 loginLast:
                   description: Último Login del usuario
                   type: date
-                  example: '2022-07-12T19:05:37.403+00:00'
+                  example: "2022-07-12T19:05:37.403+00:00"
                 dateCreation:
                   description: Fecha de creación del usuario
                   type: date
-                  example: '2022-06-21T16:13:09.567+00:00'
+                  example: "2022-06-21T16:13:09.567+00:00"
                 dateLastUpdate:
                   description: Fecha de última actualización del usuario
                   type: date
-                  example: '2022-06-21T16:13:09.567+00:00'
+                  example: "2022-06-21T16:13:09.567+00:00"
                 ipCreation:
                   description: Ip de creación del usuario
                   type: string
@@ -1392,7 +1392,7 @@ components:
                   type: string
                   example: 50563397024
                 email:
-                  $ref: '#/components/schemas/Email'
+                  $ref: "#/components/schemas/Email"
                 identification:
                   description: Identificación del usuario
                   type: string
@@ -1404,19 +1404,19 @@ components:
                 birthDate:
                   description: Fecha de nacimiento del usuario
                   type: date
-                  example: '2022-08-04'
+                  example: "2022-08-04"
                 loginLast:
                   description: Último Login del usuario
                   type: date
-                  example: '2022-07-12T19:05:37.403+00:00'
+                  example: "2022-07-12T19:05:37.403+00:00"
                 dateCreation:
                   description: Fecha de creación del usuario
                   type: date
-                  example: '2022-06-21T16:13:09.567+00:00'
+                  example: "2022-06-21T16:13:09.567+00:00"
                 dateLastUpdate:
                   description: Fecha de última actualización del usuario
                   type: date
-                  example: '2022-06-21T16:13:09.567+00:00'
+                  example: "2022-06-21T16:13:09.567+00:00"
                 ipCreation:
                   description: Ip de creación del usuario
                   type: string
@@ -1682,7 +1682,7 @@ components:
             deliveryTime:
               type: datetime
               description: Fecha y hora de envío de inicio
-              example: '2022-06-08T17:15:53.000+00:00'
+              example: "2022-06-08T17:15:53.000+00:00"
             deliveryTimeInMillis:
               type: integer
               description: Fecha y hora de envio en milisegundos
@@ -1760,11 +1760,11 @@ components:
             dateCreation:
               type: datetime
               description: Fecha de creación del envío
-              example: '2022-06-23T20:39:39.157+00:00'
+              example: "2022-06-23T20:39:39.157+00:00"
             dateLastUpdate:
               type: datetime
               description: Fecha de última actualización del envío
-              example: '2022-06-23T20:39:39.157+00:00'
+              example: "2022-06-23T20:39:39.157+00:00"
             metadata:
               type: string
               description: Metadatos del envío
@@ -1900,11 +1900,11 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación del ítem
-                    example: '2022-06-08T17:15:53.000+00:00'
+                    example: "2022-06-08T17:15:53.000+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización del ítem
-                    example: '2022-06-08T17:15:53.000+00:00'
+                    example: "2022-06-08T17:15:53.000+00:00"
                   deliveryItemsFiles:
                     type: array
                     items:
@@ -1944,13 +1944,13 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación de la factura relacionada al envío
-                    example: '2023-03-30T04:21:57.223+00:00'
+                    example: "2023-03-30T04:21:57.223+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: >-
                       Fecha de última actualización de la factura relacionada al
                       envío
-                    example: '2023-03-30T04:21:57.223+00:00'
+                    example: "2023-03-30T04:21:57.223+00:00"
             steps:
               type: array
               description: Pasos del envío
@@ -2005,15 +2005,15 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación del paso del envío
-                    example: '2022-06-23T20:39:39.157+00:00'
+                    example: "2022-06-23T20:39:39.157+00:00"
                   dateCreationInMillis:
                     type: datetime
                     description: Fecha de creación del paso del envío en milisegundos
-                    example: '2022-06-23T20:39:39.157+00:00'
+                    example: "2022-06-23T20:39:39.157+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización del paso del envío
-                    example: '2022-06-23T20:39:39.157+00:00'
+                    example: "2022-06-23T20:39:39.157+00:00"
             waypoints:
               type: array
               items:
@@ -2111,21 +2111,21 @@ components:
                         description: >-
                           Fecha de creación de los puntos dentro del área del
                           logístico
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                       dateLastUpdate:
                         type: datetime
                         description: >-
                           Fecha de última actualizaciónde los puntos dentro del
                           área del logístico
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                   dateCreation:
                     type: datetime
                     description: Fecha de creación del logístico
-                    example: '2022-06-08T17:15:53.000+00:00'
+                    example: "2022-06-08T17:15:53.000+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización del logístico
-                    example: '2022-06-08T17:15:53.000+00:00'
+                    example: "2022-06-08T17:15:53.000+00:00"
                   idWaypointsPickUpItems:
                     type: array
                     description: Id de los items de recogida
@@ -2225,11 +2225,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
             relationCustomer:
               type: object
               description: Clientes móviles asociados al envío
@@ -2261,11 +2261,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 driver:
                   type: object
                   description: Chofer
@@ -2341,11 +2341,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     store:
                       type: object
                       description: Tienda
@@ -2398,11 +2398,11 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: Fecha de última actualización del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
             relationStoreApi:
               type: object
               description: Api de la tienda asociada al envío
@@ -2434,11 +2434,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 storeApi:
                   type: object
                   properties:
@@ -2455,7 +2455,7 @@ components:
                       type: string
                       example: store_2
                     email:
-                      $ref: '#/components/schemas/Email'
+                      $ref: "#/components/schemas/Email"
                     active:
                       description: Estado de la tienda
                       type: boolean
@@ -2463,15 +2463,15 @@ components:
                     loginLastUpdate:
                       description: Último Login del usuario
                       type: date
-                      example: '2022-07-12T19:05:37.403+00:00'
+                      example: "2022-07-12T19:05:37.403+00:00"
                     dateCreation:
                       description: Fecha de creación del usuario
                       type: date
-                      example: '2022-06-21T16:13:09.567+00:00'
+                      example: "2022-06-21T16:13:09.567+00:00"
                     dateLastUpdate:
                       description: Fecha de última actualización del usuario
                       type: date
-                      example: '2022-06-21T16:13:09.567+00:00'
+                      example: "2022-06-21T16:13:09.567+00:00"
                     store:
                       type: object
                       properties:
@@ -2525,11 +2525,11 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: Fecha de última actualización del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                 storesBranch:
                   type: object
                   properties:
@@ -2584,11 +2584,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     store:
                       type: object
                       properties:
@@ -2642,11 +2642,11 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: Fecha de última actualización del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
             relationLogistics:
               type: object
               description: Logisticos asociados al envío
@@ -2716,7 +2716,7 @@ components:
             deliveryTime:
               type: datetime
               description: Fecha y hora de envío de inicio
-              example: '2022-06-08T17:15:53.000+00:00'
+              example: "2022-06-08T17:15:53.000+00:00"
             deliveryTimeInMillis:
               type: integer
               description: Fecha y hora de envio en milisegundos
@@ -2794,11 +2794,11 @@ components:
             dateCreation:
               type: datetime
               description: Fecha de creación del envío
-              example: '2022-06-23T20:39:39.157+00:00'
+              example: "2022-06-23T20:39:39.157+00:00"
             dateLastUpdate:
               type: datetime
               description: Fecha de última actualización del envío
-              example: '2022-06-23T20:39:39.157+00:00'
+              example: "2022-06-23T20:39:39.157+00:00"
             metadata:
               type: string
               description: Metadatos del envío
@@ -2934,11 +2934,11 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación del ítem
-                    example: '2022-06-08T17:15:53.000+00:00'
+                    example: "2022-06-08T17:15:53.000+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización del ítem
-                    example: '2022-06-08T17:15:53.000+00:00'
+                    example: "2022-06-08T17:15:53.000+00:00"
                   deliveryItemsFiles:
                     type: array
                     items:
@@ -2978,13 +2978,13 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación de la factura relacionada al envío
-                    example: '2023-03-30T04:21:57.223+00:00'
+                    example: "2023-03-30T04:21:57.223+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: >-
                       Fecha de última actualización de la factura relacionada al
                       envío
-                    example: '2023-03-30T04:21:57.223+00:00'
+                    example: "2023-03-30T04:21:57.223+00:00"
             steps:
               type: array
               description: Pasos del envío
@@ -3039,15 +3039,15 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación del paso del envío
-                    example: '2022-06-23T20:39:39.157+00:00'
+                    example: "2022-06-23T20:39:39.157+00:00"
                   dateCreationInMillis:
                     type: datetime
                     description: Fecha de creación del paso del envío en milisegundos
-                    example: '2022-06-23T20:39:39.157+00:00'
+                    example: "2022-06-23T20:39:39.157+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización del paso del envío
-                    example: '2022-06-23T20:39:39.157+00:00'
+                    example: "2022-06-23T20:39:39.157+00:00"
             waypoints:
               type: array
               items:
@@ -3145,21 +3145,21 @@ components:
                         description: >-
                           Fecha de creación de los puntos dentro del área del
                           logístico
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                       dateLastUpdate:
                         type: datetime
                         description: >-
                           Fecha de última actualizaciónde los puntos dentro del
                           área del logístico
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                   dateCreation:
                     type: datetime
                     description: Fecha de creación del logístico
-                    example: '2022-06-08T17:15:53.000+00:00'
+                    example: "2022-06-08T17:15:53.000+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización del logístico
-                    example: '2022-06-08T17:15:53.000+00:00'
+                    example: "2022-06-08T17:15:53.000+00:00"
                   idWaypointsPickUpItems:
                     type: array
                     description: Id de los items de recogida
@@ -3259,11 +3259,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
             relationCustomer:
               type: object
               description: Clientes móviles asociados al envío
@@ -3295,11 +3295,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 driver:
                   type: object
                   description: Chofer
@@ -3375,11 +3375,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     store:
                       type: object
                       description: Tienda
@@ -3432,11 +3432,11 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: Fecha de última actualización del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
             relationStoreApi:
               type: object
               description: Api de la tienda asociada al envío
@@ -3468,11 +3468,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 storeApi:
                   type: object
                   properties:
@@ -3489,7 +3489,7 @@ components:
                       type: string
                       example: store_2
                     email:
-                      $ref: '#/components/schemas/Email'
+                      $ref: "#/components/schemas/Email"
                     active:
                       description: Estado de la tienda
                       type: boolean
@@ -3497,15 +3497,15 @@ components:
                     loginLastUpdate:
                       description: Último Login del usuario
                       type: date
-                      example: '2022-07-12T19:05:37.403+00:00'
+                      example: "2022-07-12T19:05:37.403+00:00"
                     dateCreation:
                       description: Fecha de creación del usuario
                       type: date
-                      example: '2022-06-21T16:13:09.567+00:00'
+                      example: "2022-06-21T16:13:09.567+00:00"
                     dateLastUpdate:
                       description: Fecha de última actualización del usuario
                       type: date
-                      example: '2022-06-21T16:13:09.567+00:00'
+                      example: "2022-06-21T16:13:09.567+00:00"
                     store:
                       type: object
                       properties:
@@ -3559,11 +3559,11 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: Fecha de última actualización del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                 storesBranch:
                   type: object
                   properties:
@@ -3618,11 +3618,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     store:
                       type: object
                       properties:
@@ -3676,11 +3676,11 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: Fecha de última actualización del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
             relationLogistics:
               type: object
               description: Logisticos asociados al envío
@@ -3868,9 +3868,9 @@ components:
                 description: Identificación de la persona
                 example: 001-061199-1009L
               phone:
-                $ref: '#/components/schemas/Phonenumber'
+                $ref: "#/components/schemas/Phonenumber"
               personEmail:
-                $ref: '#/components/schemas/Email'
+                $ref: "#/components/schemas/Email"
               addressHuman:
                 type: string
                 description: Nombre del punto de ruta
@@ -3946,7 +3946,7 @@ components:
                 deliveryTime:
                   type: datetime
                   description: Fecha y hora de envío de inicio
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 deliveryTimeInMillis:
                   type: integer
                   description: Fecha y hora de envío de inicio en milisegundos
@@ -3954,7 +3954,7 @@ components:
                 estimatedDeliveryTime:
                   type: datetime
                   description: Fecha y hora de estimados
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 estimatedDeliveryTimeInMillis:
                   type: integer
                   description: Fecha y hora de estimados en milisegundos
@@ -3964,7 +3964,7 @@ components:
                   description: >-
                     Fecha y hora de estimados, pero si el courier cambia el
                     tiempo de entrega, se cambia este dato
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 scheduledDeliveryTimeInMillis:
                   type: integer
                   description: >-
@@ -4042,11 +4042,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del envío
-                  example: '2022-06-23T20:39:39.157+00:00'
+                  example: "2022-06-23T20:39:39.157+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización del envío
-                  example: '2022-06-23T20:39:39.157+00:00'
+                  example: "2022-06-23T20:39:39.157+00:00"
                 change:
                   type: float
                   description: Cambio del envío
@@ -4171,11 +4171,11 @@ components:
                       dateCreation:
                         type: datetime
                         description: Fecha de creación del item del envío
-                        example: '2022-06-23T20:39:39.157+00:00'
+                        example: "2022-06-23T20:39:39.157+00:00"
                       dateLastUpdate:
                         type: datetime
                         description: Fecha de última actualización del item del envío
-                        example: '2022-06-23T20:39:39.157+00:00'
+                        example: "2022-06-23T20:39:39.157+00:00"
                       deliveryItemsFiles:
                         type: array
                         description: Archivos del item del envío
@@ -4214,11 +4214,11 @@ components:
                       dateCreation:
                         type: datetime
                         description: Fecha de creación del paso del envío
-                        example: '2022-06-23T20:39:39.157+00:00'
+                        example: "2022-06-23T20:39:39.157+00:00"
                       dateLastUpdate:
                         type: datetime
                         description: Fecha de última actualización del paso del envío
-                        example: '2022-06-23T20:39:39.157+00:00'
+                        example: "2022-06-23T20:39:39.157+00:00"
                       dateCreationInMillis:
                         type: integer
                         description: Fecha de creación del paso del envío en milisegundos
@@ -4309,21 +4309,21 @@ components:
                           dateCreation:
                             type: datetime
                             description: Fecha de creación del área del waypoint del envío
-                            example: '2022-06-23T20:39:39.157+00:00'
+                            example: "2022-06-23T20:39:39.157+00:00"
                           dateLastUpdate:
                             type: datetime
                             description: >-
                               Fecha de última actualización del área del
                               waypoint del envío
-                            example: '2022-06-23T20:39:39.157+00:00'
+                            example: "2022-06-23T20:39:39.157+00:00"
                       dateCreation:
                         type: datetime
                         description: Fecha de creación del waypoint del envío
-                        example: '2022-06-23T20:39:39.157+00:00'
+                        example: "2022-06-23T20:39:39.157+00:00"
                       dateLastUpdate:
                         type: datetime
                         description: Fecha de última actualización del waypoint del envío
-                        example: '2022-06-23T20:39:39.157+00:00'
+                        example: "2022-06-23T20:39:39.157+00:00"
                 relationCouriers:
                   type: object
                   properties:
@@ -4398,11 +4398,11 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del logístico
-                          example: '2022-06-23T20:39:39.157+00:00'
+                          example: "2022-06-23T20:39:39.157+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: Fecha de última actualización del logístico
-                          example: '2022-06-23T20:39:39.157+00:00'
+                          example: "2022-06-23T20:39:39.157+00:00"
                 relationCustomer:
                   type: object
                   description: Cliente
@@ -4428,11 +4428,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del conductor del envío
-                      example: '2022-06-23T20:39:39.157+00:00'
+                      example: "2022-06-23T20:39:39.157+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del conductor del envío
-                      example: '2022-06-23T20:39:39.157+00:00'
+                      example: "2022-06-23T20:39:39.157+00:00"
                     driver:
                       type: null
                 relationVendors:
@@ -4454,11 +4454,11 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación de la tienda del envío
-                    example: '2022-06-23T20:39:39.157+00:00'
+                    example: "2022-06-23T20:39:39.157+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización de la tienda del envío
-                    example: '2022-06-23T20:39:39.157+00:00'
+                    example: "2022-06-23T20:39:39.157+00:00"
                 relationInvoice:
                   type: object
                   description: Factura
@@ -4494,11 +4494,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     storeApi:
                       example: null
                       description: Api de la tienda
@@ -4712,9 +4712,9 @@ components:
                 description: Identificación de la persona
                 example: 001-061199-1009L
               phone:
-                $ref: '#/components/schemas/Phonenumber'
+                $ref: "#/components/schemas/Phonenumber"
               personEmail:
-                $ref: '#/components/schemas/Email'
+                $ref: "#/components/schemas/Email"
               addressHuman:
                 type: string
                 description: Nombre del punto de ruta
@@ -4801,15 +4801,15 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del envío
-                  example: '2022-06-23T20:39:39.157+00:00'
+                  example: "2022-06-23T20:39:39.157+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización del envío
-                  example: '2022-06-23T20:39:39.157+00:00'
+                  example: "2022-06-23T20:39:39.157+00:00"
                 deliveryTime:
                   type: datetime
                   description: Fecha y hora de envío de inicio
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 deliveryTimeInMillis:
                   type: integer
                   description: Fecha y hora de envío de inicio en milisegundos
@@ -4881,7 +4881,7 @@ components:
                       categoryOther:
                         type: string
                         description: Categoría de otros
-                        example: ''
+                        example: ""
                       code:
                         type: string
                         description: Código del ítem
@@ -4889,11 +4889,11 @@ components:
                       dateCreation:
                         type: datetime
                         description: Fecha de creación del ítem
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                       dateLastUpdate:
                         type: datetime
                         description: Fecha de última actualización del ítem
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                       deliveryItemsFiles:
                         type: array
                         description: Archivos del ítem del envío
@@ -5002,23 +5002,23 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del logístico
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: Fecha de última actualización del logístico
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dba:
                           type: string
                           description: Nombre comercial del logístico
-                          example: ''
+                          example: ""
                         description:
                           type: string
                           description: Descripción del logístico
-                          example: ''
+                          example: ""
                         email:
                           type: string
                           description: Correo del logístico
-                          example: ''
+                          example: ""
                         idCourier:
                           type: integer
                           description: Id del logístico
@@ -5034,7 +5034,7 @@ components:
                         pathImage:
                           type: string
                           description: Ruta de la imagen del logístico
-                          example: ''
+                          example: ""
                         phone:
                           type: string
                           description: Teléfono del logístico
@@ -5042,7 +5042,7 @@ components:
                         providerApi:
                           type: boolean
                           description: Proveedor de la api del logístico
-                          example: ''
+                          example: ""
                         traditional:
                           type: boolean
                           description: Trabaja de manera tradicional
@@ -5054,11 +5054,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación de la relación
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización de la relación
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     idCustomerUser:
                       type: integer
                       description: Id del usuario del cliente
@@ -5138,11 +5138,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     storesBranch:
                       type: object
                       properties:
@@ -5199,11 +5199,11 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: Fecha de última actualización del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                 relationVendors:
                   type: object
                   description: Tiendas
@@ -5211,7 +5211,7 @@ components:
                 relationCustomers:
                   type: object
                   description: Clientes
-                  example: 'n'
+                  example: "n"
                 scheduledDeliveryTime:
                   type: integer
                   description: >-
@@ -5250,7 +5250,7 @@ components:
                       dateCreation:
                         type: datetime
                         description: Fecha de creación del ítem
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                       dateCreationInMillis:
                         type: integer
                         description: Fecha de creación del ítem
@@ -5258,7 +5258,7 @@ components:
                       dateLastUpdate:
                         type: datetime
                         description: Fecha de última actualización del ítem
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                       description:
                         type: string
                         description: Descripción del paso
@@ -5336,11 +5336,11 @@ components:
                       dateCreation:
                         type: datetime
                         description: Fecha de creación del ítem
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                       dateLastUpdate:
                         type: datetime
                         description: Fecha de última actualización del ítem
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                       idDeliveryWaypoint:
                         type: integer
                         description: Id del punto
@@ -5396,11 +5396,11 @@ components:
                           dateCreation:
                             type: datetime
                             description: Fecha de creación del ítem
-                            example: '2022-06-08T17:15:53.000+00:00'
+                            example: "2022-06-08T17:15:53.000+00:00"
                           dateLastUpdate:
                             type: datetime
                             description: Fecha de última actualización del ítem
-                            example: '2022-06-08T17:15:53.000+00:00'
+                            example: "2022-06-08T17:15:53.000+00:00"
             redirect:
               type: string
               description: Html para redireccionar al cliente a la página de PowerTranz
@@ -5534,17 +5534,17 @@ components:
                 deliveryTime:
                   type: datetime
                   description: Fecha y hora de envío
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 estimatedDeliveryTime:
                   type: datetime
                   description: Fecha y hora estimada de envío
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 scheduledDeliveryTime:
                   type: datetime
                   description: >-
                     Fecha y hora de estimados, pero si el courier cambia el
                     tiempo de entrega, se cambia este dato
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 active:
                   type: boolean
                   description: Estado del envío
@@ -5564,11 +5564,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del envío
-                  example: '2022-06-23T20:39:39.157+00:00'
+                  example: "2022-06-23T20:39:39.157+00:00"
                 dateLastUpdate:
                   type: string
                   description: Fecha de última actualización del envío
-                  example: '2022-06-23T20:39:39.157+00:00'
+                  example: "2022-06-23T20:39:39.157+00:00"
                 metadata:
                   type: string
                   description: Metadatos de los servicios de terceros
@@ -5611,11 +5611,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                 paymentWithCard:
                   type: object
                   description: Pagar con tarjeta
@@ -5657,11 +5657,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     vendorUser:
                       type: object
                       description: Usuario de la tienda
@@ -5705,11 +5705,11 @@ components:
                         loginLast:
                           type: date
                           description: Último inicio de sesión del usuario de la tienda
-                          example: '2022-06-08'
+                          example: "2022-06-08"
                         birthdate:
                           type: date
                           description: Fecha de nacimiento del usuario de la tienda
-                          example: '2022-06-08'
+                          example: "2022-06-08"
                         ipCreation:
                           type: string
                           description: Ip de creación del usuario de la tienda
@@ -5717,13 +5717,13 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del usuario de la tienda
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: >-
                             Fecha de última actualización del usuario de la
                             tienda
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         username:
                           type: string
                           description: Nombre de usuario del usuario de la tienda
@@ -5787,13 +5787,13 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación de la sucursal de la tienda
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: >-
                             Fecha de última actualización de la sucursal de la
                             tienda
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                 relationCustomers:
                   type: object
                   description: Clientes
@@ -5829,11 +5829,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     storesBranch:
                       type: object
                       properties:
@@ -5890,11 +5890,11 @@ components:
                         dateCreation:
                           type: datetime
                           description: Fecha de creación del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                         dateLastUpdate:
                           type: datetime
                           description: Fecha de última actualización del ítem
-                          example: '2022-06-08T17:15:53.000+00:00'
+                          example: "2022-06-08T17:15:53.000+00:00"
                 relationManager:
                   type: object
                   description: Manager
@@ -5991,7 +5991,7 @@ components:
         deliveryTime:
           type: datetime
           description: Fecha y hora de envío
-          example: '2022-06-08T17:15:53Z'
+          example: "2022-06-08T17:15:53Z"
         waypoints:
           type: array
           items:
@@ -6306,11 +6306,11 @@ components:
                       dateLastUpdate:
                         type: datetime
                         description: Fecha de última actualización de las políticas
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                       dateCreation:
                         type: datetime
                         description: Fecha de creación de las políticas
-                        example: '2022-06-08T17:15:53.000+00:00'
+                        example: "2022-06-08T17:15:53.000+00:00"
                   methodsPrice:
                     type: array
                     items:
@@ -6608,7 +6608,7 @@ components:
         deliveryTime:
           type: datetime
           description: Fecha y hora de envío
-          example: '2022-06-08T17:15:53.000+00:00'
+          example: "2022-06-08T17:15:53.000+00:00"
         deliveryTimeInMillis:
           type: integer
           description: Fecha y hora de envio en milisegundos
@@ -6686,17 +6686,17 @@ components:
         dateCreation:
           type: datetime
           description: Fecha de creación del envío
-          example: '2022-06-23T20:39:39.157+00:00'
+          example: "2022-06-23T20:39:39.157+00:00"
         dateLastUpdate:
           type: string
           description: Fecha de última actualización del envío
-          example: '2022-06-23T20:39:39.157+00:00'
+          example: "2022-06-23T20:39:39.157+00:00"
         paymentTypes:
-          $ref: '#/components/schemas/PaymentTypes'
+          $ref: "#/components/schemas/PaymentTypes"
         capacity:
-          $ref: '#/components/schemas/capacity'
+          $ref: "#/components/schemas/capacity"
         statusDelivery:
-          $ref: '#/components/schemas/statusdelivery'
+          $ref: "#/components/schemas/statusdelivery"
         items:
           type: array
           items:
@@ -6771,11 +6771,11 @@ components:
               dateCreation:
                 type: datetime
                 description: Fecha de creación del ítem
-                example: '2022-06-08T17:15:53.000+00:00'
+                example: "2022-06-08T17:15:53.000+00:00"
               dateLastUpdate:
                 type: datetime
                 description: Fecha de última actualización del ítem
-                example: '2022-06-08T17:15:53.000+00:00'
+                example: "2022-06-08T17:15:53.000+00:00"
               deliveryItemsFiles:
                 type: array
                 items:
@@ -6840,15 +6840,15 @@ components:
               dateCreation:
                 type: datetime
                 description: Fecha de creación del paso del envío
-                example: '2022-06-23T20:39:39.157+00:00'
+                example: "2022-06-23T20:39:39.157+00:00"
               dateCreationInMillis:
                 type: datetime
                 description: Fecha de creación del paso del envío en milisegundos
-                example: '2022-06-23T20:39:39.157+00:00'
+                example: "2022-06-23T20:39:39.157+00:00"
               dateLastUpdate:
                 type: string
                 description: Fecha de última actualización del paso del envío
-                example: '2022-06-23T20:39:39.157+00:00'
+                example: "2022-06-23T20:39:39.157+00:00"
         waypoints:
           type: array
           items:
@@ -6893,7 +6893,7 @@ components:
                 type: string
                 example: John
               personEmail:
-                $ref: '#/components/schemas/Email'
+                $ref: "#/components/schemas/Email"
               instructions:
                 type: string
                 description: Instrucción del punto de ruta
@@ -6942,21 +6942,21 @@ components:
                     description: >-
                       Fecha de creación de los puntos dentro del área del
                       logístico
-                    example: '2022-06-08T17:15:53.000+00:00'
+                    example: "2022-06-08T17:15:53.000+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: >-
                       Fecha de última actualizaciónde los puntos dentro del área
                       del logístico
-                    example: '2022-06-08T17:15:53.000+00:00'
+                    example: "2022-06-08T17:15:53.000+00:00"
               dateCreation:
                 type: datetime
                 description: Fecha de creación del logístico
-                example: '2022-06-08T17:15:53.000+00:00'
+                example: "2022-06-08T17:15:53.000+00:00"
               dateLastUpdate:
                 type: datetime
                 description: Fecha de última actualización del logístico
-                example: '2022-06-08T17:15:53.000+00:00'
+                example: "2022-06-08T17:15:53.000+00:00"
         relationCouriers:
           type: object
           properties:
@@ -7034,11 +7034,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
         relationCustomer:
           type: object
           description: Clientes móviles asociados al
@@ -7082,11 +7082,11 @@ components:
             dateCreation:
               type: datetime
               description: Fecha de creación del ítem
-              example: '2022-06-08T17:15:53.000+00:00'
+              example: "2022-06-08T17:15:53.000+00:00"
             dateLastUpdate:
               type: datetime
               description: Fecha de última actualización del ítem
-              example: '2022-06-08T17:15:53.000+00:00'
+              example: "2022-06-08T17:15:53.000+00:00"
             storeApi:
               type: object
               properties:
@@ -7103,7 +7103,7 @@ components:
                   type: string
                   example: store_2
                 email:
-                  $ref: '#/components/schemas/Email'
+                  $ref: "#/components/schemas/Email"
                 active:
                   description: Estado de la tienda
                   type: boolean
@@ -7111,15 +7111,15 @@ components:
                 loginLastUpdate:
                   description: Último Login del usuario
                   type: date
-                  example: '2022-07-12T19:05:37.403+00:00'
+                  example: "2022-07-12T19:05:37.403+00:00"
                 dateCreation:
                   description: Fecha de creación del usuario
                   type: date
-                  example: '2022-06-21T16:13:09.567+00:00'
+                  example: "2022-06-21T16:13:09.567+00:00"
                 dateLastUpdate:
                   description: Fecha de última actualización del usuario
                   type: date
-                  example: '2022-06-21T16:13:09.567+00:00'
+                  example: "2022-06-21T16:13:09.567+00:00"
                 store:
                   type: object
                   properties:
@@ -7171,11 +7171,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
             storesBranch:
               type: object
               properties:
@@ -7230,11 +7230,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización del ítem
-                  example: '2022-06-08T17:15:53.000+00:00'
+                  example: "2022-06-08T17:15:53.000+00:00"
                 store:
                   type: object
                   properties:
@@ -7286,11 +7286,11 @@ components:
                     dateCreation:
                       type: datetime
                       description: Fecha de creación del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
                     dateLastUpdate:
                       type: datetime
                       description: Fecha de última actualización del ítem
-                      example: '2022-06-08T17:15:53.000+00:00'
+                      example: "2022-06-08T17:15:53.000+00:00"
         relationInvoices:
           type: object
           description: Facturas asociados al envío
@@ -7316,7 +7316,7 @@ components:
             deliveries:
               type: array
               items:
-                $ref: '#/components/schemas/deliveries'
+                $ref: "#/components/schemas/deliveries"
         message:
           type: string
           description: Mensaje positivo de respuesta
@@ -7360,11 +7360,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del estado del envío
-                  example: '2022-06-02T15:47:02.797+00:00'
+                  example: "2022-06-02T15:47:02.797+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización del estado del envío
-                  example: '2022-06-07T19:26:22.807+00:00'
+                  example: "2022-06-07T19:26:22.807+00:00"
         message:
           type: string
           description: Mensaje positivo de respuesta
@@ -7416,11 +7416,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación del paso del envío
-                  example: '2022-06-02T15:47:02.797+00:00'
+                  example: "2022-06-02T15:47:02.797+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización del paso del envío
-                  example: '2022-06-07T19:26:22.807+00:00'
+                  example: "2022-06-07T19:26:22.807+00:00"
         message:
           type: string
           description: Mensaje positivo de respuesta
@@ -7472,7 +7472,7 @@ components:
                 description:
                   type: string
                   description: Descripción de la capacidad de envío
-                  example: 'Ej: Celulares, cargadores, vasos, etc.'
+                  example: "Ej: Celulares, cargadores, vasos, etc."
                 maxWeight:
                   type: float
                   description: Peso máximo de la capacidad de envío
@@ -7492,11 +7492,11 @@ components:
                 dateCreation:
                   type: string
                   description: Fecha de creación de la capacidad de envío
-                  example: '2022-03-30T15:17:56.793+00:00'
+                  example: "2022-03-30T15:17:56.793+00:00"
                 dateLastUpdate:
                   type: string
                   description: Fecha de última actualización de la capacidad de envío
-                  example: '2022-05-09T00:10:50.733+00:00'
+                  example: "2022-05-09T00:10:50.733+00:00"
                 active:
                   type: boolean
                   description: Estado de la capacidad de envío
@@ -7552,7 +7552,7 @@ components:
                 description:
                   type: string
                   description: Descripción de la capacidad de envío
-                  example: 'Ej: Celulares, cargadores, vasos, etc.'
+                  example: "Ej: Celulares, cargadores, vasos, etc."
                 maxWeight:
                   type: float
                   description: Peso máximo de la capacidad de envío
@@ -7572,11 +7572,11 @@ components:
                 dateCreation:
                   type: string
                   description: Fecha de creación de la capacidad de envío
-                  example: '2022-03-30T15:17:56.793+00:00'
+                  example: "2022-03-30T15:17:56.793+00:00"
                 dateLastUpdate:
                   type: string
                   description: Fecha de última actualización de la capacidad de envío
-                  example: '2022-05-09T00:10:50.733+00:00'
+                  example: "2022-05-09T00:10:50.733+00:00"
                 active:
                   type: boolean
                   description: Estado de la capacidad de envío
@@ -7635,11 +7635,11 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación de la categoría de paquete
-                    example: '2022-06-02T15:47:02.797+00:00'
+                    example: "2022-06-02T15:47:02.797+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización de la categoría de paquete
-                    example: '2022-06-07T19:26:22.807+00:00'
+                    example: "2022-06-07T19:26:22.807+00:00"
             count:
               type: integer
               description: Cantidad de categorías de paquetes
@@ -7690,11 +7690,11 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación del estado del envío
-                    example: '2022-06-02T15:47:02.797+00:00'
+                    example: "2022-06-02T15:47:02.797+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización del estado del envío
-                    example: '2022-06-07T19:26:22.807+00:00'
+                    example: "2022-06-07T19:26:22.807+00:00"
             count:
               type: integer
               description: Cantidad de estados de los envíos
@@ -7753,11 +7753,11 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación del paso del envío
-                    example: '2022-06-02T15:47:02.797+00:00'
+                    example: "2022-06-02T15:47:02.797+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización del paso del envío
-                    example: '2022-06-07T19:26:22.807+00:00'
+                    example: "2022-06-07T19:26:22.807+00:00"
                   active:
                     type: boolean
                     description: Estado del paso del envío
@@ -7887,11 +7887,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación de la sucursal de la tienda
-                  example: '2022-05-06T23:00:52.670+00:00'
+                  example: "2022-05-06T23:00:52.670+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización de la sucursal de la tienda
-                  example: '2022-05-06T23:00:52.670+00:00'
+                  example: "2022-05-06T23:00:52.670+00:00"
         message:
           type: string
           description: Mensaje positivo de respuesta
@@ -7976,11 +7976,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación de la sucursal de la tienda
-                  example: '2022-05-06T23:00:52.670+00:00'
+                  example: "2022-05-06T23:00:52.670+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización de la sucursal de la tienda
-                  example: '2022-05-06T23:00:52.670+00:00'
+                  example: "2022-05-06T23:00:52.670+00:00"
         message:
           type: string
           description: Mensaje positivo de respuesta
@@ -8094,11 +8094,11 @@ components:
                   dateCreation:
                     type: datetime
                     description: Fecha de creación de la sucursal de la tienda
-                    example: '2022-05-06T23:00:52.670+00:00'
+                    example: "2022-05-06T23:00:52.670+00:00"
                   dateLastUpdate:
                     type: datetime
                     description: Fecha de última actualización de la sucursal de la tienda
-                    example: '2022-05-06T23:00:52.670+00:00'
+                    example: "2022-05-06T23:00:52.670+00:00"
         message:
           type: string
           description: Mensaje positivo de respuesta
@@ -8155,15 +8155,15 @@ components:
                 lastPaymentDate:
                   type: date
                   description: Fecha de último pago de la bolsa de crédito
-                  example: '2022-05-06'
+                  example: "2022-05-06"
                 cutoffDate:
                   type: datetime
                   description: Fecha de corte de la bolsa de crédito
-                  example: '2022-05-06T23:00:52.670+00:00'
+                  example: "2022-05-06T23:00:52.670+00:00"
                 cutoffPayDate:
                   type: datetime
                   description: Fecha de corte para pagar bolsa de crédito
-                  example: '2022-05-06T23:00:52.670+00:00'
+                  example: "2022-05-06T23:00:52.670+00:00"
                 daysToPay:
                   type: integer
                   description: Días que faltan para pagar la bolsa de crédito
@@ -8171,11 +8171,11 @@ components:
                 dateCreation:
                   type: datetime
                   description: Fecha de creación de la bolsa de crédito
-                  example: '2022-05-06T23:00:52.670+00:00'
+                  example: "2022-05-06T23:00:52.670+00:00"
                 dateLastUpdate:
                   type: datetime
                   description: Fecha de última actualización de la bolsa de crédito
-                  example: '2022-05-06T23:00:52.670+00:00'
+                  example: "2022-05-06T23:00:52.670+00:00"
         message:
           type: string
           description: Mensaje positivo de respuesta

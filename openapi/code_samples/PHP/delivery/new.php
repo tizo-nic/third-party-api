@@ -84,6 +84,6 @@ $body = '{
     }
   ]
 }';
-$request = new Request('POST', 'http://staging-api.tizo.co/api/v1/delivery/new/', $headers, $body);
+$request = new Request('POST', 'http://staging-api.tizo.co/api/v1/delivery/pricing/create/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();
