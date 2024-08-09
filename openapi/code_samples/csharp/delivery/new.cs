@@ -5,163 +5,97 @@ request.AddHeader("Authorization", "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidmVuZG9yIiw
 request.AddHeader("Content-Type", "application/json");
 var body = @"{
 " + "\n" +
-@"    ""idStore"": 0,
-" + "\n" +
-@"    ""idBranchStore"": 1,
-" + "\n" +
-@"    ""customerEmail"": ""agb@tizo.app"",
-" + "\n" +
-@"    ""deliveryTypeCode"": ""T1"",
-" + "\n" +
-@"    ""description"": ""Envío simple"",
-" + "\n" +
-@"    ""isTest"": false,
-" + "\n" +
-@"    ""items"": [
-" + "\n" +
-@"        {
-" + "\n" +
-@"            ""fragile"": true,
-" + "\n" +
-@"            ""document"": false,
-" + "\n" +
-@"            ""idItemCategory"": 29,
-" + "\n" +
-@"            ""categoryOther"": """",
-" + "\n" +
-@"            ""value"": 81,
-" + "\n" +
-@"            ""description"": ""cal"",
-" + "\n" +
-@"            ""width"": 45,
-" + "\n" +
-@"            ""height"": 16,
-" + "\n" +
-@"            ""depth"": 35,
-" + "\n" +
-@"            ""weight"": 5,
-" + "\n" +
-@"            ""name"": ""Paquete"",
-" + "\n" +
-@"            ""category"": 29,
-" + "\n" +
-@"            ""images"": [],
-" + "\n" +
-@"            ""nameCategory"": ""Calzado""
-" + "\n" +
-@"        }
-" + "\n" +
-@"    ],
-" + "\n" +
-@"    ""selectedMethod"": {
-" + "\n" +
-@"        ""method"": ""COURIER"",
-" + "\n" +
-@"        ""idCourier"": 26,
-" + "\n" +
-@"        ""idAreaOrigin"": 2380,
-" + "\n" +
-@"        ""idAreaDestination"": 2385,
-" + "\n" +
-@"        ""idBranchOrigin"": -1,
-" + "\n" +
-@"        ""idBranchDestination"": -1,
-" + "\n" +
-@"        ""idPaymentMethod"": 4
-" + "\n" +
-@"    },
-" + "\n" +
-@"    ""waypoints"": [
-" + "\n" +
-@"        {
-" + "\n" +
-@"            ""type"": ""PICK_UP"",
-" + "\n" +
-@"            ""city"": ""Managua"",
-" + "\n" +
-@"            ""country"": ""Nicaragua"",
-" + "\n" +
-@"            ""state"": ""Managua"",
-" + "\n" +
-@"            ""addressStreet"": ""Sede Central"",
-" + "\n" +
-@"            ""personName"": ""Luis Gonzalez Lopez"",
-" + "\n" +
-@"            ""personEmail"": ""agb@tizo.app"",
-" + "\n" +
-@"            ""personIdentification"": ""001-4430696-0016J"",
-" + "\n" +
-@"            ""phone"": ""+50563397024"",
-" + "\n" +
-@"            ""addressHuman"": ""Parque Central"",
-" + "\n" +
-@"            ""addressGeo"": ""4QRG+622, Managua, Nicaragua"",
-" + "\n" +
-@"            ""instructions"": ""Entrar y retirar en tienda"",
-" + "\n" +
-@"            ""latitude"": 12.140644111,
-" + "\n" +
-@"            ""longitude"": -86.225119053,
-" + "\n" +
-@"            ""branchName"": ""Sede Central"",
-" + "\n" +
-@"            ""storeName"": ""tizo""
-" + "\n" +
-@"        },
-" + "\n" +
-@"        {
-" + "\n" +
-@"            ""type"": ""DROP_OFF"",
-" + "\n" +
-@"            ""city"": ""Tipitapa"",
-" + "\n" +
-@"            ""country"": ""Nicaragua"",
-" + "\n" +
-@"            ""state"": ""Managua"",
-" + "\n" +
-@"            ""addressStreet"": ""Vía sin nombre"",
-" + "\n" +
-@"            ""personName"": ""Axel Garcia"",
-" + "\n" +
-@"            ""personEmail"": ""axel.garcia@tizo.app"",
-" + "\n" +
-@"            ""personIdentification"": ""0010611991009L"",
-" + "\n" +
-@"            ""phone"": ""+50581380937"",
-" + "\n" +
-@"            ""addressHuman"": ""Contiguo al Hospital Vivian Pellas"",
-" + "\n" +
-@"            ""addressGeo"": ""5W42+2J Tipitapa, Nicaragua"",
-" + "\n" +
-@"            ""instructions"": ""Entregar al cliente"",
-" + "\n" +
-@"            ""latitude"": 12.155067762636003,
-" + "\n" +
-@"            ""longitude"": -86.09838499989073,
-" + "\n" +
-@"            ""isSaveCustomer"": false,
-" + "\n" +
-@"            ""fullName"": ""Axel Garcia"",
-" + "\n" +
-@"            ""url"": {
-" + "\n" +
-@"                ""url"": ""assets/img/logistic/maps/B-icon.png"",
-" + "\n" +
-@"                ""scaledSize"": {
-" + "\n" +
-@"                    ""width"": 60,
-" + "\n" +
-@"                    ""height"": 60
-" + "\n" +
-@"                }
-" + "\n" +
-@"            }
-" + "\n" +
-@"        }
-" + "\n" +
-@"    ]
-" + "\n" +
+@"    ""idStore"": 1," + "\n" +
+@"    ""idBranchStore"": 1," + "\n" +
+@"    ""description"": ""Envío desde la App""," + "\n" +
+@"    ""waypoints"": [" + "\n" +
+@"        {" + "\n" +
+@"            ""type"": ""PICK_UP""," + "\n" +
+@"            ""city"": ""Managua""," + "\n" +
+@"            ""country"": ""Nicaragua""," + "\n" +
+@"            ""state"": ""Managua""," + "\n" +
+@"            ""addressStreet"": ""Calle María de los Ángeles""," + "\n" +
+@"            ""personName"": ""Otto de la Rocha""," + "\n" +
+@"            ""personIdentification"": ""001-060606-1010A""," + "\n" +
+@"            ""phone"": ""50588888888""," + "\n" +
+@"            ""addressHuman"": ""Frente a la iglesia""," + "\n" +
+@"            ""addressGeo"": ""Calle María de los Ángeles, Managua, Nicaragua""," + "\n" +
+@"            ""personEmail"": ""soyuncorreo@correo.com""," + "\n" +
+@"            ""instructions"": ""Llamar al timbre""," + "\n" +
+@"            ""latitude"": 12.123456," + "\n" +
+@"            ""longitude"": -86.123456," + "\n" +
+@"            ""reference"": 1" + "\n" +
+@"        }" + "\n" +
+@"    ]," + "\n" +
+@"    ""items"": [" + "\n" +
+@"        {" + "\n" +
+@"            ""category"": 1," + "\n" +
+@"            ""idCapacity"": 1," + "\n" +
+@"            ""categoryOther"": ""Otro""," + "\n" +
+@"            ""name"": ""Laptop""," + "\n" +
+@"            ""description"": ""Laptop HP""," + "\n" +
+@"            ""instructions"": ""No dejar en la puerta""," + "\n" +
+@"            ""weight"": 1.5," + "\n" +
+@"            ""height"": 1.5," + "\n" +
+@"            ""depth"": 1.5," + "\n" +
+@"            ""width"": 1.5," + "\n" +
+@"            ""quantity"": 0," + "\n" +
+@"            ""value"": 1.5," + "\n" +
+@"            ""fragile"": true," + "\n" +
+@"            ""document"": true," + "\n" +
+@"            ""images"": [" + "\n" +
+@"                ""https://tizo.com.mx/images/1.jpg""," + "\n" +
+@"                ""https://tizo.com.mx/images/2.jpg""" + "\n" +
+@"            ]" + "\n" +
+@"        }" + "\n" +
+@"    ]," + "\n" +
+@"    ""customerName"": ""Agapito Díaz""," + "\n" +
+@"    ""customerPhone"": ""5512345678""," + "\n" +
+@"    ""customerEmail"": ""tucorreo@correo.com""," + "\n" +
+@"    ""deliveryTime"": ""2022-04-22T12:10:32Z""," + "\n" +
+@"    ""deliveryTimeInMilliseconds"": 1212121212," + "\n" +
+@"    ""imagePreview"": ""https://www.google.com.mx/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png""," + "\n" +
+@"    ""collectMoney"": 100," + "\n" +
+@"    ""isTest"": false," + "\n" +
+@"    ""lineBusiness"": ""LOGISTICS""," + "\n" +
+@"    ""selectedMethod"": {" + "\n" +
+@"        ""method"": ""DRIVER""," + "\n" +
+@"        ""idCourier"": 1," + "\n" +
+@"        ""idAreaOrigin"": 1," + "\n" +
+@"        ""idAreaDestination"": 1," + "\n" +
+@"        ""idPaymentMethod"": 1," + "\n" +
+@"        ""idBranchOrigin"": 1," + "\n" +
+@"        ""idBranchDestination"": 1," + "\n" +
+@"        ""dateEstimatedInMilliseconds"": 1454545454," + "\n" +
+@"        ""estimatedTimeInMilliseconds"": 1454545454," + "\n" +
+@"        ""idCard"": 1," + "\n" +
+@"        ""password"": ""1234""," + "\n" +
+@"        ""card"": {" + "\n" +
+@"            ""name"": ""Juan Perez""," + "\n" +
+@"            ""number"": ""4111111111111111""," + "\n" +
+@"            ""expirationDate"": ""1221""," + "\n" +
+@"            ""cvv"": ""123""," + "\n" +
+@"            ""debit"": true," + "\n" +
+@"            ""empty"": true" + "\n" +
+@"        }," + "\n" +
+@"        ""cash"": {" + "\n" +
+@"            ""cashAmount"": 100" + "\n" +
+@"        }," + "\n" +
+@"        ""invoice"": {" + "\n" +
+@"            ""businessName"": ""CONSUMIDOR FINAL""," + "\n" +
+@"            ""address"": ""CONSUMIDOR FINAL""," + "\n" +
+@"            ""ruc"": ""CONSUMIDOR FINAL""," + "\n" +
+@"            ""phone"": ""CONSUMIDOR FINAL""" + "\n" +
+@"        }," + "\n" +
+@"        ""coupon"": ""PRIMER_ENVIO""," + "\n" +
+@"        ""estimateId"": ""121212""," + "\n" +
+@"        ""deliveryOfferId"": ""121212""," + "\n" +
+@"        ""transactionCode"": ""88185B37-FFC2-40AA-B204-398CFAD50788""," + "\n" +
+@"        ""deliveryEstimatedToCalendar"": ""2024-08-09T21:20:57.089Z""" + "\n" +
+@"    }," + "\n" +
+@"    ""totalValue"": 0" + "\n" +
 @"}";
+
 request.AddParameter("application/json", body,  ParameterType.RequestBody);
 IRestResponse response = client.Execute(request);
 Console.WriteLine(response.Content);
