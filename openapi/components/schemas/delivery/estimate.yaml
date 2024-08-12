@@ -4,7 +4,7 @@ properties:
     type: integer
     description: Id de la tienda
     example: 3
-  idBranchStore:  
+  idBranchStore:
     type: integer
     description: Id de la sucursal de la tienda
     example: 3
@@ -37,7 +37,7 @@ properties:
           type: string
           description: País del punto de ruta
           example: Nicaragua
-        state:  
+        state:
           type: string
           description: Departamento del punto de ruta
           example: Managua
@@ -46,13 +46,9 @@ properties:
           description: Calle del punto de ruta
           example: Miguel Gutierrez
         personName:
+          type: string
           description: Nombre del usuario que realiza el pedido
-          type: string
           example: John
-        personEmail:
-          description: Correo electrónico del usuario que realiza el pedido
-          type: string
-          example: john@gmail.com
         personIdentification:
           type: string
           description: Identificación de la persona
@@ -77,7 +73,7 @@ properties:
           type: float
           description: Latitud del punto de ruta
           example: 12.121212
-        longitude: 
+        longitude:
           type: float
           description: Longitud del punto de ruta
           example: -12.121212
@@ -94,38 +90,14 @@ properties:
     items:
       type: object
       properties:
-        name:
-          type: string
-          description: Nombre del ítem
-          example: Paquete número uno
-        fragile:
-          type: boolean
-          description: Es frágil
-          example: false
-        document:
-          type: boolean
-          description: Necesita documento
-          example: false
-        description:
-          type: string
-          description: Descripción del item
-          example: Una escoba con gaseosa.    
-        isUsingCapacities:
-          type: boolean
-          description: El usuario conoce las capacidades
-          example: true
-        value:
-          type: float
-          description: Valor del ítem
-          example: 50.0000
         weight:
           type: float
-          description: Altura del ítem
+          description: Peso del ítem
           example: 1.00
         height:
           type: float
-          description: Peso del ítem
-          example:  1.00
+          description: Altura del ítem
+          example: 1.00
         depth:
           type: float
           description: Profundidad del ítem
@@ -133,7 +105,7 @@ properties:
         width:
           type: float
           description: Ancho del ítem
-          example:  1.00
+          example: 1.00
         images:
           type: array
           items:
@@ -149,17 +121,14 @@ properties:
           description: Nombre de la capacidad seleccionada
           example: Tizo Small
         otherCapacity:
-          type: string 
-          description: Cuando la categoria es otros, se almacena este dato para saber en que categoría puede el cliente meter el producto que desea enviar
+          type: string
+          description: Cuando la categoría es otra, se almacena este dato para saber en qué categoría puede el cliente meter el producto que desea enviar
           example: m
         category:
           type: integer
           description: Id de la categoría
           example: 13
   customerEmail:
-    description: Correo Electrónico del cliente
     type: string
+    description: Correo Electrónico del cliente
     example: john.smith@example.com
-
-
-

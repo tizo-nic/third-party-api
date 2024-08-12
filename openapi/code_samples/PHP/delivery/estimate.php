@@ -5,76 +5,43 @@ $headers = [
   'Content-Type' => 'application/json'
 ];
 $body = '{
-  "idStore": 0,
-  "idBranchStore": 1,
-  "customerEmail": "agb@tizo.app",
-  "deliveryTypeCode": "T1",
-  "description": "Envío simple",
-  "isTest": false,
-  "items": [
-    {
-      "fragile": false,
-      "document": false,
-      "idItemCategory": 29,
-      "categoryOther": "",
-      "value": 123,
-      "description": "dd",
-      "width": 45,
-      "height": 16,
-      "depth": 35,
-      "weight": 5,
-      "name": "Paquete",
-      "category": 29,
-      "images": [],
-      "nameCategory": "Calzado"
-    }
-  ],
-  "waypoints": [
-    {
-      "type": "PICK_UP",
-      "city": "Managua",
-      "country": "Nicaragua",
-      "state": "Managua",
-      "addressStreet": "Sede Central",
-      "personName": "Luis Gonzalez Lopez",
-      "personEmail": "agb@tizo.app",
-      "personIdentification": "001-4430696-0016J",
-      "phone": "+50563397024",
-      "addressHuman": "Parque Central",
-      "addressGeo": "4QRG+622, Managua, Nicaragua",
-      "instructions": "Entrar y retirar en tienda",
-      "latitude": 12.140644111,
-      "longitude": -86.225119053,
-      "branchName": "Sede Central",
-      "storeName": "tizo"
-    },
-    {
-      "type": "DROP_OFF",
-      "city": "Tipitapa",
-      "country": "Nicaragua",
-      "state": "Managua",
-      "addressStreet": "Vía sin nombre",
-      "personName": "Axel Garcia",
-      "personEmail": "axel.garcia@tizo.app",
-      "personIdentification": "0010611991009L",
-      "phone": "+50581380937",
-      "addressHuman": "Contiguo al Hospital Vivian Pellas",
-      "addressGeo": "5W42+2J Tipitapa, Nicaragua",
-      "instructions": "Entregar al cliente",
-      "latitude": 12.155067762636003,
-      "longitude": -86.09838499989073,
-      "isSaveCustomer": false,
-      "fullName": "Axel Garcia",
-      "url": {
-        "url": "assets/img/logistic/maps/B-icon.png",
-        "scaledSize": {
-          "width": 60,
-          "height": 60
-        }
-      }
-    }
-  ]
-}';
+           "type": "string",
+           "waypoints": [
+             {
+               "type": "string",
+               "city": "string",
+               "country": "string",
+               "state": "string",
+               "addressStreet": "string",
+               "personName": "string",
+               "personIdentification": "string",
+               "phone": "string",
+               "addressHuman": "string",
+               "addressGeo": "string",
+               "personEmail": "string",
+               "instructions": "string",
+               "latitude": 0,
+               "longitude": 0
+             }
+           ],
+           "items": [
+             {
+               "weight": 0,
+               "height": 0,
+               "width": 0,
+               "depth": 0,
+               "idItemCategory": 0,
+               "idCapacity": 0,
+               "value": 0,
+               "fragile": true
+             }
+           ],
+           "deliveryTime": "string",
+           "isTest": true,
+           "idStore": 0,
+           "collectMoney": 0,
+           "lineBusiness": "string"
+         }';
 $request = new Request('POST', 'http://staging-api.tizo.co/api/v1/delivery/estimate/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();
