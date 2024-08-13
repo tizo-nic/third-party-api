@@ -2,182 +2,243 @@ type: object
 properties:
   idStore:
     type: integer
-    description: Id de la tienda
-    example: 3
+    description: ID de la tienda
+    example: 1
   idBranchStore:
     type: integer
-    description: Id de la sucursal de la tienda
-    example: 3
-  customerEmail:
-    description: Correo Electrónico del cliente
-    type: string
-    example: john.smith@example.com
-  deliveryTypeCode:
-    type: string
-    description: Código del tipo de envío
-    example: DELIVERY
+    description: ID de la sucursal de la tienda
+    example: 1
   description:
     type: string
     description: Descripción del envío
-    example: Con descripcion
-  isTest:
-    type: boolean
-    description: El envío es de prueba
-    example: true
-  items:
-    type: array
-    items:
-      type: object
-      properties:
-        fragile:
-          type: boolean
-          description: Es frágil
-          example: false
-        document:
-          type: boolean
-          description: Necesita documento
-          example: false
-        idItemCategory:
-          type: integer
-          description: Id del ítem de la categoría
-          example: 13
-        categoryOther:
-          type: string
-          description: Cuando la categoria es otros, se almacena este dato para saber en que categoría puede el cliente meter el producto que desea enviar
-          example: m
-        value:
-          type: float
-          description: Valor del ítem
-          example: 50.0000
-        description:
-          type: string
-          description: Descripción del item
-          example: Una escoba con gaseosa.
-        weight:
-          type: float
-          description: Altura del ítem
-          example: 1.00
-        height:
-          type: float
-          description: Peso del ítem
-          example:  1.00
-        depth:
-          type: float
-          description: Profundidad del ítem
-          example: 1.00
-        width:
-          type: float
-          description: Ancho del ítem
-          example:  1.00
-        name:
-          type: string
-          description: Nombre del ítem
-          example: Paquete número uno
-        category:
-          type: integer
-          description: Id de la categoría
-          example: 13
-        images:
-          type: array
-          description: Imagen del ítem
-          example: []
-        nameCategory:
-          type: string
-          description: Nombre de la categoría
-          example: Paquete
-  selectedMethod:
-    type: object
-    properties:
-      method:
-        type: string
-        description: Método seleccionado por el cliente
-        example: Courier
-      idCourier:
-        type: integer
-        description: Id del transportista
-        example: 0
-      idAreaOrigin:
-        type: integer
-        description: Id del área de origen
-        example: 0
-      idAreaDestination:
-        type: integer
-        description: Id del área de destino
-        example: 0
-      idBranchOrigin:
-        type: integer
-        description: Id de la sucursal de origen
-        example: 0
-      idBranchDestination:
-        type: integer
-        description: Id de la sucursal de destino
-        example: 0
-      idPaymentMethod:
-        type: integer
-        description: Id del tipo de pago
-        example: 2
+    example: "Envío desde la App"
   waypoints:
     type: array
+    description: Puntos de recogida y entrega
     items:
       type: object
       properties:
         type:
           type: string
-          description: Tipo de punto de ruta
-          example: PICK-UP
+          description: Tipo de punto (recogida o entrega)
+          example: "PICK_UP"
         city:
           type: string
-          description: Ciudad del punto de ruta
-          example: Managua
+          description: Ciudad del punto
+          example: "Managua"
         country:
           type: string
-          description: País del punto de ruta
-          example: Nicaragua
-        state:  
+          description: País del punto
+          example: "Nicaragua"
+        state:
           type: string
-          description: Departamento del punto de ruta
-          example: Managua
+          description: Estado o provincia del punto
+          example: "Managua"
         addressStreet:
           type: string
-          description: Calle del punto de ruta
-          example: Miguel Gutierrez
+          description: Dirección del punto
+          example: "Calle María de los Ángeles"
         personName:
-          description: Nombre del usuario que realiza el pedido
           type: string
-          example: John
+          description: Nombre de la persona en el punto
+          example: "Otto de la Rocha"
         personIdentification:
           type: string
-          description: Identificación de la persona
-          example: 001-061199-1009L
+          description: Identificación de la persona en el punto
+          example: "001-060606-1010A"
         phone:
-          $ref: ../Phonenumber.yaml
-        personEmail:
-          $ref: ../Email.yaml
+          type: string
+          description: Teléfono de contacto en el punto
+          example: "50588888888"
         addressHuman:
           type: string
-          description: Nombre del punto de ruta
-          example: Tamarindo
+          description: Descripción de la dirección en términos humanos
+          example: "Frente a la iglesia"
         addressGeo:
           type: string
-          description: Dirección del punto de ruta
-          example: De la rotonda de Rubén Darío 1c al sur, 2c abajo, Managua 14003, Nicaragua
+          description: Descripción geográfica de la dirección
+          example: "Calle María de los Ángeles, Managua, Nicaragua"
+        personEmail:
+          type: string
+          description: Correo electrónico de la persona en el punto
+          example: "soyuncorreo@correo.com"
         instructions:
           type: string
-          description: Instrucción del punto de ruta
-          example: Arbol de mango
+          description: Instrucciones adicionales para el punto
+          example: "Llamar al timbre"
         latitude:
-          type: float
-          description: Latitud del punto de ruta
-          example: 12.121212
-        longitude: 
-          type: float
-          description: Longitud del punto de ruta
-          example: -12.121212
-        branchName:
-          type: string
-          description: Nombre de la sucursal de la Tienda
-          example: tizo central
-        storeName:
-          type: string
-          description: Nombre de la tienda
-          example: Tizo bodegon
+          type: number
+          description: Latitud del punto
+          example: 12.123456
+        longitude:
+          type: number
+          description: Longitud del punto
+          example: -86.123456
+        reference:
+          type: integer
+          description: Referencia del punto
+          example: 1
+  items:
+    type: array
+    items:
+      type: object
+      properties:
+        weight:
+          type: number
+          format: float
+          description: Peso del ítem
+          example: 1.5
+        height:
+          type: number
+          format: float
+          description: Altura del ítem
+          example: 1.5
+        width:
+          type: number
+          format: float
+          description: Ancho del ítem
+          example: 1.5
+        depth:
+          type: number
+          format: float
+          description: Profundidad del ítem
+          example: 1.5
+        idItemCategory:
+          type: integer
+          description: ID de la categoría del ítem
+          example: 0
+        idCapacity:
+          type: integer
+          description: ID de la capacidad del ítem
+          example: 0
+        value:
+          type: number
+          format: float
+          description: Valor del ítem
+          example: 0
+        fragile:
+          type: boolean
+          description: Indica si el ítem es frágil
+          example: true
+  customerName:
+    type: string
+    description: Nombre del cliente
+    example: "Agapito Díaz"
+  customerPhone:
+    type: string
+    description: Teléfono del cliente
+    example: "5512345678"
+  customerEmail:
+    type: string
+    description: Correo electrónico del cliente
+    example: "tucorreo@correo.com"
+  deliveryTime:
+    type: string
+    format: date-time
+    description: Fecha y hora de entrega
+    example: "2022-04-22T12:10:32Z"
+  deliveryTimeInMilliseconds:
+    type: integer
+    description: Tiempo de entrega en milisegundos
+    example: 1212121212
+  imagePreview:
+    type: string
+    format: uri
+    description: URL de la imagen de previsualización
+    example: "https://www.google.com.mx/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+  collectMoney:
+    type: number
+    description: Monto a cobrar
+    example: 100
+  isTest:
+    type: boolean
+    description: Indica si es una prueba
+    example: false
+  lineBusiness:
+    type: string
+    description: Línea de negocio
+    example: "LOGISTICS"
+  selectedMethod:
+    type: object
+    properties:
+      method:
+        type: string
+        description: Método seleccionado
+        example: "DRIVER"
+      idCourier:
+        type: integer
+        description: ID del mensajero
+        example: 1
+      idPaymentMethod:
+        type: integer
+        description: ID del método de pago
+        example: 1
+      card:
+        type: object
+        properties:
+          name:
+            type: string
+            description: Nombre en la tarjeta
+            example: "Juan Perez"
+          number:
+            type: string
+            description: Número de la tarjeta
+            example: "4111111111111111"
+          expirationDate:
+            type: string
+            description: Fecha de expiración de la tarjeta (MMYY)
+            example: "1221"
+          cvv:
+            type: string
+            description: CVV de la tarjeta
+            example: "123"
+          debit:
+            type: boolean
+            description: Indica si es una tarjeta de débito
+            example: true
+          empty:
+            type: boolean
+            description: Indica si la tarjeta está vacía
+            example: true
+      cash:
+        type: object
+        properties:
+          cashAmount:
+            type: number
+            description: Monto en efectivo
+            example: 100
+      invoice:
+        type: object
+        properties:
+          businessName:
+            type: string
+            description: Nombre del negocio
+            example: "CONSUMIDOR FINAL"
+          address:
+            type: string
+            description: Dirección del negocio
+            example: "CONSUMIDOR FINAL"
+          ruc:
+            type: string
+            description: RUC del negocio
+            example: "CONSUMIDOR FINAL"
+          phone:
+            type: string
+            description: Teléfono del negocio
+            example: "CONSUMIDOR FINAL"
+      coupon:
+        type: string
+        description: Cupón aplicado
+        example: "PRIMER_ENVIO"
+      estimateId:
+        type: string
+        description: ID de la estimación
+        example: "121212"
+      deliveryOfferId:
+        type: string
+        description: ID de la oferta de entrega
+        example: "121212"
+  totalValue:
+    type: number
+    description: Valor total
+    example: 0

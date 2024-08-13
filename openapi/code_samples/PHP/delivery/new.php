@@ -5,85 +5,82 @@ $headers = [
   'Content-Type' => 'application/json'
 ];
 $body = '{
-  "idStore": 0,
-  "idBranchStore": 1,
-  "customerEmail": "agb@tizo.app",
-  "deliveryTypeCode": "T1",
-  "description": "Envío simple",
-  "isTest": false,
-  "items": [
-    {
-      "fragile": true,
-      "document": false,
-      "idItemCategory": 29,
-      "categoryOther": "",
-      "value": 81,
-      "description": "cal",
-      "width": 45,
-      "height": 16,
-      "depth": 35,
-      "weight": 5,
-      "name": "Paquete",
-      "category": 29,
-      "images": [],
-      "nameCategory": "Calzado"
-    }
-  ],
-  "selectedMethod": {
-    "method": "COURIER",
-    "idCourier": 26,
-    "idAreaOrigin": 2380,
-    "idAreaDestination": 2385,
-    "idBranchOrigin": -1,
-    "idBranchDestination": -1,
-    "idPaymentMethod": 4
-  },
-  "waypoints": [
-    {
-      "type": "PICK_UP",
-      "city": "Managua",
-      "country": "Nicaragua",
-      "state": "Managua",
-      "addressStreet": "Sede Central",
-      "personName": "Luis Gonzalez Lopez",
-      "personEmail": "agb@tizo.app",
-      "personIdentification": "001-4430696-0016J",
-      "phone": "+50563397024",
-      "addressHuman": "Parque Central",
-      "addressGeo": "4QRG+622, Managua, Nicaragua",
-      "instructions": "Entrar y retirar en tienda",
-      "latitude": 12.140644111,
-      "longitude": -86.225119053,
-      "branchName": "Sede Central",
-      "storeName": "tizo"
-    },
-    {
-      "type": "DROP_OFF",
-      "city": "Tipitapa",
-      "country": "Nicaragua",
-      "state": "Managua",
-      "addressStreet": "Vía sin nombre",
-      "personName": "Axel Garcia",
-      "personEmail": "axel.garcia@tizo.app",
-      "personIdentification": "0010611991009L",
-      "phone": "+50581380937",
-      "addressHuman": "Contiguo al Hospital Vivian Pellas",
-      "addressGeo": "5W42+2J Tipitapa, Nicaragua",
-      "instructions": "Entregar al cliente",
-      "latitude": 12.155067762636003,
-      "longitude": -86.09838499989073,
-      "isSaveCustomer": false,
-      "fullName": "Axel Garcia",
-      "url": {
-        "url": "assets/img/logistic/maps/B-icon.png",
-        "scaledSize": {
-          "width": 60,
-          "height": 60
-        }
-      }
-    }
-  ]
-}';
+           "idStore": 1,
+           "idBranchStore": 1,
+           "description": "Envío desde la App",
+           "waypoints": [
+             {
+               "type": "PICK_UP",
+               "city": "Managua",
+               "country": "Nicaragua",
+               "state": "Managua",
+               "addressStreet": "Calle María de los Ángeles",
+               "personName": "Otto de la Rocha",
+               "personIdentification": "001-060606-1010A",
+               "phone": "50588888888",
+               "addressHuman": "Frente a la iglesia",
+               "addressGeo": "Calle María de los Ángeles, Managua, Nicaragua",
+               "personEmail": "soyuncorreo@correo.com",
+               "instructions": "Llamar al timbre",
+               "latitude": 12.123456,
+               "longitude": -86.123456,
+               "reference": 1
+             }
+           ],
+           "items": [
+             {
+               "category": 1,
+               "idCapacity": 1,
+               "categoryOther": "Otro",
+               "name": "Laptop",
+               "description": "Laptop HP",
+               "instructions": "No dejar en la puerta",
+               "weight": 1.5,
+               "height": 1.5,
+               "depth": 1.5,
+               "width": 1.5,
+               "quantity": 0,
+               "value": 1.5,
+               "fragile": true,
+               "document": true,
+               "images": [
+                 "https://tizo.com.mx/images/1.jpg",
+                 "https://tizo.com.mx/images/2.jpg"
+               ]
+             }
+           ],
+           "customerName": "Agapito Díaz",
+           "customerPhone": "5512345678",
+           "customerEmail": "tucorreo@correo.com",
+           "deliveryTime": "2022-04-22T12:10:32Z",
+           "deliveryTimeInMilliseconds": 1212121212,
+           "collectMoney": 100,
+           "isTest": false,
+           "selectedMethod": {
+             "method": "DRIVER",
+             "idCourier": 1,
+             "idPaymentMethod": 1,
+             "card": {
+               "name": "Juan Perez",
+               "number": "4111111111111111",
+               "expirationDate": "1221",
+               "cvv": "123",
+               "debit": true,
+               "empty": true
+             },
+             "cash": {
+               "cashAmount": 100
+             },
+             "invoice": {
+               "businessName": "CONSUMIDOR FINAL",
+               "address": "CONSUMIDOR FINAL",
+               "ruc": "CONSUMIDOR FINAL",
+               "phone": "CONSUMIDOR FINAL"
+             },
+             "coupon": "PRIMER_ENVIO",
+             "estimateId": "121212",
+             "deliveryOfferId": "121212",
+           }';
 $request = new Request('POST', 'http://staging-api.tizo.co/api/v1/delivery/pricing/create/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();
