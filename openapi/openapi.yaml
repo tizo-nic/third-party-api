@@ -15,13 +15,13 @@ info:
     $ref: './info-description.md'
 tags:
   - name: Aclaraciones importantes
-    description: 
+    description:
       $ref: './info-authentication.md'
 servers:
   - url: 'https://staging-api.tizo.co/api/v1'
 paths:
   /auth/reset-password:
-    $ref: paths/auth/reset-password.yaml  
+    $ref: paths/auth/reset-password.yaml
   /auth/login:
     $ref: paths/auth/login.yaml
   /auth/recovery-password:
@@ -66,6 +66,8 @@ paths:
     $ref: paths/branches/listbranches.yaml
   /vendors/stores/{idStore}/credit-bag/:
     $ref: paths/store/get-creditbag.yaml
+  /auth/createProduct:
+    $ref: paths/products/createProducts.yml
 components:
   securitySchemes:
     main_auth:

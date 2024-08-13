@@ -1,0 +1,44 @@
+post:
+  tags:
+    - Producto
+  summary: Crear una Producto
+  description: Este método sirve para crear nuevos Productos
+  operationId: create-Producto
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/products/createProduct.yml'
+    '400':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/products/createProduct.yml'
+  requestBody:
+    headers:
+      environment:
+        description: Creacion de un nuevo producto.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/products/createProduct.yml"
+    description: Estructura de datos para la creación de los productos
+    required: true
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/products/createProduct.cs"
+    - lang: PHP
+      source:
+        $ref: "../../code_samples/PHP/products/createProduct.php"
+    - lang: Python
+      source:
+        $ref: "../../code_samples/python/products/createProduct.py"

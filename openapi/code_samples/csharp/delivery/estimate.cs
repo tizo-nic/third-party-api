@@ -5,145 +5,80 @@ request.AddHeader("Authorization", "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidmVuZG9yIiw
 request.AddHeader("Content-Type", "application/json");
 var body = @"{
 " + "\n" +
-@"    ""idStore"": 0,
-" + "\n" +
-@"    ""idBranchStore"": 1,
-" + "\n" +
-@"    ""customerEmail"": ""agb@tizo.app"",
-" + "\n" +
-@"    ""deliveryTypeCode"": ""T1"",
-" + "\n" +
-@"    ""description"": ""Envío simple"",
-" + "\n" +
-@"    ""isTest"": false,
-" + "\n" +
-@"    ""items"": [
-" + "\n" +
-@"        {
-" + "\n" +
-@"            ""fragile"": false,
-" + "\n" +
-@"            ""document"": false,
-" + "\n" +
-@"            ""idItemCategory"": 29,
-" + "\n" +
-@"            ""categoryOther"": """",
-" + "\n" +
-@"            ""value"": 123,
-" + "\n" +
-@"            ""description"": ""dd"",
-" + "\n" +
-@"            ""width"": 45,
-" + "\n" +
-@"            ""height"": 16,
-" + "\n" +
-@"            ""depth"": 35,
-" + "\n" +
-@"            ""weight"": 5,
-" + "\n" +
-@"            ""name"": ""Paquete"",
-" + "\n" +
-@"            ""category"": 29,
-" + "\n" +
-@"            ""images"": [],
-" + "\n" +
-@"            ""nameCategory"": ""Calzado""
-" + "\n" +
-@"        }
-" + "\n" +
-@"    ],
+@"    ""type"": ""string"",
 " + "\n" +
 @"    ""waypoints"": [
 " + "\n" +
 @"        {
 " + "\n" +
-@"            ""type"": ""PICK_UP"",
+@"            ""type"": ""string"",
 " + "\n" +
-@"            ""city"": ""Managua"",
+@"            ""city"": ""string"",
 " + "\n" +
-@"            ""country"": ""Nicaragua"",
+@"            ""country"": ""string"",
 " + "\n" +
-@"            ""state"": ""Managua"",
+@"            ""state"": ""string"",
 " + "\n" +
-@"            ""addressStreet"": ""Sede Central"",
+@"            ""addressStreet"": ""string"",
 " + "\n" +
-@"            ""personName"": ""Luis Gonzalez Lopez"",
+@"            ""personName"": ""string"",
 " + "\n" +
-@"            ""personEmail"": ""agb@tizo.app"",
+@"            ""personIdentification"": ""string"",
 " + "\n" +
-@"            ""personIdentification"": ""001-4430696-0016J"",
+@"            ""phone"": ""string"",
 " + "\n" +
-@"            ""phone"": ""+50563397024"",
+@"            ""addressHuman"": ""string"",
 " + "\n" +
-@"            ""addressHuman"": ""Parque Central"",
+@"            ""addressGeo"": ""string"",
 " + "\n" +
-@"            ""addressGeo"": ""4QRG+622, Managua, Nicaragua"",
+@"            ""personEmail"": ""string"",
 " + "\n" +
-@"            ""instructions"": ""Entrar y retirar en tienda"",
+@"            ""instructions"": ""string"",
 " + "\n" +
-@"            ""latitude"": 12.140644111,
+@"            ""latitude"": 0,
 " + "\n" +
-@"            ""longitude"": -86.225119053,
-" + "\n" +
-@"            ""branchName"": ""Sede Central"",
-" + "\n" +
-@"            ""storeName"": ""tizo""
-" + "\n" +
-@"        },
-" + "\n" +
-@"        {
-" + "\n" +
-@"            ""type"": ""DROP_OFF"",
-" + "\n" +
-@"            ""city"": ""Tipitapa"",
-" + "\n" +
-@"            ""country"": ""Nicaragua"",
-" + "\n" +
-@"            ""state"": ""Managua"",
-" + "\n" +
-@"            ""addressStreet"": ""Vía sin nombre"",
-" + "\n" +
-@"            ""personName"": ""Axel Garcia"",
-" + "\n" +
-@"            ""personEmail"": ""axel.garcia@tizo.app"",
-" + "\n" +
-@"            ""personIdentification"": ""0010611991009L"",
-" + "\n" +
-@"            ""phone"": ""+50581380937"",
-" + "\n" +
-@"            ""addressHuman"": ""Contiguo al Hospital Vivian Pellas"",
-" + "\n" +
-@"            ""addressGeo"": ""5W42+2J Tipitapa, Nicaragua"",
-" + "\n" +
-@"            ""instructions"": ""Entregar al cliente"",
-" + "\n" +
-@"            ""latitude"": 12.155067762636003,
-" + "\n" +
-@"            ""longitude"": -86.09838499989073,
-" + "\n" +
-@"            ""isSaveCustomer"": false,
-" + "\n" +
-@"            ""fullName"": ""Axel Garcia"",
-" + "\n" +
-@"            ""url"": {
-" + "\n" +
-@"                ""url"": ""assets/img/logistic/maps/B-icon.png"",
-" + "\n" +
-@"                ""scaledSize"": {
-" + "\n" +
-@"                    ""width"": 60,
-" + "\n" +
-@"                    ""height"": 60
-" + "\n" +
-@"                }
-" + "\n" +
-@"            }
+@"            ""longitude"": 0
 " + "\n" +
 @"        }
 " + "\n" +
-@"    ]
+@"    ],
+" + "\n" +
+@"    ""items"": [
+" + "\n" +
+@"        {
+" + "\n" +
+@"            ""weight"": 0,
+" + "\n" +
+@"            ""height"": 0,
+" + "\n" +
+@"            ""width"": 0,
+" + "\n" +
+@"            ""depth"": 0,
+" + "\n" +
+@"            ""idItemCategory"": 0,
+" + "\n" +
+@"            ""idCapacity"": 0,
+" + "\n" +
+@"            ""value"": 0,
+" + "\n" +
+@"            ""fragile"": true
+" + "\n" +
+@"        }
+" + "\n" +
+@"    ],
+" + "\n" +
+@"    ""deliveryTime"": ""string"",
+" + "\n" +
+@"    ""isTest"": true,
+" + "\n" +
+@"    ""idStore"": 0,
+" + "\n" +
+@"    ""collectMoney"": 0,
+" + "\n" +
+@"    ""lineBusiness"": ""string""
 " + "\n" +
 @"}";
+
 request.AddParameter("application/json", body,  ParameterType.RequestBody);
 IRestResponse response = client.Execute(request);
 Console.WriteLine(response.Content);
