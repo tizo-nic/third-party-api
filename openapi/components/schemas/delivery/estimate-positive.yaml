@@ -54,9 +54,6 @@ properties:
                 price:
                   type: number
                   example: 0.0
-                cost:
-                  type: number
-                  example: 0.0
                 nameAreaOrigin:
                   type: string
                   example: "string"

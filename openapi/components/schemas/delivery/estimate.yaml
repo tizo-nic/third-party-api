@@ -76,22 +76,22 @@ properties:
           type: number
           format: float
           description: Peso del ítem
-          example: 0
+          example:  1.5
         height:
           type: number
           format: float
           description: Altura del ítem
-          example: 0
+          example:  1.5
         width:
           type: number
           format: float
           description: Ancho del ítem
-          example: 0
+          example:  1.5
         depth:
           type: number
           format: float
           description: Profundidad del ítem
-          example: 0
+          example:  1.5
         idItemCategory:
           type: integer
           description: ID de la categoría del ítem
