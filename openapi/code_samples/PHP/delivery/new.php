@@ -57,7 +57,7 @@ $body = '{
            "imagePreview": "https://www.google.com.mx/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
            "collectMoney": 100,
            "isTest": false,
-           "lineBusiness": "LOGISTICS",
+           "lineBusiness": "string",
            "selectedMethod": {
              "method": "DRIVER",
              "idCourier": 1,
@@ -91,7 +91,7 @@ $body = '{
              "estimateId": "121212",
              "deliveryOfferId": "121212",
              "transactionCode": "88185B37-FFC2-40AA-B204-398CFAD50788",
-             "deliveryEstimatedToCalendar": "2024-08-09T21:20:57.089Z"
+             "deliveryEstimatedToCalendar": "2024-08-13T17:36:31.771Z"
            },
            "totalValue": 0
          }';

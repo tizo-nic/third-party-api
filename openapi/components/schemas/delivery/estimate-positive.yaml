@@ -4,10 +4,10 @@ properties:
     type: array
     items:
       type: string
-      example: "Estimate Complete"
+      example: "string"
   status:
     type: integer
-    example: 200
+    example: 0
   data:
     type: object
     properties:
@@ -18,16 +18,16 @@ properties:
           properties:
             idCourier:
               type: integer
-              example: 37
+              example: 0
             type:
               type: string
               example: "COURIER"
             name:
               type: string
-              example: "NicaMandados"
+              example: "string"
             pathImage:
               type: string
-              example: "https://s3.amazonaws.com/tizo-dev/couriers/28/profile.jpeg"
+              example: "string"
             pricing:
               type: object
               properties:
@@ -35,40 +35,40 @@ properties:
                   type: array
                   items:
                     type: integer
-                    example: 179
+                    example: 0
                 time:
                   type: string
-                  example: "1 Minuto(s)"
+                  example: "string"
                 timeInNumber:
                   type: integer
-                  example: 1723486737061
+                  example: 0
                 startTimeInNumber:
                   type: integer
-                  example: 1723486737061
+                  example: 0
                 endTimeInNumber:
                   type: integer
-                  example: 1723486737061
+                  example: 0
                 distance:
                   type: integer
-                  example: 2307
+                  example: 0
                 price:
                   type: number
-                  example: 90.0
+                  example: 0.0
                 cost:
                   type: number
-                  example: 80.0
+                  example: 0.0
                 nameAreaOrigin:
                   type: string
-                  example: "Managua"
+                  example: "string"
                 idAreaOrigin:
                   type: integer
-                  example: 1243
+                  example: 0
                 nameAreaDestination:
                   type: string
-                  example: "Managua"
+                  example: "string"
                 idAreaDestination:
                   type: integer
-                  example: 1243
+                  example: 0
                 pickUpAtOrigin:
                   type: boolean
                   example: true
@@ -77,16 +77,16 @@ properties:
                   example: true
                 liveTrackingAtOrigin:
                   type: boolean
-                  example: false
+                  example: true
                 liveTrackingAtDestination:
                   type: boolean
-                  example: false
+                  example: true
                 traditional:
                   type: boolean
                   example: true
                 metadata:
                   type: string
-                  example: "{}"
+                  example: "string"
             paymentsAvailable:
               type: array
               items:
@@ -97,25 +97,25 @@ properties:
                     example: 0
                   paymentType:
                     type: string
-                    example: "Efectivo"
+                    example: "string"
                   paymentCode:
                     type: string
-                    example: "CASH"
+                    example: "string"
             traditional:
               type: boolean
               example: true
             vacation:
               type: boolean
-              example: false
+              example: true
             cheapest:
               type: boolean
               example: true
             fastest:
               type: boolean
-              example: false
+              example: true
             recommended:
               type: boolean
-              example: false
+              example: true
       distance:
         type: integer
-        example: 2307
+        example: 0

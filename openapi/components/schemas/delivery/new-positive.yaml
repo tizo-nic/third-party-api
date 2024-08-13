@@ -3,301 +3,803 @@ properties:
   data:
     type: object
     properties:
-      delivery:
+      DeliveryResponse:
         type: object
         properties:
-          idDelivery:
-            type: integer
-            description: Id del envío
-            example: 304
-          idPaymentType:
-            type: integer
-            description: Id del tipo de pago
-            example: 2
-          idDeliveryType:
-            type: integer
-            description: Id del tipo de envío
-            example: 2
-          deliveryType:
-            type: string
-            description: Tipo de envío
-            example: Envío Simple
-          deliveryTypeImage:
-            type: string
-            description: Imagen del tipo de envío
-            example: https://cdn.mercadoni.com/images/delivery_types/1.png
-          code:
-            type: string
-            description: Código del envío
-            example: 5443185F-3FD5-42B1-AF56-4A3128E996A7
-          codeShort:
-            type: string
-            description: Código corto del envío
-            example: 5443185F
-          url:
-            type: string
-            description: Url del envío
-            example: https://www.mercadoni.com/delivery/5443185F-3FD5-42B1-AF56-4A3128E996A7
-          deliveryTime:
-            type: datetime
-            description: Fecha y hora de envío de inicio
-            example: 2022-06-08T17:15:53.000+00:00
-          deliveryTimeInMillis:
-            type: integer
-            description: Fecha y hora de envío de inicio en milisegundos
-            example: 0
-          estimatedDeliveryTime:
-            type: datetime
-            description: Fecha y hora de estimados
-            example: 2022-06-08T17:15:53.000+00:00
-          estimatedDeliveryTimeInMillis:
-            type: integer
-            description: Fecha y hora de estimados en milisegundos
-            example: 0
-          scheduledDeliveryTime:
-            type: datetime
-            description: Fecha y hora de estimados, pero si el courier cambia el tiempo de entrega, se cambia este dato
-            example: 2022-06-08T17:15:53.000+00:00
-          scheduledDeliveryTimeInMillis:
-            type: integer
-            description: Fecha y hora de estimados, pero si el courier cambia el tiempo de entrega, se cambia este dato en milisegundos
-            example: 0
-          idCapacity:
-            type: integer
-            description: Id de la capacidad de envío
-            example: 0
-          baseRatePickup:
-            type: float
-            description: Tarifa base de recogida
-            example: 0.0000
-          distance:
-            type: float
-            description: Distancia del envío
-            example: 6136
-          discount:
-            type: float
-            description: Descuento del envío
-            example: 0
-          height:
-            type: float
-            description: Altura del envío
-            example: 1
-          weight:
-            type: float
-            description: Peso del envío
-            example: 1
-          depth:
-            type: float
-            description: Profundidad del envío
-            example: 1
-          width:
-            type: float
-            description: Ancho del envío
-            example: 1
-          total:
-            type: float
-            description: Total del envío
-            example: 29.80
-          cost:
-            type: float
-            description: Costo del envío
-            example: 29.80
-          description:
-            type: string
-            description: Descripción del envío
-            example: Con descripcion
-          notificationMail:
-            type: string
-            description: Correo de notificación del envío
-            example: john@gmail.com
-          active:
-            type: boolean
-            description: Estado del envío
-            example: true
-          collectMoney:
-            type: float
-            description: Cobro del producto, para pagos en efectivo.
-            example: 40.0
-          origin:
-            type: string
-            description: Origen del envío
-            example: store_api
-          receiver:
-            type: string
-            description: Destinatario del envío
-            example: courier
-          idStatusDelivery:
-            type: integer
-            description: Id del estado del envío
-            example: 2
-          dateCreation:
-            type: datetime
-            description: Fecha de creación del envío
-            example: 2022-06-23T20:39:39.157+00:00
-          dateLastUpdate:
-            type: datetime
-            description: Fecha de última actualización del envío
-            example: 2022-06-23T20:39:39.157+00:00
-          change:
-            type: float
-            description: Cambio del envío
-            example: 11.20
-          pinDelivery:
-            type: integer
-            description: Pin único que se crea para validar que la persona que reciba el pedido sea la correcta
-            example: 04704
-          paymentTypes:
-            type: object
-            description: Tipos de pago del envío
-            properties:
-              idPaymentType:
-                type: integer
-                description: Id del tipo de pago
-                example: 2
-              code:
-                type: string
-                description: Código del tipo de pago
-                example: cash
-              name:
-                type: string
-                description: Nombre del tipo de pago
-                example: Efectivo
-              description:
-                type: string
-                description: Descripción del tipo de pago
-                example: Efectivo
-          capacity:
-            type: object
-            description: Capacidad del envío
-            properties:
-              idCapacity:
-                type: integer
-                description: Id de la capacidad
-                example: 0
-              code:
-                type: string
-                description: Código de la capacidad
-                example: 0
-              name:
-                type: string
-                description: Nombre de la capacidad
-                example: 0
-          statusDelivery:
-            type: object
-            description: Estado del envío
-            properties:
-              idStatusDelivery:
-                type: integer
-                description: Id del estado del envío
-                example: 2
-              code:
-                type: string
-                description: Código del estado del envío
-                example: 2
-              name:
-                type: string
-                description: Nombre del estado del envío
-                example: 2
-          items:
+          messages:
             type: array
-            description: Items del envío
             items:
-              type: object
-              description: Item del envío
-              properties:
-                idDeliveryItem:
-                  type: integer
-                  description: Id del item del envío
-                  example: 0
-                idItemCategory:
-                  type: integer
-                  description: Id de la categoría del item del envío
-                  example: 0
-                code:
-                  type: string
-                  description: Código del item del envío
-                  example: 0
-                categoryOther:
-                  type: string
-                  description: Otra categoría del item del envío
-                  example: 0
-                name:
-                  type: string
-                  description: Nombre del item del envío
-                  example: 0
-                description:
-                  type: string
-                  description: Descripción del item del envío
-                  example: 0
-                quantity:
-                  type: integer
-                  description: Cantidad del item del envío
-                  example: 0
-                document:
-                  type: boolean
-                  description: Documento del item del envío
-                  example: false
-                fragile:
-                  type: boolean
-                  description: Frágil del item del envío
-                  example: false
-                weight:
-                  type: float
-                  description: Peso del item del envío
-                  example: 0
-                height:
-                  type: float
-                  description: Altura del item del envío
-                  example: 0
-                width:
-                  type: float
-                  description: Ancho del item del envío
-                  example: 0
-                depth:
-                  type: float
-                  description: Profundidad del item del envío
-                  example: 0
-                dateCreation:
-                  type: datetime
-                  description: Fecha de creación del item del envío
-                  example: 2022-06-23T20:39:39.157+00:00
-                dateLastUpdate:
-                  type: datetime
-                  description: Fecha de última actualización del item del envío
-                  example: 2022-06-23T20:39:39.157+00:00
-                deliveryItemsFiles:
-                  type: array
-                  description: Archivos del item del envío
-                  example: []
-          relationInvoices:
-            type: array
-            description: Facturas del envío
-            example: []
-          steps:
-            type: array
-            description: Pasos del envío
-            items:
-              type: object
-              description: Paso del envío
-              properties:
-                idStepDelivery:
-                  type: integer
-                  description: Id del paso del envío
-                  example: 0
-                idStepDeliveries:
-                  type: integer
-                  description: Id del paso del envío
-                  example: 0
-                name:
-                  type: string
-                  description: Nombre del paso del envío
-                  example: 0
-                description:
-                  type: string
-                  description: Descripción del paso del envío
-                  example: 0
-                stepsDeliveries:
-                  type: array
+              type: string
+            description: Lista de mensajes de respuesta
+            example:
+              - "string"
+          status:
+            type: integer
+            description: Estado de la respuesta
+            example: 0
+          data:
+            type: object
+            properties:
+              delivery:
+                type: object
+                properties:
+                  idDelivery:
+                    type: integer
+                    description: ID de la entrega
+                    example: 0
+                  idPaymentType:
+                    type: integer
+                    description: ID del tipo de pago
+                    example: 0
+                  idDeliveryType:
+                    type: integer
+                    description: ID del tipo de entrega
+                    example: 0
+                  deliveryType:
+                    type: string
+                    description: Tipo de entrega
+                    example: "string"
+                  deliveryTypeImage:
+                    type: string
+                    description: Imagen del tipo de entrega
+                    example: "string"
+                  code:
+                    type: string
+                    description: Código de la entrega
+                    example: "string"
+                  codeShort:
+                    type: string
+                    description: Código corto de la entrega
+                    example: "string"
+                  url:
+                    type: string
+                    description: URL de la entrega
+                    example: "string"
+                  urlTracking:
+                    type: string
+                    description: URL de seguimiento
+                    example: "string"
+                  deliveryTime:
+                    type: string
+                    format: date-time
+                    description: Fecha y hora de la entrega
+                    example: "2024-08-13T15:11:24.839Z"
+                  deliveryTimeInMillis:
+                    type: integer
+                    description: Fecha y hora de la entrega en milisegundos
+                    example: 0
+                  estimatedDeliveryTime:
+                    type: string
+                    format: date-time
+                    description: Fecha y hora estimada de la entrega
+                    example: "2024-08-13T15:11:24.839Z"
+                  estimatedDeliveryTimeInMillis:
+                    type: integer
+                    description: Fecha y hora estimada de la entrega en milisegundos
+                    example: 0
+                  scheduledDeliveryTime:
+                    type: string
+                    format: date-time
+                    description: Fecha y hora programada de la entrega
+                    example: "2024-08-13T15:11:24.839Z"
+                  scheduledDeliveryTimeInMillis:
+                    type: integer
+                    description: Fecha y hora programada de la entrega en milisegundos
+                    example: 0
+                  idCapacity:
+                    type: integer
+                    description: ID de la capacidad
+                    example: 0
+                  baseRatePickup:
+                    type: number
+                    format: float
+                    description: Tarifa base de recogida
+                    example: 0
+                  distance:
+                    type: number
+                    format: float
+                    description: Distancia de la entrega
+                    example: 0
+                  discount:
+                    type: number
+                    format: float
+                    description: Descuento aplicado
+                    example: 0
+                  height:
+                    type: number
+                    format: float
+                    description: Altura del paquete
+                    example: 0
+                  weight:
+                    type: number
+                    format: float
+                    description: Peso del paquete
+                    example: 0
+                  depth:
+                    type: number
+                    format: float
+                    description: Profundidad del paquete
+                    example: 0
+                  width:
+                    type: number
+                    format: float
+                    description: Ancho del paquete
+                    example: 0
+                  couponDiscount:
+                    type: number
+                    format: float
+                    description: Descuento del cupón
+                    example: 0
+                  total:
+                    type: number
+                    format: float
+                    description: Total de la entrega
+                    example: 0
+                  cost:
+                    type: number
+                    format: float
+                    description: Costo de la entrega
+                    example: 0
+                  description:
+                    type: string
+                    description: Descripción de la entrega
+                    example: "string"
+                  notificationMail:
+                    type: string
+                    description: Correo electrónico de notificación
+                    example: "string"
+                  active:
+                    type: boolean
+                    description: Estado activo de la entrega
+                    example: true
+                  collectMoney:
+                    type: number
+                    format: float
+                    description: Dinero a recoger
+                    example: 0
+                  origin:
+                    type: string
+                    description: Origen de la entrega
+                    example: "string"
+                  receiver:
+                    type: string
+                    description: Receptor de la entrega
+                    example: "string"
+                  idStatusDelivery:
+                    type: integer
+                    description: ID del estado de la entrega
+                    example: 0
+                  dateCreation:
+                    type: string
+                    format: date-time
+                    description: Fecha de creación
+                    example: "2024-08-13T15:11:24.839Z"
+                  dateLastUpdate:
+                    type: string
+                    format: date-time
+                    description: Fecha de la última actualización
+                    example: "2024-08-13T15:11:24.839Z"
+                  metadata:
+                    type: string
+                    description: Metadatos adicionales
+                    example: "string"
+                  change:
+                    type: number
+                    format: float
+                    description: Cambio en la entrega
+                    example: 0
+                  imagePreview:
+                    type: string
+                    description: Imagen previa de la entrega
+                    example: "string"
+                  pinDelivery:
+                    type: string
+                    description: PIN de la entrega
+                    example: "string"
+                  paymentTypes:
+                    type: object
+                    properties:
+                      idPaymentType:
+                        type: integer
+                        description: ID del tipo de pago
+                        example: 0
+                      code:
+                        type: string
+                        description: Código del tipo de pago
+                        example: "string"
+                      name:
+                        type: string
+                        description: Nombre del tipo de pago
+                        example: "string"
+                      description:
+                        type: string
+                        description: Descripción del tipo de pago
+                        example: "string"
+                  capacity:
+                    type: object
+                    properties:
+                      idCapacity:
+                        type: integer
+                        description: ID de la capacidad
+                        example: 0
+                      name:
+                        type: string
+                        description: Nombre de la capacidad
+                        example: "string"
+                      code:
+                        type: string
+                        description: Código de la capacidad
+                        example: "string"
+                  statusDelivery:
+                    type: object
+                    properties:
+                      idStatusDelivery:
+                        type: integer
+                        description: ID del estado de la entrega
+                        example: 0
+                      name:
+                        type: string
+                        description: Nombre del estado de la entrega
+                        example: "string"
+                      code:
+                        type: string
+                        description: Código del estado de la entrega
+                        example: "string"
+                      delivery:
+                        type: object
+                        properties:
+                          idDelivery:
+                            type: integer
+                            description: ID de la entrega
+                            example: 0
+                          idPaymentType:
+                            type: integer
+                            description: ID del tipo de pago
+                            example: 0
+                          idDeliveryType:
+                            type: integer
+                            description: ID del tipo de entrega
+                            example: 0
+                          deliveryType:
+                            type: string
+                            description: Tipo de entrega
+                            example: "string"
+                          deliveryTypeImage:
+                            type: string
+                            description: Imagen del tipo de entrega
+                            example: "string"
+                          code:
+                            type: string
+                            description: Código de la entrega
+                            example: "string"
+                          codeShort:
+                            type: string
+                            description: Código corto de la entrega
+                            example: "string"
+                          url:
+                            type: string
+                            description: URL de la entrega
+                            example: "string"
+                          urlTracking:
+                            type: string
+                            description: URL de seguimiento
+                            example: "string"
+                          deliveryTime:
+                            type: string
+                            format: date-time
+                            description: Fecha y hora de la entrega
+                            example: "2024-08-13T15:11:24.839Z"
+                          deliveryTimeInMillis:
+                            type: integer
+                            description: Fecha y hora de la entrega en milisegundos
+                            example: 0
+                          estimatedDeliveryTime:
+                            type: string
+                            format: date-time
+                            description: Fecha y hora estimada de la entrega
+                            example: "2024-08-13T15:11:24.839Z"
+                          estimatedDeliveryTimeInMillis:
+                            type: integer
+                            description: Fecha y hora estimada de la entrega en milisegundos
+                            example: 0
+                          scheduledDeliveryTime:
+                            type: string
+                            format: date-time
+                            description: Fecha y hora programada de la entrega
+                            example: "2024-08-13T15:11:24.839Z"
+                          scheduledDeliveryTimeInMillis:
+                            type: integer
+                            description: Fecha y hora programada de la entrega en milisegundos
+                            example: 0
+                          idCapacity:
+                            type: integer
+                            description: ID de la capacidad
+                            example: 0
+                          baseRatePickup:
+                            type: number
+                            format: float
+                            description: Tarifa base de recogida
+                            example: 0
+                          distance:
+                            type: number
+                            format: float
+                            description: Distancia de la entrega
+                            example: 0
+                          discount:
+                            type: number
+                            format: float
+                            description: Descuento aplicado
+                            example: 0
+                          height:
+                            type: number
+                            format: float
+                            description: Altura del paquete
+                            example: 0
+                          weight:
+                            type: number
+                            format: float
+                            description: Peso del paquete
+                            example: 0
+                          depth:
+                            type: number
+                            format: float
+                            description: Profundidad del paquete
+                            example: 0
+                          width:
+                            type: number
+                            format: float
+                            description: Ancho del paquete
+                            example: 0
+                          couponDiscount:
+                            type: number
+                            format: float
+                            description: Descuento del cupón
+                            example: 0
+                          total:
+                            type: number
+                            format: float
+                            description: Total de la entrega
+                            example: 0
+                          cost:
+                            type: number
+                            format: float
+                            description: Costo de la entrega
+                            example: 0
+                          description:
+                            type: string
+                            description: Descripción de la entrega
+                            example: "string"
+                          notificationMail:
+                            type: string
+                            description: Correo electrónico de notificación
+                            example: "string"
+                          active:
+                            type: boolean
+                            description: Estado activo de la entrega
+                            example: true
+                          collectMoney:
+                            type: number
+                            format: float
+                            description: Dinero a recoger
+                            example: 0
+                          origin:
+                            type: string
+                            description: Origen de la entrega
+                            example: "string"
+                          receiver:
+                            type: string
+                            description: Receptor de la entrega
+                            example: "string"
+                          idStatusDelivery:
+                            type: integer
+                            description: ID del estado de la entrega
+                            example: 0
+                          dateCreation:
+                            type: string
+                            format: date-time
+                            description: Fecha de creación
+                            example: "2024-08-13T15:11:24.839Z"
+                          dateLastUpdate:
+                            type: string
+                            format: date-time
+                            description: Fecha de la última actualización
+                            example: "2024-08-13T15:11:24.839Z"
+                          metadata:
+                            type: string
+                            description: Metadatos adicionales
+                            example: "string"
+                          change:
+                            type: number
+                            format: float
+                            description: Cambio en la entrega
+                            example: 0
+                          imagePreview:
+                            type: string
+                            description: Imagen previa de la entrega
+                            example: "string"
+                          pinDelivery:
+                            type: string
+                            description: PIN de la entrega
+                            example: "string"
+                          paymentTypes:
+                            type: object
+                            properties:
+                              idPaymentType:
+                                type: integer
+                                description: ID del tipo de pago
+                                example: 0
+                              code:
+                                type: string
+                                description: Código del tipo de pago
+                                example: "string"
+                              name:
+                                type: string
+                                description: Nombre del tipo de pago
+                                example: "string"
+                              description:
+                                type: string
+                                description: Descripción del tipo de pago
+                                example: "string"
+                          capacity:
+                            type: object
+                            properties:
+                              idCapacity:
+                                type: integer
+                                description: ID de la capacidad
+                                example: 0
+                              name:
+                                type: string
+                                description: Nombre de la capacidad
+                                example: "string"
+                              code:
+                                type: string
+                                description: Código de la capacidad
+                                example: "string"
+                          statusDelivery:
+                            type: object
+                            properties:
+                              idStatusDelivery:
+                                type: integer
+                                description: ID del estado de la entrega
+                                example: 0
+                              name:
+                                type: string
+                                description: Nombre del estado de la entrega
+                                example: "string"
+                              code:
+                                type: string
+                                description: Código del estado de la entrega
+                                example: "string"
+                          items:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                idDeliveryItem:
+                                  type: integer
+                                  description: ID del ítem de entrega
+                                  example: 0
+                                idDelivery:
+                                  type: integer
+                                  description: ID de la entrega
+                                  example: 0
+                                idItemCategory:
+                                  type: integer
+                                  description: ID de la categoría del ítem
+                                  example: 0
+                                categoryName:
+                                  type: string
+                                  description: Nombre de la categoría del ítem
+                                  example: "string"
+                                code:
+                                  type: string
+                                  description: Código del ítem
+                                  example: "string"
+                                categoryOther:
+                                  type: string
+                                  description: Otra categoría del ítem
+                                  example: "string"
+                                name:
+                                  type: string
+                                  description: Nombre del ítem
+                                  example: "string"
+                                description:
+                                  type: string
+                                  description: Descripción del ítem
+                                  example: "string"
+                                instructions:
+                                  type: string
+                                  description: Instrucciones para el ítem
+                                  example: "string"
+                                quantity:
+                                  type: integer
+                                  description: Cantidad del ítem
+                                  example: 0
+                                document:
+                                  type: boolean
+                                  description: Indica si el ítem es un documento
+                                  example: true
+                                fragile:
+                                  type: boolean
+                                  description: Indica si el ítem es frágil
+                                  example: true
+                                value:
+                                  type: number
+                                  format: float
+                                  description: Valor del ítem
+                                  example: 0
+                                height:
+                                  type: number
+                                  format: float
+                                  description: Altura del ítem
+                                  example: 0
+                                weight:
+                                  type: number
+                                  format: float
+                                  description: Peso del ítem
+                                  example: 0
+                                depth:
+                                  type: number
+                                  format: float
+                                  description: Profundidad del ítem
+                                  example: 0
+                                width:
+                                  type: number
+                                  format: float
+                                  description: Ancho del ítem
+                                  example: 0
+                                dateCreation:
+                                  type: string
+                                  format: date-time
+                                  description: Fecha de creación del ítem
+                                  example: "2024-08-13T15:11:24.839Z"
+                                dateLastUpdate:
+                                  type: string
+                                  format: date-time
+                                  description: Fecha de la última actualización del ítem
+                                  example: "2024-08-13T15:11:24.839Z"
+                                deliveryItemsFiles:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      idDeliveryItemFile:
+                                        type: integer
+                                        description: ID del archivo del ítem de entrega
+                                        example: 0
+                                      idDeliveryItem:
+                                        type: integer
+                                        description: ID del ítem de entrega
+                                        example: 0
+                                      fileName:
+                                        type: string
+                                        description: Nombre del archivo
+                                        example: "string"
+                                idWaypointPickup:
+                                  type: integer
+                                  description: ID del punto de recogida
+                                  example: 0
+                                idWaypointDropOff:
+                                  type: integer
+                                  description: ID del punto de entrega
+                                  example: 0
+                          relatedInvoices:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                idRelatedInvoice:
+                                  type: integer
+                                  description: ID de la factura relacionada
+                                  example: 0
+                                code:
+                                  type: string
+                                  description: Código de la factura
+                                  example: "string"
+                                description:
+                                  type: string
+                                  description: Descripción de la factura
+                                  example: "string"
+                                dateCreation:
+                                  type: string
+                                  format: date-time
+                                  description: Fecha de creación de la factura
+                                  example: "2024-08-13T15:11:24.839Z"
+                                dateLastUpdate:
+                                  type: string
+                                  format: date-time
+                                  description: Fecha de la última actualización de la factura
+                                  example: "2024-08-13T15:11:24.839Z"
+                          steps:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                idStepDelivery:
+                                  type: integer
+                                  description: ID del paso de entrega
+                                  example: 0
+                                idStepDeliveries:
+                                  type: integer
+                                  description: ID de los pasos de entrega
+                                  example: 0
+                                idDelivery:
+                                  type: integer
+                                  description: ID de la entrega
+                                  example: 0
+                                name:
+                                  type: string
+                                  description: Nombre del paso
+                                  example: "string"
+                                author:
+                                  type: string
+                                  description: Autor del paso
+                                  example: "string"
+                                description:
+                                  type: string
+                                  description: Descripción del paso
+                                  example: "string"
+                                stepsDeliveries:
+                                  type: object
+                                  properties:
+                                    idStepDeliveries:
+                                      type: integer
+                                      description: ID de los pasos de entrega
+                                      example: 0
+                                    name:
+                                      type: string
+                                      description: Nombre de los pasos de entrega
+                                      example: "string"
+                                    code:
+                                      type: string
+                                      description: Código de los pasos de entrega
+                                      example: "string"
+                                    type:
+                                      type: string
+                                      description: Tipo de los pasos de entrega
+                                      example: "string"
+                                    order:
+                                      type: integer
+                                      description: Orden de los pasos de entrega
+                                      example: 0
+                                dateCreation:
+                                  type: string
+                                  format: date-time
+                                  description: Fecha de creación del paso
+                                  example: "2024-08-13T15:11:24.839Z"
+                                dateCreationInMillis:
+                                  type: integer
+                                  description: Fecha de creación en milisegundos
+                                  example: 0
+                                dateLastUpdate:
+                                  type: string
+                                  format: date-time
+                                  description: Fecha de la última actualización del paso
+                                  example: "2024-08-13T15:11:24.839Z"
+                          stepsToShow:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                idStepsDeliveries:
+                                  type: integer
+                                  description: ID de los pasos de entrega para mostrar
+                                  example: 0
+                                code:
+                                  type: string
+                                  description: Código de los pasos de entrega para mostrar
+                                  example: "string"
+                                name:
+                                  type: string
+                                  description: Nombre de los pasos de entrega para mostrar
+                                  example: "string"
+                                order:
+                                  type: integer
+                                  description: Orden de los pasos de entrega para mostrar
+                                  example: 0
+                                status:
+                                  type: boolean
+                                  description: Estado de los pasos de entrega para mostrar
+                                  example: true
+                                dateCreation:
+                                  type: integer
+                                  description: Fecha de creación en milisegundos de los pasos de entrega para mostrar
+                                  example: 0
+                                dateLastUpdate:
+                                  type: integer
+                                  description: Fecha de la última actualización en milisegundos de los pasos de entrega para mostrar
+                                  example: 0
+                                description:
+                                  type: string
+                                  description: Descripción de los pasos de entrega para mostrar
+                                  example: "string"
+                          validation:
+                            type: object
+                            properties:
+                              idDeliveryValidation:
+                                type: integer
+                                description: ID de la validación de entrega
+                                example: 0
+                              idDelivery:
+                                type: integer
+                                description: ID de la entrega
+                                example: 0
+                              personReceived:
+                                type: string
+                                description: Persona que recibió la entrega
+                                example: "string"
+                              comment:
+                                type: string
+                                description: Comentario sobre la validación
+                                example: "string"
+                              imgPath:
+                                type: string
+                                description: Ruta de la imagen de la validación
+                                example: "string"
+                              dateCreation:
+                                type: string
+                                format: date-time
+                                description: Fecha de creación de la validación
+                                example: "2024-08-13T15:11:24.840Z"
+                              dateLastUpdate:
+                                type: string
+                                format: date-time
+                                description: Fecha de la última actualización de la validación
+                                example: "2024-08-13T15:11:24.840Z"
+                            paymentByCard:
+                              type: object
+                              properties:
+                                idTransaction:
+                                  type: integer
+                                  description: ID de la transacción
+                                  example: 0
+                                name:
+                                  type: string
+                                  description: Nombre del titular de la tarjeta
+                                  example: "string"
+                                numberCard:
+                                  type: string
+                                  description: Número de la tarjeta de crédito
+                                  example: "string"
+                                code:
+                                  type: string
+                                  description: Código de seguridad de la tarjeta
+                                  example: "string"
+                            deliveryCouriersRejected:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  idDeliveryCourierRejected:
+                                    type: integer
+                                    description: ID de la solicitud de rechazo de mensajero
+                                    example: 0
+                                  idCourier:
+                                    type: integer
+                                    description: ID del mensajero
+                                    example: 0
+                                  idDelivery:
+                                    type: integer
+                                    description: ID de la entrega
+                                    example: 0
+                                  cancelReason:
+                                    type: string
+                                    description: Motivo del rechazo
+                                    example: "string"
+                                  active:
+                                    type: boolean
+                                    description: Estado activo del rechazo
+                                    example: true
+                                  dateCreation:
+                                    type: string
+                                    format: date-time
+                                    description: Fecha de creación del rechazo
+                                    example: "2024-08-13T15:11:24.840Z"
+                                  dateLastUpdate:
+                                    type: string
+                                    format: date-time
+                                    description: Fecha de la última actualización del rechazo
+                                    example: "2024-08-13T15:11:24.840Z"
 
   message:
     type: string
