@@ -1,131 +1,132 @@
 type: object
 properties:
+  type:
     type: string
     description: Tipo de solicitud
     example: "string"
-    waypoints:
-      type: array
-      items:
-        type: object
-        properties:
-          type:
-            type: string
-            description: Tipo de waypoint
-            example: "string"
-          city:
-            type: string
-            description: Ciudad del waypoint
-            example: "string"
-          country:
-            type: string
-            description: País del waypoint
-            example: "string"
-          state:
-            type: string
-            description: Estado del waypoint
-            example: "string"
-          addressStreet:
-            type: string
-            description: Calle del waypoint
-            example: "string"
-          personName:
-            type: string
-            description: Nombre de la persona en el waypoint
-            example: "string"
-          personIdentification:
-            type: string
-            description: Identificación de la persona en el waypoint
-            example: "string"
-          phone:
-            type: string
-            description: Teléfono de contacto en el waypoint
-            example: "string"
-          addressHuman:
-            type: string
-            description: Dirección en formato humano del waypoint
-            example: "string"
-          addressGeo:
-            type: string
-            description: Dirección geográfica del waypoint
-            example: "string"
-          personEmail:
-            type: string
-            description: Correo electrónico de la persona en el waypoint
-            example: "string"
-          instructions:
-            type: string
-            description: Instrucciones adicionales para el waypoint
-            example: "string"
-          latitude:
-            type: number
-            format: float
-            description: Latitud del waypoint
-            example: 0
-          longitude:
-            type: number
-            format: float
-            description: Longitud del waypoint
-            example: 0
+  waypoints:
+    type: array
     items:
-      type: array
-      items:
-        type: object
-        properties:
-          weight:
-            type: number
-            format: float
-            description: Peso del ítem
-            example: 0
-          height:
-            type: number
-            format: float
-            description: Altura del ítem
-            example: 0
-          width:
-            type: number
-            format: float
-            description: Ancho del ítem
-            example: 0
-          depth:
-            type: number
-            format: float
-            description: Profundidad del ítem
-            example: 0
-          idItemCategory:
-            type: integer
-            description: ID de la categoría del ítem
-            example: 0
-          idCapacity:
-            type: integer
-            description: ID de la capacidad del ítem
-            example: 0
-          value:
-            type: number
-            format: float
-            description: Valor del ítem
-            example: 0
-          fragile:
-            type: boolean
-            description: Indica si el ítem es frágil
-            example: true
-    deliveryTime:
-      type: string
-      description: Hora de entrega
-      example: "string"
-    isTest:
-      type: boolean
-      description: Indica si es una prueba
-      example: true
-    idStore:
-      type: integer
-      description: ID de la tienda
-      example: 0
-    collectMoney:
-      type: number
-      format: float
-      description: Dinero a recoger
-      example: 0
-    lineBusiness:
-      type: string
-      description: Línea de negocio
-      example: "string"
+      type: object
+      properties:
+        type:
+          type: string
+          description: Tipo de waypoint
+          example: "string"
+        city:
+          type: string
+          description: Ciudad del waypoint
+          example: "string"
+        country:
+          type: string
+          description: País del waypoint
+          example: "string"
+        state:
+          type: string
+          description: Estado del waypoint
+          example: "string"
+        addressStreet:
+          type: string
+          description: Calle del waypoint
+          example: "string"
+        personName:
+          type: string
+          description: Nombre de la persona en el waypoint
+          example: "string"
+        personIdentification:
+          type: string
+          description: Identificación de la persona en el waypoint
+          example: "string"
+        phone:
+          type: string
+          description: Teléfono de contacto en el waypoint
+          example: "string"
+        addressHuman:
+          type: string
+          description: Dirección en formato humano del waypoint
+          example: "string"
+        addressGeo:
+          type: string
+          description: Dirección geográfica del waypoint
+          example: "string"
+        personEmail:
+          type: string
+          description: Correo electrónico de la persona en el waypoint
+          example: "string"
+        instructions:
+          type: string
+          description: Instrucciones adicionales para el waypoint
+          example: "string"
+        latitude:
+          type: number
+          format: float
+          description: Latitud del waypoint
+          example: 0
+        longitude:
+          type: number
+          format: float
+          description: Longitud del waypoint
+          example: 0
+  items:
+    type: array
+    items:
+      type: object
+      properties:
+        weight:
+          type: number
+          format: float
+          description: Peso del ítem
+          example: 0
+        height:
+          type: number
+          format: float
+          description: Altura del ítem
+          example: 0
+        width:
+          type: number
+          format: float
+          description: Ancho del ítem
+          example: 0
+        depth:
+          type: number
+          format: float
+          description: Profundidad del ítem
+          example: 0
+        idItemCategory:
+          type: integer
+          description: ID de la categoría del ítem
+          example: 0
+        idCapacity:
+          type: integer
+          description: ID de la capacidad del ítem
+          example: 0
+        value:
+          type: number
+          format: float
+          description: Valor del ítem
+          example: 0
+        fragile:
+          type: boolean
+          description: Indica si el ítem es frágil
+          example: true
+  deliveryTime:
+    type: string
+    description: Hora de entrega
+    example: "string"
+  isTest:
+    type: boolean
+    description: Indica si es una prueba
+    example: true
+  idStore:
+    type: integer
+    description: ID de la tienda
+    example: 0
+  collectMoney:
+    type: number
+    format: float
+    description: Dinero a recoger
+    example: 0
+  lineBusiness:
+    type: string
+    description: Línea de negocio
+    example: "string"

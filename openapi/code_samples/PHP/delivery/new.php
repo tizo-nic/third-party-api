@@ -54,22 +54,12 @@ $body = '{
            "customerEmail": "tucorreo@correo.com",
            "deliveryTime": "2022-04-22T12:10:32Z",
            "deliveryTimeInMilliseconds": 1212121212,
-           "imagePreview": "https://www.google.com.mx/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
            "collectMoney": 100,
            "isTest": false,
-           "lineBusiness": "string",
            "selectedMethod": {
              "method": "DRIVER",
              "idCourier": 1,
-             "idAreaOrigin": 1,
-             "idAreaDestination": 1,
              "idPaymentMethod": 1,
-             "idBranchOrigin": 1,
-             "idBranchDestination": 1,
-             "dateEstimatedInMilliseconds": 1454545454,
-             "estimatedTimeInMilliseconds": 1454545454,
-             "idCard": 1,
-             "password": "1234",
              "card": {
                "name": "Juan Perez",
                "number": "4111111111111111",
@@ -90,11 +80,7 @@ $body = '{
              "coupon": "PRIMER_ENVIO",
              "estimateId": "121212",
              "deliveryOfferId": "121212",
-             "transactionCode": "88185B37-FFC2-40AA-B204-398CFAD50788",
-             "deliveryEstimatedToCalendar": "2024-08-13T17:36:31.771Z"
-           },
-           "totalValue": 0
-         }';
+           }';
 $request = new Request('POST', 'http://staging-api.tizo.co/api/v1/delivery/pricing/create/', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();

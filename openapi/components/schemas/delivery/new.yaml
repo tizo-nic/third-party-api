@@ -196,42 +196,10 @@ properties:
         type: integer
         description: ID del mensajero
         example: 1
-      idAreaOrigin:
-        type: integer
-        description: ID del área de origen
-        example: 1
-      idAreaDestination:
-        type: integer
-        description: ID del área de destino
-        example: 1
       idPaymentMethod:
         type: integer
         description: ID del método de pago
         example: 1
-      idBranchOrigin:
-        type: integer
-        description: ID de la sucursal de origen
-        example: 1
-      idBranchDestination:
-        type: integer
-        description: ID de la sucursal de destino
-        example: 1
-      dateEstimatedInMilliseconds:
-        type: integer
-        description: Fecha estimada en milisegundos
-        example: 1454545454
-      estimatedTimeInMilliseconds:
-        type: integer
-        description: Tiempo estimado en milisegundos
-        example: 1454545454
-      idCard:
-        type: integer
-        description: ID de la tarjeta
-        example: 1
-      password:
-        type: string
-        description: Contraseña
-        example: "1234"
       card:
         type: object
         properties:
@@ -297,15 +265,6 @@ properties:
         type: string
         description: ID de la oferta de entrega
         example: "121212"
-      transactionCode:
-        type: string
-        description: Código de la transacción
-        example: "88185B37-FFC2-40AA-B204-398CFAD50788"
-      deliveryEstimatedToCalendar:
-        type: string
-        format: date-time
-        description: Fecha estimada de entrega en formato de calendario
-        example: "2024-08-12T21:48:16.682Z"
   totalValue:
     type: number
     description: Valor total
