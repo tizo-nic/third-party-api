@@ -9,6 +9,12 @@ payload = json.dumps({
                          "brand": "string",
                          "shortDescription": "string",
                          "longDescription": "string",
+                         "additionalFeatures": [
+                           {
+                             "id": 0,
+                             "feature": "string"
+                           }
+                         ],
                          "warranty": 0,
                          "warrantyPdf": "string",
                          "promotion": true,
@@ -47,7 +53,14 @@ payload = json.dumps({
                            "depth": 0,
                            "digitalProductPathLink": "string",
                            "skuCode": "string",
-                           "digitalProductQuantity": 0
+                           "digitalProductQuantity": 0,
+                           "idCapacity": 0
+                         }
+                       ],
+                       "branchInventorys": [
+                         {
+                           "idBranch": 0,
+                           "quantity": 0
                          }
                        ]
                      })
