@@ -1,0 +1,44 @@
+post:
+  tags:
+    - Producto
+  summary: actualizacion Producto
+  description: Este método sirve para actualizacion  nuevos Productos
+  operationId: updated-Producto
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/products/updatedProduct.yml'
+    '400':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/products/updatedProduct.yml'
+  requestBody:
+    headers:
+      environment:
+        description: Actualizacion de un nuevo producto.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/products/updatedProduct.yml"
+    description: Estructura de datos para la Actualizacion de los productos
+    required: true
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/products/updatedProduct.cs"
+    - lang: PHP
+      source:
+        $ref: "../../code_samples/PHP/products/updatedProduct.php"
+    - lang: Python
+      source:
+        $ref: "../../code_samples/python/products/updatedProduct.py"

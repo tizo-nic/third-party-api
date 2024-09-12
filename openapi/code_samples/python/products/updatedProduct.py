@@ -30,10 +30,13 @@ payload = json.dumps({
     {
       "productOptionKeyValueInList": [
         {
+          "idProductOptionKeyValue": 0,
           "key": "string",
           "value": "string"
         }
       ],
+      "idProductOptions": 0,
+      "idProductOptionsInventory": 0,
       "idBranch": 0,
       "quantity": 0,
       "cost": 0,
@@ -41,9 +44,10 @@ payload = json.dumps({
       "discountPercentage": 100,
       "tax": 0,
       "lotNumber": "string",
-      "productOptionOfferIn": {
+      "productOptionOfferInUpdatedDto": {
+        "idProductOptionOffer": 0,
         "offer": 0,
-        "endDate": "2024-09-12T15:56:16.287Z"
+        "endDate": "2024-09-12T16:43:35.344Z"
       },
       "width": 0,
       "height": 0,
@@ -54,12 +58,13 @@ payload = json.dumps({
       "digitalProductQuantity": 0
     }
   ]
-})
+}
+)
 headers = {
   'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidmVuZG9yIiwidXNlcm5hbWUiOiJ2X2F4ZWxfOSIsImlhdCI6MTY1ODE2NDM4OCwiZXhwIjoxNjU4NzY5MTg4fQ.vvLtYB4O73futNvwzTZt2LhFzNV--XvMfTT5-62YWtxX-9CY6X4-UtIVDkCR_MX4YqX83AcCXiquHAb8uNHIjw',
   'Content-Type': 'application/json'
 }
 
-response = requests.request("POST", url, headers=headers, data=payload)
+response = requests.request("PUT", url, headers=headers, data=payload)
 
 print(response.text)
