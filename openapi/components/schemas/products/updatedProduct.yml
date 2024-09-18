@@ -1,0 +1,114 @@
+type: object
+properties:
+  productInfo:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Newest 14
+        example: string
+      brand:
+        type: string
+        description: HP
+        example: string
+      shortDescription:
+        type: string
+        description: Ultral Light Laptop for Students and Business
+        example: string
+      longDescription:
+        type: string
+        description: 14.0-inch diagonal, HD (1366 x 768), micro-edge, BrightView. With virtually no bezel encircling the display, an ultra-wide viewing experience provides for seamless multi-monitor set-ups
+        example: string
+      warranty:
+        type: integer
+        description: Garantía del producto en meses
+        example: 12
+  productOptionsPricing:
+    type: array
+    items:
+      type: object
+      properties:
+        productOptionKeyValueInList:
+          type: array
+          items:
+            type: object
+            properties:
+              idProductOptionKeyValue:
+                type: integer
+                example: 0
+              key:
+                type: string
+                example: string
+              value:
+                type: string
+                example: string
+        idProductOptions:
+          type: integer
+          example: 0
+        idProductOptionsInventory:
+          type: integer
+          example: 0
+        idBranch:
+          type: integer
+          example: 0
+        quantity:
+          type: integer
+          example: 0
+        cost:
+          type: number
+          format: float
+          example: 0
+        price:
+          type: number
+          format: float
+          example: 0
+        discountPercentage:
+          type: number
+          format: float
+          example: 100
+        tax:
+          type: number
+          format: float
+          example: 0
+        lotNumber:
+          type: string
+          example: string
+        productOptionOfferInUpdatedDto:
+          type: object
+          properties:
+            idProductOptionOffer:
+              type: integer
+              example: 0
+            offer:
+              type: number
+              format: float
+              example: 0
+            endDate:
+              type: string
+              format: date-time
+              example: 2024-09-12T16:50:51.282Z
+        width:
+          type: number
+          format: float
+          example: 0
+        height:
+          type: number
+          format: float
+          example: 0
+        weight:
+          type: number
+          format: float
+          example: 0
+        depth:
+          type: number
+          format: float
+          example: 0
+        digitalProductPathLink:
+          type: string
+          example: string
+        skuCode:
+          type: string
+          example: string
+        digitalProductQuantity:
+          type: integer
+          example: 0
