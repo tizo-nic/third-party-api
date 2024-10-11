@@ -1,4 +1,4 @@
-post:
+get:
   tags:
     - Producto
   summary: List de los  Producto
