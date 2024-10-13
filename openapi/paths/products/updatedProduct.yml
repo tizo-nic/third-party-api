@@ -1,7 +1,7 @@
-post:
+put:
   tags:
     - Producto
-  summary: actualizacion Producto
+  summary: Actualizacion Producto
   description: Este método sirve para actualizacion  nuevos Productos
   operationId: updated-Producto
   security:

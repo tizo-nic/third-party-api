@@ -37,7 +37,7 @@ properties:
         example: "Minuto"
       preparationTimeDuration:
         type: integer
-        description: Duración del tiempo de preparación
+        description: Duración del tiempo de preparación en minutos
         example: 0
       specialTape:
         type: string
@@ -49,7 +49,7 @@ properties:
         example: 0
       idStore:
         type: integer
-        description: ID de la tienda del producto
+        description: ID de la tienda donde se vende el producto
         example: 0
       idMotherCategory:
         type: integer
@@ -65,7 +65,7 @@ properties:
         example: 0
       digitalProductNote:
         type: integer
-        description: Indica si el producto tiene notas digitales
+        description: Indicador si el producto tiene notas digitales
         example: 0
       selfPickup:
         type: boolean
@@ -89,38 +89,43 @@ properties:
                 type: string
                 description: Valor de la opción del producto
                 example: "string"
-        idBranch:
-          type: integer
-          description: ID de la sucursal
-          example: 0
         idCapacity:
           type: integer
-          description: Capacidad del producto (si aplica)
+          description: ID de la capacidad del producto
           example: 0
-        quantity:
-          type: integer
-          description: Cantidad disponible
-          example: 0
+        productionQuatitiesList:
+          type: array
+          items:
+            type: object
+            properties:
+              idBranch:
+                type: integer
+                description: ID de la sucursal
+                example: 0
+              quantity:
+                type: integer
+                description: Cantidad de inventario en la sucursal
+                example: 0
         cost:
           type: number
           format: float
           description: Costo del producto
-          example: 0.0
+          example: 0
         price:
           type: number
           format: float
           description: Precio del producto
-          example: 0.0
+          example: 0
         discountPercentage:
           type: number
           format: float
-          description: Porcentaje de descuento aplicado
-          example: 0.0
+          description: Porcentaje de descuento del producto
+          example: 0
         tax:
           type: number
           format: float
           description: Impuesto aplicado al producto
-          example: 0.0
+          example: 0
         lotNumber:
           type: string
           description: Número de lote del producto
@@ -131,36 +136,36 @@ properties:
             offer:
               type: number
               format: float
-              description: Porcentaje de oferta aplicado
-              example: 0.0
+              description: Oferta aplicada al producto
+              example: 0
             endDate:
               type: string
               format: date-time
               description: Fecha de finalización de la oferta
-              example: "2024-10-10T20:49:49.576Z"
+              example: "2024-10-13T17:39:03.338Z"
         width:
           type: number
           format: float
-          description: Ancho del producto en centímetros
-          example: 0.0
+          description: Ancho del producto
+          example: 0
         height:
           type: number
           format: float
-          description: Altura del producto en centímetros
-          example: 0.0
+          description: Alto del producto
+          example: 0
         weight:
           type: number
           format: float
-          description: Peso del producto en kilogramos
-          example: 0.0
+          description: Peso del producto
+          example: 0
         depth:
           type: number
           format: float
-          description: Profundidad del producto en centímetros
-          example: 0.0
+          description: Profundidad del producto
+          example: 0
         digitalProductPathLink:
           type: string
-          description: Enlace al archivo digital del producto
+          description: URL del enlace del producto digital
           example: "string"
         skuCode:
           type: string
@@ -168,5 +173,5 @@ properties:
           example: "string"
         digitalProductQuantity:
           type: integer
-          description: Cantidad de productos digitales disponibles
+          description: Cantidad de productos digitales
           example: 0

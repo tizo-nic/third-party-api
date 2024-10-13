@@ -2,7 +2,7 @@ get:
   tags:
     - Producto
   summary: List de los  Producto
-  description: Este método sirve para crear nuevos Productos
+  description: Este método sirve para Listar nuevos Productos
   operationId: List-Producto
   security:
     - basic_auth: [ Authorization ]

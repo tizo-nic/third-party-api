@@ -73,6 +73,27 @@ properties:
           type: integer
           description: Indica si el producto tiene notas digitales
           example: 0
+        idProductOptions:
+          type: integer
+          description: ID de las opciones de producto
+          example: 0
+        productVariationList:
+          type: array
+          items:
+            type: object
+            properties:
+              idProductOptionKeyValue:
+                type: integer
+                description: ID del valor clave de la opción de producto
+                example: 0
+              idProductOptionsInventory:
+                type: integer
+                description: ID del inventario de opciones de producto
+                example: 0
+              idProductOptionOffer:
+                type: integer
+                description: ID de la oferta de la opción de producto
+                example: 0
         digital:
           type: boolean
           description: Indica si el producto es digital
