@@ -5,7 +5,7 @@ properties:
     items:
       type: object
       properties:
-        id:
+        idProduct:
           type: integer
           description: ID del producto
           example: 0
@@ -23,7 +23,7 @@ properties:
           example: "string"
         longDescription:
           type: string
-          description: Descripción detallada del producto
+          description: Descripción larga del producto
           example: "string"
         warranty:
           type: integer
@@ -43,11 +43,11 @@ properties:
           example: "string"
         preparationTimeDuration:
           type: integer
-          description: Duración del tiempo de preparación en minutos
+          description: Duración del tiempo de preparación
           example: 0
         specialTape:
           type: string
-          description: Descripción de cinta especial
+          description: Descripción de la cinta especial
           example: "string"
         idCategory:
           type: integer
@@ -59,7 +59,7 @@ properties:
           example: "string"
         returnReplacement:
           type: integer
-          description: Indicador de devolución y reemplazo
+          description: Indica si el producto tiene opción de devolución y reemplazo
           example: 0
         returnInterval:
           type: integer
@@ -71,42 +71,82 @@ properties:
           example: 0
         digitalProductNote:
           type: integer
-          description: Indica si el producto tiene notas digitales
+          description: Indicador de si el producto digital tiene notas
           example: 0
-        idProductOptions:
-          type: integer
-          description: ID de las opciones de producto
-          example: 0
-        productVariationList:
+        productOptions:
           type: array
           items:
             type: object
             properties:
-              idProductOptionKeyValue:
-                type: integer
-                description: ID del valor clave de la opción de producto
-                example: 0
-              idProductOptionsInventory:
-                type: integer
-                description: ID del inventario de opciones de producto
-                example: 0
-              idProductOptionOffer:
-                type: integer
-                description: ID de la oferta de la opción de producto
-                example: 0
+              productKeyValues:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    idProductOptionKeyValue:
+                      type: integer
+                      description: ID del par clave-valor de la opción del producto
+                      example: 0
+                    key:
+                      type: string
+                      description: Clave de la opción del producto
+                      example: "string"
+                    value:
+                      type: string
+                      description: Valor de la opción del producto
+                      example: "string"
+              productOptionInventory:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    idProductOptionsInventory:
+                      type: integer
+                      description: ID del inventario de la opción del producto
+                      example: 0
+                    quantity:
+                      type: integer
+                      description: Cantidad en inventario
+                      example: 0
+                    branch:
+                      type: integer
+                      description: Sucursal donde está el inventario
+                      example: 0
+        idProductOptions:
+          type: integer
+          description: ID de las opciones del producto
+          example: 0
+        idProductOffer:
+          type: integer
+          description: ID de la oferta del producto
+          example: 0
         digital:
           type: boolean
           description: Indica si el producto es digital
           example: true
         selfPickup:
           type: boolean
-          description: Indica si está disponible la recogida en tienda
+          description: Indica si el producto está disponible para recogida en tienda
           example: true
-  message:
-    type: string
-    description: Mensaje de respuesta
-    example: "string"
-  status:
+  total:
     type: integer
-    description: Estado de la operación
+    description: Total de productos
     example: 0
+  page:
+    type: integer
+    description: Página actual
+    example: 0
+  size:
+    type: integer
+    description: Cantidad de productos por página
+    example: 0
+  totalPages:
+    type: integer
+    description: Total de páginas
+    example: 0
+  messages:
+    type: array
+    items:
+      type: string
+      description: Mensajes asociados a la solicitud
+      example: "string"
