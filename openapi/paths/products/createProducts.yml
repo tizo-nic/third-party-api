@@ -1,7 +1,7 @@
 post:
   tags:
     - Producto
-  summary: Crear una Producto
+  summary: Crear un Producto
   description: Este método sirve para crear nuevos Productos
   operationId: create-Producto
   security:

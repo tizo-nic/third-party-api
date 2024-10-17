@@ -5,24 +5,80 @@ properties:
     properties:
       name:
         type: string
-        description: "Más reciente 14"
-        example: string
+        description: Nombre del producto
+        example: "string"
       brand:
         type: string
-        description: "HP"
-        example: string
+        description: Marca del producto
+        example: "string"
       shortDescription:
         type: string
-        description: "Portátil ultraligera para estudiantes y negocios"
-        example: string
+        description: Descripción corta del producto
+        example: "string"
       longDescription:
         type: string
-        description: "Pantalla diagonal de 14.0 pulgadas, HD (1366 x 768), micro-borde, BrightView. Con prácticamente ningún bisel alrededor de la pantalla, una experiencia de visualización ultra amplia proporciona configuraciones de múltiples monitores sin interrupciones."
-        example: string
+        description: Descripción detallada del producto
+        example: "string"
       warranty:
         type: integer
-        description: "Garantía del producto en meses"
-        example: 12
+        description: Garantía del producto en meses
+        example: 0
+      warrantyPdf:
+        type: string
+        description: URL del PDF de garantía
+        example: "string"
+      promotion:
+        type: boolean
+        description: Indica si el producto está en promoción
+        example: true
+      preparationTimeType:
+        type: string
+        description: Tipo de tiempo de preparación
+        example: "string"
+      preparationTimeDuration:
+        type: integer
+        description: Duración del tiempo de preparación en minutos
+        example: 0
+      specialTape:
+        type: string
+        description: Descripción de cinta especial
+        example: "string"
+      idCategory:
+        type: integer
+        description: ID de la categoría del producto
+        example: 1
+      idStore:
+        type: integer
+        description: ID de la tienda donde se vende el producto
+        example: 1
+      idMotherCategory:
+        type: integer
+        description: ID de la categoría madre del producto
+        example: 1
+      returnReplacement:
+        type: integer
+        description: Indicador de devolución y reemplazo
+        example: 0
+      returnInterval:
+        type: integer
+        description: Intervalo de devolución en días
+        example: 0
+      replacementInterval:
+        type: integer
+        description: Intervalo de reemplazo en días
+        example: 0
+      digitalProductNote:
+        type: integer
+        description: Indica si el producto tiene notas digitales
+        example: 0
+      digital:
+        type: boolean
+        description: Indica si el producto es digital
+        example: true
+      selfPickup:
+        type: boolean
+        description: Indica si está disponible la recogida en tienda
+        example: true
   productOptionsPricing:
     type: array
     items:
@@ -35,102 +91,111 @@ properties:
             properties:
               idProductOptionKeyValue:
                 type: integer
-                description: "ID de la clave-valor de la opción del producto"
+                description: ID del valor clave de la opción de producto
                 example: 0
               key:
                 type: string
-                description: "Clave de la opción del producto"
-                example: string
+                description: Clave de la opción de producto
+                example: "string"
               value:
                 type: string
-                description: "Valor de la opción del producto"
-                example: string
+                description: Valor de la opción de producto
+                example: "string"
+        productionQuatitiesList:
+          type: array
+          items:
+            type: object
+            properties:
+              idProductOptionsInventory:
+                type: integer
+                description: ID del inventario de opciones de producto
+                example: 0
+              idBranch:
+                type: integer
+                description: ID de la sucursal
+                example: 0
+              quantity:
+                type: integer
+                description: Cantidad en inventario
+                example: 0
         idProductOptions:
           type: integer
-          description: "ID de las opciones del producto"
+          description: ID de las opciones de producto
           example: 0
-        idProductOptionsInventory:
+        idCapacity:
           type: integer
-          description: "ID del inventario de las opciones del producto"
-          example: 0
-        idBranch:
-          type: integer
-          description: "ID de la sucursal"
-          example: 0
-        quantity:
-          type: integer
-          description: "Cantidad disponible"
+          description: ID de la capacidad del producto
           example: 0
         cost:
           type: number
           format: float
-          description: "Costo del producto"
+          description: Costo del producto
           example: 0
         price:
           type: number
           format: float
-          description: "Precio del producto"
+          description: Precio del producto
           example: 0
         discountPercentage:
           type: number
           format: float
-          description: "Porcentaje de descuento aplicado al producto"
+          description: Porcentaje de descuento
           example: 100
         tax:
           type: number
           format: float
-          description: "Impuesto aplicado al producto"
+          description: Impuesto aplicado al producto
           example: 0
         lotNumber:
           type: string
-          description: "Número de lote del producto"
-          example: string
+          description: Número de lote del producto
+          example: "string"
         productOptionOfferInUpdatedDto:
           type: object
           properties:
             idProductOptionOffer:
               type: integer
-              description: "ID de la oferta de la opción del producto"
+              description: ID de la oferta de la opción de producto
               example: 0
             offer:
               type: number
               format: float
-              description: "Porcentaje de oferta"
+              description: Oferta en porcentaje
               example: 0
             endDate:
               type: string
               format: date-time
-              description: "Fecha de finalización de la oferta"
-              example: "2024-09-12T16:50:51.282Z"
+              description: Fecha de fin de la oferta
+              example: "2024-10-13T17:38:43.380Z"
         width:
           type: number
           format: float
-          description: "Ancho del producto"
+          description: Ancho del producto
           example: 0
         height:
           type: number
           format: float
-          description: "Altura del producto"
+          description: Alto del producto
           example: 0
         weight:
           type: number
           format: float
-          description: "Peso del producto"
+          description: Peso del producto
           example: 0
         depth:
           type: number
           format: float
-          description: "Profundidad del producto"
+          description: Profundidad del producto
           example: 0
         digitalProductPathLink:
           type: string
-          description: "Enlace al archivo digital del producto"
-          example: string
+          description: URL del enlace del producto digital
+          example: "string"
         skuCode:
           type: string
-          description: "Código SKU del producto"
-          example: string
+          description: Código SKU del producto
+          example: "string"
         digitalProductQuantity:
           type: integer
-          description: "Cantidad de productos digitales disponibles"
+          description: Cantidad de producto digital
           example: 0

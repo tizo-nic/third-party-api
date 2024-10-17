@@ -70,6 +70,8 @@ paths:
     $ref: paths/products/createProducts.yml
   /products/updatedProduct:
     $ref: "paths/products/updatedProduct.yml"
+  /products/listProducts:
+    $ref: "paths/products/listProducts.yml"
 components:
   securitySchemes:
     main_auth:

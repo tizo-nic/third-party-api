@@ -1,0 +1,112 @@
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ID del producto
+          example: 0
+        name:
+          type: string
+          description: Nombre del producto
+          example: "string"
+        brand:
+          type: string
+          description: Marca del producto
+          example: "string"
+        shortDescription:
+          type: string
+          description: Descripción corta del producto
+          example: "string"
+        longDescription:
+          type: string
+          description: Descripción detallada del producto
+          example: "string"
+        warranty:
+          type: integer
+          description: Garantía del producto en meses
+          example: 0
+        warrantyPdf:
+          type: string
+          description: URL del PDF de garantía
+          example: "string"
+        promotion:
+          type: boolean
+          description: Indica si el producto está en promoción
+          example: true
+        preparationTimeType:
+          type: string
+          description: Tipo de tiempo de preparación
+          example: "string"
+        preparationTimeDuration:
+          type: integer
+          description: Duración del tiempo de preparación en minutos
+          example: 0
+        specialTape:
+          type: string
+          description: Descripción de cinta especial
+          example: "string"
+        idCategory:
+          type: integer
+          description: ID de la categoría del producto
+          example: 0
+        nameCategory:
+          type: string
+          description: Nombre de la categoría del producto
+          example: "string"
+        returnReplacement:
+          type: integer
+          description: Indicador de devolución y reemplazo
+          example: 0
+        returnInterval:
+          type: integer
+          description: Intervalo de devolución en días
+          example: 0
+        replacementInterval:
+          type: integer
+          description: Intervalo de reemplazo en días
+          example: 0
+        digitalProductNote:
+          type: integer
+          description: Indica si el producto tiene notas digitales
+          example: 0
+        idProductOptions:
+          type: integer
+          description: ID de las opciones de producto
+          example: 0
+        productVariationList:
+          type: array
+          items:
+            type: object
+            properties:
+              idProductOptionKeyValue:
+                type: integer
+                description: ID del valor clave de la opción de producto
+                example: 0
+              idProductOptionsInventory:
+                type: integer
+                description: ID del inventario de opciones de producto
+                example: 0
+              idProductOptionOffer:
+                type: integer
+                description: ID de la oferta de la opción de producto
+                example: 0
+        digital:
+          type: boolean
+          description: Indica si el producto es digital
+          example: true
+        selfPickup:
+          type: boolean
+          description: Indica si está disponible la recogida en tienda
+          example: true
+  message:
+    type: string
+    description: Mensaje de respuesta
+    example: "string"
+  status:
+    type: integer
+    description: Estado de la operación
+    example: 0

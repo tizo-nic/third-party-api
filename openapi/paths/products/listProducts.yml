@@ -1,0 +1,44 @@
+get:
+  tags:
+    - Producto
+  summary: List de los  Producto
+  description: Este método sirve para Listar nuevos Productos
+  operationId: List-Producto
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/products/listProducts.yml'
+    '400':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/products/listProducts.yml'
+  requestBody:
+    headers:
+      environment:
+        description: Lista de los producto.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/products/listProducts.yml"
+    description: Estructura de datos para la lista  de los productos
+    required: true
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/products/listProducts.cs"
+    - lang: PHP
+      source:
+        $ref: "../../code_samples/PHP/products/listProducts.php"
+    - lang: Python
+      source:
+        $ref: "../../code_samples/python/products/listProducts.py"
