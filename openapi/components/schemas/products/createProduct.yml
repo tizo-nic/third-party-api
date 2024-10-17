@@ -32,9 +32,9 @@ properties:
         description: Indica si el producto está en promoción
         example: true
       preparationTimeType:
-        type: string
-        description: Tipo de tiempo de preparación
-        example: "Minuto"
+        type: Enum
+        description:  Tipo de tiempo de preparación ( Minuto, Hora, Día, Semana)
+        example: " Minuto, Hora, Día, Semana"
       preparationTimeDuration:
         type: integer
         description: Duración del tiempo de preparación en minutos
@@ -50,10 +50,6 @@ properties:
       idStore:
         type: integer
         description: ID de la tienda donde se vende el producto
-        example: 0
-      idMotherCategory:
-        type: integer
-        description: ID de la categoría madre del producto
         example: 0
       returnInterval:
         type: integer
@@ -93,7 +89,7 @@ properties:
           type: integer
           description: ID de la capacidad del producto
           example: 0
-        productionQuatitiesList:
+        productionQuantitiesList:
           type: array
           items:
             type: object
@@ -121,11 +117,6 @@ properties:
           format: float
           description: Porcentaje de descuento del producto
           example: 0
-        tax:
-          type: number
-          format: float
-          description: Impuesto aplicado al producto
-          example: 0
         lotNumber:
           type: string
           description: Número de lote del producto
@@ -142,7 +133,7 @@ properties:
               type: string
               format: date-time
               description: Fecha de finalización de la oferta
-              example: "2024-10-13T17:39:03.338Z"
+              example: "2024-10-17T17:22:34.228Z"
         width:
           type: number
           format: float

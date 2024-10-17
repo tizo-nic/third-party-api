@@ -17,7 +17,7 @@ properties:
         example: "string"
       longDescription:
         type: string
-        description: Descripción detallada del producto
+        description: Descripción larga del producto
         example: "string"
       warranty:
         type: integer
@@ -25,23 +25,23 @@ properties:
         example: 0
       warrantyPdf:
         type: string
-        description: URL del PDF de garantía
+        description: URL del PDF de la garantía
         example: "string"
       promotion:
         type: boolean
         description: Indica si el producto está en promoción
         example: true
       preparationTimeType:
-        type: string
-        description: Tipo de tiempo de preparación
-        example: "string"
+        type: Enum
+        description: Tipo de tiempo de preparación ( Minuto, Hora, Día, Semana)
+        example: " Minuto, Hora, Día, Semana;"
       preparationTimeDuration:
         type: integer
-        description: Duración del tiempo de preparación en minutos
+        description: Duración del tiempo de preparación
         example: 0
       specialTape:
         type: string
-        description: Descripción de cinta especial
+        description: Descripción de la cinta especial
         example: "string"
       idCategory:
         type: integer
@@ -49,15 +49,11 @@ properties:
         example: 1
       idStore:
         type: integer
-        description: ID de la tienda donde se vende el producto
-        example: 1
-      idMotherCategory:
-        type: integer
-        description: ID de la categoría madre del producto
+        description: ID de la tienda
         example: 1
       returnReplacement:
         type: integer
-        description: Indicador de devolución y reemplazo
+        description: Indica si el producto tiene opción de devolución y reemplazo
         example: 0
       returnInterval:
         type: integer
@@ -69,7 +65,7 @@ properties:
         example: 0
       digitalProductNote:
         type: integer
-        description: Indica si el producto tiene notas digitales
+        description: Indicador de si el producto digital tiene notas
         example: 0
       digital:
         type: boolean
@@ -77,7 +73,7 @@ properties:
         example: true
       selfPickup:
         type: boolean
-        description: Indica si está disponible la recogida en tienda
+        description: Indica si el producto está disponible para recogida en tienda
         example: true
   productOptionsPricing:
     type: array
@@ -91,24 +87,24 @@ properties:
             properties:
               idProductOptionKeyValue:
                 type: integer
-                description: ID del valor clave de la opción de producto
+                description: ID del par clave-valor de la opción del producto
                 example: 0
               key:
                 type: string
-                description: Clave de la opción de producto
+                description: Clave de la opción del producto
                 example: "string"
               value:
                 type: string
-                description: Valor de la opción de producto
+                description: Valor de la opción del producto
                 example: "string"
-        productionQuatitiesList:
+        productionQuantitiesList:
           type: array
           items:
             type: object
             properties:
               idProductOptionsInventory:
                 type: integer
-                description: ID del inventario de opciones de producto
+                description: ID del inventario de la opción del producto
                 example: 0
               idBranch:
                 type: integer
@@ -120,7 +116,7 @@ properties:
                 example: 0
         idProductOptions:
           type: integer
-          description: ID de las opciones de producto
+          description: ID de la opción del producto
           example: 0
         idCapacity:
           type: integer
@@ -139,7 +135,7 @@ properties:
         discountPercentage:
           type: number
           format: float
-          description: Porcentaje de descuento
+          description: Porcentaje de descuento del producto
           example: 100
         tax:
           type: number
@@ -155,18 +151,18 @@ properties:
           properties:
             idProductOptionOffer:
               type: integer
-              description: ID de la oferta de la opción de producto
+              description: ID de la oferta de la opción del producto
               example: 0
             offer:
               type: number
               format: float
-              description: Oferta en porcentaje
+              description: Oferta aplicada al producto
               example: 0
             endDate:
               type: string
               format: date-time
-              description: Fecha de fin de la oferta
-              example: "2024-10-13T17:38:43.380Z"
+              description: Fecha de finalización de la oferta
+              example: "2024-10-17T17:30:13.920Z"
         width:
           type: number
           format: float
@@ -175,7 +171,7 @@ properties:
         height:
           type: number
           format: float
-          description: Alto del producto
+          description: Altura del producto
           example: 0
         weight:
           type: number
@@ -197,5 +193,5 @@ properties:
           example: "string"
         digitalProductQuantity:
           type: integer
-          description: Cantidad de producto digital
+          description: Cantidad de productos digitales
           example: 0
