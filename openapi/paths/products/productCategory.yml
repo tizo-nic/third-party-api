@@ -1,0 +1,44 @@
+get:
+  tags:
+    - Producto
+  summary: Lista de Category de Productos
+  description: Este método sirve para Listar los productos Categorias
+  operationId: List-Product-Categroy
+  security:
+    - basic_auth: [ Authorization ]
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/products/productCategory.yml'
+    '400':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/products/productCategory.yml'
+  requestBody:
+    headers:
+      environment:
+        description: Lista de la category de producto.
+        schema:
+          type: string
+          example: "ni"
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/products/productCategory.yml"
+    description: Estructura de datos para la lista  de la category de producto
+    required: true
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../../code_samples/csharp/products/productCategory.cs"
+    - lang: PHP
+      source:
+        $ref: "../../code_samples/PHP/products/productCategory.php"
+    - lang: Python
+      source:
+        $ref: "../../code_samples/python/products/productCategory.py"
