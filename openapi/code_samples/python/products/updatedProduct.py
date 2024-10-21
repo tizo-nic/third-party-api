@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "https://staging-api.tizo.co/api/v1/vendors/stores/0/notifications/"
+url = "https://staging-api.tizo.co/api/v1/products/update/product/{idProduct}"
 
 payload = json.dumps({
   "productInfo": {

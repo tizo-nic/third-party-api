@@ -68,10 +68,12 @@ paths:
     $ref: paths/store/get-creditbag.yaml
   /products/createProduct:
     $ref: paths/products/createProducts.yml
-  /products/updatedProduct:
-    $ref: "paths/products/updatedProduct.yml"
+  /products/updated/product/{idProduct}:
+    $ref: paths/products/updatedProduct.yml
   /products/listProducts:
-    $ref: "paths/products/listProducts.yml"
+    $ref: paths/products/listProducts.yml
+  /products/changeStatus/{idProduct}:
+    $ref: paths/products/deleteProduct.yml
 components:
   securitySchemes:
     main_auth:
