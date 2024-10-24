@@ -23,7 +23,7 @@ properties:
           example: "string"
         longDescription:
           type: string
-          description: Descripción larga del producto
+          description: Descripción detallada del producto
           example: "string"
         warranty:
           type: integer
@@ -39,15 +39,16 @@ properties:
           example: true
         preparationTimeType:
           type: string
-          description: Tipo de tiempo de preparación
+          enum: [Minuto, Hora, Día, Semana]
+          description: Tipo de tiempo de preparación (Minuto, Hora, Día, Semana)
           example: "string"
         preparationTimeDuration:
           type: integer
-          description: Duración del tiempo de preparación
+          description: Duración del tiempo de preparación en minutos
           example: 0
         specialTape:
           type: string
-          description: Descripción de la cinta especial
+          description: Descripción de cinta especial
           example: "string"
         idCategory:
           type: integer
@@ -59,7 +60,7 @@ properties:
           example: "string"
         returnReplacement:
           type: integer
-          description: Indica si el producto tiene opción de devolución y reemplazo
+          description: Indicador si el producto tiene devolución y reemplazo
           example: 0
         returnInterval:
           type: integer
@@ -71,7 +72,7 @@ properties:
           example: 0
         digitalProductNote:
           type: integer
-          description: Indicador de si el producto digital tiene notas
+          description: Indicador si el producto tiene notas digitales
           example: 0
         productOptions:
           type: array
@@ -85,7 +86,7 @@ properties:
                   properties:
                     idProductOptionKeyValue:
                       type: integer
-                      description: ID del par clave-valor de la opción del producto
+                      description: ID de la clave-valor de opción del producto
                       example: 0
                     key:
                       type: string
@@ -102,16 +103,33 @@ properties:
                   properties:
                     idProductOptionsInventory:
                       type: integer
-                      description: ID del inventario de la opción del producto
+                      description: ID del inventario de opciones del producto
                       example: 0
                     quantity:
                       type: integer
-                      description: Cantidad en inventario
+                      description: Cantidad en el inventario
                       example: 0
                     branch:
                       type: integer
-                      description: Sucursal donde está el inventario
+                      description: ID de la sucursal
                       example: 0
+              fileInventoryDtoList:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id_product_files_inventory:
+                      type: integer
+                      description: ID del inventario de archivos del producto
+                      example: 0
+                    filePath:
+                      type: string
+                      description: Ruta del archivo
+                      example: "string"
+                    filesType:
+                      type: string
+                      description: Tipo de archivo (Imagen, PDF, etc.)
+                      example: "Image"
         idProductOptions:
           type: integer
           description: ID de las opciones del producto
@@ -130,23 +148,23 @@ properties:
           example: true
   total:
     type: integer
-    description: Total de productos
+    description: Total de productos en la lista
     example: 0
   page:
     type: integer
-    description: Página actual
+    description: Página actual de la lista de productos
     example: 0
   size:
     type: integer
-    description: Cantidad de productos por página
+    description: Tamaño de la página
     example: 0
   totalPages:
     type: integer
-    description: Total de páginas
+    description: Total de páginas disponibles
     example: 0
   messages:
     type: array
     items:
       type: string
-      description: Mensajes asociados a la solicitud
+      description: Mensajes relacionados con la operación
       example: "string"
