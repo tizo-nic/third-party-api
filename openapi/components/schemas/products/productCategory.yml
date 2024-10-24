@@ -1,0 +1,36 @@
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        idProduct:
+          type: integer
+          description: ID del producto
+          example: 0
+        name:
+          type: string
+          description: Nombre del producto
+          example: "string"
+  total:
+    type: integer
+    description: Total de productos
+    example: 1
+  page:
+    type: integer
+    description: Número de página actual
+    example: 1
+  size:
+    type: integer
+    description: Tamaño de la página
+    example: 100
+  totalPages:
+    type: integer
+    description: Número total de páginas
+    example: 1
+  messages:
+    type: array
+    items:
+      type: string
+      example: "success"
