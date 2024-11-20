@@ -59,6 +59,6 @@ $body ='{
     }
   ]
 }';
-$request = new Request('PUT', 'https://staging-api.tizo.co/api/v1/products/update/product/{id}', $headers,$body);
+$request = new Request('PUT', 'https://staging-api.tizo.co/api/v1/products/update/product/{idProduct}', $headers,$body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();
